@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -15,7 +15,7 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        Button botaoSalvar = (Button) findViewById(R.id.cadastro_btnSalvar);
+        ImageButton botaoSalvar = (ImageButton) findViewById(R.id.cadastro_btnSalvar);
         botaoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -7,13 +7,14 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Avaliar Estabelecimento"
         android:id="@+id/Main_btnIniciar"
         android:textColor="#f5f5f5"
-        android:background="@drawable/botao"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"/>
+        android:layout_gravity="bottom"
+        android:background="#2f2f4f"
+        android:clickable="true" />
 </RelativeLayout>

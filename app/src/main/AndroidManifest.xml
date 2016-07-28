@@ -3,21 +3,24 @@
     package="com.admms.tcc.oasis">
 
     <application
-        android:debuggable="true"
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@drawable/ic_logo"
-        android:label="Shapp - Boas Práticas"
+        android:label="DBoas"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadastroActivity"></activity>
+        <activity android:name=".CadastroActivity" />
+        <activity android:name=".ItensDeAvaliacaoActivity" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

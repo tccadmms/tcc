@@ -11,8 +11,8 @@
         android:id="@+id/Main_btnIniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="bottom"
-        android:background="@drawable/botao_inicio" />
+        android:background="@drawable/botao_inicio"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

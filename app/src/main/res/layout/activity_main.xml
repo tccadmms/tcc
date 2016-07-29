@@ -15,4 +15,5 @@
         android:background="@drawable/botao_inicio"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:hint="CNPJ"
             android:textColorHint="#000000"
-            android:id="@+id/cadastro_cnpj"/>
+            android:id="@+id/cadastro_cnpj" />
 
         <EditText
             android:layout_width="match_parent"
@@ -62,11 +62,10 @@
             android:id="@+id/cadastro_cidade"/>
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cadastro_estados"
-            android:spinnerMode="dialog"
-            style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+            android:spinnerMode="dropdown"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -95,8 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cadastro_legislacao"
-            android:spinnerMode="dialog"
-            style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+            android:spinnerMode="dropdown"/>
 
         <ImageButton
             android:id="@+id/cadastro_btnSalvar"

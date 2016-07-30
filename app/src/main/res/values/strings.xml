@@ -4,57 +4,35 @@
     <string name="title_activity_principal">PrincipalActivity</string>
     <string-array name="estado_array">
         <item>AM - AMAZONAS</item>
-
         <item>BA - BAHIA</item>
-
         <item>CE - CEARÁ</item>
-
         <item>DF - DISTRITO FEDERAL</item>
-
         <item>ES - ESPÍRITO SANTO</item>
-
         <item>GO - GOIÁS</item>
-
         <item>MA - MARANHÃO</item>
-
         <item>MT - MATO GROSSO</item>
-
         <item>MS - MATO GROSSO DO SUL</item>
-
         <item>MG - MINAS GERAIS</item>
-
         <item>PA - PARÁ</item>
-
         <item>PB - PARAÍBA</item>
-
         <item>PR - PARANÁ</item>
-
         <item>PE - PERNAMBUCO</item>
-
         <item>PI - PIAUÍ</item>
-
         <item>RJ - RIO DE JANEIRO</item>
-
         <item>RN - RIO GRANDE DO NORTE</item>
-
         <item>RS - RIO GRANDE DO SUL</item>
-
         <item>RO - RONDÔNIA</item>
-
         <item>RR - RORAIMA</item>
-
         <item>SC - SANTA CATARINA</item>
-
         <item>SP - SÃO PAULO</item>
-
         <item>SE - SERGIPE</item>
-
         <item>TO - TOCANTINS</item>
     </string-array>
-    <string-array name="legislacao_array">
-        <item>Legislação Federal</item>
-        <item>Legislação Estadual de São Paulo</item>
-        <item>Legislação Municipal de São Paulo</item>
-        <item>Legislação Estadual do Rio Grande do Sul</item>
+
+    <string-array name="legislacao_array" title="Legislação">
+        <item>Federal</item>
+        <item>Estadual de São Paulo</item>
+        <item>Municipal de São Paulo</item>
+        <item>Estadual do Rio Grande do Sul</item>
     </string-array>
 </resources>

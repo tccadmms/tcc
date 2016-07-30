@@ -23,8 +23,8 @@ public class CadastroActivity extends AppCompatActivity {
 
         estados = (Spinner)findViewById(R.id.cadastro_estados);
         legislacoes = (Spinner)findViewById(R.id.cadastro_legislacao);
-        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_spinner_item);
-        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_spinner_item);
+        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_list_item_1);
+        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_list_item_1);
         estados.setAdapter(adapterEstados);
         legislacoes.setAdapter(adapterLegislacoes);
 
@@ -40,7 +40,7 @@ public class CadastroActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            Thread.sleep(1500);
+                            Thread.sleep(1000);
                             startActivity(intentVaiProItens);
                         } catch (Exception e) {
                             e.printStackTrace();

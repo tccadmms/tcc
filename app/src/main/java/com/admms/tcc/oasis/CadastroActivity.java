@@ -13,18 +13,17 @@ import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    Spinner estados;
-    Spinner legislacoes;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        estados = (Spinner)findViewById(R.id.cadastro_estados);
-        legislacoes = (Spinner)findViewById(R.id.cadastro_legislacao);
-        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_list_item_1);
-        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_list_item_1);
+        Spinner estados = (Spinner)findViewById(R.id.cadastro_estados);
+        Spinner legislacoes = (Spinner)findViewById(R.id.cadastro_legislacao);
+        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_selectable_list_item);
+        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_selectable_list_item);
         estados.setAdapter(adapterEstados);
         legislacoes.setAdapter(adapterLegislacoes);
 

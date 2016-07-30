@@ -61,11 +61,22 @@
             android:textColorHint="#000000"
             android:id="@+id/cadastro_cidade"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Estado"
+            android:id="@+id/textView2"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cadastro_estados"
-            android:spinnerMode="dropdown"/>
+            android:spinnerMode="dialog"
+            android:prompt="@string/title_spinner_estado"
+            android:layout_gravity="center_horizontal" />
 
         <EditText
             android:layout_width="match_parent"
@@ -90,11 +101,22 @@
             android:textColorHint="#000000"
             android:id="@+id/cadastro_proprietarioDoEstabelecimento"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Legislação"
+            android:id="@+id/textView3"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cadastro_legislacao"
-            android:spinnerMode="dropdown"/>
+            android:spinnerMode="dialog"
+            android:prompt="@string/title_spinner_legislacao"
+            android:layout_gravity="center_horizontal"/>
 
         <ImageButton
             android:id="@+id/cadastro_btnSalvar"

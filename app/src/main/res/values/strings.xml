@@ -2,6 +2,8 @@
     <string name="app_name">Oasis</string>
     <string name="title_activity_cadastro">Cadastro</string>
     <string name="title_activity_principal">PrincipalActivity</string>
+    <string name="title_spinner_estado">Estado</string>
+    <string name="title_spinner_legislacao">Legislação</string>
     <string-array name="estado_array">
         <item>AM - AMAZONAS</item>
         <item>BA - BAHIA</item>
@@ -29,7 +31,7 @@
         <item>TO - TOCANTINS</item>
     </string-array>
 
-    <string-array name="legislacao_array" title="Legislação">
+    <string-array name="legislacao_array">
         <item>Federal</item>
         <item>Estadual de São Paulo</item>
         <item>Municipal de São Paulo</item>

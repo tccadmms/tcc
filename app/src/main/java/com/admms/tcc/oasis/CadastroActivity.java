@@ -6,23 +6,48 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
+
+    Spinner estados;
+    Spinner legislacoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
+        estados = (Spinner)findViewById(R.id.cadastro_estados);
+        legislacoes = (Spinner)findViewById(R.id.cadastro_legislacao);
+        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_spinner_item);
+        estados.setAdapter(adapterEstados);
+        legislacoes.setAdapter(adapterLegislacoes);
+
         ImageButton botaoSalvar = (ImageButton) findViewById(R.id.cadastro_btnSalvar);
         botaoSalvar.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+
                 Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                Intent intentVaiProItens = new Intent(CadastroActivity.this, ItensDeAvaliacaoActivity.class);
-                startActivity(intentVaiProItens);
+                final Intent intentVaiProItens = new Intent(CadastroActivity.this, ItensDeAvaliacaoActivity.class);
+                Thread thread = new Thread(){
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(1500);
+                            startActivity(intentVaiProItens);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                thread.start();
             }
         });
     }

@@ -22,8 +22,8 @@ public class CadastroActivity extends AppCompatActivity {
 
         Spinner estados = (Spinner)findViewById(R.id.cadastro_estados);
         Spinner legislacoes = (Spinner)findViewById(R.id.cadastro_legislacao);
-        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_selectable_list_item);
-        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_selectable_list_item);
+        ArrayAdapter adapterEstados = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.estado_array, android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_spinner_dropdown_item);
         estados.setAdapter(adapterEstados);
         legislacoes.setAdapter(adapterLegislacoes);
 

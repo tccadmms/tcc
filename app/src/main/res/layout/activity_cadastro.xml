@@ -25,21 +25,21 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CNPJ"
+            android:hint="CNPJ:"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_cnpj" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Razão Social"
+            android:hint="Razão Social:"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_razaoSocial"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="Email:"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:textColorHint="#000000"
@@ -48,7 +48,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telefone"
+            android:hint="Telefone:"
             android:inputType="phone"
             android:ems="10"
             android:textColorHint="#000000"
@@ -57,31 +57,35 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Cidade"
+            android:hint="Cidade:"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_cidade"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Estado"
+            android:text="Estado:"
+            android:layout_marginLeft="5dp"
             android:id="@+id/textView2"
-            android:textStyle="bold"
             android:textColor="#000000"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cadastro_estados"
-            android:spinnerMode="dialog"
-            android:prompt="@string/title_spinner_estado"
-            android:layout_gravity="center_horizontal" />
-
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cadastro_estados"
+                android:spinnerMode="dialog"
+                android:prompt="@string/title_spinner_estado"
+                android:layout_weight="1" />
+        </TableRow>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CEP"
+            android:hint="CEP:"
             android:inputType="textPostalAddress"
             android:ems="8"
             android:textColorHint="#000000"
@@ -90,33 +94,38 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ramo de Atividade"
+            android:hint="Ramo de Atividade:"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_ramoDeAtividade"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Proprietário do Estabelecimento"
+            android:hint="Proprietário do Estabelecimento:"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_proprietarioDoEstabelecimento"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Legislação"
+            android:text="Legislação:"
+            android:layout_marginLeft="5dp"
             android:id="@+id/textView3"
-            android:textStyle="bold"
             android:textColor="#000000"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cadastro_legislacao"
-            android:spinnerMode="dialog"
-            android:prompt="@string/title_spinner_legislacao"
-            android:layout_gravity="center_horizontal"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cadastro_legislacao"
+                android:spinnerMode="dialog"
+                android:prompt="@string/title_spinner_legislacao"
+                android:layout_weight="1" />
+        </TableRow>
 
         <ImageButton
             android:id="@+id/cadastro_btnSalvar"
@@ -124,8 +133,6 @@
             android:layout_height="31dp"
             android:background="@drawable/botao_salvar"
             android:layout_gravity="center_horizontal"/>
-
-
 
     </LinearLayout>
 </ScrollView>

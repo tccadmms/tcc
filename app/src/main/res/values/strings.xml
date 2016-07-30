@@ -5,30 +5,30 @@
     <string name="title_spinner_estado">Estado</string>
     <string name="title_spinner_legislacao">Legislação</string>
     <string-array name="estado_array">
-        <item>AM - AMAZONAS</item>
-        <item>BA - BAHIA</item>
-        <item>CE - CEARÁ</item>
-        <item>DF - DISTRITO FEDERAL</item>
-        <item>ES - ESPÍRITO SANTO</item>
-        <item>GO - GOIÁS</item>
-        <item>MA - MARANHÃO</item>
-        <item>MT - MATO GROSSO</item>
-        <item>MS - MATO GROSSO DO SUL</item>
-        <item>MG - MINAS GERAIS</item>
-        <item>PA - PARÁ</item>
-        <item>PB - PARAÍBA</item>
-        <item>PR - PARANÁ</item>
-        <item>PE - PERNAMBUCO</item>
-        <item>PI - PIAUÍ</item>
-        <item>RJ - RIO DE JANEIRO</item>
-        <item>RN - RIO GRANDE DO NORTE</item>
-        <item>RS - RIO GRANDE DO SUL</item>
-        <item>RO - RONDÔNIA</item>
-        <item>RR - RORAIMA</item>
-        <item>SC - SANTA CATARINA</item>
-        <item>SP - SÃO PAULO</item>
-        <item>SE - SERGIPE</item>
-        <item>TO - TOCANTINS</item>
+        <item>AMAZONAS - AM</item>
+        <item>BAHIA - BA</item>
+        <item>CEARÁ - CE</item>
+        <item>DISTRITO FEDERAL - DF</item>
+        <item>ESPÍRITO SANTO - ES</item>
+        <item>GOIÁS - GO</item>
+        <item>MARANHÃO - MA</item>
+        <item>MATO GROSSO - MT</item>
+        <item>MATO GROSSO DO SUL - MS</item>
+        <item>MINAS GERAIS - MG</item>
+        <item>PARÁ - PA</item>
+        <item>PARAÍBA - PB</item>
+        <item>PARANÁ - PR</item>
+        <item>PERNAMBUCO - PE</item>
+        <item>PIAUÍ - PI</item>
+        <item>RIO DE JANEIRO - RJ</item>
+        <item>RIO GRANDE DO NORTE - RN</item>
+        <item>RIO GRANDE DO SUL - RS</item>
+        <item>RONDÔNIA - RO</item>
+        <item>RORAIMA - RR</item>
+        <item>SANTA CATARINA - SC</item>
+        <item>SÃO PAULO - SP</item>
+        <item>SERGIPE - SE</item>
+        <item>TOCANTINS - TO</item>
     </string-array>
 
     <string-array name="legislacao_array">

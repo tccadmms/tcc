@@ -13,11 +13,7 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CadastroActivity"
@@ -25,7 +21,15 @@
         <activity android:name=".ItensDeAvaliacaoActivity" />
         <activity android:name=".ArmazenamentoActivity" />
         <activity android:name=".DocumentacaoActivity" />
-        <activity android:name=".EdificacaoActivity"></activity>
+        <activity android:name=".EdificacaoActivity" />
+        <activity android:name=".DBPActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

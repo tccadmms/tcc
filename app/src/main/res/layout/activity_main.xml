@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logo"
+    android:background="#000080"
     android:orientation="vertical">
 
+    <TableRow android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center">
 
+    <ImageView
+        android:layout_width="328dp"
+        android:layout_height="438dp"
+        android:background="@drawable/dbp" />
+    </TableRow>
 
     <ImageButton
         android:id="@+id/Main_btnIniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/botao_inicio"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
-</RelativeLayout>
+
+</LinearLayout>

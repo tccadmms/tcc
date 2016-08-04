@@ -2,28 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000080"
-    android:orientation="vertical">
+    android:background="#191970"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-    <TableRow android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+    <TableRow android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center">
 
-    <ImageView
-        android:layout_width="328dp"
-        android:layout_height="438dp"
-        android:background="@drawable/dbp" />
+    </TableRow>
+    <TableRow android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="214dp"
+            android:layout_height="293dp"
+            android:background="@drawable/dbp" />
+
     </TableRow>
 
     <ImageButton
-        android:id="@+id/Main_btnIniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/botao_inicio"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
-
-
+    android:id="@+id/Main_btnIniciar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/botao_inicio"
+    android:layout_marginTop="20dp"/>
 </LinearLayout>

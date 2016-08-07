@@ -6,20 +6,33 @@
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@drawable/ic_logo"
-        android:label="DBoas Práticas"
+        android:label="DBP - Serviços de Alimentação"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".CadastroActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ItensDeAvaliacaoActivity" />
+        <activity android:name=".ArmazenamentoActivity" />
+        <activity android:name=".DocumentacaoActivity" />
+        <activity android:name=".EdificacaoActivity" />
+        <activity android:name=".DBPActivity" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".CadastroActivity" android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".ItensDeAvaliacaoActivity"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

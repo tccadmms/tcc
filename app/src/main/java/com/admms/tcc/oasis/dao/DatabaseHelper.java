@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.entity.Avaliador;
 import com.admms.tcc.oasis.entity.Estabelecimento;
+import com.admms.tcc.oasis.entity.ItemAvaliacao;
+import com.admms.tcc.oasis.entity.Legislacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
@@ -26,10 +28,15 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private Dao<Avaliador, Integer> avaliadorDao = null;
     private Dao<Estabelecimento, Integer> estabelecimentoDao= null;
     private Dao<PlanoAcao, Integer> planoAcaoDao = null;
+    private Dao<ItemAvaliacao, Integer> itemAvaliacaoDao = null;
+    private Dao<Legislacao, Integer> legislacaoDao = null;
+
 
     private RuntimeExceptionDao<Avaliador, Integer> avaliadorRuntimeExceptionDao = null;
     private RuntimeExceptionDao<Estabelecimento, Integer> estabelecimentoRuntimeExceptionDao = null;
     private RuntimeExceptionDao<PlanoAcao, Integer> planoAcaoRuntimeExceptionDao = null;
+    private RuntimeExceptionDao<ItemAvaliacao, Integer> itemAvaliacaoIntegerRuntimeExceptionDao = null;
+    private RuntimeExceptionDao<Legislacao, Integer> legislacaoRuntimeExceptionDao = null;
 
 
     public DatabaseHelper (Context context) {
@@ -117,5 +124,41 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
 
         return planoAcaoRuntimeExceptionDao ;
+    }
+
+    public Dao<ItemAvaliacao, Integer> getItemAvaliacaoDao() throws SQLException {
+
+        if (itemAvaliacaoDao== null) {
+            itemAvaliacaoDao = getDao(ItemAvaliacao.class);
+        }
+
+        return itemAvaliacaoDao;
+    }
+
+    public RuntimeExceptionDao<ItemAvaliacao, Integer> getItemAvaliacaoRuntimeExceptionDao() {
+
+        if (itemAvaliacaoIntegerRuntimeExceptionDao == null) {
+            itemAvaliacaoIntegerRuntimeExceptionDao = getRuntimeExceptionDao(ItemAvaliacao.class);
+        }
+
+        return itemAvaliacaoIntegerRuntimeExceptionDao ;
+    }
+
+    public Dao<Legislacao, Integer> getLegislacaoDao() throws SQLException {
+
+        if (legislacaoDao == null) {
+            legislacaoDao = getDao(Legislacao.class);
+        }
+
+        return legislacaoDao;
+    }
+
+    public RuntimeExceptionDao<Legislacao, Integer> getLegislacaoRuntimeExceptionDao() {
+
+        if (legislacaoRuntimeExceptionDao == null) {
+            legislacaoRuntimeExceptionDao = getRuntimeExceptionDao(Legislacao.class);
+        }
+
+        return legislacaoRuntimeExceptionDao;
     }
 }

@@ -38,4 +38,5 @@
         <item>PRT nº:2.619/2011</item>
         <item>CVS nº:5/2013</item>
     </string-array>
+    <string name="title_activity_teste">TesteActivity</string>
 </resources>

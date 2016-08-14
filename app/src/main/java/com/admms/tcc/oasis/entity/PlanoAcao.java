@@ -20,35 +20,53 @@ public class PlanoAcao {
     @DatabaseField(canBeNull = false)
     private Date data;
 
+    @DatabaseField
+    private Legislacao legislacao;
+
     public PlanoAcao() {
     }
 
-    public PlanoAcao(int codlegislacao, Date data) {
+    public PlanoAcao(int codlegislacao, Date data, Legislacao legislacao) {
         this.codlegislacao = codlegislacao;
         this.data = new Date(System.currentTimeMillis());
+        this.legislacao = legislacao;
     }
 
     public int getCodigo() {
+
         return codigo;
     }
 
     public void setCodigo(int codigo) {
+
         this.codigo = codigo;
     }
 
     public int getCodlegislacao() {
+
         return codlegislacao;
     }
 
     public void setCodlegislacao(int codlegislacao) {
+
         this.codlegislacao = codlegislacao;
     }
 
     public Date getData() {
+
         return data;
     }
 
     public void setData(Date data) {
+
         this.data = data;
+    }
+
+    public Legislacao getLegislacao() {
+        return legislacao;
+    }
+
+    public void setLegislacao(Legislacao legislacao) {
+        this.legislacao = legislacao;
     }
 }

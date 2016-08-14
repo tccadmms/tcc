@@ -31,13 +31,17 @@ public class ItemAvaliacao {
     @DatabaseField
     private String descricao;
 
-    public ItemAvaliacao(int codPlanoAcao, String areaAvaliada, String pergunta, String conformidade, String foto, String descricao) {
+    @DatabaseField
+    private PlanoAcao planoAcao;
+
+    public ItemAvaliacao(int codPlanoAcao, String areaAvaliada, String pergunta, String conformidade, String foto, String descricao, PlanoAcao planoAcao) {
         this.codPlanoAcao = codPlanoAcao;
         this.areaAvaliada = areaAvaliada;
         this.pergunta = pergunta;
         this.conformidade = conformidade;
         this.foto = foto;
         this.descricao = descricao;
+        this.planoAcao = planoAcao;
     }
 
     public int getCodigo() {
@@ -45,6 +49,7 @@ public class ItemAvaliacao {
     }
 
     public void setCodigo(int codigo) {
+
         this.codigo = codigo;
     }
 
@@ -57,14 +62,17 @@ public class ItemAvaliacao {
     }
 
     public String getAreaAvaliada() {
+
         return areaAvaliada;
     }
 
     public void setAreaAvaliada(String areaAvaliada) {
+
         this.areaAvaliada = areaAvaliada;
     }
 
     public String getPergunta() {
+
         return pergunta;
     }
 
@@ -73,26 +81,40 @@ public class ItemAvaliacao {
     }
 
     public String getConformidade() {
+
         return conformidade;
     }
 
     public void setConformidade(String conformidade) {
+
         this.conformidade = conformidade;
     }
 
     public String getFoto() {
+
         return foto;
     }
 
     public void setFoto(String foto) {
+
         this.foto = foto;
     }
 
     public String getDescricao() {
+
         return descricao;
     }
 
     public void setDescricao(String descricao) {
+
         this.descricao = descricao;
+    }
+
+    public PlanoAcao getPlanoAcao() {
+        return planoAcao;
+    }
+
+    public void setPlanoAcao(PlanoAcao planoAcao) {
+        this.planoAcao = planoAcao;
     }
 }

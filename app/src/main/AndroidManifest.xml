@@ -12,9 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CadastroActivity"
             android:windowSoftInputMode="stateHidden" />
@@ -22,17 +20,18 @@
         <activity android:name=".ArmazenamentoActivity" />
         <activity android:name=".DocumentacaoActivity" />
         <activity android:name=".EdificacaoActivity" />
-        <activity android:name=".DBPActivity" >
+        <activity android:name=".DBPActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
     </application>
 
 </manifest>

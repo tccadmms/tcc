@@ -1,5 +1,7 @@
 package com.admms.tcc.oasis.dao;
 
+import android.app.Application;
+import android.content.ClipData;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -8,6 +10,7 @@ import com.admms.tcc.oasis.entity.Avaliador;
 import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
 import com.admms.tcc.oasis.entity.Legislacao;
+import com.admms.tcc.oasis.entity.Pergunta;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
@@ -15,6 +18,10 @@ import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+
+import java.io.IOException;
 import java.sql.SQLException;
 
 /**
@@ -30,6 +37,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private Dao<PlanoAcao, Integer> planoAcaoDao = null;
     private Dao<ItemAvaliacao, Integer> itemAvaliacaoDao = null;
     private Dao<Legislacao, Integer> legislacaoDao = null;
+    private Dao<Pergunta, Integer> perguntaDao = null;
 
 
     private RuntimeExceptionDao<Avaliador, Integer> avaliadorRuntimeExceptionDao = null;
@@ -37,7 +45,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private RuntimeExceptionDao<PlanoAcao, Integer> planoAcaoRuntimeExceptionDao = null;
     private RuntimeExceptionDao<ItemAvaliacao, Integer> itemAvaliacaoIntegerRuntimeExceptionDao = null;
     private RuntimeExceptionDao<Legislacao, Integer> legislacaoRuntimeExceptionDao = null;
-
+    private RuntimeExceptionDao<Pergunta, Integer> perguntaRuntimeExceptionDao = null;
 
     public DatabaseHelper (Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION, R.raw.ormlite_config);
@@ -46,15 +54,36 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
+
+
         try {
             //Criação de tabelas usando o ORMLite
 
             TableUtils.createTable(connectionSource, Avaliador.class);
             TableUtils.createTable(connectionSource, Estabelecimento.class);
             TableUtils.createTable(connectionSource, PlanoAcao.class);
+            TableUtils.createTable(connectionSource, ItemAvaliacao.class);
+            TableUtils.createTable(connectionSource, Legislacao.class);
+            TableUtils.createTable(connectionSource, Pergunta.class);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void onPopulate(Context context) {
+
+        try {
+            String str = IOUtils.toString(context.getResources().openRawResource(R.raw.sql_legislacao));
+            IOUtils.closeQuietly(context.getResources().openRawResource(R.raw.sql_legislacao));
+
+            RuntimeExceptionDao<Estabelecimento, Integer> legislacaoREDao = getEstabelecimentoRuntimeExceptionDao();
+
+            legislacaoREDao.executeRaw(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -160,5 +189,23 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
 
         return legislacaoRuntimeExceptionDao;
+    }
+
+    public Dao<Pergunta, Integer> getPerguntaDao() throws SQLException {
+
+        if (perguntaDao == null) {
+            perguntaDao = getDao(Pergunta.class);
+        }
+
+        return perguntaDao;
+    }
+
+    public RuntimeExceptionDao<Pergunta, Integer> getPerguntaRuntimeExceptionDao() {
+
+        if (perguntaRuntimeExceptionDao == null) {
+            perguntaRuntimeExceptionDao = getRuntimeExceptionDao(Pergunta.class);
+        }
+
+        return perguntaRuntimeExceptionDao;
     }
 }

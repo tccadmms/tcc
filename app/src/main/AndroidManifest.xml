@@ -10,17 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Controller.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".CadastroActivity"
+            android:name=".Controller.CadastroActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".ItensDeAvaliacaoActivity" />
-        <activity android:name=".ArmazenamentoActivity" />
-        <activity android:name=".DocumentacaoActivity" />
-        <activity android:name=".EdificacaoActivity" />
-        <activity android:name=".DBPActivity">
+        <activity android:name=".Controller.ItensDeAvaliacaoActivity" />
+        <activity android:name=".Controller.ArmazenamentoActivity" />
+        <activity android:name=".Controller.DocumentacaoActivity" />
+        <activity android:name=".Controller.EdificacaoActivity" />
+        <activity android:name=".Controller.DBPActivity">
             <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

@@ -1,11 +1,12 @@
-package com.admms.tcc.oasis;
+package com.admms.tcc.oasis.Controller;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageButton;
+
+import com.admms.tcc.oasis.R;
 
 public class MainActivity extends AppCompatActivity {
 

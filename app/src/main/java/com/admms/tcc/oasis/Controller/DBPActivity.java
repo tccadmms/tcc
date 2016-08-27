@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis.Controller;
+package com.admms.tcc.oasis.controller;
 
 import android.app.Activity;
 import android.content.Intent;

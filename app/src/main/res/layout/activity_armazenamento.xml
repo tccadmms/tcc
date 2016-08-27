@@ -11,7 +11,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".Controller.ArmazenamentoActivity">
+        tools:context=".controller.ArmazenamentoActivity">
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,24 +45,45 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:id="@+id/armazenamento_p1">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p1_na"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p1_ad"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p1_in"/>
             </RadioGroup>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armazenamento_foto_p1"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/armazenamento_descricao_p1"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -85,24 +106,45 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:id="@+id/armazenamento_p2">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p2_na"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p2_ad"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p2_in"/>
             </RadioGroup>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armazenamento_foto_p2"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/armazenamento_descricao_p2"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -124,24 +166,44 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:id="@+id/armazenamento_p3">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p3_na"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p3_ad"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p3_in"/>
             </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armazenamento_foto_p3"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/armazenamento_descricao_p3"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -163,24 +225,44 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:id="@+id/armazenamento_p4">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p4_na"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p4_ad"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p4_in"/>
             </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armazenamento_foto_p4"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/armazenamento_descricao_p4"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -202,24 +284,44 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:id="@+id/armazenamento_p5">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p5_na"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p5_ad"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p5_in"/>
             </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armazenamento_foto_p5"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/armazenamento_descricao_p5"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -241,24 +343,44 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:id="@+id/armazenamento_p6">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p6_na"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p6_ad"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/armazenamento_p6_in"/>
             </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armazenamento_foto_p6"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/armazenamento_descricao_p6"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
         </TableRow>
         <ImageButton
             android:id="@+id/armazenamento_btnSalvar"

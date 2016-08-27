@@ -10,28 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Controller.MainActivity"
+            android:name=".controller.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".Controller.CadastroActivity"
+            android:name=".controller.CadastroActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Controller.ItensDeAvaliacaoActivity" />
-        <activity android:name=".Controller.ArmazenamentoActivity" />
-        <activity android:name=".Controller.DocumentacaoActivity" />
-        <activity android:name=".Controller.EdificacaoActivity" />
-        <activity android:name=".Controller.DBPActivity">
+        <activity android:name=".controller.ItensDeAvaliacaoActivity" />
+        <activity android:name=".controller.ArmazenamentoActivity" />
+        <activity android:name=".controller.DocumentacaoActivity" />
+        <activity android:name=".controller.EdificacaoActivity" />
+        <activity android:name=".controller.DBPActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <activity android:name=".controller.PopUpActivity"></activity>
     </application>
 
 </manifest>

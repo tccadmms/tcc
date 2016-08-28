@@ -20,7 +20,7 @@ public class PlanoAcao {
     @DatabaseField(canBeNull = false)
     private Date data;
 
-    @DatabaseField
+    @DatabaseField(foreign = true)
     private Legislacao legislacao;
 
     public PlanoAcao() {

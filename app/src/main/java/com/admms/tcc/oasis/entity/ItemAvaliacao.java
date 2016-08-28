@@ -31,8 +31,11 @@ public class ItemAvaliacao {
     @DatabaseField
     private String descricao;
 
-    @DatabaseField
+    @DatabaseField(foreign = true)
     private PlanoAcao planoAcao;
+
+    public ItemAvaliacao() {
+    }
 
     public ItemAvaliacao(int codPlanoAcao, String areaAvaliada, String pergunta, String conformidade, String foto, String descricao, PlanoAcao planoAcao) {
         this.codPlanoAcao = codPlanoAcao;

@@ -19,6 +19,9 @@ public class Pergunta {
     @DatabaseField
     private String pergunta;
 
+    public Pergunta() {
+    }
+
     public Pergunta(Legislacao legislacao, String pergunta) {
         this.legislacao = legislacao;
         this.pergunta = pergunta;

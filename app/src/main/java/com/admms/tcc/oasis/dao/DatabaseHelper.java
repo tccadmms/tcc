@@ -47,9 +47,11 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private RuntimeExceptionDao<Legislacao, Integer> legislacaoRuntimeExceptionDao = null;
     private RuntimeExceptionDao<Pergunta, Integer> perguntaRuntimeExceptionDao = null;
 
+    private static Context context;
+
     public DatabaseHelper (Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION, R.raw.ormlite_config);
-
+        this.context = context;
     }
 
     @Override
@@ -59,19 +61,20 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         try {
             //Criação de tabelas usando o ORMLite
 
-            TableUtils.createTable(connectionSource, Avaliador.class);
-            TableUtils.createTable(connectionSource, Estabelecimento.class);
-            TableUtils.createTable(connectionSource, PlanoAcao.class);
-            TableUtils.createTable(connectionSource, ItemAvaliacao.class);
-            TableUtils.createTable(connectionSource, Legislacao.class);
-            TableUtils.createTable(connectionSource, Pergunta.class);
+            TableUtils.createTableIfNotExists(connectionSource, Avaliador.class);
+            TableUtils.createTableIfNotExists(connectionSource, Estabelecimento.class);
+            TableUtils.createTableIfNotExists(connectionSource, Legislacao.class);
+            TableUtils.createTableIfNotExists(connectionSource, Pergunta.class);
+            TableUtils.createTableIfNotExists(connectionSource, PlanoAcao.class);
+            TableUtils.createTableIfNotExists(connectionSource, ItemAvaliacao.class);
 
+            onPopulate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void onPopulate(Context context) {
+    public void onPopulate() {
 
         try {
             String str = IOUtils.toString(context.getResources().openRawResource(R.raw.sql_legislacao));
@@ -91,9 +94,12 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         try {
             //No update, as tabelas sofrem um drop e são criadas novamente.
 
-            TableUtils.dropTable(connectionSource, Avaliador.class,true);
-            TableUtils.dropTable(connectionSource, Estabelecimento.class, true);
+            TableUtils.dropTable(connectionSource, ItemAvaliacao.class, true);
             TableUtils.dropTable(connectionSource, PlanoAcao.class, true);
+            TableUtils.dropTable(connectionSource, Pergunta.class, true);
+            TableUtils.dropTable(connectionSource, Legislacao.class, true);
+            TableUtils.dropTable(connectionSource, Estabelecimento.class, true);
+            TableUtils.dropTable(connectionSource, Avaliador.class, true);
 
             onCreate(database, connectionSource);
         } catch (SQLException e) {

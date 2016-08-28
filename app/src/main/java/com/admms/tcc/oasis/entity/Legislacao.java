@@ -7,7 +7,7 @@ import com.j256.ormlite.table.DatabaseTable;
  * Created by DemonHide-RB on 8/7/2016.
  */
 
-@DatabaseTable(tableName = "tb_Plano_Acao")
+@DatabaseTable(tableName = "tb_Legislacao")
 public class Legislacao {
 
     @DatabaseField(generatedId = true)
@@ -15,6 +15,9 @@ public class Legislacao {
 
     @DatabaseField(canBeNull = false)
     private String nome;
+
+    public Legislacao() {
+    }
 
     public Legislacao(String nome) {
         this.nome = nome;

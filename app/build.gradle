@@ -27,4 +27,5 @@ dependencies {
     compile 'com.android.support:design:24.1.1'
     compile group: 'com.j256.ormlite', name: 'ormlite-android', version: '4.45'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'commons-io:commons-io:2.4'
 }

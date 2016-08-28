@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xml:tools="http://schemas.android.com/tools"
-    tools:context="com.admms.tcc.oasis.CadastroActivity">
+    tools:context=".controller.CadastroActivity">
     <item android:id="@+id/menu_cadastro_menu"
         android:title="Menu"
         android:icon="@drawable/empresas"

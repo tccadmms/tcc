@@ -1,13 +1,15 @@
-package com.admms.tcc.oasis;
+package com.admms.tcc.oasis.controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class EdificacaoActivity extends AppCompatActivity {
+import com.admms.tcc.oasis.R;
+
+public class DocumentacaoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edificacao);
+        setContentView(R.layout.activity_documentacao);
     }
 }

@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis;
+package com.admms.tcc.oasis.controller;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.dao.DatabaseHelper;
 import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.j256.ormlite.android.apptools.OpenHelperManager;

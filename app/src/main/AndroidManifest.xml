@@ -3,8 +3,10 @@
     package="com.admms.tcc.oasis">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -36,7 +38,17 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".controller.PopUpActivity"></activity>
+        <activity android:name=".controller.PopUpActivity" />
+        <activity android:name=".controller.Rdc216Activity" />
+        <activity android:name=".controller.HigieneActivity" />
+        <activity android:name=".controller.IngredientesActivity" />
+        <activity android:name=".controller.ManipuladorActivity" />
+        <activity android:name=".controller.VetoresActivity" />
+        <activity android:name=".controller.PreparoActivity" />
+        <activity android:name=".controller.ResiduosActivity" />
+        <activity android:name=".controller.ResponsavelActivity" />
+        <activity android:name=".controller.SaneamentoActivity" />
+        <activity android:name=".controller.Prt78_325Activity"></activity>
     </application>
 
 </manifest>

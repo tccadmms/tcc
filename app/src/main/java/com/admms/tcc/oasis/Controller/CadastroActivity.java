@@ -36,6 +36,16 @@ public class CadastroActivity extends AppCompatActivity {
         ArrayAdapter adapterLegislacoes = ArrayAdapter.createFromResource(CadastroActivity.this,R.array.legislacao_array,android.R.layout.simple_spinner_dropdown_item);
         estados.setAdapter(adapterEstados);
         legislacoes.setAdapter(adapterLegislacoes);
+        cnpj = (EditText) findViewById(R.id.cadastro_cnpj);
+        razaoSocial = (EditText) findViewById(R.id.cadastro_razaoSocial);
+        email = (EditText) findViewById(R.id.cadastro_email);
+        telefone = (EditText) findViewById(R.id.cadastro_telefone);
+        cidade = (EditText) findViewById(R.id.cadastro_cidade);
+        cep = (EditText) findViewById(R.id.cadastro_cep);
+        ramoAtividade = (EditText) findViewById(R.id.cadastro_ramoDeAtividade);
+        proprietario = (EditText) findViewById(R.id.cadastro_proprietarioDoEstabelecimento);
+        estado = (Spinner) findViewById(R.id.cadastro_estados);
+        legislacao = (Spinner) findViewById(R.id.cadastro_legislacao);
 
         //Preparando o db para salvar onClick
         databaseHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
@@ -46,41 +56,57 @@ public class CadastroActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                cnpj = (EditText) findViewById(R.id.cadastro_cnpj);
-                razaoSocial = (EditText) findViewById(R.id.cadastro_razaoSocial);
-                email = (EditText) findViewById(R.id.cadastro_email);
-                telefone = (EditText) findViewById(R.id.cadastro_telefone);
-                cidade = (EditText) findViewById(R.id.cadastro_cidade);
-                estado = (Spinner) findViewById(R.id.cadastro_estados);
-                cep = (EditText) findViewById(R.id.cadastro_cep);
-                ramoAtividade = (EditText) findViewById(R.id.cadastro_ramoDeAtividade);
-                proprietario = (EditText) findViewById(R.id.cadastro_proprietarioDoEstabelecimento);
-                legislacao = (Spinner) findViewById(R.id.cadastro_legislacao);
 
-                estabelecimentoDao.create(new Estabelecimento(String.valueOf(razaoSocial.getText()),
-                                                              String.valueOf(email.getText()),
-                                                              String.valueOf(cnpj.getText()),
-                                                              String.valueOf(cep.getText()),
-                                                              String.valueOf(cidade.getText()),
-                                                              String.valueOf(estado.getSelectedItem().toString()),
-                                                              String.valueOf(ramoAtividade.getText()),
-                                                              String.valueOf(proprietario.getText()),
-                                                              String.valueOf(legislacao.getSelectedItem().toString())));
-                Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                final Intent intentVaiProItens = new Intent(CadastroActivity.this, ItensDeAvaliacaoActivity.class);
-                Thread thread = new Thread(){
-                    @Override
-                    public void run() {
-                        try {
-                            Thread.sleep(1000);
-                            startActivity(intentVaiProItens);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+                if (razaoSocial.getText().toString().length() == 0) {
+                    razaoSocial.setError(getString(R.string.required_message));
+                } else {
+                    estabelecimentoDao.create(new Estabelecimento(String.valueOf(razaoSocial.getText()),
+                            String.valueOf(email.getText()),
+                            String.valueOf(cnpj.getText()),
+                            String.valueOf(cep.getText()),
+                            String.valueOf(cidade.getText()),
+                            String.valueOf(estado.getSelectedItem().toString()),
+                            String.valueOf(telefone.getText()),
+                            String.valueOf(ramoAtividade.getText()),
+                            String.valueOf(proprietario.getText()),
+                            String.valueOf(legislacao.getSelectedItem().toString())));
+                    Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                    if (legislacao.getSelectedItem().toString().equals("RDC nº:216/2004")) {
+                        final Intent intentVaiPraRdc216 = new Intent(CadastroActivity.this, Rdc216Activity.class);
+                        Thread thread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(1000);
+                                    startActivity(intentVaiPraRdc216);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        thread.start();
                     }
-                };
-                thread.start();
+
+                    if (legislacao.getSelectedItem().toString().equals("PRT nº:78/2009 - 325/2010")) {
+                        final Intent intentVaiPraPrt78_325 = new Intent(CadastroActivity.this, Prt78_325Activity.class);
+                        Thread thread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(1000);
+                                    startActivity(intentVaiPraPrt78_325);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        thread.start();
+                    }
+                }
+
             }
+
         });
     }
 
@@ -91,4 +117,7 @@ public class CadastroActivity extends AppCompatActivity {
 
         return super.onCreateOptionsMenu(menu);
     }
+
+
+
 }

@@ -35,8 +35,9 @@
     <string-array name="legislacao_array">
         <item>RDC nº:216/2004</item>
         <item>PRT nº:78/2009 - 325/2010</item>
-        <item>PRT nº:2.619/2011</item>
+        <item>PRT nº:2619/2011</item>
         <item>CVS nº:5/2013</item>
+        <item>DVS nº:210/2014</item>
     </string-array>
     <string name="title_activity_teste">TesteActivity</string>
 </resources>

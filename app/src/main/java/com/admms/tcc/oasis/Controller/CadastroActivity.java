@@ -103,6 +103,54 @@ public class CadastroActivity extends AppCompatActivity {
                         };
                         thread.start();
                     }
+
+                    if (legislacao.getSelectedItem().toString().equals("PRT nº:2619/2011")) {
+                        final Intent intentVaiPraPrt2619 = new Intent(CadastroActivity.this, Prt2619Activity.class);
+                        Thread thread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(1000);
+                                    startActivity(intentVaiPraPrt2619);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        thread.start();
+                    }
+
+                    if (legislacao.getSelectedItem().toString().equals("CVS nº:5/2013")) {
+                        final Intent intentVaiPraCvs5 = new Intent(CadastroActivity.this, Cvs5Activity.class);
+                        Thread thread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(1000);
+                                    startActivity(intentVaiPraCvs5);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        thread.start();
+                    }
+
+                    if (legislacao.getSelectedItem().toString().equals("DVS nº:210/2014")) {
+                        final Intent intentVaiPraDvs210 = new Intent(CadastroActivity.this, Dvs210Activity.class);
+                        Thread thread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(1000);
+                                    startActivity(intentVaiPraDvs210);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        thread.start();
+                    }
                 }
 
             }

@@ -43,7 +43,7 @@ public class Estabelecimento {
     public Estabelecimento() {
     }
 
-    public Estabelecimento(String razaoSocial, String email, String numCNPJ, String numCEP, String cidade, String estado, String ramo, String responsavelLegal, String legislacao) {
+    public Estabelecimento(String razaoSocial, String email, String numCNPJ, String numCEP, String cidade, String estado, String ramo, String responsavelLegal, String legislacao, String s) {
         this.razaoSocial = razaoSocial;
         this.email = email;
         this.numCNPJ = numCNPJ;

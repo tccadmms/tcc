@@ -36,6 +36,7 @@
             android:textColorHint="#000000"
             android:id="@+id/cadastro_razaoSocial"/>
 
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

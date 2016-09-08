@@ -10,6 +10,8 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName = "tb_Legislacao")
 public class Legislacao {
 
+    public static final String NOME_FIELD_NAME = "nome";
+
     @DatabaseField(generatedId = true)
     private int codigo;
 

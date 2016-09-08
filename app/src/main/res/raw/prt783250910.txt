@@ -1,0 +1,178 @@
+1.1.1 São projetadas de forma a possibilitar um fluxo ordenado e sem cruzamentos (2.1)?
+1.1.2 O acesso às instalações é independente e não comum a outros usos (2.2)?
+1.1.3 O dimensionamento é compatível com todas as operações (2.3)?
+1.1.4 Existe separação entre as diferentes atividades por meios físicos ou por outros meios eficazes (2.4)?
+1.1.5 As instalações são abastecidas de água potável corrente e possuem conexões com rede de esgoto ou fossa séptica (2.10)?
+1.2.1 O piso é de fácil higienização (liso, impermeável e lavável) e está em adequado estado de conservação (2.5)?
+1.3.1 As paredes possuem revestimentos lisos, impermeáveis, de cores claras, de fácil higienização, estão sem cortinas e em adequado estado de conservação (2.6)?
+1.4.1 As portas da área de preparação e armazenamento são dotadas de fechamento automático e de barreiras adequadas para impedir a entrada de vetores e outros animais (2.8)?
+1.5.1 O teto é de acabamento liso, impermeável, de cor clara, de fácil higienização e está em adequado estado de conservação (2.7)?
+1.6.1 As janelas são de superfície lisa, de fácil higienização e estão em adequado estado de conservação (2.9)?
+1.7.1 As caixas de gordura e de esgoto são compatíveis ao volume de resíduos e estão localizadas fora da área de preparação e armazenamento de alimentos (2.11)?
+1.8.1 Os ralos são sifonados e com grelhas que permitam o fechamento (2.12)?
+1.9.1 A área externa do estabelecimento está livre de objetos em desuso e da presença de animais (2.14)?
+1.9.2 A área interna do estabelecimento está livre de objetos em desuso e da presença de animais (2.13)?
+1.10.1 A iluminação da área de preparação dos alimentos proporciona a visualização adequada de forma que as atividades estão sendo realizadas sem comprometer a higiene e as características sensoriais dos alimentos (2.15)?
+1.10.2 As luminárias localizadas na área de preparação, armazenamento e dentro de equipamentos que possam contaminar os alimentos, são apropriadas e protegidas contra explosão e quedas acidentais (2.16)?
+1.11.1 As instalações elétricas são embutidas ou estão protegidas em tubulações externas e íntegras, permitindo a higienização dos ambientes (2.17)?
+1.12.1 A ventilação e a circulação de ar são capazes de garantir o ambiente livre de fungos, fumaça, dentre outros, que possam comprometer a qualidade dos alimentos (2.18)?
+1.12.2 A limpeza dos componentes do sistema de climatização, a troca de filtros, a manutenção programada e periódica destes equipamentos são registrados, verificados, datados e rubricados (2.20)?
+1.12.3 A área de preparação do alimento é dotada de coifa com sistema de exaustão interna com elementos filtrantes ou com sistema de coifa eletrostática (2.21)?
+1.12.4 Existem manutenção programada e periódica do sistema de exaustão e elementos filtrantes registrados, verificados, datados e rubricados (2.22)?
+1.12.5 Os equipamentos e filtros para climatização estão em bom estado de conservação (2.19)?
+1.13.1 As instalações sanitárias e os vestiários não possuem comunicação direta com a área de preparação, armazenamento de alimentos ou refeitório (2.23)?
+1.13.2 As instalações sanitárias e os vestiários são mantidos organizados em adequado estado de conservação (2.24)?
+1.13.3 As portas externas das instalações sanitárias e dos vestiários possuem fechamento automático (2.24)?
+1.13.4 Os coletores de lixo das instalações sanitárias são dotados de tampa acionada sem contato manual e higienizados sempre que necessário e no mínimo diariamente (2.26)?
+1.13.5 As instalações sanitárias são dotadas de lavatórios e supridas de produtos (papel higiênico, sabonete líquido inodoro antisséptico ou sabonete líquido inodoro e produto antisséptico, papel toalha não reciclado) destinados à higiene pessoal ou há outro sistema higiênico e seguro de secagem de mãos (2.25)?
+1.14.1 Os lavatórios nas áreas de manipulação estão em posições estratégicas em relação ao fluxo de preparo dos alimentos e em número suficiente (2.27)?
+1.14.2 Os lavatórios são dotados preferencialmente de torneira com fechamento automático, exclusivos para higiene das mãos, com sabonete líquido inodoro antisséptico ou sabonete líquido inodoro e produto antisséptico, toalhas de papel não reciclado, ou outro sistema higiênico e seguro de secagem das mãos e coletor de papel, acionado sem contato manual, higienizados sempre que necessário e no mínimo diariamente (2.27)?
+1.15 Equipamentos e utensílios
+1.15.1 Os equipamentos, móveis e utensílios que entram em contato com alimentos são preparados com desenhos que permitam a higienização, são de materiais que não transmitam substâncias tóxicas, odores e sabores aos alimentos e estão em adequado estado de conservação (2.28)?
+1.15.2 As superfícies que entram em contato com os alimentos, são lisas, íntegras, impermeáveis, resistentes à corrosão, de fácil higienização e de material não contaminante (2.29)?
+1.15.3  Existe manutenção programada e periódica dos equipamentos e utensílios (2.30)?
+1.15.4 Existe registro da manutenção programada e periódica dos equipamentos e utensílios (2.31)?
+1.15.5 Existem instrumentos ou equipamentos de medição críticos para a segurança dos alimentos, tais como termômetros, relógios, entre outros (2.32)?
+1.15.6 Os registros da calibração dos instrumentos ou equipamentos de medição críticos para a segurança dos alimentos são verificados, datados e rubricados (quando aplicável) (2.33)?
+1.15.7 Existem registros da manutenção programada e periódica dos equipamentos e utensílios críticos para a segurança dos alimentos, tais como, pelo menos, refrigeradores, congeladores e equipamentos de conservação e distribuição a quente e a frio (2.34)?
+2.1 Existe responsável pela operação de higienização comprovadamente capacitado (3.1)?
+2.2. As operações de higienização das instalações são realizadas com frequência que garanta a manutenção das condições higiênico-sanitárias (3.2)?
+2.3. Existem registros das operações de limpeza e/ou de desinfecção das instalações e equipamentos, quando não realizadas rotineiramente (3.3)?
+2.4 O registro das operações de limpeza e/ou de desinfecção das instalações e equipamentos, quando não realizados rotineiramente são verificados, datados e rubricados (3.4)?
+2.5 As caixas de gordura são periodicamente limpas (3.5)?
+2.6. A área de preparação do alimento é higienizada quantas vezes forem necessárias e imediatamente após o término do trabalho (3.6)?
+2.7. Ausência de substâncias odorizantes ou desodorantes ou quaisquer das suas formas utilizadas, nas áreas de preparação e armazenamento de alimentos (3.7)?
+2.8. Os produtos saneantes utilizados são regularizados pelo Ministério da Saúde (3.8)?
+2.9. A diluição, o tempo de contato e o modo de uso/aplicação dos produtos saneantes, obedecem às instruções recomendadas pelos fabricantes (3.9)?
+2.10. Os produtos saneantes são identificados e guardados em local reservado para essa finalidade, sem contato com os alimentos (3.10)?
+2.11. Os utensílios, equipamentos e materiais utilizados na higienização, são próprios para a atividade, são conservados limpos, em número suficiente e são guardados em local reservado para essa atividade (3.11)?
+2.12 Os panos de limpeza descartáveis, quando utilizados em superfícies que entram em contato com alimentos, são descartados a cada 2 horas, não excedendo 3 horas, e não são utilizados novamente (3.12)?
+2.13 Os panos de limpeza não descartáveis, quando utilizados em superfícies que entram em contato com alimentos, são trocados a cada 2 horas, não excedendo 3 horas (3.13)?
+2.14 Os panos de limpeza não descartáveis são limpos através de esfregação com solução de detergente neutro, são desinfetados através de fervura em água por 15 minutos ou solução clorada a 200ppm por 15 minutos, e são enxaguados com água potável e corrente (3.14)?
+2.15 A higienização de panos de limpeza utilizados em superfícies que entram em contato com alimentos é realizada em local próprio para esse fim, em recipientes exclusivos para essa atividade, separados de outros panos utilizados para outras finalidades (3.15)?
+2.16 A secagem dos panos de limpeza utilizados em superfícies que entram em contato com alimentos é realizada em local adequado (3.15)?
+2.17 Os funcionários responsáveis pela atividade de higienização das instalações sanitárias e higienização de panos estão com uniformes apropriados e diferenciados daqueles utilizados na manipulação de alimentos (3.16)?
+2.18 As esponjas de limpeza utilizadas em superfícies que entram em contato com alimentos, são desinfetadas diariamente, por fervura em água, por no mínimo 5 minutos ou outro método adequado (3.17)?
+3.1 A edificação, as instalações, os equipamentos, os móveis e os utensílios estão livres de vetores e pragas urbanas (4.1)?
+3.2 Existe ações eficazes e contínuas de prevenção de controle de vetores e pragas urbanas, com o objetivo de impedir a atração, o abrigo, o acesso e ou proliferação dos mesmos (4.2)?
+3.3 O controle químico, quando aplicável, é realizado por empresa especializada, conforme legislação específica (4.3)?
+3.4 Quando ocorre aplicação do controle químico, a empresa estabelece procedimentos de pré e pós-tratamento, a fim de evitar a contaminação dos alimentos, equipamentos e utensílios (4.4)?
+3.5 Existem registros que comprovam o controle de vetores e pragas urbanas, tais como relatório de avaliação das medidas de controle realizado pela empresa especializada (4.5)?
+3.6 Existem registros do controle de vetores e pragas urbanas que comprovam a regularização dos produtos químicos nos órgãos competentes (4.6)?
+3.7 Os registros do controle de vetores e pragas urbanas são verificados, datados e rubricados (4.7)?
+4.1 A água utilizada para a manipulação de alimentos é potável (5.1)?
+4.2 Quando utilizada fonte alternativa, a potabilidade é atestada semestralmente mediante laudos laboratoriais (5.2)?
+4.3 O gelo utilizado em alimentos é fabricado a partir de água potável e mantido em condição higiênico-sanitária que evite sua contaminação (5.3)?
+4.4 O vapor, quando utilizado em contato direto com alimentos ou superfícies que entram em contato com alimentos, é produzido a partir de água potável (5.4)?
+4.5 O reservatório de água é edificado e/ou revestido de material que não comprometa a qualidade da água, conforme legislação específica (5.5)?
+4.6 O reservatório de água está livre de rachaduras, vazamentos, infiltrações, descascamentos, em adequado estado de higiene e conservação e está devidamente tampado (5.6)?
+4.7 O reservatório de água é higienizado em intervalo máximo de seis meses, por empresa especializada e pessoal capacitado (5.7)?
+4.8. Existe registro que comprove a higienização do reservatório de água (5.8)?
+4.9 Os registros da higienização do reservatório de água são verificados, datados e rubricados (5.9)?
+5.1 Os coletores de resíduos do estabelecimento são de fácil higienização e transporte, estão devidamente identificados e íntegros, dotados de tampas, sacos plásticos e existem em número suficiente (6.1)?
+5.2 Os coletores de resíduos das áreas de preparação e armazenamento de alimentos são dotados de tampas acionadas sem contato manual, estão devidamente identificados, íntegros, com sacos plásticos e em número suficiente (6.2)?
+5.3 Os resíduos coletados na área de produção e armazenamento de alimentos são  retirados frequentemente e estocados em local fechado e isolado (6.3)?
+6.1 O controle de saúde dos manipuladores é realizado de acordo com legislação específica e são mantidos registrados (7.1)?
+6.2 Os manipuladores realizam exames admissionais e periódicos de acordo com a legislação específica (7.2)?
+6.3 A saúde dos manipuladores é supervisionada diariamente (7.3)?
+6.4 Manipuladores são afastados quando apresentam algum sintoma relacionado com gripe como tosse, espirro, coriza, dor de garganta e outros (Saúde do Manipulador)?
+6.5 Os manipuladores são afastados quando apresentam doenças de pele, tais como micoses de unhas e mãos, lesões e ou sintomas que possam comprometer a qualidade higiênico-sanitária do alimento (7.4)?
+6.6 O uniforme dos manipuladores são de cor clara, limpo, estão em adequado estado de conservação, completos (proteção para cabelos cobrindo completamente os fios, uniforme com mangas curtas ou compridas cobrindo a totalidade da roupa pessoal e sem bolsos acima da linha da cintura, sem botões ou com botões protegidos, calças compridas, calçados fechados), exclusivo à área de preparação de alimentos e trocados, no mínimo, diariamente (7.5)?
+6.7 Os manipuladores estão dotados de boa apresentação, asseio corporal, mãos higienizadas, unhas curtas, sem esmalte, sem adornos, sem barba ou bigode e cabelos protegidos (7.6)?
+6.8 Os manipuladores adotam o hábito de não fumar, falar, assobiar, espirrar, tossir, comer, manipular dinheiro ou praticar outros atos que possam contaminar o alimento (7.7)?
+6.9 Os manipuladores higienizam cuidadosamente as mãos antes da manipulação de alimentos, principalmente após qualquer interrupção, troca de atividade e depois do uso de sanitários (7.8)?
+6.10 Existem cartazes de orientação aos manipuladores sobre a correta higienização das mãos e demais hábitos de higiene, e estes estão afixados em locais apropriados (7.9)?
+6.11 As roupas e os objetos pessoais são guardados em armários reservados para esse fim, fora da área de produção (7.10)?
+6.12 Os manipuladores são supervisionados e capacitados periodicamente (com freqüência mínima anual) em higiene pessoal, manipulação de alimentos e em doenças transmitidas por alimentos (7.11)?
+6.13 As capacitações são comprovadas mediante documentação (7.12)?
+6.14 Os manipuladores são capacitados na admissão, abordando no mínimo os seguintes temas: contaminação de alimentos, doenças transmitidas por alimentos, manipulação higiênica dos alimentos e Boas Práticas em serviços de alimentação (7.13)?
+6.15 Os manipuladores de serviços de alimentação para eventos, mini-mercados e supermercados, ambulantes e feirantes que preparam e/ou manipulem alimentos de risco, cozinhas de instituições de longa permanência para idosos, instituições de ensino e demais locais que manipulem alimentos de risco são comprovadamente capacitados em Boas Práticas (7.14)?
+6.16 Os visitantes cumprem os requisitos de higiene e saúde estabelecidos para manipuladores (7.15)?
+7.1 O recebimento das matérias-primas, ingredientes e embalagens são realizadas em áreas protegidas e limpas (8.1)?
+7.2 As matérias-primas, ingredientes e embalagens são inspecionadas no recebimento, seguindo critérios pré-estabelecidos para cada produto (8.2)?
+7.3 O controle da temperatura no recebimento de matérias-primas e ingredientes congelados estão a -12ºC ou inferior conforme rotulagem (8.3)?
+7.4 O controle da temperatura no recebimento de matérias-primas e ingredientes resfriados estão a 7ºC ou inferior conforme rotulagem (8.3)?
+7.5 Existem registros comprovando o controle de temperaturas no recebimento, e estes são verificados, datados e rubricados (8.3)?
+7.6 A temperatura das matérias-primas, ingredientes e produtos industrializados congelados são armazenados conforme indicações do fabricante ou a -18ºC ou temperatura inferior (8.4)?
+7.7 A temperatura das matérias-primas, ingredientes e produtos industrializados refrigerados são armazenados conforme indicações do fabricante ou a 5ºC ou temperatura inferior (8.4)?
+7.8 Existem registros comprovando o controle de temperaturas no armazenamento, e estes são verificados, datados e rubricados (8.4)?
+7.9 Os alimentos congelados são armazenados exclusivamente sob congelamento e os alimentos refrigerados são armazenados exclusivamente sob refrigeração, ou conforme rotulagem (8.5)?
+7.10 Os equipamentos de refrigeração e congelamento existem em número suficiente com as necessidades e tipos de alimentos a serem armazenados (8.6)?
+7.11 Quando diferentes gêneros alimentícios estão armazenados em um mesmo equipamento, os alimentos prontos estão colocados nas prateleiras superiores, os alimentos semi-prontos e/ou pré-preparados estão nas prateleiras centrais e os produtos crus estão nas prateleiras inferiores, separados entre si e dos demais produtos (8.7)?
+7.12 Quando diferentes gêneros alimentícios estão armazenados em um mesmo equipamento todos estão embalados ou protegidos em recipientes fechados e em temperaturas definidas neste regulamento (8.7)?
+7.13 O equipamento está regulado para o alimento que necessita temperatura mais baixa (8.8)?
+7.14 Durante a limpeza ou descongelamento de equipamentos de frio, os alimentos refrigerados são mantidos com temperatura inferior a 5º C, e os alimentos congelados são mantidos ≤ a – 18º C (8.9)?
+7.15 Os lotes das matérias-primas, ingredientes e embalagens reprovadas ou com prazos de validade vencidos, são imediatamente devolvidos ao fornecedor ou identificados e armazenados separadamente até o destino final (8.10)?
+7.16 As matérias-primas, ingredientes e embalagens estão armazenados em local limpo e organizado de forma a garantir proteção contra contaminantes (8.11)?
+7.17 As matérias-primas, ingredientes e embalagens estão armazenados sobre paletes, estrados e/ou prateleiras, respeitando os espaços mínimos para adequada ventilação e higienização (8.12)?
+8.1 As matérias-primas, ingredientes e embalagens utilizadas para preparação do alimento estão em condições higiênico-sanitárias, adequados e em conformidade com a legislação específica (9.1)?
+8.2 Há adoção de medidas a fim de minimizar o risco de contaminação cruzada (9.2)?
+8.3 Os produtos perecíveis expostos à temperatura ambiente permanecem pelo tempo mínimo necessário para a preparação do alimento (máximo 30 minutos) (9.3)?
+8.4 Os alimentos não utilizados na totalidade são acondicionados e identificados de acordo com a rotulagem (9.4)?
+8.5 O tratamento térmico garante a temperatura de no mínimo 70° C em todas as partes do alimento (9.5)?
+8.6 Quando a utilização de temperaturas forem inferiores a 70° C, o tratamento térmico é garantido através das combinações de tempo e temperatura que asseguram a qualidade higiênico-sanitária dos alimentos (9.6)?
+8.7 Os óleos e gorduras utilizados são aquecidos à temperatura não superior a 180° C (9.7)?
+8.8 Os óleos e gorduras são substituídos quando há alteração evidente das características físico-químicas ou sensoriais (fumaça, espuma, aroma e sabor) (9.8)?
+8.9 Há monitoramento da qualidade de óleos e gorduras para frituras, e este monitoramento é registrado (9.9)?
+8.10 O descongelamento é conduzido sob refrigeração à temperatura inferior a 5° C (9.10)?
+8.11 Quando utilizado o forno de microondas para descongelamento, o alimento é submetido à cocção imediata (9.11)?
+8.12 Os alimentos submetidos ao descongelamento, são mantidos sob refrigeração quando não utilizados imediatamente (9.12)?
+8.13 O alimento preparado e conservado a quente encontra-se em temperatura superior a 60° C, por no máximo 6 horas (9.13)?
+8.14 Existem monitoramento, registro e ação corretiva, da temperatura de conservação a quente (9.14)?
+8.15 O registro da temperatura de conservação a quente é verificado, datado e rubricado (9.15)?
+8.16 A temperatura do alimento preparado, no processo de resfriamento é reduzida de 60° C a 10° C em, no máximo, 2 horas (9.16)?
+8.17 Os produtos preparados são conservados em temperaturas de 4º C ou menos por 5 dias, ou em temperaturas superiores a 4º C e inferiores a 5° C, conservados por menos de cinco dias (9.17)?
+8.18 Os produtos preparados congelados estão em temperaturas iguais ou inferiores a -18° C (9.18)?
+8.19 Os alimentos preparados são embalados e identificados quando armazenados sob refrigeração ou congelamento (9.19)?
+8.20 Existem registros das temperaturas de refrigeração e congelamento (9.20)?
+8.21 Os registros das temperaturas de refrigeração e congelamento são verificados, datados e rubricados (9.21)?
+8.22 Durante a higienização, os alimentos hortifrutigranjeiros são selecionados, retirando partes ou produtos deteriorados e sem condições adequadas; são lavados criteriosamente um a um, com água potável e após imersos em solução clorada com 100 a 250ppm de cloro livre, por 15 minutos, ou demais produtos adequados, registrados no Ministério da Saúde, liberados para esse fim e de acordo com as indicações do fabricante e depois enxaguados com água potável (9.22)?
+8.23 Há adoção de medidas de controle para os alimentos hortifrutigranjeiros que garantam que a limpeza e, quando necessário, a desinfecção, não constituam fontes de contaminação do alimento (9.23)?
+8.24 Os vegetais folhosos crus, corretamente higienizados e não adicionados de molho, maionese, iogurte, creme de leite ou demais ligas, preparados e prontos para o consumo, são mantidos em temperatura ambiente por no máximo 1 hora ou conservados sob refrigeração por períodos maiores (9.24)?
+8.25 Os ovos utilizados estão limpos, íntegros e possuem registro no órgão competente (9.25)?
+8.26 Os ovos estão dentro do prazo de validade, em bom estado de conservação e armazenamento, que não propicie contaminação cruzada e seguem as indicações da rotulagem (9.25)?
+8.27 Os ovos são lavados com água potável corrente, imediatamente antes do uso, quando apresentam sujidades visíveis (9.25)?
+8.28 Os ovos utilizados não são preparados e expostos ao consumo alimentos com ovos crus, como maionese caseira, mousse, merengue, entre outros (9.25)?
+8.29 Os alimentos são preparados somente com ovos pasteurizados, desidratados ou tratados termicamente, assegurando sua inocuidade e quando submetidos à cocção ou fritura apresentam toda a gema dura (9.25)?
+8.30 As embalagens dos ovos não são reutilizadas para outros fins (9.25)?
+8.31 Existem guarda de amostras (100g/100mL) de todos os alimentos preparados, incluindo bebidas (100mL), em embalagens apropriadas para alimentos, de primeiro uso (9.26)?
+8.32 A embalagem da guarda de amostras são identificadas com no mínimo a denominação e data da preparação, armazenadas por 72 horas sob refrigeração, em temperatura inferior a 5º C, em cozinhas industriais, hotéis, escolas, instituições de longa permanência para idosos e estabelecimentos de educação infantil e demais estabelecimentos à critério da autoridade sanitária (9.26)?
+9.1 Os alimentos preparados são mantidos na área de armazenamento ou aguardam o transporte protegidos contra contaminantes (10.1)?
+9.2 Os alimentos preparados aguardando o transporte são identificados, com a designação do produto, data de preparo e prazo de validade (10.2)?
+9.3 O armazenamento e o transporte do alimento preparado, da distribuição até o consumo, ocorrem em condições de tempo e temperatura que não comprometam a qualidade higiênico-sanitária (10.3)?
+9.4 Há controle de temperatura do alimento no transporte, com registro, verificação, data e rubrica (10.4)?
+9.5 Os meios de transporte do alimento preparado são higienizados e são dotados de medidas que garantam a ausência de vetores e pragas urbanas (10.5)?
+9.6 Os veículos utilizados para o transporte do alimento preparado, são refrigerados ou congelados, e são providos de meios que garantam essas condições durante todo o tempo de duração do trajeto (10.6)?
+9.6 Os veículos utilizados para o transporte do alimento preparado são utilizados somente para esse fim (10.6)?
+10.1 Área de exposição, consumação ou refeitório é ventilada e com circulação de ar capaz de garantir um ambiente livre de contaminantes? (1)
+10.2 A área de exposição, consumação ou refeitório são mantidas organizados e em adequadas condições higiênico-sanitárias (11.1)?
+10.3 Os manipuladores adotam procedimentos que minimizem o risco de contaminação dos alimentos preparados por meio da antissepsia das mãos ou pelo uso de luvas descartáveis (11.2)?
+10.4 Quando utilizado equipamento de climatização na área de exposição, consumação ou refeitório esse está adequado ao número de ocupantes por m² de área com aumento da renovação de ar? (2)
+10.5 Os equipamentos de calor e frio necessários à exposição ou distribuição de alimentos preparados estão sob temperaturas controladas, são devidamente dimensionados e estão em adequado estado de higiene, conservação e funcionamento (11.3)?
+10.6 São realizados procedimentos de limpeza e manutenção dos componentes do equipamento de climatização ou ar condicionado, como troca de filtros e demais procedimentos de acordo com legislação específica? (3)
+10.7 Local dotado de lavatório para os clientes, exclusivo para higiene de mãos, em lugares estratégicos e em número suficiente, equipado com torneira preferencialmente com fechamento automático, lavatórios exclusivos de higiene de mãos dotados de sabonete líquido ou bactericida e álcool 70% (gel ou líquido) ou outro produto para anti-sepsia de mãos que comprovadamente inative o vírus H1N1, toalha de papel não reciclado ou outro sistema adequado de secagem de mãos e coletor de papel acionado sem contato manual? (4)
+10.8 Está disponível álcool 70%, em gel ou líquido, para serem utilizados pelos clientes, em lugares estratégicos,  como na entrada dos estabelecimentos e antes do “Buffet” em quantidade suficiente? (5)
+10.9 O balcão de distribuição do alimento preparado é equipado com protetor salivar de material liso, resistente e de fácil higienização disposto de modo a evitar que partículas provenientes da saliva, tosse, espirro, fios de cabelo e objetos dos consumidores contaminem o alimento preparado? (6)
+10.10 O equipamento de exposição do alimento preparado na área de consumação é dotado de barreiras de proteção que previnam a contaminação do mesmo em decorrência da proximidade ou da ação do consumidor (11.6)?
+10.11 Existe registro da temperatura do equipamento de exposição ou distribuição de alimentos preparados (11.4)?
+10.12 O registro da temperatura do equipamento de exposição ou distribuição de alimentos preparados é verificado, datado e rubricado (11.5)?
+10.13 Os utensílios utilizados na consumação do alimento preparado, como pratos, copos e talheres de uso coletivo são desinfetados antes da utilização com álcool 70% líquido? (7)
+10.14 Os talheres e outros utensílios utilizados na área de exposição, consumação ou refeitório do alimento preparado são desinfetados antes do uso com álcool 70% líquido? (8)
+10.15 Para desinfecção dos utensílios utilizados na área de exposição, consumação ou refeitório do alimento preparado é utilizado um borrifador para auxiliar na aplicação do álcool 70% líquido? (9)
+10.16 No local de manipulação dos alimentos preparados em “Buffet” ou similares, o conjunto de talheres após desinfecção é embalado e exposto individualmente? (10)
+10.17 Os utensílios utilizados na consumação do alimento, tais como pratos, copos, talheres são devidamente higienizados e armazenados em local protegido (11.7)?
+10.18 O estabelecimento apresenta medidas preventivas com relação à Gripe “A”, como cartazes, com letras legíveis e em local de fácil visualização e em negrito, dizendo: - O contágio da Gripe “A” é dado através do ar, por vias aéreas e através de contato direto com pessoas contaminadas; - Antes de servir-se lave bem as mãos com água e sabonete. Em seguida, faça anti-sepsia com álcool 70%; - Evite colocar as mãos nos olhos, boca e nariz e conversar sobre os alimentos; - Ao tossir ou espirrar cubra o nariz e a boca com lenço descartável e higienize as mãos; (Disposições gerais)
+10.19 Ausência de ornamentos e plantas na área de produção e, quando presentes na área de consumo, não constituem fontes de contaminação para os alimentos preparados (11.8)?
+10.20 Os funcionários responsáveis pela atividade de recebimento de dinheiro e cartões, não manipulam alimentos (11.9)?
+11.1 Os Serviços de Alimentação dispõe de Manual de Boas Práticas e de Procedimentos Operacionais Padronizados (POP) disponíveis aos funcionários envolvidos e à autoridade sanitária (12.1)?
+11.2 Os POP contêm instruções sequenciais das operações, a frequência de execução e as ações corretivas, especificando o cargo e ou a função dos responsáveis pelas atividades (12.2)?
+11.3 Os POP são aprovados, datados e rubricados pelo responsável do estabelecimento (12.2)?
+11.4 Os registros são mantidos por período mínimo de 30 dias contados a partir da data de preparação dos alimentos (12.3)?
+11.5 Os Serviços de Alimentação têm implementado POP de: higienização de instalações, equipamentos e móveis; controle integrado de vetores e pragas urbanas; higienização do reservatório e higiene e saúde dos manipuladores (12.4)?
+12.1 O responsável pelas atividades de manipulação dos alimentos é comprovadamente submetido a Curso de Capacitação em Boas Práticas para Serviços de Alimentação, abordando no mínimo contaminação de alimentos, doenças transmitidas por alimentos, manipulação higiênica dos alimentos e Boas Práticas (13.1)?
+12.2 O estabelecimento dispõe do documento comprobatório do Curso de Capacitação do responsável pelas atividades de manipulação dos alimentos e este documento está devidamente datado, contendo a carga horária e conteúdo programático (13.2)?
+12.3 O responsável pelas atividades de manipulação dos alimentos atualiza-se, através de cursos, palestras, simpósios e demais atividades que se fizerem necessárias, pelo menos anualmente, em temas como higiene pessoal, manipulação higiênica dos alimentos e doenças transmitidas por alimentos (13.3)?
+12.4 Existem documentos que comprovam as atualizações do responsável pela manipulação dos alimentos (13.4)?
+12.5 O responsável pelas atividades de manipulação promove treinamentos, no mínimo, anuais em higiene pessoal, manipulação higiênica dos alimentos e doenças transmitidas por alimentos para a equipe de manipuladores de alimentos sob sua responsabilidade (13.5)?
+12.6 Existem documentos que comprovam a promoção de treinamentos para a equipe de manipuladores de alimentos do estabelecimento (13.6)?
+12.7 O responsável pela manipulação dos alimentos, em caso de surtos de doença transmitida por alimentos, realiza notificação compulsória aos Órgãos Oficiais de Vigilância Sanitária (13.7)?

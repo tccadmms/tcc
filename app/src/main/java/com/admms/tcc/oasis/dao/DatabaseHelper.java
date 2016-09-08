@@ -1,7 +1,5 @@
 package com.admms.tcc.oasis.dao;
 
-import android.app.Application;
-import android.content.ClipData;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -12,17 +10,19 @@ import com.admms.tcc.oasis.entity.ItemAvaliacao;
 import com.admms.tcc.oasis.entity.Legislacao;
 import com.admms.tcc.oasis.entity.Pergunta;
 import com.admms.tcc.oasis.entity.PlanoAcao;
+import com.admms.tcc.oasis.entity.SQLUtil;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
+import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
-import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by DemonHide-RB on 7/31/2016.
@@ -75,18 +75,26 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     }
 
     public void onPopulate() {
+        RuntimeExceptionDao<Legislacao, Integer> legislacaoREDao = getLegislacaoRuntimeExceptionDao();
+        Legislacao legislacao = new Legislacao();
+
+        new PopulateLegislacao().populate(this,context);
+
+        QueryBuilder<Legislacao, Integer> qb = legislacaoREDao.queryBuilder();
 
         try {
-            String str = IOUtils.toString(context.getResources().openRawResource(R.raw.sql_legislacao));
-            IOUtils.closeQuietly(context.getResources().openRawResource(R.raw.sql_legislacao));
+            legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"PRT nº:2.619/2011").query().get(0);
+            new PopulatePergunta().populate(this, context, R.raw.prt26192011,legislacao);
+            legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"RDC nº:216/2004").query().get(0);
+            new PopulatePergunta().populate(this, context, R.raw.rdc21604,legislacao);
+            legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"CVS nº:5/2013").query().get(0);
+            new PopulatePergunta().populate(this, context, R.raw.cvs513,legislacao);
+            legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"PRT nº:78/2009 & PRT nº:325/2010").query().get(0);
+            new PopulatePergunta().populate(this, context, R.raw.prt783250910,legislacao);
 
-            RuntimeExceptionDao<Estabelecimento, Integer> legislacaoREDao = getEstabelecimentoRuntimeExceptionDao();
-
-            legislacaoREDao.executeRaw(str);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

@@ -1,0 +1,234 @@
+1.1.1 A área externa é livre de focos de insalubridade, ausência de lixo, objetos em desuso, animais, poeira, água estagnada e de vetores e pragas urbanas (Art. 77)?
+1.1.2 O acesso é direto e independente, não comum a outros usos (habitação) (Art. 77)?
+1.1.3 A construção atende as normas de edificações vigentes estaduais ou municipais (Art. 77)?
+1.1.4 A garantia de acesso a pessoas com deficiência ou mobilidade reduzida (Art. 77)?
+1.1.5 Em todas as etapas do processo produtivo as instalações são separadas por meios físicos, ou outras medidas efetivas, facilitandoos procedimentos de higienização e manutenção, por meio de  fluxos contínuos, sem cruzamento de etapas e contaminação aos utensílios limpos (Art.78)?
+1.1.6 Se não há áreas separadas para as atividades, existe locais específicos para o pré-preparo e preparo dos alimentos (Art.78)?
+1.1.7 Existe lavatório para a higienização das mãos dos consumidores (Art. 95)?
+1.1.8 A área de armazenamento de botijões de gás liquefeitos de petróleo é instalada em local ventilado, protegido da passagem e entrada de pessoas estranhas e atende o disposto em legislação específica (Art.75)?
+1.2.1 É de material liso, antiderrapante, resistente, impermeável, lavável, integro, sem trincas, vazamentos ou infiltrações (Art.85)? 
+1.2.2 Tem inclinação em direção aos ralos e não permite que a água fique estagnada (Art.85)?
+1.2.3 Em áreas que permitam existência, os ralos são sifonados, e as grelhas possuem dispositivos que permitem o fechamento (Art.85)?
+1.3.1 São sólidas, com acabamento liso e impermeável (Art.86)?
+1.4.1 As portas devem ser ajustadas aos batentes e de fácil limpeza (Art.88)?
+1.4.2 As portas de entrada para o armazenamento e manipulação possuem fechamento automático e protetor na parte inferior (Art. 88)?
+1.5.1 São de acabamento liso, impermeável e materiais não inflamáveis (Art. 87)?
+1.5.2 São isentos de goteiras, vazamentos, umidade, trincas, rachaduras, bolores, infiltrações e descascamento (Art. 87)?
+1.6.1 Janelas são providas de telas milimétricas removíveis para facilitar a limpeza, sem falhas de revestimento e ajustadas aos batentes (Art.89)?
+1.6.2 As janelas devem ser ajustadas aos batentes de modo que os raios solares não incidam diretamente sobre os funcionários, alimentos ou equipamentos mais sensíveis ao calor (Art.89)?
+1.7.1 O sistema de esgoto é ligado à rede pública de coleta (Art.71)?
+1.7.2 Se utilizado um sistema de esgoto alternativo ocorre o tratamento adequado e seu destino é aprovado pela autoridade ambiental competente (Art.71)?
+1.7.3 Os despejos das pias de produção passam por uma caixa de gordura fora da área de manipulação e armazenamento sendo higienizada periodicamente (Art.72)?
+1.8.1 O ambiente tem iluminação uniforme, sem ofuscamentos e não deve alterar as características sensoriais dos alimentos (Art.90)?
+1.8.2 As lâmpadas e luminárias encontram-se protegidas contra explosão e quedas acidentais (Art.90)?
+1.9.1 As instalações elétricas são embutidas, e quando externas protegidas por tubulações presas e distantes das paredes e teto, permitindo a higienização do ambiente (Art.90)?
+1.10.1 Garante o conforto térmico, a renovação do ar e o ambiente livre de fungos, gases, fumaça, gordura e condensação de vapores (Art.91)?
+1.10.2 A circulação de ar na cozinha é feita com o ar insuflado filtrado ou através de exaustão (Art.92)?
+1.10.3 A direção do fluxo de ar nas áreas de preparo dos alimentos é da área limpa para a suja (Art.92)?
+1.10.4 Os exaustores possuem telas milimétricas removíveis para impedir a entrada de vetores e pragas urbanas, sendo periodicamente higienizados e sofrendo manutenção (Art.92)?
+1.10.5 Ventiladores e climatizadores com aspersão de neblina sobre os alimentos, não são utilizados nas áreas de manipulação e armazenamentos (Art.93)?
+1.11.1 As instalações sanitárias não se comunicam diretamente com a área de armazenamento, manipulação, distribuição e consumo de alimentos são separados por gêneros e suas portas externas devem ter fechamento automático (Art. 94)?
+1.11.2 As instalações sanitárias dispõem de vaso sanitário sifonado com tampa e descarga, mictório com descarga, papel higiênico, lixeira com tampa acionada por pedal, pias com sabonete liquido, neutro, inodoro, antisséptico e coletor de papel acionado sem contato manual (Art. 94)?
+1.11.3 Os vestiários não se comunicam diretamente com a área de armazenamento, manipulação, distribuição e consumo de alimentos são separados por gêneros e suas portas externas devem ter fechamento automático (Art. 94)?
+1.11.4 Os vestiários possuem armários individuais e chuveiros (Art. 94)?
+1.11.5 Existem instalações sanitárias para os clientes sem comunicação com as áreas de produção dos alimentos (Art.95)?
+1.12.1 Existem lavatórios exclusivos para higiene das mãos na área de manipulação e em numero suficiente para atender toda a área de preparação (Art.80)?
+1.12.2 Os lavatórios possuem sabonete líquido, neutro, inodora e com ação antisséptica, com papel toalha descartável não reciclado e coletor de papel acionado sem contato manual (Art.80)?
+1.13.1 Os equipamentos são mantidos em condições higiênico-sanitárias apropriadas e em bom estado de conservação (Art.62)?
+1.13.2 O dimensionamento dos equipamentos tem relacionamento direto com o volume de produção, tipos de produtos ou padrão de cardápio e sistema de distribuição/venda, suas reformas são executadas fora do horário de manipulação (Art. 79)? 
+1.13.3 Os equipamentos são de fácil higienização não transmitindo substancias tóxicas, odores ou sabores aos alimentos (Art.82)?
+1.13.4 Todos os equipamentos possuem proteção em suas partes de maior risco como: motor prensa peça cortante, sucção, correia (Art.83)?
+1.13.5 Na existência de câmaras frigorificas essas possuem revestimento com material lavável, impermeável e resistente (Art. 84)?
+1.13.5.1 Na existência de câmaras frias existe termômetro de fácil leitura, calibrado e com visor na parte externa da câmara (Art. 84)?
+1.13.5.2 Na existência de câmaras frias há interruptor de segurança na parte externa que sinalize ligado e desligado, dispositivo de segurança interno que permita a abertura da porta por dentro (Art. 84)?
+1.13.5.3 Na existência de câmaras frias, internamente há prateleiras e estrados em material impermeável, resistente e lavável, e isenção de ralo ou grelha (Art. 84)?
+1.13.6 Os móveis e utensílios são de fácil higienização não transmitindo substancias tóxicos odores ou sabores aos alimentos (Art.82)?
+1.13.7 Os móveis e utensílios são mantidos em condições higiênico-sanitárias apropriadas e em bom estado de conservação (Art.62)?
+1.13.8 Os equipamentos de refrigeração e freezers apresentam-se em bom estado de conservação e higiene e adequados quanto ao volume de produto armazenado (Art. 33)?
+1.13.9 Não é realizado o desligamento dos equipamentos de refrigeração e freezers objetivando a economia de energia e utilização de termômetros de haste de vidro para o controle de suas temperaturas (Art.33)?
+2.1 As instalações, equipamentos, móveis e utensílios apresentam condições higiênico-sanitárias apropriadas e em bom estado de conservação (Art.62)?
+2.2 As áreas de manipulação não são varridas a seco e a não ocorre à lavagem de panos de limpeza na área de manipulação (Art.63.1)?
+2.2.1 Não é feito o uso de panos não descartáveis para secar utensílios e equipamentos (Art.63.2)?
+2.2.2 Não é feito o reaproveitamento de vasilhames de produtos alimentícios para envasar produtos de limpeza (Art.63.3)?
+2.2.3 Há presença de animais domésticos no local (Art.63.4)?
+2.2.4 O escoamento da água residual da higienização ambiental ocorre para via pública (Art.63.5)?
+2.2.5 Os produtos utilizados para os procedimentos de limpeza e desinfecção são identificados e armazenados em local especifico fora da área de preparo e armazenamento de alimentos (Art.64)?
+2.2.5.1 Os produtos de limpeza e desinfecção são registrados na ANVISA, possuem rotulagem obrigatória, estabelecida pela legislação federal (Art.64)?
+2.2.5.2 (Os produtos de limpeza e desinfecção informam dados completos sobre a fabricante como: nome, endereço, telefone, CNPJ e numero de autorização da ANVISA) (Art. 64.1)?
+2.2.5.3 Os produtos de limpeza e desinfecção possuem o nome do responsável técnico e numero de inscrição em seu conselho profissional (Art.64.2)?
+2.2.5.4 Os produtos de limpeza e desinfecção possuem informações sobre precauções e cuidados em casos de acidentes (Art.64.3)?
+2.3 As operações de higienização são realizadas por funcionários capacitados para este fim (Art.65)?
+2.4 Durante a aplicação de produtos de limpeza e desinfecção fortemente alcalina, fortemente ácida ou oxidante forte os manipuladores utilizam luvas nitrílicas, óculos e botas (Art.65)?
+2.5 São obedecidas às instruções de uso e de segurança recomendadas pelo fabricante dos produtos (Art.65)?
+2.6 Os utensílios são mantidos em condições higiênico-sanitárias apropriadas e em bom estado de conservação (Art.62)?
+2.6.1 A higienização dos utensílios ocorre em local próprio (Art. 62)?
+2.6.2 Todos os utensílios passam pelas etapas obrigatórias do procedimento de higienização: remoção de sujidades, lavagem com água e detergente, enxágue desinfecção química e enxague final (Art. 62)?
+2.6.3 Existem Procedimentos Operacionais Padronizados da higienização e sua periodicidade (Art. 62)?
+2.6.4 Quando realizado o método de higienização químico, pelo emprego de produtos de limpeza e desinfecção, são descritos métodos, frequência, ingredientes ativos, concentração, temperaturas e tempo de contato com as superfícies em higienização e seus produtos sem deixar resíduos ou odores (Art. 62.1)?
+2.6.5 Quando realizado o método de desinfecção pelo emprego de vapor, são descritos o método, frequência, temperatura e tempo de contato com as superfícies (Art. 62.2)?
+2.6.6 Ausência de panos não descartáveis para secar utensílios (Art. 63.2)?
+2.7 A higienização de material de limpeza como baldes, vassouras, panos de chão, ocorre em local exclusivo fora da área de preparo (Art. 81)?
+3.1 São implantados procedimentos de boas práticas que previnem ou minimizem a presença de vetores e pragas urbanas (Art.76)?
+3.2 A aplicação de produtos desinfetantes só é realizada quando as medidas de prevenção adotadas não forem eficazes (Art.76)?
+3.3 O controle de vetores e pragas urbanas é executado por empresa prestadora de serviço, licenciada no órgão de vigilância sanitária competente e seus produtos regularizados na ANVISA (Art.76)?
+4.1 A água utilizada para o consumo direto ou no preparo dos alimentos é proveniente de abastecimento público (Art.66)?
+4.2 A água utilizada pelo estabelecimento deve ser tratada e a qualidade controlada por análise laboratorial periódica, conforme legislação em vigor (Art.66)?
+4.3 As águas de poços, minas e outras fontes alternativas só são usadas quando não existe risco de contaminação e após a licença de uso concedida pelo órgão competente (Art.66)?
+4.4 Após o tratamento da água de fontes alternativas é realizada análise laboratorial na periodicidade determinada pela legislação vigente (Art.66)?
+4.5 A empresa responsável pelo transporte de água potável em caminhões pipa atende o disposto na legislação vigente e fornece laudos de análise do produto (Art. 67)?
+4.6 Existem reservatórios de água (Art.68)?
+4.7 O reservatório de água é limpo e desinfetado conforme métodos recomendados por órgão oficiais a cada 6 meses e/ou na ocorrência de acidentes que possam contaminar a água (queda de animais, sujeira, enchentes) (Art.68)?
+4.8 O reservatório é mantido sempre tampado, é de fácil higienização e livre de rachaduras, infiltrações e vazamentos (Art.68)?
+4.9 O gelo para utilização em alimentos é fabricado com água potável, de acordo com os Padrões de Identidade e Qualidade vigentes (Art. 69)?
+4.10 O vapor, quando utilizado em contato com produtos ou superfícies que entram em contato com alimentos, não representa riscos de contaminação (Art.70)?
+5.1 O lixo é removido e separado quantas vezes forem necessárias (Art.73)?
+5.2 Estamos dispostos adequadamente em recipientes com tampas acionadas por pedal (Art.73)?
+5.3 O lixo possui um local exclusivo, em condições de higiene, revestido de material de fácil higienização e protegido de animais, vetores e pragas urbanas (Art.73)?
+5.4 O lixo não sai da cozinha pelo mesmo local onde entram as matérias primas, e quando há total impossibilidade de áreas distintas, são determinados horários diferenciados (Art.74)?
+6.1 Somos realizados o PCMSO - Programa de Controle Médico de Saúde Ocupacional e o Atestado de Saúde Ocupacional (ASO) (Art.8)?
+6.2 O PCMSO é realizado por um profissional médico especializado em medicina do trabalho (Art.8)?
+6.3 A saúde dos funcionários é comprovada por atestados médicos, exames e laudos laboratoriais (Art.8)?
+6.4 A periodicidade dos exames médicos e laboratoriais é anual (Art.8)? 
+6.5 Em ocorrências endêmicas de certas doenças, a periodicidade dos exames médicos e laboratoriais obedece às exigências dos órgãos de Vigilância Sanitária e Epidemiológica local (Art.8)?
+6.6 Os funcionários que apresentarem patologias ou lesões de pele, mucosas e unhas, feridas ou cortes nas mãos e braços, infecções oculares, pulmonares ou orofaríngeas e infecções/infestações gastrintestinais agudas ou crônicas, não manipulam alimentos (Art.8)?
+6.7 Os manipuladores tomam banho diário (Art.10)?
+6.7.1 Os manipuladores mantêm a barba e bigode raspados diariamente (Art.10)?
+6.7.2 Manipuladores possuem unhas curtas, limpas, sem esmalte ou base (Art.10)?
+6.7.3 Manipuladores usam maquiagem leve (Art.10)?
+6.7.4 Os manipuladores não utilizam adornos como: colares, pulseiras, brincos, piercing, anéis, alianças entre outros (Art.10)?
+6.7.5 Manipuladores quando utilizam objetos necessários para uso no trabalho como: canetas, papéis, entre outros os colocam nos bolsos inferiores do uniforme (Art.10)?
+6.8 Os manipuladores mantem cabelos presos e totalmente protegidos (Art.11)?
+6.9 Os uniformes são bem conservados e limpos, com troca diária e utilização restrita as dependências internas da empresa (Art.11)?
+6.10 Os sapatos são fechados, antiderrapantes, em boas condições de higiene e conservação (Art.11)?
+6.11 Uso de botas de borracha para limpeza e higienização do estabelecimento quando necessário (Art.11)?
+6.12 A empresa dispõe de equipamentos de proteção individual (EPI), em local de fácil acesso, limpos e em bom estado de conservação, em número suficiente e em tamanhos adequados, em relação ao quadro de funcionários, visitantes e atividades desenvolvidas no local (Art.11)?
+6.13 O uso de Equipamento de Proteção Individual como: blusas, capa, luvas e botas para trabalho em câmaras frias ou que alternem ambientes quentes e frios ((Art.11)?).
+6.14 Não são utilizados panos ou sacos plásticos para proteção do uniforme (Art.11)?
+6.15 O uso do avental de plástico é restrito as atividades onde há grande quantidade de água, não sendo utilizado próximo a fontes de calor (Art.11)?
+6.16 Nenhuma peça do uniforme é lavada dentro da cozinha (Art.11)?
+6.17 Os manipulares de alimentos adotam procedimentos de antissepsia frequente das mãos, especialmente, antes de usar utensílios higienizados e colocar luvas descartáveis (Art.12)?
+6.18 Há existência de cartazes sobre procedimento correto da higienização das mãos em pias exclusivas para este fim, na linha de produção e lavatórios dos banheiros e vestiários (Art.15)?
+6.19 A Instrução para higienização das mãos apresenta o seguinte procedimento: umedecer as mãos e antebraço com água; lavar com sabonete liquido neutro, inodoro e com ação antisséptica. Massagear bem as mãos, antebraços, entre os dedos e unhas, por pelo menos 3 minutos e secá-los com papel toalha descartável não reciclado, coletor de papel com acionamento sem contato manual, os produtos de higiene com ação antisséptica aprovada pela ANVISA (Art.15)?
+6.20 Durante a manipulação dos alimentos os manipuladores não realizam os seguintes hábitos: falam, cantam, assobiam, tossem, espirram, cospem, fumam; mascam goma, palito, fósforo ou similares, chupam bala ou comem; experimentam alimentos com as mãos; tocam o corpo; colocam o dedo no nariz ou ouvido, assoam o nariz, mexem no cabelo ou penteiam-se; Enxugam o suor com as mãos, panos ou qualquer peça da vestimenta; Fumam; Tocam maçanetas, celulares ou qualquer outro objeto alheio a atividades; Fazem uso de utensílios e equipamentos sujos; manipulam dinheiro e praticam atos que possam contaminar os alimentos (Art.13)?
+6.21 Ausência do uso de máscara nasobucal (Art.12)?
+6.21.1  A manipulação de alimentos prontos para o consumo, que sofreram tratamento térmico ou que não serão submetidos a tratamento térmico, bem como manipulação de frutas, legumes e verduras higienizadas são realizadas com as mãos previamente higienizadas, ou com uso de utensílio ou luvas descartáveis (Art.12)?
+6.21.2 As luvas descartáveis são trocadas e descartadas sempre que há interrupção do procedimento, ou quando produtos e superfícies não higienizadas forem tocados com as mesmas, para evitar contaminação cruzada (Art.12)?
+6.21.3 Ausência de luva descartável de borracha, látex ou plástico em procedimento que envolva calor como cozimento e fritura, e também quando é utilizadas máquinas de moagem, tritura, mistura ou outros equipamentos que possam provocar acidentes (Art.12.1)?
+6.21.4 As luvas de malha de aço são utilizadas durante o corte e desossa de carnes, e luvas térmicas em situações de calor intenso, estão conservadas e limpas (Art.12.2)?
+6.21.5 A luva nitrílica (borracha) de cano longo é obrigatória na manipulação de produtos saneantes, durante a higienização do ambiente, equipamentos e utensílios, coleta e transporte de lixo, higienização de contentores de lixo e limpeza de sanitários (Art.12.3)?
+6.22 Os funcionários higienizam as mãos sempre que necessário e: quando chegam ao trabalho; utilizam sanitários; tossir, espirrar ou assoar o nariz; usar esfregões, panos ou materiais de limpeza; fumar recolher lixo e outros resíduos; tocar em sacarias, caixas, garrafas e sapatos; tocar em alimentos não higienizados ou crus; houver interrupção do serviço e iniciar outro; pegar dinheiro (Art.14)?
+6.23 Visitantes somente entram na área de manipulação ou elaboração de alimentos quando minimamente informados sobre boas práticas, devidamente paramentados com uniforme fornecido pela empresa (avental, rede ou gorro para proteger os cabelos e se necessário, botas ou protetores para os pés) (Art.20)?
+7.1 Os entregadores de matérias primas, ingredientes, embalagens e alimentos, assim como seus veículos apresentam-se em condições de higiene (Art.21)?
+7.2 A recepção ocorre em área exclusiva para este fim, protegida de chuva, sol, poeira e livre de materiais ou equipamentos em desuso Art. 21)?
+7.3 As embalagens de matérias primas, ingredientes, alimentos industrializados ou prontos estão limpas e integras e seus dizeres de rotulagem são conferidos (Art. 22)?
+7.4 No ato do recebimento realizam-se avaliações quantitativas, qualitativas e sensoriais (cor, gosto, odor, aroma, aparência, textura, consistência e sabor) dos produtos de acordo com os padrões de identidade e qualidade definidos (Art. 23)?
+7.5 No recebimento são conferidas e registradas em planilhas as temperaturas dos produtos que necessitem de condições especiais de conservação (congelados, pescados, carnes e demais produtos refrigerados) (Art.24)?
+7.6 Ocorre à presença de produtos em embalagens originais de madeira ou papelão desde que limpas que adentram a área de pré- preparo e os produtos em embalagens impermeáveis são lavados antes de serem abertas (Art. 35)?
+7.8 Os alimentos industrializados, embalados na ausência dos consumidores, apresentam informações de rotulagem e informações nutricionais de acordo com a legislação vigente (Art.25)?
+7.9 Reconhecem a qualidade dos seus fornecedores de ovos e as aves que realizam a postura não estão contaminadas com Salmonela (Art.43.1)?
+7.10 Ocorrem à venda de ovos com a casca rachada (Art.43.5)?
+7.11 Há conferencia de prazo de validade dos ovos (Art.43.8)?
+7.12 Ocorrem à lavagem dos ovos por estabelecimentos comerciais de alimentos ou serviços de alimentação (Art.43.10)?
+7.13 Reutilizam-se as embalagens de ovos (Art.43.9)?
+8.1 A higienização de hortifruticulas é realizada em local apropriado, com água potável e produtos desinfetantes para uso em alimentos, regulamentados na ANVISA, e atendem as instruções recomendadas pelo fabricante (Art. 39)?
+8.2 Ocorrem à higienização com remoção mecânica de partes deterioradas e de sujidades sob água corrente potável, seguida de desinfecção por imersão em solução desinfetante (Art.39)?
+8.3 Ocorrem à higienização com solução clorada onde os hortifrutícolas permanecem imersos por quinze a trinta minutos, seguidos de enxague final com água potável (Art.39)?
+8.3.1 Recomendação da diluição para a solução clorada desinfetante de higienização de hortifruticolas: dez mililitros ou uma colher de sopa rasa de hipoclorito de sódio na concentração de dois a dois vírgula cinco por cento, diluída em um litro de água potável ou seguir a recomendação do fabricante (Art.39.1)?
+8.3.2  Recomendação da diluição para a solução clorada desinfetante de higienização de hortifruticolas: vinte mililitros ou duas  colheres de sopa rasa de hipoclorito de sódio na concentração de um por cento, diluídas em um litro de água potável  ou seguir a recomendação do fabricante(Art.39.2)?
+8.4 Existem instrução facilmente visível e compreensível, sobre o correto procedimento de higienização de hortifrutícolas, no local onde ocorre essa operação (Art.40)?
+8.5 Na etapa de cocção os alimentos são submetidos a tratamento térmico por tempo determinado pelo produto, atingindo no mínimo setenta e quatro graus Celcius no seu centro geométrico, ou utilizadas outras operações combinando-se tempo de duração sob determinada temperatura, desde que sejam suficientes para assegurar a qualidade do alimento (Art. 41)?
+8.6 Na cocção por fritura os óleos e gorduras utilizados não são aquecidos a mais de cento e oitenta graus Celsius (Art.42)?
+8.6.1 A reutilização do óleo só é realizada quando este não apresentar quaisquer alterações em suas características sensoriais como cor, sabor e odor, ou não apresentar formação de espuma e fumaça, caso ocorra é desprezado (Art.42.2)?
+8.6.2 Quando reutilizado o óleo é filtrado em filtros próprios (Art.42.3)?
+8.6.3 O óleo não é descartado na rede de esgoto e nem em águas pluviais (Art.42.4)?
+8.6.4 Os óleos de frituras utilizados e inservíveis são reciclados por empresas que os utilizam para a fabricação de biodiesel, sabões e tintas (Art. 42.5)?
+8.7 Não há cruzamento de alimentos crus, semi preparados e prontos para o consumo (Art. 36)?
+8.8 Todo o descongelamento de alimentos é efetuado segundo recomendação do fabricante, não ocorre descongelamento em temperatura ambiente (Art. 37)?
+8.9 Todo o descongelamento rápido é realizado no micro-ondas e o descongelamento lento efetuado sobre refrigeração em temperatura inferior a cinco graus Celsius (Art.37)?
+8.10 Para a dessalga de carnes e pescados são seguidas as recomendações do fabricante, ou utilizando-se de água potável sob-refrigeração até cinco graus Celsius ou em fervura (Art. 38)?
+8.11 São realizadas a coleta de amostras de pratos prontos elaborados em serviços de alimentação, que ofereçam refeições prontas para alimentação coletiva, (Art.52)?
+8.11.1 Os alimentos são colhidos na segunda hora do tempo de distribuição, utilizando-se os mesmos utensílios empregados na distribuição (Art.52)?
+8.11.2 A técnica de coleta segue o seguinte método: o responsável pela coleta procede à higienização das mãos; identifica às embalagens higienizadas, com o nome do estabelecimento, nome do produto, data, horário e seu nome, abrem a embalagem ou o saco sem tocá-lo internamente nem soprá-lo; coloca a amostra do alimento, retira o ar e fecha a embalagem (Art.52)?
+8.11.3 A quantidade de amostra coletada é de no mínimo 100g as amostras são armazenadas por 72 horas sob-refrigeração até 4ºC e líquidos somente são armazenados por 72 horas sob-refrigeração até 4ºC (Art.52)?
+8.11.4 Alimentos quentes que foram distribuídos quentes são armazenados por 72 horas sob congelamento até -18ºC (Art.52)?
+8.12 Ocorrem à utilização de ovos pasteurizados, desidratados ou cozidos em preparações sem cocção, como maioneses, cremes, mousses entre outros (Art. 43)?
+8.12.1 Evita-se misturar o conteúdo do ovo com a superfície externa da casca (Art. 43)?
+8.12.2 Utilizam-se ovos com casca rachada ou suja em preparações de alimentos (Art.43)?
+8.12.3 Ocorrem preparações onde os ovos estejam crus ou mal cozidos (Art.43)?
+8.12.4 Nas preparações quentes: ovos são cozidos por 7 minutos em fervura e ovos fritos apresentam a gema dura (Art.43)?
+8.13 Ocorre reutilização de alimentos para fins de doação gratuita, incluindo-se sobras em quaisquer das etapas da produção, desde que tenha sido elaborada com observância das Boas Práticas, descritas nesta norma entre outras estabelecidas pela legislação sanitária vigente, sendo que as sobras de alimentos não incluem restos dos pratos dos consumidores (Art.51)?
+9.1 As matérias primas, ingredientes, embalagens e outros produtos são armazenados em local limpo, organizado, ventilado, sem luz solar direta, livre de entulho ou materiais tóxicos de acordo com suas características intrínsecas e recomendação do produtor (Art.26)?
+9.2 Há separação no armazenamento dos alimentos, materiais de limpeza, embalagens e descartáveis (Art.26)?
+9.3 Existem caixas de madeiras nas áreas de armazenamento, na existência destas devem apresentar rotulagem e ser armazenadas em equipamento de refrigeração exclusivo, de uso único provenientes diretamente do fabricante ou produtor para acondicionamento de peixes e frutas e separadas dos demais produtos (Art.27)?
+9.4 As caixas de papelão permanecem sob-refrigeração ou congelamento, se armazenadas em local delimitado, ou equipamento exclusivo não apresentam sinais de umidade ou bolores (Art.27)?
+9.5 Os alimentos ou recipientes com alimentos não estão em contato direto com o piso, as matérias primas, ingredientes e embalagens estão armazenadas sobre palhetes, prateleiras ou estrados, mantendo distancia do forro, paredes e piso garantindo adequada ventilação, limpeza e quando necessária desinfecção do local (Art.28)?
+9.6 Os palhetes, prateleiras e estrados são de material liso, resistente, impermeável e lavável (Art.28)?
+9.7 Os produtos reprovados com validade vencida ou para devolução são identificados e colocados em local apropriado fora da área de produção (Art.29)?
+9.8 Ausências de embalagens sujas, rasgadas e /ou furadas, latas amassadas, com ferrugem e /ou estufadas para a comercialização dos alimentos (Art.29)?
+9.10 O acondicionamento dos alimentos destinados à refrigeração ocorre em volumes que permitam adequado resfriamento do centro geométrico do produto (Art. 31)?
+9.11 Se o armazenamento de diferentes alimentos ocorre no mesmo refrigerador  estes está disposto da seguinte forma: prontos ao consumo nas prateleiras superiores, os pré-preparados nas prateleiras do meio e os crus nas prateleiras inferiores, separados entre si e dos demais (Art.31)?
+9.12 O refrigerador quando utilizado para armazenar mais de um alimento esta regulado para o alimento que necessitar da temperatura mais baixa (Art. 31)?
+9.13 Os produtos crus ou minimamente processados, ou que exalem odor ou exsudem estão armazenados em equipamentos diferentes dos produtos termicamente processados (Art. 32)?
+9.14 Ocorre à estocagem de alimentos sob condensadores e evaporadores de câmaras frigoríficas (Art. 32)?
+9.15 As temperaturas de armazenamento de produtos sob congelamento e refrigeração obedecem a ás recomendações do fabricante indicadas nos rótulos (Art.34)?
+9.16 O armazenamento sob congelamento é realizado à temperatura de -12ºC ou menor temperatura de acordo com as recomendações dos fabricantes  (Art. 24)?
+9.16.1 O armazenamento sob-refrigeração de pescados é realizado em temperatura de 2ºC a 3ºC ou conforme recomendação do estabelecimento produtor (Art.24)?
+9.16.2 O armazenamento sob-refrigeração de carnes é realizado em temperatura de 4ºC a 7ºC ou conforme recomendação do frigorifico produtor (Art.24)?
+9.16.3 O armazenamento sob-refrigeração dos demais produtos é realizado em temperatura de 4ºC a 10ºC ou conforme recomendação do fabricante (Art.24)?
+9.17 O resfriamento e armazenamento de alimento pré-preparado e preparado é realizado em equipamento de refrigeração (Art.44)?
+9.18 Na refrigeração os produtos estão identificados com denominação, data de preparo e prazo de validade (Art. 44)?
+9.19 O processo de resfriamento do alimento preparado ocorre de forma a minimizar o risco de contaminação cruzada e sua permanência em temperaturas que favoreçam a multiplicação microbiana (Art.45)?
+9.20 A temperatura do alimento preparado é reduzida de sessenta graus Celsius a dez graus Celsius em até duas horas, o mesmo deve ser conservado sob-refrigeração a temperaturas inferiores a cinco graus Celsius, ou congelado a temperatura igual ou inferior a dezoito graus Celsius negativos (Art.45)?
+9.21 Após o descongelamento nenhum produto é recongelado (Art.37)?
+9.22 Alimentos preparados crus, manipulados, parcialmente cozidos, ou prontos, são armazenados sob-refrigeração, protegidos e identificados com designação, data de preparo e validade (Art.30)?
+9.23 Em caso de matérias primas e ingredientes que sofreram fracionamento ou transferência de embalagens originais para outras embalagens de armazenamento, estes foram manipulados com uso de utensilio exclusivo e transferidos também o rótulo do produto original ou foram colocadas etiquetas com nome do fornecedor, nome e marca do produto, modo de conservação, validade e data de transferência (Art. 30)?
+9.24 Critérios de congelamento: Os produtos seguem os seguintes critérios de tempo máximo de armazenamento de acordo com a temperatura: 0 a -5ºC (10 dias); -6 a -10ºC (20 dias); -11 a -18ºC (30 dias); < -18ºC (90 dias) (Art. 34)?
+9.25 Critérios de produtos resfriados: pescados e seus produtos manipulados crus permanecem sob-refrigeração até 2ºC por 3dias (Art. 34)?
+9.26 Pescados pós-cocção permanecem sob-refrigeração até 2ºC por 1 dia (Art. 34)?
+9.27 Alimentos pós-cocção, exceto pescados permanecem sob refrigeração até 4ºC por 3 dias dias (Art. 34)?
+9.28 Carne bovina, suína, aves entre  outras e seus produtos manipulados crus permanecem sob-refrigeração até 4ºC por 3 dias (Art. 34)?
+9.29 Espetos mistos, bife rolê, carnes empanadas cruas e preparações com carne moída permanecem sob-refrigeração até 4ºC por 2 dias (Art.34)?
+9.30 Frios e embutidos, fatiados, picados ou moídos permanecem sob-refrigeração até 4ºC por 3 dias (Art.34)?
+9.31 Maionese e misturas de maionese com outros alimentos permanecem sob-refrigeração até 4ºC por 2 dias (Art.34)?
+9.32 Sobremesas e outras preparações com laticínios permanecem sob-refrigeração  até 4ºC por  3 dias (Art.34)?
+9.33 Demais alimentos preparados permanecem sob-refrigeração até 4ºC por 3 dias (Art.34)?
+9.34 Produtos de panificação e confeitaria com coberturas e recheios, prontos para o consumo permanecem sob-refrigeração até 5º por 5 dias (Art.34)?
+9.35 Frutas, verduras e legumes higienizados, fracionados ou descascados; sucos e polpas de frutas permanecem sob-refrigeração até 5º por 3 dias (Art.34)?
+9.36 Leite e derivados permanecem sob-refrigeração até 7ºC por 5 dias (Art.34)?
+9.37 Ovos permanecem sob-refrigeração até 10º por 7 dias (Art.34)?
+9.38 Armazenamento do ovo ocorre sob-refrigeração (Art.43)?
+9.39 Os serviços de alimentação e estabelecimentos comerciais que transportam alimentos apresenta relação individualizada de cada veículo transportador e suas características técnicas ao órgão competente de vigilância sanitária (Art. 53)?
+9.40 Quanto às características técnicas dos veículos transportadores de alimentos, observa-se o tipo de compartilhamento de carga, cujo revestimento interno é liso, impermeável, atóxico e resistente, utilizados para transportar alimentos manipulados prontos ou não para o consumo (Art.53)?
+9.41 Existe controle térmico no compartimento de carga, conforme o tipo de produto alimentício transportado (Art.53)?
+9.42 Os veículos possuem cabine do condutor isolada de um compartimento de carga fechada (Art. 54)?
+9.43 Os veículos transportadores apresentam-se em bom estado de conservação, livres de produtos, substancias, animais, pessoas e objetos estranhos à atividade de transporte de alimentos, higienizados e com temperatura do compartimento de carga conforme a carga transportada (Art. 54)?
+9.44 Existe procedimento operacional padrão que descreva o método de higienização dos veículos e sua frequência (Art.55)?
+9.45 Sendo o método químico pelo emprego de produtos de limpeza e desinfecção registrados na ANVISA há descrição do método, frequência, ingredientes ativos e concentração das soluções de limpeza e desinfecção, temperaturas e tempo de contato com as superfícies, sem presença de resíduos ou odores (Art. 55.1)?
+9.46 Sendo o método físico por emprego de vapor devem estar descrito o método, frequência de realização, temperatura e tempo de contato do vapor com as superfícies (Art.55.2)?
+9.47 Ocorre contato direto dos ingredientes e matérias primas alimentícias com o piso do compartimento de carga que são separados e protegidos sobre prateleiras, estrados ou palhetes utilizados para separar e proteger a carga, sendo higienizados da mesma forma que o compartilhamento de carga (Art.56)?
+9.48 Ocorre o transporte concomitante, num mesmo compartilhamento de carga de alimentos preparados ou industrializados crus, semi-processados ou prontos para o consumo com ingredientes, matérias-primas e embalagens que representem risco de contaminação cruzada (Art.57)?
+9.49 Durante o transporte de alimentos quando a volumes a serem fracionados, os produtos apresentam rotulo, com nome do produto, nome da empresa produtora e endereço completo, CNPJ, prazo de validade e instruções de conservação (Art. 58)?
+9.50 O transporte do alimento é realizado em condições de tempo e temperatura que impeçam a contaminação e desenvolvimento de microrganismos (Art.59)?
+9.51 São conservados sob-refrigeração ou congelamento os alimentos perecíveis preparados ou industrializados crus, semi-processados ou prontos, transportados em compartimento de carga fechado com temperatura controlada por termômetro fixo, calibrado e de fácil leitura (Art.60)?
+9.52 Durante o carregamento o compartilhamento de carga está pré-condicionado com a temperatura do produto alimentício que exigir menor temperatura de conservação (Art.60)?
+9.53 No período de tempo do transporte por horas ou dias, os alimentos perecíveis preparados ou industrializados, crus, semi-processados ou prontos são conservados sob congelamento ou refrigeração em conformidade com o Art.24 desta lei (Art.61)?
+10.1 Os alimentos expostos para o consumo imediato estão protegidos contra poeiras, insetos e outras pragas urbanas, e contra contaminantes oriundos de consumidores como saliva, cabelo, entre outros (Art.46)?
+10.2 Alimentos expostos para o consumo imediato estão distantes de saneantes, produtos de higiene e demais produtos tóxicos (Art.46)?
+10.3 Os alimentos expostos para o consumo imediato obedecem aos critérios de tempos X temperaturas: Alimentos quentes mínimo de 60º com tempo máximo de exposição de 6 horas, alimentos quentes abaixo de 60º tempo máximo de exposição de 1 hora; Alimentos frios até 10º tempo máximo de exposição de 4 horas e alimentos frios entre 10º e 21º tempo máximo para exposição de 2 horas (Art.47)?
+10.4 Os alimentos quentes e frios que não apresentam os critérios de tempo e temperatura estabelecidos são desprezados (Art.47)??
+10.5 A água do balcão térmico é trocada diariamente e mantida a temperatura entre oitenta e noventa graus Celsius, ocorre aferição durante o tempo de distribuição (Art.48)?
+10.6 Os ornamentos localizados na área de consumação ou refeitórios não constituem fonte de contaminação para alimentos preparados, não estão entre o fluxo de ar e os alimentos e nem sobre os balcões de distribuição (Art.49)?
+10.7 Ocorre o uso de ventiladores e ar condicionado, porém, o fluxo de ar não incide diretamente sobre os ornamentos e alimentos (Art.49)?
+10.8 O recebimento de dinheiro, cartões ou outras formas de pagamento ocorrem em área específica, os funcionários responsáveis por essa atividade não manipulam alimentos (Art.50)?
+11.1 O estabelecimento dispõe de Manual de Boas Práticas e de Procedimentos Padrão Padronizados (Art.96)?
+11.2 Os documentos estão organizados, aprovados, datados e assinados pelo responsável e acessível aos funcionários e autoridades (Art.96)?
+11.3 Estão descrito e implementado os Procedimentos Padrão Padronizados para higiene e saúde dos funcionários (Art.96.1)?
+11.4 Existem o Procedimento Padrão Padronizado para capacitação dos funcionários em Boas Práticas, com conteúdo mínimo estabelecido pelo Art. 17 desta legislação (Art.96.2)?
+11.5 Existem o Procedimento Padrão Padronizado para controle de qualidade na recepção de mercadorias (Art.96.3)?
+11.6 Existem o Procedimento Padrão Padronizado para transporte de alimentos (Art.96.4)?
+11.7 Existem o Procedimentos Padrão Padronizado para higienização e manutenção das instalações, equipamentos e móveis (Art.96.5)?
+11.8 Existe o Procedimento Padrão Padronizado para higienização do reservatório e controle de potabilidade de agua (Art.96.6)?
+11.9 Existe o Procedimento Padrão Padronizado para controle integrado de vetores e pragas urbanas (Art.96.7)?
+11.10 O Procedimento Padrão Padronizado relacionado à saúde dos funcionários é especificado os exames médicos realizados, periodicidade de sua execução e medidas adotada sem casos de problemas detectados (Art.97)?
+11.11 O Procedimento Padrão Padronizado referente às operações de higienizações contem a descrição dos procedimentos de limpeza e desinfecção, com principio ativo germicida, concentração de uso, tempo de contato e temperatura, e ainda a manutenção e calibração de equipamentos (Art.98)?
+11.12 No Procedimento Padrão Padronizado relacionado ao controle integrado de pragas possuem medidas preventivas e corretivas para impedir a atração, abrigo, acesso e proliferação (Art.99)?

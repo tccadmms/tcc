@@ -27,6 +27,10 @@ public class Pergunta {
         this.pergunta = pergunta;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
     public Legislacao getLegislacao() {
         return legislacao;
     }

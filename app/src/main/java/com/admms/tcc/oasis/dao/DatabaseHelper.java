@@ -91,8 +91,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             new PopulatePergunta().populate(this, context, R.raw.cvs513,legislacao);
             legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"PRT nº:78/2009 & PRT nº:325/2010").query().get(0);
             new PopulatePergunta().populate(this, context, R.raw.prt783250910,legislacao);
-            legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"DVS nº:210/2014").query().get(0);
-            new PopulatePergunta().populate(this, context, R.raw.dvs2102014,legislacao);
+
 
         } catch (SQLException e) {
             e.printStackTrace();

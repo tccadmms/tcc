@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24dp"
-                    android:text="DVS nº: 210/2014"
+                    android:text="IN nº: 04/2014"
                     android:id="@+id/textView"
                     android:layout_column="2"
                     android:layout_span="3"

@@ -51,7 +51,7 @@
         <activity android:name=".controller.Prt78_325Activity" />
         <activity android:name=".controller.Prt2619Activity" />
         <activity android:name=".controller.Cvs5Activity" />
-        <activity android:name=".controller.Dvs210Activity"></activity>
+        <activity android:name=".controller.In04Activity"></activity>
     </application>
 
 </manifest>

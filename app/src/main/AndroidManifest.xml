@@ -16,17 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".controller.MainActivity"
+            android:name=".controller.principal.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".controller.CadastroActivity"
+            android:name=".controller.principal.CadastroActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".controller.ItensDeAvaliacaoActivity" />
-        <activity android:name=".controller.ArmazenamentoActivity" />
-        <activity android:name=".controller.DocumentacaoActivity" />
-        <activity android:name=".controller.EdificacaoActivity" />
-        <activity android:name=".controller.DBPActivity">
+        <activity android:name=".controller.rdc216.Rdc216ArmazenamentoActivity" />
+        <activity android:name=".controller.rdc216.Rdc216DocumentacaoActivity" />
+        <activity android:name=".controller.rdc216.Rdc216EdificacaoActivity" />
+        <activity android:name=".controller.principal.DBPActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,20 +37,20 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".controller.PopUpActivity" />
-        <activity android:name=".controller.Rdc216Activity" />
-        <activity android:name=".controller.HigieneActivity" />
-        <activity android:name=".controller.IngredientesActivity" />
-        <activity android:name=".controller.ManipuladorActivity" />
-        <activity android:name=".controller.VetoresActivity" />
-        <activity android:name=".controller.PreparoActivity" />
-        <activity android:name=".controller.ResiduosActivity" />
-        <activity android:name=".controller.ResponsavelActivity" />
-        <activity android:name=".controller.SaneamentoActivity" />
-        <activity android:name=".controller.Prt78_325Activity" />
-        <activity android:name=".controller.Prt2619Activity" />
-        <activity android:name=".controller.Cvs5Activity" />
-        <activity android:name=".controller.In04Activity"></activity>
+        <activity android:name=".controller.principal.PopUpActivity" />
+        <activity android:name=".controller.rdc216.Rdc216Activity" />
+        <activity android:name=".controller.rdc216.Rdc216HigieneActivity"></activity>
+        <activity android:name=".controller.rdc216.Rdc216IngredientesActivity" />
+        <activity android:name=".controller.rdc216.Rdc216ManipuladorActivity" />
+        <activity android:name=".controller.rdc216.Rdc216VetoresActivity" />
+        <activity android:name=".controller.rdc216.Rdc216PreparoActivity" />
+        <activity android:name=".controller.rdc216.Rdc216ResiduosActivity" />
+        <activity android:name=".controller.rdc216.Rdc216ResponsavelActivity" />
+        <activity android:name=".controller.rdc216.Rdc216SaneamentoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325Activity" />
+        <activity android:name=".controller.prt2619.Prt2619Activity" />
+        <activity android:name=".controller.cvs5.Cvs5Activity" />
+        <activity android:name=".controller.in04.In04Activity" />
     </application>
 
 </manifest>

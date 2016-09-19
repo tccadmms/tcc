@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="CNPJ:"
+            android:singleLine="true"
+            android:maxLength="18"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_cnpj" />
 
@@ -33,6 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Razão Social:"
+            android:maxLength="40"
+            android:singleLine="true"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_razaoSocial"/>
 
@@ -43,6 +47,8 @@
             android:hint="Email:"
             android:inputType="textEmailAddress"
             android:ems="10"
+            android:singleLine="true"
+            android:maxLength="255"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_email"/>
 
@@ -52,6 +58,8 @@
             android:hint="Telefone:"
             android:inputType="phone"
             android:ems="10"
+            android:singleLine="true"
+            android:maxLength="18"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_telefone"/>
 
@@ -59,6 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Cidade:"
+            android:maxLength="255"
+            android:singleLine="true"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_cidade"/>
 
@@ -87,6 +97,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="CEP:"
+            android:singleLine="true"
+            android:maxLength="10"
             android:inputType="textPostalAddress"
             android:ems="8"
             android:textColorHint="#000000"
@@ -96,6 +108,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ramo de Atividade:"
+            android:singleLine="true"
+            android:maxLength="40"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_ramoDeAtividade"/>
 
@@ -103,6 +117,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Proprietário do Estabelecimento:"
+            android:singleLine="true"
+            android:maxLength="50"
             android:textColorHint="#000000"
             android:id="@+id/cadastro_proprietarioDoEstabelecimento"/>
         <TableRow

@@ -24,7 +24,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_armazenamento_rdc216);
 
-        RadioGroup r_p1 = (RadioGroup) findViewById(R.id.armazenamento_p1);
+        final RadioGroup r_p1 = (RadioGroup) findViewById(R.id.armazenamento_p1);
 
 
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -64,7 +64,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
             }
         });
 
-        RadioGroup r_p2 = (RadioGroup) findViewById(R.id.armazenamento_p2);
+        final RadioGroup r_p2 = (RadioGroup) findViewById(R.id.armazenamento_p2);
 
 
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -104,7 +104,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
             }
         });
 
-        RadioGroup r_p3 = (RadioGroup) findViewById(R.id.armazenamento_p3);
+        final RadioGroup r_p3 = (RadioGroup) findViewById(R.id.armazenamento_p3);
 
 
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -144,7 +144,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
             }
         });
 
-        RadioGroup r_p4 = (RadioGroup) findViewById(R.id.armazenamento_p4);
+        final RadioGroup r_p4 = (RadioGroup) findViewById(R.id.armazenamento_p4);
 
 
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -184,7 +184,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
             }
         });
 
-        RadioGroup r_p5 = (RadioGroup) findViewById(R.id.armazenamento_p5);
+        final RadioGroup r_p5 = (RadioGroup) findViewById(R.id.armazenamento_p5);
 
 
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -224,7 +224,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
             }
         });
 
-        RadioGroup r_p6 = (RadioGroup) findViewById(R.id.armazenamento_p6);
+        final RadioGroup r_p6 = (RadioGroup) findViewById(R.id.armazenamento_p6);
 
 
         r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -268,8 +268,9 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         armazenamentoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProArmazenamento = new Intent(Rdc216ArmazenamentoActivity.this, Rdc216Activity.class);
-                startActivity(intentVaiProArmazenamento);
+                    Intent intentVaiProArmazenamento = new Intent(Rdc216ArmazenamentoActivity.this, Rdc216Activity.class);
+                    startActivity(intentVaiProArmazenamento);
+
             }
         });
 

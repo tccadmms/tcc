@@ -39,7 +39,7 @@
 
         <activity android:name=".controller.principal.PopUpActivity" />
         <activity android:name=".controller.rdc216.Rdc216Activity" />
-        <activity android:name=".controller.rdc216.Rdc216HigieneActivity"></activity>
+        <activity android:name=".controller.rdc216.Rdc216HigieneActivity" />
         <activity android:name=".controller.rdc216.Rdc216IngredientesActivity" />
         <activity android:name=".controller.rdc216.Rdc216ManipuladorActivity" />
         <activity android:name=".controller.rdc216.Rdc216VetoresActivity" />
@@ -51,6 +51,7 @@
         <activity android:name=".controller.prt2619.Prt2619Activity" />
         <activity android:name=".controller.cvs5.Cvs5Activity" />
         <activity android:name=".controller.in04.In04Activity" />
+        <activity android:name=".controller.rdc216.Rdc216ExposicaoActivity"></activity>
     </application>
 
 </manifest>

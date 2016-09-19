@@ -4,7 +4,7 @@
     <string name="title_activity_principal">PrincipalActivity</string>
     <string name="title_spinner_estado">Estado</string>
     <string name="title_spinner_legislacao">Legislação</string>
-    <string name="required_message">O Campo Razão Social é Obrigatório!</string>
+    <string name="required_message">Campo Obrigatório!</string>
     <string-array name="estado_array">
         <item>AMAZONAS - AM</item>
         <item>BAHIA - BA</item>

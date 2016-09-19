@@ -19,6 +19,7 @@ public class Rdc216Activity extends Activity {
         ImageButton documentacao = (ImageButton) findViewById(R.id.iten_documentacao_rdc216);
         ImageButton edificacao = (ImageButton) findViewById(R.id.iten_edificacao_rdc216);
         ImageButton higiene = (ImageButton) findViewById(R.id.iten_higiene_rdc216);
+        ImageButton exposicao = (ImageButton) findViewById(R.id.iten_exposicao_rdc216);
         ImageButton ingredientes = (ImageButton) findViewById(R.id.iten_ingredientes_rdc216);
         ImageButton manipulador = (ImageButton) findViewById(R.id.iten_manipulador_rdc216);
         ImageButton vetores = (ImageButton) findViewById(R.id.iten_vetores_rdc216);
@@ -49,6 +50,13 @@ public class Rdc216Activity extends Activity {
             public void onClick(View view) {
                 Intent intentVaiPraEdificacao = new Intent(Rdc216Activity.this, Rdc216EdificacaoActivity.class);
                 startActivity(intentVaiPraEdificacao);
+            }
+        });
+        exposicao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentVaiPraExposicao = new Intent(Rdc216Activity.this, Rdc216ExposicaoActivity.class);
+                startActivity(intentVaiPraExposicao);
             }
         });
         higiene.setOnClickListener(new View.OnClickListener() {

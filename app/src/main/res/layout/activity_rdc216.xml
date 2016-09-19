@@ -67,68 +67,68 @@
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
 
-                <ImageButton android:id="@+id/iten_higiene_rdc216"
+                <ImageButton android:id="@+id/iten_exposicao_rdc216"
                     android:layout_column="4"
+                    android:background="@drawable/exposicao"
+                    android:layout_width="108dp"
+                    android:layout_height="92dp"
+                    android:layout_margin="15dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageButton android:id="@+id/iten_higiene_rdc216"
+                    android:layout_column="2"
                     android:background="@drawable/higiene"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
 
                 <ImageButton android:id="@+id/iten_ingredientes_rdc216"
-                    android:layout_column="2"
+                    android:layout_column="4"
                     android:background="@drawable/ingredientes"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
-
-                <ImageButton android:id="@+id/iten_manipulador_rdc216"
-                    android:layout_column="4"
-                    android:background="@drawable/manipulador"
-                    android:layout_width="108dp"
-                    android:layout_height="92dp"
-                    android:layout_margin="15dp"/>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageButton android:id="@+id/iten_vetores_rdc216"
+                <ImageButton android:id="@+id/iten_manipulador_rdc216"
                     android:layout_column="2"
+                    android:background="@drawable/manipulador"
+                    android:layout_width="108dp"
+                    android:layout_height="92dp"
+                    android:layout_margin="15dp"/>
+
+                <ImageButton android:id="@+id/iten_vetores_rdc216"
+                    android:layout_column="4"
                     android:background="@drawable/vetores"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
 
-                <ImageButton android:id="@+id/iten_preparo_rdc216"
-                    android:layout_column="4"
-                    android:background="@drawable/preparo"
-                    android:layout_width="108dp"
-                    android:layout_height="92dp"
-                    android:layout_margin="15dp"/>
-
 
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageButton android:id="@+id/iten_residuos_rdc216"
+                <ImageButton android:id="@+id/iten_preparo_rdc216"
                     android:layout_column="2"
-                    android:background="@drawable/residuos"
+                    android:background="@drawable/preparo"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
 
-                <ImageButton android:id="@+id/iten_responsavel_rdc216"
+                <ImageButton android:id="@+id/iten_residuos_rdc216"
                     android:layout_column="4"
-                    android:background="@drawable/responsavel"
+                    android:background="@drawable/residuos"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
@@ -139,12 +139,20 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
-                <ImageButton android:id="@+id/iten_saneamento_rdc216"
+                <ImageButton android:id="@+id/iten_responsavel_rdc216"
                     android:layout_column="2"
+                    android:background="@drawable/responsavel"
+                    android:layout_width="108dp"
+                    android:layout_height="92dp"
+                    android:layout_margin="15dp"/>
+
+                <ImageButton android:id="@+id/iten_saneamento_rdc216"
+                    android:layout_column="4"
                     android:background="@drawable/saneamento"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>
+
             </TableRow>
         </TableLayout>
     </LinearLayout>

@@ -11,7 +11,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        tools:context=".controller.rdc216.Rdc216EdificacaoActivity">
+        tools:context=".controller.cvs5.Cvs5Activity.Cvs5EdificacaoActivity">
 
         <TextView
             android:layout_width="match_parent"
@@ -22,24 +22,6 @@
             android:textColor="#000000"
             android:textStyle="bold"
             android:textSize="24dp"/>
-
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Áreas Externas"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -52,12 +34,12 @@
                 android:id="@+id/edificacao_pergunta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.1 Estão livres de objetos em desuso ou estranhos ao ambiente (4.1.7)?"
+                android:text="1.1 A área externa é livre de focos de insalubridade, ausência de lixo, objetos em desuso, animais, poeira, água estagnada e de vetores e pragas urbanas (Art. 77)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
 
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,11 +99,11 @@
                 android:id="@+id/edificacao_pergunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.2 Livre da presença de animais (4.1.7)?"
+                android:text="1.2 O acesso é direto e independente, não comum a outros usos (habitação) (Art. 77)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -173,24 +155,6 @@
         </TableRow>
 
 
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Áreas Internas"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -202,11 +166,11 @@
                 android:id="@+id/edificacao_pergunta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.3 Estão livres de objetos em desuso ou estranhos ao ambiente (4.1.7)?"
+                android:text="1.3 A construção atende as normas de edificações vigentes estaduais ou municipais (Art. 77)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -267,11 +231,11 @@
                 android:id="@+id/edificacao_pergunta4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.4 Livre da presença de animais (4.1.7)?"
+                android:text="1.4 A garantia de acesso a pessoas com deficiência ou mobilidade reduzida (Art. 77)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -321,6 +285,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -332,11 +297,11 @@
                 android:id="@+id/edificacao_pergunta5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.5 São projetadas de forma a possibilitar um fluxo ordenado e sem cruzamentos em todas as etapas de preparação de alimentos (4.1.1)?"
+                android:text="1.5 Em todas as etapas do processo produtivo as instalações são separadas por meios físicos, ou outras medidas efetivas, facilitandoos procedimentos de higienização e manutenção, por meio de  fluxos contínuos, sem cruzamento de etapas e contaminação aos utensílios limpos (Art.78)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -397,11 +362,11 @@
                 android:id="@+id/edificacao_pergunta6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.6 São projetadas para facilitar as operações de manutenção, limpeza e, quando for o caso, desinfecção (4.1.1)?"
+                android:text="1.6 Se não há áreas separadas para as atividades, existe locais específicos para o pré-preparo e preparo dos alimentos (Art.78)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -462,11 +427,11 @@
                 android:id="@+id/edificacao_pergunta7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.7 O acesso às instalações é independente e não comum a outros usos (4.1.1)?"
+                android:text="1.7 Existe lavatório para a higienização das mãos dos consumidores (Art. 95)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -527,11 +492,11 @@
                 android:id="@+id/edificacao_pergunta8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.8 Existe controle do acesso de pessoal (4.1.1)?"
+                android:text="1.8 A área de armazenamento de botijões de gás liquefeitos de petróleo é instalada em local ventilado, protegido da passagem e entrada de pessoas estranhas e atende o disposto em legislação específica (Art.75)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -581,6 +546,23 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pisos"
+            android:textColor="#000000"
+            android:layout_weight="0.91"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold|italic"/>
+
+    </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -592,11 +574,11 @@
                 android:id="@+id/edificacao_pergunta9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.9 O dimensionamento é compatível com todas as operações (4.1.2)?"
+                android:text="1.9 É de material liso, antiderrapante, resistente, impermeável, lavável, integro, sem trincas, vazamentos ou infiltrações (Art.85)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -657,7 +639,7 @@
                 android:id="@+id/edificacao_pergunta10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.10 Existe separação entre as diferentes atividades por meios físicos ou por outros meios eficazes (4.1.2)?"
+                android:text="1.10 Tem inclinação em direção aos ralos e não permite que a água fique estagnada (Art.85)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -722,11 +704,11 @@
                 android:id="@+id/edificacao_pergunta11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.11 As instalações são abastecidas de água corrente (4.1.5)?"
+                android:text="1.11 Em áreas que permitam existência, os ralos são sifonados, e as grelhas possuem dispositivos que permitem o fechamento (Art.85)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -776,6 +758,24 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paredes"
+            android:textColor="#000000"
+            android:layout_weight="0.91"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold|italic"/>
+
+    </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -787,7 +787,7 @@
                 android:id="@+id/edificacao_pergunta12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.12 As instalações dispõem de conexões com rede de esgoto ou fossa séptica (4.1.5)?"
+                android:text="1.12 São sólidas, com acabamento liso e impermeável (Art.86)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -849,7 +849,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pisos"
+                android:text="Portas"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -870,11 +870,11 @@
                 android:id="@+id/edificacao_pergunta13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.13 Possuem revestimentos lisos, impermeáveis e laváveis (4.1.3)? "
+                android:text="1.13 As portas devem ser ajustadas aos batentes e de fácil limpeza (Art.88)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -935,11 +935,11 @@
                 android:id="@+id/edificacao_pergunta14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.14 São mantidos íntegros, conservados, livres de rachaduras, trincas, vazamentos, infiltrações, bolores e descascamentos (4.1.3)?"
+                android:text="1.14 As portas de entrada para o armazenamento e manipulação possuem fechamento automático e protetor na parte inferior (Art. 88)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -997,7 +997,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Paredes"
+                android:text="Teto"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -1008,21 +1008,21 @@
         </TableRow>
 
         <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_marginTop="15dp">
-
-
-        <TextView
-            android:id="@+id/edificacao_pergunta15"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1.15 Possuem revestimentos lisos, impermeáveis e laváveis (4.1.3)? "
-            android:textColor="#000000"
-            android:layout_weight="0.91"
-            android:layout_gravity="center_horizontal"/>
-            </TableRow>
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/edificacao_pergunta15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.15 São de acabamento liso, impermeável e materiais não inflamáveis (Art. 87)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1071,7 +1071,7 @@
                 android:id="@+id/edificacao_descricao_p15"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
-    </TableRow>
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -1084,11 +1084,11 @@
                 android:id="@+id/edificacao_pergunta16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.16 São mantidas íntegras, conservadas, livres de rachaduras, trincas, vazamentos, infiltrações, bolores e descascamentos (4.1.3)?"
+                android:text="1.16 São isentos de goteiras, vazamentos, umidade, trincas, rachaduras, bolores, infiltrações e descascamento (Art. 87)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1146,7 +1146,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tetos/Forro"
+                android:text="Janelas"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -1167,11 +1167,11 @@
                 android:id="@+id/edificacao_pergunta17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.17 Possuem revestimentos lisos, impermeáveis e laváveis (4.1.3)? "
+                android:text="1.17 Janelas são providas de telas milimétricas removíveis para facilitar a limpeza, sem falhas de revestimento e ajustadas aos batentes (Art.89)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1232,11 +1232,11 @@
                 android:id="@+id/edificacao_pergunta18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.18 São mantidos íntegros, conservados, livres de rachaduras, trincas, goteiras, vazamentos, infiltrações, bolores e descascamentos (4.1.3)?"
+                android:text="1.18 As janelas devem ser ajustadas aos batentes de modo que os raios solares não incidam diretamente sobre os funcionários, alimentos ou equipamentos mais sensíveis ao calor (Art.89)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1294,7 +1294,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Portas"
+                android:text="Caixas de gosdura e esgoto"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -1315,11 +1315,11 @@
                 android:id="@+id/edificacao_pergunta19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.19 São mantidas ajustadas aos batentes (bem fechadas/ vedadas) e estão bem conservadas (4.1.4)?"
+                android:text="1.19 O sistema de esgoto é ligado à rede pública de coleta (Art.71)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1380,11 +1380,11 @@
                 android:id="@+id/edificacao_pergunta20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.20 Na área de preparação e armazenamento possuem fechamento automático (4.1.4)?"
+                android:text="1.20 Se utilizado um sistema de esgoto alternativo ocorre o tratamento adequado e seu destino é aprovado pela autoridade ambiental competente (Art.71)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1445,11 +1445,11 @@
                 android:id="@+id/edificacao_pergunta21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.21 Na área de preparação e armazenamento são providas de telas milimetradas (4.1.4)?"
+                android:text="1.21 Os despejos das pias de produção passam por uma caixa de gordura fora da área de manipulação e armazenamento sendo higienizada periodicamente (Art.72)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1507,7 +1507,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Janelas e Outras Aberturas (sistema de exaustão)"
+                android:text="Luminárias"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -1528,11 +1528,11 @@
                 android:id="@+id/edificacao_pergunta22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.22 As janelas são mantidas ajustadas aos batentes (bem fechadas/ vedadas) e estão bem conservadas (4.1.4)?"
+                android:text="1.22 O ambiente tem iluminação uniforme, sem ofuscamentos e não deve alterar as características sensoriais dos alimentos (Art.90)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1593,11 +1593,11 @@
                 android:id="@+id/edificacao_pergunta23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.23 Na área de preparação e armazenamento são providas de telas milimetradas (4.1.4)?"
+                android:text="1.23 As lâmpadas e luminárias encontram-se protegidas contra explosão e quedas acidentais (Art.90)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1647,6 +1647,25 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instalações elétricas"
+            android:textColor="#000000"
+            android:layout_weight="0.91"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold|italic"/>
+
+    </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1658,11 +1677,11 @@
                 android:id="@+id/edificacao_pergunta24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.24 As telas são removíveis para facilitar a limpeza periódica (4.1.4)?"
+                android:text="1.24 As instalações elétricas são embutidas, e quando externas protegidas por tubulações presas e distantes das paredes e teto, permitindo a higienização do ambiente (Art.90)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1720,7 +1739,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ralos e Grelhas"
+                android:text="Ventilação e circulação de ar"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -1731,21 +1750,21 @@
         </TableRow>
 
         <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_marginTop="15dp">
-
-
-        <TextView
-            android:id="@+id/edificacao_pergunta25"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1.25 Quando presentes, os ralos são sifonados (4.1.5)?"
-            android:textColor="#000000"
-            android:layout_weight="0.91"
-            android:layout_gravity="center_horizontal"/>
-            </TableRow>
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/edificacao_pergunta25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.25 Garante o conforto térmico, a renovação do ar e o ambiente livre de fungos, gases, fumaça, gordura e condensação de vapores (Art.91)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1794,7 +1813,7 @@
                 android:id="@+id/edificacao_descricao_p25"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
-    </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1806,7 +1825,7 @@
                 android:id="@+id/edificacao_pergunta26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.26 Quando presentes, as grelhas possuem dispositivo de fechamento (4.1.5)?"
+                android:text="1.26 A circulação de ar na cozinha é feita com o ar insuflado filtrado ou através de exaustão (Art.92)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1860,23 +1879,6 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Caixa de Gordura e Esgoto"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -1889,7 +1891,7 @@
                 android:id="@+id/edificacao_pergunta27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.27 Possuem dimensão compatível ao volume de resíduos (4.1.6)?"
+                android:text="1.27 A direção do fluxo de ar nas áreas de preparo dos alimentos é da área limpa para a suja (Art.92)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1954,11 +1956,11 @@
                 android:id="@+id/edificacao_pergunta28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.28 Estão localizadas fora da área de preparação e armazenamento de alimentos (4.1.6)?"
+                android:text="1.28 Os exaustores possuem telas milimétricas removíveis para impedir a entrada de vetores e pragas urbanas, sendo periodicamente higienizados e sofrendo manutenção (Art.92)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -2019,11 +2021,11 @@
                 android:id="@+id/edificacao_pergunta29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.29 Apresentam adequado estado de conservação e funcionamento (4.1.6)?"
+                android:text="1.29 Ventiladores e climatizadores com aspersão de neblina sobre os alimentos, não são utilizados nas áreas de manipulação e armazenamentos (Art.93)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -2081,7 +2083,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Iluminação "
+                android:text="Instalações sanitárias e vestiários"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"
@@ -2102,11 +2104,11 @@
                 android:id="@+id/edificacao_pergunta30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.30 A iluminação da área de preparação permite adequada visualização (4.1.8)? "
+                android:text="1.30 As instalações sanitárias não se comunicam diretamente com a área de armazenamento, manipulação, distribuição e consumo de alimentos são separados por gêneros e suas portas externas devem ter fechamento automático (Art. 94)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -2167,7 +2169,7 @@
                 android:id="@+id/edificacao_pergunta31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.31 As luminárias localizadas na área de preparação são apropriadas e estão protegidas contra explosão e quedas acidentais (4.1.8)?"
+                android:text="1.31 As instalações sanitárias dispõem de vaso sanitário sifonado com tampa e descarga, mictório com descarga, papel higiênico, lixeira com tampa acionada por pedal, pias com sabonete liquido, neutro, inodoro, antisséptico e coletor de papel acionado sem contato manual (Art. 94)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2250,11 +2252,11 @@
                 android:id="@+id/edificacao_pergunta32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.32 Garante a renovação do ar e a manutenção do ambiente livre de fungos, gases, fumaça, pós, partículas em suspensão e condensação de vapores (4.1.10)? "
+                android:text="1.32 Os vestiários não se comunicam diretamente com a área de armazenamento, manipulação, distribuição e consumo de alimentos são separados por gêneros e suas portas externas devem ter fechamento automático (Art. 94)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -2315,11 +2317,11 @@
                 android:id="@+id/edificacao_pergunta33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.33 O fluxo de ar está adequado, não incidindo diretamente sobre os alimentos (4.1.10)?"
+                android:text="1.33 Os vestiários possuem armários individuais e chuveiros (Art. 94)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
-            </TableRow>
+        </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -2380,7 +2382,7 @@
                 android:id="@+id/edificacao_pergunta34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.34 Os equipamentos e os filtros para climatização estão bem conservados (4.1.11)?"
+                android:text="1.34 Existem instalações sanitárias para os clientes sem comunicação com as áreas de produção dos alimentos (Art.95)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2434,6 +2436,25 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lavatórios da área de manipulação"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold|italic"/>
+
+        </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -2445,7 +2466,7 @@
                 android:id="@+id/edificacao_pergunta35"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.35 Existe registro periódico da troca de filtros, da limpeza e da manutenção dos componentes do sistema de climatização (conforme legislação específica) (4.1.11)? "
+                android:text="1.35 Existem lavatórios exclusivos para higiene das mãos na área de manipulação e em numero suficiente para atender toda a área de preparação (Art.80)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2499,23 +2520,6 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Instalações elétricas"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -2528,7 +2532,7 @@
                 android:id="@+id/edificacao_pergunta36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.36 Estão embutidas ou protegidas em tubulações externas (4.1.9)? "
+                android:text="1.36 Os lavatórios possuem sabonete líquido, neutro, inodora e com ação antisséptica, com papel toalha descartável não reciclado e coletor de papel acionado sem contato manual (Art.80)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2582,6 +2586,24 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equipamentos e utensílios"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold|italic"/>
+
+        </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -2593,7 +2615,7 @@
                 android:id="@+id/edificacao_pergunta37"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.37 São íntegras, permitindo a higienização dos ambientes (4.1.9)? "
+                android:text="1.37 Os equipamentos são mantidos em condições higiênico-sanitárias apropriadas e em bom estado de conservação (Art.62)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2647,23 +2669,6 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Instalações Sanitárias e Vestiários"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -2676,7 +2681,7 @@
                 android:id="@+id/edificacao_pergunta38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.38 Localizados sem comunicação direta com a área de preparação e armazenamento ou refeitórios (4.1.12)? "
+                android:text="1.38 O dimensionamento dos equipamentos tem relacionamento direto com o volume de produção, tipos de produtos ou padrão de cardápio e sistema de distribuição/venda, suas reformas são executadas fora do horário de manipulação (Art. 79)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2741,7 +2746,7 @@
                 android:id="@+id/edificacao_pergunta39"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.39 Mantidos organizados e em adequado estado de conservação (4.1.12)? "
+                android:text="1.39 Os equipamentos são de fácil higienização não transmitindo substancias tóxicas, odores ou sabores aos alimentos (Art.82)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2806,7 +2811,7 @@
                 android:id="@+id/edificacao_pergunta40"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.40 Possuem portas externas com fechamento automático (4.1.12)?"
+                android:text="1.40 Todos os equipamentos possuem proteção em suas partes de maior risco como: motor prensa peça cortante, sucção, correia (Art.83)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2871,7 +2876,7 @@
                 android:id="@+id/edificacao_pergunta41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.41 As instalações sanitárias possuem lavatórios de mãos e os produtos destinados à higiene pessoal (papel higiênico, sabonete líquido inodoro antisséptico ou sabonete líquido inodoro e antisséptico, coletores com tampa e acionados sem contato manual e toalhas de papel não reciclado ou outro sistema higiênico e seguro para secagem das mãos) (4.1.13)?"
+                android:text="1.41 Na existência de câmaras frigorificas essas possuem revestimento com material lavável, impermeável e resistente (Art. 84)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2925,23 +2930,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lavatório Área de Manipulação"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -2954,7 +2943,7 @@
                 android:id="@+id/edificacao_pergunta42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.42 Existe lavatório exclusivo para a higiene das mãos na área de manipulação, em posições estratégicas em relação ao fluxo de preparo (4.1.14)?"
+                android:text="1.42 Na existência de câmaras frias existe termômetro de fácil leitura, calibrado e com visor na parte externa da câmara (Art. 84)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3019,7 +3008,7 @@
                 android:id="@+id/edificacao_pergunta43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.43 Existem lavatórios em número suficiente de modo a atender toda a área de preparação (4.1.14)?"
+                android:text="1.43 Na existência de câmaras frias há interruptor de segurança na parte externa que sinalize ligado e desligado, dispositivo de segurança interno que permita a abertura da porta por dentro (Art. 84)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3084,7 +3073,7 @@
                 android:id="@+id/edificacao_pergunta44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.44 Possuem: sabonete líquido inodoro anti-séptico ou sabonete líquido inodoro e produto anti-séptico, toalhas de papel não reciclado ou outro sistema higiênico e seguro de secagem das mãos e coletor de papel, acionado sem contato manual (4.1.14)?"
+                android:text="1.44 Na existência de câmaras frias, internamente há prateleiras e estrados em material impermeável, resistente e lavável, e isenção de ralo ou grelha (Art. 84)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3138,23 +3127,6 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Equipamentos"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -3167,7 +3139,7 @@
                 android:id="@+id/edificacao_pergunta45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.45 Quando entram em contato com alimentos, são de materiais que não transmitam substâncias tóxicas, odores, nem sabores aos alimentos (conforme legislação específica) (4.1.15)?"
+                android:text="1.45 Os móveis e utensílios são de fácil higienização não transmitindo substancias tóxicos odores ou sabores aos alimentos (Art.82)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3232,7 +3204,7 @@
                 android:id="@+id/edificacao_pergunta46"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.46 São mantidos em adequado estado de conservação e são resistentes à corrosão e a repetidas operações de higienização (4.1.15)?"
+                android:text="1.46 Os  móveis e utensílios são mantidos em condições higiênico-sanitárias apropriadas e em bom estado de conservação (Art.62)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3297,7 +3269,7 @@
                 android:id="@+id/edificacao_pergunta47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.47 Possuem as superfícies lisas, impermeáveis, laváveis e isentas de rugosidades, frestas e outras imperfeições (4.1.17)?"
+                android:text="1.47 Os equipamentos de refrigeração e freezers apresentam-se em bom estado de conservação e higiene e adequados quanto ao volume de produto armazenado (Art. 33)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3362,7 +3334,7 @@
                 android:id="@+id/edificacao_pergunta48"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.48 São realizadas manutenções programadas e periódicas, bem como o registro dessa operação (4.1.16)?"
+                android:text="1.48 Não é realizado o desligamento dos equipamentos de refrigeração e freezers objetivando a economia de energia e utilização de termômetros de haste de vidro para o controle de suas temperaturas (Art.33)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -3413,497 +3385,6 @@
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
                 android:id="@+id/edificacao_descricao_p48"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta49"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.49 É realizada a calibração dos instrumentos de medição, bem como o registro dessa operação (4.1.16)? "
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p49"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p49_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p49_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p49_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p49"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p49"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Utensílios"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.50 Quando entram em contato com alimentos são de materiais que não transmitam substâncias tóxicas, odores, nem sabores aos alimentos (conforme legislação específica) (4.1.15)? "
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p50_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p50_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p50_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p50"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p50"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta51"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.51 São mantidos em adequado estado de conservação e são resistentes à corrosão e a repetidas operações de higienização (4.1.15)?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p51"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p51_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p51_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p51_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p51"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p51"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.52 Possuem as superfícies lisas, impermeáveis, laváveis e isentas de rugosidades, frestas e outras imperfeições (4.1.17)?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p52_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p52_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p52_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p52"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p52"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Móveis"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textStyle="bold|italic"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta53"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.53 Quando entram em contato com alimentos são de materiais que não transmitam substâncias tóxicas, odores, nem sabores aos alimentos (conforme legislação específica) (4.1.15)? "
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p53"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p53_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p53_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p53_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p53"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p53"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta54"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.54 São mantidos em adequado estado de conservação e são resistentes à corrosão e a repetidas operações de higienização (4.1.15)?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p54"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p54_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p54_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p54_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p54"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p54"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/edificacao_pergunta55"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.55 Possuem as superfícies lisas, impermeáveis, laváveis e estão isentas de rugosidades, frestas e outras imperfeições (4.1.17)?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/edificacao_p55"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/edificacao_p55_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p55_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/edificacao_p55_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/edificacao_foto_p55"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/edificacao_descricao_p55"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>

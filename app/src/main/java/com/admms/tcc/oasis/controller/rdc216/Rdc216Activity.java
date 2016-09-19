@@ -15,18 +15,18 @@ public class Rdc216Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rdc216);
 
-        ImageButton armazenamento = (ImageButton) findViewById(R.id.iten_armazenamento_rdc216);
-        ImageButton documentacao = (ImageButton) findViewById(R.id.iten_documentacao_rdc216);
-        ImageButton edificacao = (ImageButton) findViewById(R.id.iten_edificacao_rdc216);
-        ImageButton higiene = (ImageButton) findViewById(R.id.iten_higiene_rdc216);
-        ImageButton exposicao = (ImageButton) findViewById(R.id.iten_exposicao_rdc216);
-        ImageButton ingredientes = (ImageButton) findViewById(R.id.iten_ingredientes_rdc216);
-        ImageButton manipulador = (ImageButton) findViewById(R.id.iten_manipulador_rdc216);
-        ImageButton vetores = (ImageButton) findViewById(R.id.iten_vetores_rdc216);
-        ImageButton preparo = (ImageButton) findViewById(R.id.iten_preparo_rdc216);
-        ImageButton residuos = (ImageButton) findViewById(R.id.iten_residuos_rdc216);
-        ImageButton responsavel = (ImageButton) findViewById(R.id.iten_responsavel_rdc216);
-        ImageButton saneamento = (ImageButton) findViewById(R.id.iten_saneamento_rdc216);
+        ImageButton armazenamento = (ImageButton) findViewById(R.id.rdc216_armazenamento_rdc216);
+        ImageButton documentacao = (ImageButton) findViewById(R.id.rdc216_documentacao_rdc216);
+        ImageButton edificacao = (ImageButton) findViewById(R.id.rdc216_edificacao_rdc216);
+        ImageButton higiene = (ImageButton) findViewById(R.id.rdc216_higiene_rdc216);
+        ImageButton exposicao = (ImageButton) findViewById(R.id.rdc216_exposicao_rdc216);
+        ImageButton ingredientes = (ImageButton) findViewById(R.id.rdc216_ingredientes_rdc216);
+        ImageButton manipulador = (ImageButton) findViewById(R.id.rdc216_manipulador_rdc216);
+        ImageButton vetores = (ImageButton) findViewById(R.id.rdc216_vetores_rdc216);
+        ImageButton preparo = (ImageButton) findViewById(R.id.rdc216_preparo_rdc216);
+        ImageButton residuos = (ImageButton) findViewById(R.id.rdc216_residuos_rdc216);
+        ImageButton responsavel = (ImageButton) findViewById(R.id.rdc216_responsavel_rdc216);
+        ImageButton saneamento = (ImageButton) findViewById(R.id.rdc216_saneamento_rdc216);
 
 
         armazenamento.setOnClickListener(new View.OnClickListener() {

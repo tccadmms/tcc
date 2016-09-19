@@ -51,7 +51,18 @@
         <activity android:name=".controller.prt2619.Prt2619Activity" />
         <activity android:name=".controller.cvs5.Cvs5Activity" />
         <activity android:name=".controller.in04.In04Activity" />
-        <activity android:name=".controller.rdc216.Rdc216ExposicaoActivity"></activity>
+        <activity android:name=".controller.rdc216.Rdc216ExposicaoActivity" />
+        <activity android:name=".controller.cvs5.Cvs5ArmazenamentoActivity" />
+        <activity android:name=".controller.cvs5.Cvs5DocumentacaoActivity" />
+        <activity android:name=".controller.cvs5.Cvs5EdificacaoActivity" />
+        <activity android:name=".controller.cvs5.Cvs5ExposicaoActivity" />
+        <activity android:name=".controller.cvs5.Cvs5HigieneActivity" />
+        <activity android:name=".controller.cvs5.Cvs5IngredientesActivity" />
+        <activity android:name=".controller.cvs5.Cvs5ManipuladoresActivity" />
+        <activity android:name=".controller.cvs5.Cvs5VetoresActivity" />
+        <activity android:name=".controller.cvs5.Cvs5PreparoActivity" />
+        <activity android:name=".controller.cvs5.Cvs5ResiduosActivity" />
+        <activity android:name=".controller.cvs5.Cvs5SaneamentoActivity"></activity>
     </application>
 
 </manifest>

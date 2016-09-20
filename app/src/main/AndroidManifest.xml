@@ -62,7 +62,19 @@
         <activity android:name=".controller.cvs5.Cvs5VetoresActivity" />
         <activity android:name=".controller.cvs5.Cvs5PreparoActivity" />
         <activity android:name=".controller.cvs5.Cvs5ResiduosActivity" />
-        <activity android:name=".controller.cvs5.Cvs5SaneamentoActivity"></activity>
+        <activity android:name=".controller.cvs5.Cvs5SaneamentoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_ArmazenamentoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_DocumentacaoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_EdificacaoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_HigieneActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_IngredientesActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_ManipuladoresActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_VetoresActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_PreparoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_ResiduosActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_ResponsavelActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_SaneamentoActivity" />
+        <activity android:name=".controller.prt78_325.Prt78_325_ExposicaoActivity"></activity>
     </application>
 
 </manifest>

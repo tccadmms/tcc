@@ -74,7 +74,18 @@
         <activity android:name=".controller.prt78_325.Prt78_325_ResiduosActivity" />
         <activity android:name=".controller.prt78_325.Prt78_325_ResponsavelActivity" />
         <activity android:name=".controller.prt78_325.Prt78_325_SaneamentoActivity" />
-        <activity android:name=".controller.prt78_325.Prt78_325_ExposicaoActivity"></activity>
+        <activity android:name=".controller.prt78_325.Prt78_325_ExposicaoActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_EdificacaoActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_HigieneActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_VetoresActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_SaneamentoActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_ResiduosActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_ManipuladoresActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_IngredientesActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_PreparoActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_ArmazenamentoActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_ExposicaoActivity" />
+        <activity android:name=".controller.prt2619.Prt2619_DocumentacaoActivity"></activity>
     </application>
 
 </manifest>

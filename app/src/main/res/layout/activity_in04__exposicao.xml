@@ -11,12 +11,12 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        tools:context=".controller.prt2619.Prt2619Activity.Prt2619_DocumentacaoActivity">
+        tools:context=".controller.in04.In04Activity.In04_ExposicaoActivity">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="11. Documentação e Registro"
+            android:text="10. Exposição ao Consumo do Alimento Preparado"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -31,10 +31,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta1"
+                android:id="@+id/exposicao_pergunta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.1 Possui responsável pelas atividades de manipulação dos alimentos, devidamente capacitado?"
+                android:text="10.1 No açougue as carnes são mantidas em geladeira ou balcão frigorífico. Temperaturas máximas: + 4ºC para carnes; ou conforme recomendação do fabricante?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -45,26 +45,26 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
             <RadioGroup
-                android:id="@+id/documentacao_p1"
+                android:id="@+id/exposicao_p1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p1_na"
+                    android:id="@+id/exposicao_p1_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p1_ad"
+                    android:id="@+id/exposicao_p1_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p1_in"
+                    android:id="@+id/exposicao_p1_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -73,7 +73,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p1"
+                android:id="@+id/exposicao_foto_p1"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p1"
+                android:id="@+id/exposicao_descricao_p1"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -96,10 +96,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta2"
+                android:id="@+id/exposicao_pergunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.2 Possui e cumpre o Manual de Boas Práticas específico para empresa?"
+                android:text="10.2 Os balcões refrigerados expositores de carnes nos açougues, estão organizados sem misturar tipos (bovina, suína, aves, etc.) de carnes, evitando contaminação cruzada. As carnes não poderão ser penduradas acima de outros produtos alimentícios a fim de impedir o gotejamento de sangue e outros?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -110,26 +110,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/documentacao_p2"
+                android:id="@+id/exposicao_p2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p2_na"
+                    android:id="@+id/exposicao_p2_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p2_ad"
+                    android:id="@+id/exposicao_p2_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p2_in"
+                    android:id="@+id/exposicao_p2_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -138,7 +138,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p2"
+                android:id="@+id/exposicao_foto_p2"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -149,138 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p2"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/documentacao_pergunta3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11.3 Possui e cumpre os procedimentos operacionais padronizados para Higienização de Instalações, Equipamentos e Móveis?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/documentacao_p3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/documentacao_p3_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p3_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p3_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p3"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p3"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/documentacao_pergunta4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11.4 Possui e cumpre os procedimentos operacionais padronizados para Controle Integrado de Vetores e Pragas Urbanas?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/documentacao_p4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/documentacao_p4_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p4_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p4_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p4"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p4"
+                android:id="@+id/exposicao_descricao_p2"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -293,10 +162,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta5"
+                android:id="@+id/exposicao_pergunta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.5 Possui e cumpre os procedimentos operacionais padronizados para higienização do Reservatório?"
+                android:text="10.3 Os alimentos expostos à venda estão adequadamente protegidos contra poeira, insetos, e outras pragas urbanas?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -307,26 +176,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/documentacao_p5"
+                android:id="@+id/exposicao_p3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p5_na"
+                    android:id="@+id/exposicao_p3_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p5_ad"
+                    android:id="@+id/exposicao_p3_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p5_in"
+                    android:id="@+id/exposicao_p3_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -335,7 +204,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p5"
+                android:id="@+id/exposicao_foto_p3"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -346,7 +215,72 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p5"
+                android:id="@+id/exposicao_descricao_p3"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/exposicao_pergunta4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.4 Produtos expostos a venda obedecem às recomendações do fabricante quanto ao empilhamento?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/exposicao_p4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/exposicao_p4_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/exposicao_p4_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/exposicao_p4_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exposicao_foto_p4"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/exposicao_descricao_p4"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -359,10 +293,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta6"
+                android:id="@+id/exposicao_pergunta5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.6 Possui e cumpre os procedimentos operacionais padronizados para higiene e Saúde dos Manipuladores?"
+                android:text="10.5 Os alimentos expostos à venda estão distantes de saneantes, cosméticos, produtos de higiene e demais produtos tóxicos?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -373,26 +307,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/documentacao_p6"
+                android:id="@+id/exposicao_p5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p6_na"
+                    android:id="@+id/exposicao_p5_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p6_ad"
+                    android:id="@+id/exposicao_p5_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p6_in"
+                    android:id="@+id/exposicao_p5_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -401,7 +335,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p6"
+                android:id="@+id/exposicao_foto_p5"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -412,7 +346,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p6"
+                android:id="@+id/exposicao_descricao_p5"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -425,10 +359,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta7"
+                android:id="@+id/exposicao_pergunta6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.7 Apresentou comprovante de execução de treinamento de funcionários?"
+                android:text="10.6 As preparações consumidas quentes, expostas ao consumo em distribuição ou espera, permanecem sob controle de tempo e temperatura mínima de 60ºC por 6 horas; Nos casos em que os alimentos não possam ser mantidos a 60º, estão ser mantidos resfriados abaixo de 5º podendo ser aquecidos em presença do cliente?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -439,26 +373,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/documentacao_p7"
+                android:id="@+id/exposicao_p6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p7_na"
+                    android:id="@+id/exposicao_p6_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p7_ad"
+                    android:id="@+id/exposicao_p6_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p7_in"
+                    android:id="@+id/exposicao_p6_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -467,7 +401,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p7"
+                android:id="@+id/exposicao_foto_p6"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -478,72 +412,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p7"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/documentacao_pergunta8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11.8 Apresentou registros de execução de programas de saúde: PPRA, PCMSO, ASO?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/documentacao_p8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/documentacao_p8_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p8_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p8_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p8"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p8"
+                android:id="@+id/exposicao_descricao_p6"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -556,10 +425,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta9"
+                android:id="@+id/exposicao_pergunta7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.9 Apresentou comprovante de execução de higienização do reservatório de água realizado semestralmente?"
+                android:text="10.7 Os produtos preparados ou fracionados e embalados na presença do consumidor têm as seguintes informações no mínimo: nome do produto, quantidade, ingredientes, validade?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -570,26 +439,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/documentacao_p9"
+                android:id="@+id/exposicao_p7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p9_na"
+                    android:id="@+id/exposicao_p7_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p9_ad"
+                    android:id="@+id/exposicao_p7_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p9_in"
+                    android:id="@+id/exposicao_p7_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -598,7 +467,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p9"
+                android:id="@+id/exposicao_foto_p7"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -609,7 +478,72 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p9"
+                android:id="@+id/exposicao_descricao_p7"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/exposicao_pergunta8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.8 Alimentos frios, que dependam somente da temperatura para sua conservação permanecem no máximo a 10ºC por 4 horas?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/exposicao_p8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/exposicao_p8_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/exposicao_p8_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/exposicao_p8_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exposicao_foto_p8"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/exposicao_descricao_p8"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -622,10 +556,10 @@
 
 
             <TextView
-                android:id="@+id/documentacao_pergunta10"
+                android:id="@+id/exposicao_pergunta9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.10 Apresentou planilhas de controle de temperatura de câmaras, balcões, congeladores e equipamentos térmicos, adequadamente preenchidas?"
+                android:text="10.9 Dispõe de lavatório de fácil acesso para os consumidores providos de papel toalha e dispensador de sabonete líquido?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -636,26 +570,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/documentacao_p10"
+                android:id="@+id/exposicao_p9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/documentacao_p10_na"
+                    android:id="@+id/exposicao_p9_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p10_ad"
+                    android:id="@+id/exposicao_p9_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/documentacao_p10_in"
+                    android:id="@+id/exposicao_p9_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -664,7 +598,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p10"
+                android:id="@+id/exposicao_foto_p9"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -675,78 +609,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p10"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/documentacao_pergunta11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11.11 Registros que comprovem a manutenção preventiva de equipamentos e maquinários?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/documentacao_p11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/documentacao_p11_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p11_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/documentacao_p11_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/documentacao_foto_p11"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/documentacao_descricao_p11"
+                android:id="@+id/exposicao_descricao_p9"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
 
         <ImageButton
-            android:id="@+id/documentacao_btnSalvar"
+            android:id="@+id/exposicao_btnSalvar"
             android:layout_width="98dp"
             android:layout_height="31dp"
             android:background="@drawable/botao_salvar"

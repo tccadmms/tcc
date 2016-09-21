@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis.controller.prt2619;
+package com.admms.tcc.oasis.controller.in04;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -14,29 +14,29 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.prt2619.Prt2619Activity;
 
-public class Prt2619_ManipuladoresActivity extends Activity {
+public class In04_IngredientesActivity extends Activity {
 
     private static final int REQUEST_IMAGE_PICTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prt2619__manipuladores);
+        setContentView(R.layout.activity_in04__ingredientes);
 
-
-        RadioGroup r_p1 = (RadioGroup) findViewById(R.id.manipuladores_p1);
+        RadioGroup r_p1 = (RadioGroup) findViewById(R.id.ingredientes_p1);
 
 
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p1 = (RadioButton) findViewById(R.id.manipuladores_p1_na);
-                RadioButton ad_p1 = (RadioButton) findViewById(R.id.manipuladores_p1_ad);
-                RadioButton in_p1 = (RadioButton) findViewById(R.id.manipuladores_p1_in);
+                RadioButton na_p1 = (RadioButton) findViewById(R.id.ingredientes_p1_na);
+                RadioButton ad_p1 = (RadioButton) findViewById(R.id.ingredientes_p1_ad);
+                RadioButton in_p1 = (RadioButton) findViewById(R.id.ingredientes_p1_in);
 
-                ImageButton foto_p1 = (ImageButton) findViewById(R.id.manipuladores_foto_p1);
-                ImageButton descricao_p1 = (ImageButton) findViewById(R.id.manipuladores_descricao_p1);
+                ImageButton foto_p1 = (ImageButton) findViewById(R.id.ingredientes_foto_p1);
+                ImageButton descricao_p1 = (ImageButton) findViewById(R.id.ingredientes_descricao_p1);
 
 
                 if (in_p1.isChecked()) {
@@ -65,18 +65,18 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p2 = (RadioGroup) findViewById(R.id.manipuladores_p2);
+        RadioGroup r_p2 = (RadioGroup) findViewById(R.id.ingredientes_p2);
 
 
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p2 = (RadioButton) findViewById(R.id.manipuladores_p2_na);
-                RadioButton ad_p2 = (RadioButton) findViewById(R.id.manipuladores_p2_ad);
-                RadioButton in_p2 = (RadioButton) findViewById(R.id.manipuladores_p2_in);
+                RadioButton na_p2 = (RadioButton) findViewById(R.id.ingredientes_p2_na);
+                RadioButton ad_p2 = (RadioButton) findViewById(R.id.ingredientes_p2_ad);
+                RadioButton in_p2 = (RadioButton) findViewById(R.id.ingredientes_p2_in);
 
-                ImageButton foto_p2 = (ImageButton) findViewById(R.id.manipuladores_foto_p2);
-                ImageButton descricao_p2 = (ImageButton) findViewById(R.id.manipuladores_descricao_p2);
+                ImageButton foto_p2 = (ImageButton) findViewById(R.id.ingredientes_foto_p2);
+                ImageButton descricao_p2 = (ImageButton) findViewById(R.id.ingredientes_descricao_p2);
 
 
                 if (in_p2.isChecked()) {
@@ -105,18 +105,18 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p3 = (RadioGroup) findViewById(R.id.manipuladores_p3);
+        RadioGroup r_p3 = (RadioGroup) findViewById(R.id.ingredientes_p3);
 
 
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p3 = (RadioButton) findViewById(R.id.manipuladores_p3_na);
-                RadioButton ad_p3 = (RadioButton) findViewById(R.id.manipuladores_p3_ad);
-                RadioButton in_p3 = (RadioButton) findViewById(R.id.manipuladores_p3_in);
+                RadioButton na_p3 = (RadioButton) findViewById(R.id.ingredientes_p3_na);
+                RadioButton ad_p3 = (RadioButton) findViewById(R.id.ingredientes_p3_ad);
+                RadioButton in_p3 = (RadioButton) findViewById(R.id.ingredientes_p3_in);
 
-                ImageButton foto_p3 = (ImageButton) findViewById(R.id.manipuladores_foto_p3);
-                ImageButton descricao_p3 = (ImageButton) findViewById(R.id.manipuladores_descricao_p3);
+                ImageButton foto_p3 = (ImageButton) findViewById(R.id.ingredientes_foto_p3);
+                ImageButton descricao_p3 = (ImageButton) findViewById(R.id.ingredientes_descricao_p3);
 
 
                 if (in_p3.isChecked()) {
@@ -145,18 +145,18 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p4 = (RadioGroup) findViewById(R.id.manipuladores_p4);
+        RadioGroup r_p4 = (RadioGroup) findViewById(R.id.ingredientes_p4);
 
 
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p4 = (RadioButton) findViewById(R.id.manipuladores_p4_na);
-                RadioButton ad_p4 = (RadioButton) findViewById(R.id.manipuladores_p4_ad);
-                RadioButton in_p4 = (RadioButton) findViewById(R.id.manipuladores_p4_in);
+                RadioButton na_p4 = (RadioButton) findViewById(R.id.ingredientes_p4_na);
+                RadioButton ad_p4 = (RadioButton) findViewById(R.id.ingredientes_p4_ad);
+                RadioButton in_p4 = (RadioButton) findViewById(R.id.ingredientes_p4_in);
 
-                ImageButton foto_p4 = (ImageButton) findViewById(R.id.manipuladores_foto_p4);
-                ImageButton descricao_p4 = (ImageButton) findViewById(R.id.manipuladores_descricao_p4);
+                ImageButton foto_p4 = (ImageButton) findViewById(R.id.ingredientes_foto_p4);
+                ImageButton descricao_p4 = (ImageButton) findViewById(R.id.ingredientes_descricao_p4);
 
 
                 if (in_p4.isChecked()) {
@@ -185,18 +185,18 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p5 = (RadioGroup) findViewById(R.id.manipuladores_p5);
+        RadioGroup r_p5 = (RadioGroup) findViewById(R.id.ingredientes_p5);
 
 
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p5 = (RadioButton) findViewById(R.id.manipuladores_p5_na);
-                RadioButton ad_p5 = (RadioButton) findViewById(R.id.manipuladores_p5_ad);
-                RadioButton in_p5 = (RadioButton) findViewById(R.id.manipuladores_p5_in);
+                RadioButton na_p5 = (RadioButton) findViewById(R.id.ingredientes_p5_na);
+                RadioButton ad_p5 = (RadioButton) findViewById(R.id.ingredientes_p5_ad);
+                RadioButton in_p5 = (RadioButton) findViewById(R.id.ingredientes_p5_in);
 
-                ImageButton foto_p5 = (ImageButton) findViewById(R.id.manipuladores_foto_p5);
-                ImageButton descricao_p5 = (ImageButton) findViewById(R.id.manipuladores_descricao_p5);
+                ImageButton foto_p5 = (ImageButton) findViewById(R.id.ingredientes_foto_p5);
+                ImageButton descricao_p5 = (ImageButton) findViewById(R.id.ingredientes_descricao_p5);
 
 
                 if (in_p5.isChecked()) {
@@ -225,18 +225,18 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p6 = (RadioGroup) findViewById(R.id.manipuladores_p6);
+        RadioGroup r_p6 = (RadioGroup) findViewById(R.id.ingredientes_p6);
 
 
         r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p6 = (RadioButton) findViewById(R.id.manipuladores_p6_na);
-                RadioButton ad_p6 = (RadioButton) findViewById(R.id.manipuladores_p6_ad);
-                RadioButton in_p6 = (RadioButton) findViewById(R.id.manipuladores_p6_in);
+                RadioButton na_p6 = (RadioButton) findViewById(R.id.ingredientes_p6_na);
+                RadioButton ad_p6 = (RadioButton) findViewById(R.id.ingredientes_p6_ad);
+                RadioButton in_p6 = (RadioButton) findViewById(R.id.ingredientes_p6_in);
 
-                ImageButton foto_p6 = (ImageButton) findViewById(R.id.manipuladores_foto_p6);
-                ImageButton descricao_p6 = (ImageButton) findViewById(R.id.manipuladores_descricao_p6);
+                ImageButton foto_p6 = (ImageButton) findViewById(R.id.ingredientes_foto_p6);
+                ImageButton descricao_p6 = (ImageButton) findViewById(R.id.ingredientes_descricao_p6);
 
 
                 if (in_p6.isChecked()) {
@@ -265,18 +265,18 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p7 = (RadioGroup) findViewById(R.id.manipuladores_p7);
+        RadioGroup r_p7 = (RadioGroup) findViewById(R.id.ingredientes_p6);
 
 
         r_p7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p7 = (RadioButton) findViewById(R.id.manipuladores_p7_na);
-                RadioButton ad_p7 = (RadioButton) findViewById(R.id.manipuladores_p7_ad);
-                RadioButton in_p7 = (RadioButton) findViewById(R.id.manipuladores_p7_in);
+                RadioButton na_p7 = (RadioButton) findViewById(R.id.ingredientes_p7_na);
+                RadioButton ad_p7 = (RadioButton) findViewById(R.id.ingredientes_p7_ad);
+                RadioButton in_p7 = (RadioButton) findViewById(R.id.ingredientes_p7_in);
 
-                ImageButton foto_p7 = (ImageButton) findViewById(R.id.manipuladores_foto_p7);
-                ImageButton descricao_p7 = (ImageButton) findViewById(R.id.manipuladores_descricao_p7);
+                ImageButton foto_p7 = (ImageButton) findViewById(R.id.ingredientes_foto_p7);
+                ImageButton descricao_p7 = (ImageButton) findViewById(R.id.ingredientes_descricao_p7);
 
 
                 if (in_p7.isChecked()) {
@@ -305,12 +305,12 @@ public class Prt2619_ManipuladoresActivity extends Activity {
             }
         });
 
-        ImageButton manipuladoresSalvar = (ImageButton) findViewById(R.id.manipuladores_btnSalvar);
-        manipuladoresSalvar.setOnClickListener(new View.OnClickListener() {
+        ImageButton ingredientesSalvar = (ImageButton) findViewById(R.id.ingredientes_btnSalvar);
+        ingredientesSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProManipuladores = new Intent(Prt2619_ManipuladoresActivity.this, Prt2619Activity.class);
-                startActivity(intentVaiProManipuladores);
+                Intent intentVaiProIngredientes = new Intent(In04_IngredientesActivity.this, Prt2619Activity.class);
+                startActivity(intentVaiProIngredientes);
             }
         });
 
@@ -329,9 +329,9 @@ public class Prt2619_ManipuladoresActivity extends Activity {
     protected void mostraJanelaDescricao() {
 
 
-        LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_ManipuladoresActivity.this);
+        LayoutInflater layoutInflater = LayoutInflater.from(In04_IngredientesActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Prt2619_ManipuladoresActivity.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(In04_IngredientesActivity.this);
         alertDialogBuilder.setTitle("Descrição");
         alertDialogBuilder.setIcon(R.drawable.ic_logo);
         alertDialogBuilder.setView(promptView);

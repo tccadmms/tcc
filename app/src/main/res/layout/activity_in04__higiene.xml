@@ -11,12 +11,12 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        tools:context=".controller.prt2619.Prt2619Activity.Prt2619_VetoresActivity">
+        tools:context=".controller.in04.In04Activity.In04_HigieneActivity">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3. Controle de Pragas"
+            android:text="2. Higienização de instalações, equipamentos, móveis e utensílios"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -31,10 +31,10 @@
 
 
             <TextView
-                android:id="@+id/vetores_pergunta1"
+                android:id="@+id/higiene_pergunta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3.1 Foram implantados procedimentos de Boas Práticas, ações eficazes e contínuas, de modo a garantir a ausência de vetores e pragas urbanas tais como insetos, roedores, aves e outros?"
+                android:text="2.1 Os uniformes e panos de limpeza são lavados e secos fora da área de produção?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -45,26 +45,26 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
             <RadioGroup
-                android:id="@+id/vetores_p1"
+                android:id="@+id/higiene_p1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/vetores_p1_na"
+                    android:id="@+id/higiene_p1_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/vetores_p1_ad"
+                    android:id="@+id/higiene_p1_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/vetores_p1_in"
+                    android:id="@+id/higiene_p1_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -73,7 +73,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/vetores_foto_p1"
+                android:id="@+id/higiene_foto_p1"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/vetores_descricao_p1"
+                android:id="@+id/higiene_descricao_p1"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -96,10 +96,10 @@
 
 
             <TextView
-                android:id="@+id/vetores_pergunta2"
+                android:id="@+id/higiene_pergunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3.2 As instalações são dotadas de elementos de proteção com o objetivo de impedir a atração, o abrigo, o acesso e ou proliferação de vetores e pragas urbanas, como: ralos sifonados com tampa escamoteável, aberturas teladas, cortina de ar (opcional), portas e janelas ajustadas aos batentes, instalações elétricas vedadas, entre outros?"
+                android:text="2.2 Os utensílios utilizados são limpos e desinfetados a cada uso?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -110,26 +110,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/vetores_p2"
+                android:id="@+id/higiene_p2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/vetores_p2_na"
+                    android:id="@+id/higiene_p2_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/vetores_p2_ad"
+                    android:id="@+id/higiene_p2_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/vetores_p2_in"
+                    android:id="@+id/higiene_p2_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -138,7 +138,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/vetores_foto_p2"
+                android:id="@+id/higiene_foto_p2"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -149,140 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/vetores_descricao_p2"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/vetores_pergunta3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3.3 A aplicação de produtos desinfestantes é efetuada de modo a evitar a contaminação dos alimentos, equipamentos e utensílios, e garantir a segurança dos operadores e do meio ambiente?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/vetores_p3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/vetores_p3_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/vetores_p3_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/vetores_p3_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vetores_foto_p3"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/vetores_descricao_p3"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_marginTop="15dp">
-
-
-            <TextView
-                android:id="@+id/vetores_pergunta4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3.4 Controle de vetores e pragas urbanas é executado por empresa licenciada no órgão de vigilância sanitária competente e os produtos utilizados devem estar regularizados na ANVISA. A empresa fornece comprovante de execução conforme parágrafo único do artigo 90?"
-                android:textColor="#000000"
-                android:layout_weight="0.91"
-                android:layout_gravity="center_horizontal"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:id="@+id/vetores_p4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:id="@+id/vetores_p4_na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/vetores_p4_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"/>
-                <RadioButton
-                    android:id="@+id/vetores_p4_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"/>
-            </RadioGroup>
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vetores_foto_p4"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/vetores_descricao_p4"
+                android:id="@+id/higiene_descricao_p2"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
@@ -295,10 +162,10 @@
 
 
             <TextView
-                android:id="@+id/vetores_pergunta5"
+                android:id="@+id/higiene_pergunta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3.5 Em se tratando de aplicação em prédios de uso coletivo, comercial ou de serviços, a empresa especializada forneceu cartazes informando a realização da desinfestação, com a data da aplicação, o nome do produto, grupo químico, telefone do Centro de Informação Toxicológica e números da licença sanitária da empresa responsável pelo procedimento?"
+                android:text="2.3 As luvas térmicas estão íntegras e limpas?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -309,26 +176,26 @@
             android:weightSum="1">
 
             <RadioGroup
-                android:id="@+id/vetores_p5"
+                android:id="@+id/higiene_p3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/vetores_p5_na"
+                    android:id="@+id/higiene_p3_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/vetores_p5_ad"
+                    android:id="@+id/higiene_p3_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
                     android:textColor="#000000"/>
                 <RadioButton
-                    android:id="@+id/vetores_p5_in"
+                    android:id="@+id/higiene_p3_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
@@ -338,7 +205,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/vetores_foto_p5"
+                android:id="@+id/higiene_foto_p3"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -349,13 +216,210 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/vetores_descricao_p5"
+                android:id="@+id/higiene_descricao_p3"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/higiene_pergunta4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.4 As geladeiras e os freezers estão em bom estado de conservação, sem acúmulo excessivo de gelo. limpos e organizados?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/higiene_p4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/higiene_p4_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/higiene_p4_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/higiene_p4_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/higiene_foto_p4"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/higiene_descricao_p4"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/higiene_pergunta5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.5 A periodicidade e os procedimentos de higienização e manutenção estão adequados e registrados?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/higiene_p5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/higiene_p5_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/higiene_p5_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/higiene_p5_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/higiene_foto_p5"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/higiene_descricao_p5"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/higiene_pergunta6"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:text="2.6 O balcão térmico está limpo, com água potável, trocada diariamente, mantida à temperatura de 80 a 90º C?"
+                android:textColor="#000000"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/higiene_p6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/higiene_p6_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/higiene_p6_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/higiene_p6_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/higiene_foto_p6"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/higiene_descricao_p6"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
 
         <ImageButton
-            android:id="@+id/vetores_btnSalvar"
+            android:id="@+id/higiene_btnSalvar"
             android:layout_width="98dp"
             android:layout_height="31dp"
             android:background="@drawable/botao_salvar"

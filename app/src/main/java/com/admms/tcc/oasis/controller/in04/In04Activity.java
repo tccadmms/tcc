@@ -26,23 +26,23 @@ public class In04Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in04);
 
-        ImageButton armazenamento = (ImageButton) findViewById(R.id.iten_armazenamento);
-        ImageButton documentacao = (ImageButton) findViewById(R.id.iten_documentacao);
-        ImageButton edificacao = (ImageButton) findViewById(R.id.iten_edificacao);
-        ImageButton higiene = (ImageButton) findViewById(R.id.iten_higiene);
-        ImageButton ingredientes = (ImageButton) findViewById(R.id.iten_ingredientes);
-        ImageButton manipulador = (ImageButton) findViewById(R.id.iten_manipulador);
-        ImageButton vetores = (ImageButton) findViewById(R.id.iten_vetores);
-        ImageButton preparo = (ImageButton) findViewById(R.id.iten_preparo);
-        ImageButton residuos = (ImageButton) findViewById(R.id.iten_residuos);
-        ImageButton responsavel = (ImageButton) findViewById(R.id.iten_responsavel);
-        ImageButton saneamento = (ImageButton) findViewById(R.id.iten_saneamento);
+        ImageButton armazenamento = (ImageButton) findViewById(R.id.in04_armazenamento_in04);
+        ImageButton documentacao = (ImageButton) findViewById(R.id.in04_documentacao_in04);
+        ImageButton edificacao = (ImageButton) findViewById(R.id.in04_edificacao_in04);
+        ImageButton exposicao = (ImageButton) findViewById(R.id.in04_exposicao_in04);
+        ImageButton higiene = (ImageButton) findViewById(R.id.in04_higiene_in04);
+        ImageButton ingredientes = (ImageButton) findViewById(R.id.in04_ingredientes_in04);
+        ImageButton manipulador = (ImageButton) findViewById(R.id.in04_manipulador_in04);
+        ImageButton vetores = (ImageButton) findViewById(R.id.in04_vetores_in04);
+        ImageButton preparo = (ImageButton) findViewById(R.id.in04_preparo_in04);
+        ImageButton residuos = (ImageButton) findViewById(R.id.in04_residuos_in04);
+        ImageButton saneamento = (ImageButton) findViewById(R.id.in04_saneamento_in04);
 
 
         armazenamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProArmazenamento = new Intent(In04Activity.this, Rdc216ArmazenamentoActivity.class);
+                Intent intentVaiProArmazenamento = new Intent(In04Activity.this, In04_ArmazenamentoActivity.class);
                 startActivity(intentVaiProArmazenamento);
             }
         });
@@ -50,7 +50,7 @@ public class In04Activity extends Activity {
         documentacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraDocumentacao = new Intent(In04Activity.this, Rdc216DocumentacaoActivity.class);
+                Intent intentVaiPraDocumentacao = new Intent(In04Activity.this, In04_DocumentacaoActivity.class);
                 startActivity(intentVaiPraDocumentacao);
             }
         });
@@ -58,63 +58,65 @@ public class In04Activity extends Activity {
         edificacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraEdificacao = new Intent(In04Activity.this, Rdc216EdificacaoActivity.class);
+                Intent intentVaiPraEdificacao = new Intent(In04Activity.this, In04_EdificacaoActivity.class);
                 startActivity(intentVaiPraEdificacao);
             }
         });
+
+        exposicao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentVaiPraExposicao = new Intent(In04Activity.this, In04_ExposicaoActivity.class);
+                startActivity(intentVaiPraExposicao);
+            }
+        });
+
         higiene.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraHigiene = new Intent(In04Activity.this, Rdc216HigieneActivity.class);
+                Intent intentVaiPraHigiene = new Intent(In04Activity.this, In04_HigieneActivity.class);
                 startActivity(intentVaiPraHigiene);
             }
         });
         ingredientes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraIngredientes = new Intent(In04Activity.this, Rdc216IngredientesActivity.class);
+                Intent intentVaiPraIngredientes = new Intent(In04Activity.this, In04_IngredientesActivity.class);
                 startActivity(intentVaiPraIngredientes);
             }
         });
         manipulador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraManipulador = new Intent(In04Activity.this, Rdc216ManipuladorActivity.class);
+                Intent intentVaiPraManipulador = new Intent(In04Activity.this, In04_ManipuladoresActivity.class);
                 startActivity(intentVaiPraManipulador);
             }
         });
         vetores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraVetores = new Intent(In04Activity.this, Rdc216VetoresActivity.class);
+                Intent intentVaiPraVetores = new Intent(In04Activity.this, In04_VetoresActivity.class);
                 startActivity(intentVaiPraVetores);
             }
         });
         preparo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraPreparo = new Intent(In04Activity.this, Rdc216PreparoActivity.class);
+                Intent intentVaiPraPreparo = new Intent(In04Activity.this, In04_PreparoActivity.class);
                 startActivity(intentVaiPraPreparo);
             }
         });
         residuos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraResiduos = new Intent(In04Activity.this, Rdc216ResiduosActivity.class);
+                Intent intentVaiPraResiduos = new Intent(In04Activity.this, In04_ResiduosActivity.class);
                 startActivity(intentVaiPraResiduos);
-            }
-        });
-        responsavel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentVaiPraResponsavel = new Intent(In04Activity.this, Rdc216ResponsavelActivity.class);
-                startActivity(intentVaiPraResponsavel);
             }
         });
         saneamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiPraSaneamento = new Intent(In04Activity.this, Rdc216SaneamentoActivity.class);
+                Intent intentVaiPraSaneamento = new Intent(In04Activity.this, In04_SaneamentoActivity.class);
                 startActivity(intentVaiPraSaneamento);
             }
         });

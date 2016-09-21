@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis.controller.prt2619;
+package com.admms.tcc.oasis.controller.in04;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -14,15 +14,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.prt2619.Prt2619Activity;
 
-public class Prt2619_EdificacaoActivity extends Activity {
+public class In04_EdificacaoActivity extends Activity {
 
     private static final int REQUEST_IMAGE_PICTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prt2619__edificacao);
+        setContentView(R.layout.activity_in04__edificacao);
 
 
         RadioGroup r_p1 = (RadioGroup) findViewById(R.id.edificacao_p1);
@@ -1510,7 +1511,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         edificacaoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProEdificacao = new Intent(Prt2619_EdificacaoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProEdificacao = new Intent(In04_EdificacaoActivity.this, Prt2619Activity.class);
                 startActivity(intentVaiProEdificacao);
             }
         });
@@ -1530,9 +1531,9 @@ public class Prt2619_EdificacaoActivity extends Activity {
     protected void mostraJanelaDescricao() {
 
 
-        LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_EdificacaoActivity.this);
+        LayoutInflater layoutInflater = LayoutInflater.from(In04_EdificacaoActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Prt2619_EdificacaoActivity.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(In04_EdificacaoActivity.this);
         alertDialogBuilder.setTitle("Descrição");
         alertDialogBuilder.setIcon(R.drawable.ic_logo);
         alertDialogBuilder.setView(promptView);

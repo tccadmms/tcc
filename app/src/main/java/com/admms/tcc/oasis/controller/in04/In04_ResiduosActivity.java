@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis.controller.prt2619;
+package com.admms.tcc.oasis.controller.in04;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -14,15 +14,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.prt2619.Prt2619Activity;
 
-public class Prt2619_ResiduosActivity extends Activity {
+public class In04_ResiduosActivity extends Activity {
 
     private static final int REQUEST_IMAGE_PICTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prt2619__residuos);
+        setContentView(R.layout.activity_in04__residuos);
 
         RadioGroup r_p1 = (RadioGroup) findViewById(R.id.residuos_p1);
 
@@ -189,7 +190,7 @@ public class Prt2619_ResiduosActivity extends Activity {
         residuosSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProResiduos = new Intent(Prt2619_ResiduosActivity.this, Prt2619Activity.class);
+                Intent intentVaiProResiduos = new Intent(In04_ResiduosActivity.this, Prt2619Activity.class);
                 startActivity(intentVaiProResiduos);
             }
         });
@@ -209,9 +210,9 @@ public class Prt2619_ResiduosActivity extends Activity {
     protected void mostraJanelaDescricao() {
 
 
-        LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_ResiduosActivity.this);
+        LayoutInflater layoutInflater = LayoutInflater.from(In04_ResiduosActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Prt2619_ResiduosActivity.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(In04_ResiduosActivity.this);
         alertDialogBuilder.setTitle("Descrição");
         alertDialogBuilder.setIcon(R.drawable.ic_logo);
         alertDialogBuilder.setView(promptView);

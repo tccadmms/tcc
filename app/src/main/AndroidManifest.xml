@@ -75,17 +75,17 @@
         <activity android:name=".controller.prt78_325.Prt78_325_ResponsavelActivity" />
         <activity android:name=".controller.prt78_325.Prt78_325_SaneamentoActivity" />
         <activity android:name=".controller.prt78_325.Prt78_325_ExposicaoActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_EdificacaoActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_HigieneActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_VetoresActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_SaneamentoActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_ResiduosActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_ManipuladoresActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_IngredientesActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_PreparoActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_ArmazenamentoActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_ExposicaoActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_DocumentacaoActivity"></activity>
+        <activity android:name=".controller.in04.In04_EdificacaoActivity" />
+        <activity android:name=".controller.in04.In04_HigieneActivity" />
+        <activity android:name=".controller.in04.In04_VetoresActivity" />
+        <activity android:name=".controller.in04.In04_SaneamentoActivity" />
+        <activity android:name=".controller.in04.In04_ResiduosActivity" />
+        <activity android:name=".controller.in04.In04_ManipuladoresActivity" />
+        <activity android:name=".controller.in04.In04_IngredientesActivity" />
+        <activity android:name=".controller.in04.In04_PreparoActivity" />
+        <activity android:name=".controller.in04.In04_ArmazenamentoActivity" />
+        <activity android:name=".controller.in04.In04_ExposicaoActivity" />
+        <activity android:name=".controller.in04.In04_DocumentacaoActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis.controller.prt2619;
+package com.admms.tcc.oasis.controller.in04;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -14,30 +14,31 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.prt2619.Prt2619Activity;
 
-public class Prt2619_VetoresActivity extends Activity {
+public class In04_PreparoActivity extends Activity {
 
     private static final int REQUEST_IMAGE_PICTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prt2619__vetores);
+        setContentView(R.layout.activity_in04__preparo);
 
 
 
-        RadioGroup r_p1 = (RadioGroup) findViewById(R.id.vetores_p1);
+        RadioGroup r_p1 = (RadioGroup) findViewById(R.id.preparo_p1);
 
 
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p1 = (RadioButton) findViewById(R.id.vetores_p1_na);
-                RadioButton ad_p1 = (RadioButton) findViewById(R.id.vetores_p1_ad);
-                RadioButton in_p1 = (RadioButton) findViewById(R.id.vetores_p1_in);
+                RadioButton na_p1 = (RadioButton) findViewById(R.id.preparo_p1_na);
+                RadioButton ad_p1 = (RadioButton) findViewById(R.id.preparo_p1_ad);
+                RadioButton in_p1 = (RadioButton) findViewById(R.id.preparo_p1_in);
 
-                ImageButton foto_p1 = (ImageButton) findViewById(R.id.vetores_foto_p1);
-                ImageButton descricao_p1 = (ImageButton) findViewById(R.id.vetores_descricao_p1);
+                ImageButton foto_p1 = (ImageButton) findViewById(R.id.preparo_foto_p1);
+                ImageButton descricao_p1 = (ImageButton) findViewById(R.id.preparo_descricao_p1);
 
 
                 if (in_p1.isChecked()) {
@@ -66,18 +67,18 @@ public class Prt2619_VetoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p2 = (RadioGroup) findViewById(R.id.vetores_p2);
+        RadioGroup r_p2 = (RadioGroup) findViewById(R.id.preparo_p2);
 
 
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p2 = (RadioButton) findViewById(R.id.vetores_p2_na);
-                RadioButton ad_p2 = (RadioButton) findViewById(R.id.vetores_p2_ad);
-                RadioButton in_p2 = (RadioButton) findViewById(R.id.vetores_p2_in);
+                RadioButton na_p2 = (RadioButton) findViewById(R.id.preparo_p2_na);
+                RadioButton ad_p2 = (RadioButton) findViewById(R.id.preparo_p2_ad);
+                RadioButton in_p2 = (RadioButton) findViewById(R.id.preparo_p2_in);
 
-                ImageButton foto_p2 = (ImageButton) findViewById(R.id.vetores_foto_p2);
-                ImageButton descricao_p2 = (ImageButton) findViewById(R.id.vetores_descricao_p2);
+                ImageButton foto_p2 = (ImageButton) findViewById(R.id.preparo_foto_p2);
+                ImageButton descricao_p2 = (ImageButton) findViewById(R.id.preparo_descricao_p2);
 
 
                 if (in_p2.isChecked()) {
@@ -106,18 +107,18 @@ public class Prt2619_VetoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p3 = (RadioGroup) findViewById(R.id.vetores_p3);
+        RadioGroup r_p3 = (RadioGroup) findViewById(R.id.preparo_p3);
 
 
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p3 = (RadioButton) findViewById(R.id.vetores_p3_na);
-                RadioButton ad_p3 = (RadioButton) findViewById(R.id.vetores_p3_ad);
-                RadioButton in_p3 = (RadioButton) findViewById(R.id.vetores_p3_in);
+                RadioButton na_p3 = (RadioButton) findViewById(R.id.preparo_p3_na);
+                RadioButton ad_p3 = (RadioButton) findViewById(R.id.preparo_p3_ad);
+                RadioButton in_p3 = (RadioButton) findViewById(R.id.preparo_p3_in);
 
-                ImageButton foto_p3 = (ImageButton) findViewById(R.id.vetores_foto_p3);
-                ImageButton descricao_p3 = (ImageButton) findViewById(R.id.vetores_descricao_p3);
+                ImageButton foto_p3 = (ImageButton) findViewById(R.id.preparo_foto_p3);
+                ImageButton descricao_p3 = (ImageButton) findViewById(R.id.preparo_descricao_p3);
 
 
                 if (in_p3.isChecked()) {
@@ -146,18 +147,18 @@ public class Prt2619_VetoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p4 = (RadioGroup) findViewById(R.id.vetores_p4);
+        RadioGroup r_p4 = (RadioGroup) findViewById(R.id.preparo_p4);
 
 
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p4 = (RadioButton) findViewById(R.id.vetores_p4_na);
-                RadioButton ad_p4 = (RadioButton) findViewById(R.id.vetores_p4_ad);
-                RadioButton in_p4 = (RadioButton) findViewById(R.id.vetores_p4_in);
+                RadioButton na_p4 = (RadioButton) findViewById(R.id.preparo_p4_na);
+                RadioButton ad_p4 = (RadioButton) findViewById(R.id.preparo_p4_ad);
+                RadioButton in_p4 = (RadioButton) findViewById(R.id.preparo_p4_in);
 
-                ImageButton foto_p4 = (ImageButton) findViewById(R.id.vetores_foto_p4);
-                ImageButton descricao_p4 = (ImageButton) findViewById(R.id.vetores_descricao_p4);
+                ImageButton foto_p4 = (ImageButton) findViewById(R.id.preparo_foto_p4);
+                ImageButton descricao_p4 = (ImageButton) findViewById(R.id.preparo_descricao_p4);
 
 
                 if (in_p4.isChecked()) {
@@ -186,18 +187,18 @@ public class Prt2619_VetoresActivity extends Activity {
             }
         });
 
-        RadioGroup r_p5 = (RadioGroup) findViewById(R.id.vetores_p5);
+        RadioGroup r_p5 = (RadioGroup) findViewById(R.id.preparo_p5);
 
 
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p5 = (RadioButton) findViewById(R.id.vetores_p5_na);
-                RadioButton ad_p5 = (RadioButton) findViewById(R.id.vetores_p5_ad);
-                RadioButton in_p5 = (RadioButton) findViewById(R.id.vetores_p5_in);
+                RadioButton na_p5 = (RadioButton) findViewById(R.id.preparo_p5_na);
+                RadioButton ad_p5 = (RadioButton) findViewById(R.id.preparo_p5_ad);
+                RadioButton in_p5 = (RadioButton) findViewById(R.id.preparo_p5_in);
 
-                ImageButton foto_p5 = (ImageButton) findViewById(R.id.vetores_foto_p5);
-                ImageButton descricao_p5 = (ImageButton) findViewById(R.id.vetores_descricao_p5);
+                ImageButton foto_p5 = (ImageButton) findViewById(R.id.preparo_foto_p5);
+                ImageButton descricao_p5 = (ImageButton) findViewById(R.id.preparo_descricao_p5);
 
 
                 if (in_p5.isChecked()) {
@@ -226,13 +227,92 @@ public class Prt2619_VetoresActivity extends Activity {
             }
         });
 
+        RadioGroup r_p6 = (RadioGroup) findViewById(R.id.preparo_p6);
 
-        ImageButton vetoresSalvar = (ImageButton) findViewById(R.id.vetores_btnSalvar);
-        vetoresSalvar.setOnClickListener(new View.OnClickListener() {
+
+        r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton na_p6 = (RadioButton) findViewById(R.id.preparo_p6_na);
+                RadioButton ad_p6 = (RadioButton) findViewById(R.id.preparo_p6_ad);
+                RadioButton in_p6 = (RadioButton) findViewById(R.id.preparo_p6_in);
+
+                ImageButton foto_p6 = (ImageButton) findViewById(R.id.preparo_foto_p6);
+                ImageButton descricao_p6 = (ImageButton) findViewById(R.id.preparo_descricao_p6);
+
+
+                if (in_p6.isChecked()) {
+                    foto_p6.setVisibility(View.VISIBLE);
+                    descricao_p6.setVisibility(View.VISIBLE);
+                    foto_p6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            tirarFotoIntent();
+                        }
+                    });
+                    descricao_p6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            mostraJanelaDescricao();
+                        }
+                    });
+
+                } else if (na_p6.isChecked()) {
+                    foto_p6.setVisibility(View.INVISIBLE);
+                    descricao_p6.setVisibility(View.INVISIBLE);
+                } else {
+                    foto_p6.setVisibility(View.INVISIBLE);
+                    descricao_p6.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        RadioGroup r_p7 = (RadioGroup) findViewById(R.id.preparo_p7);
+
+
+        r_p7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton na_p7 = (RadioButton) findViewById(R.id.preparo_p7_na);
+                RadioButton ad_p7 = (RadioButton) findViewById(R.id.preparo_p7_ad);
+                RadioButton in_p7 = (RadioButton) findViewById(R.id.preparo_p7_in);
+
+                ImageButton foto_p7 = (ImageButton) findViewById(R.id.preparo_foto_p7);
+                ImageButton descricao_p7 = (ImageButton) findViewById(R.id.preparo_descricao_p7);
+
+
+                if (in_p7.isChecked()) {
+                    foto_p7.setVisibility(View.VISIBLE);
+                    descricao_p7.setVisibility(View.VISIBLE);
+                    foto_p7.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            tirarFotoIntent();
+                        }
+                    });
+                    descricao_p7.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            mostraJanelaDescricao();
+                        }
+                    });
+
+                } else if (na_p7.isChecked()) {
+                    foto_p7.setVisibility(View.INVISIBLE);
+                    descricao_p7.setVisibility(View.INVISIBLE);
+                } else {
+                    foto_p7.setVisibility(View.INVISIBLE);
+                    descricao_p7.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        ImageButton preparoSalvar = (ImageButton) findViewById(R.id.preparo_btnSalvar);
+        preparoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProVetores = new Intent(Prt2619_VetoresActivity.this, Prt2619Activity.class);
-                startActivity(intentVaiProVetores);
+                Intent intentVaiProPreparo = new Intent(In04_PreparoActivity.this, Prt2619Activity.class);
+                startActivity(intentVaiProPreparo);
             }
         });
 
@@ -251,9 +331,9 @@ public class Prt2619_VetoresActivity extends Activity {
     protected void mostraJanelaDescricao() {
 
 
-        LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_VetoresActivity.this);
+        LayoutInflater layoutInflater = LayoutInflater.from(In04_PreparoActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Prt2619_VetoresActivity.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(In04_PreparoActivity.this);
         alertDialogBuilder.setTitle("Descrição");
         alertDialogBuilder.setIcon(R.drawable.ic_logo);
         alertDialogBuilder.setView(promptView);
@@ -281,6 +361,7 @@ public class Prt2619_VetoresActivity extends Activity {
     }
 
 }
+
 
 
 

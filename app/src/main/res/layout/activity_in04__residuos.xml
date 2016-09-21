@@ -11,7 +11,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        tools:context=".controller.prt2619.Prt2619Activity.Prt2619_ResiduosActivity">
+        tools:context=".controller.in04.In04Activity.In04_ResiduosActivity">
 
         <TextView
             android:layout_width="match_parent"

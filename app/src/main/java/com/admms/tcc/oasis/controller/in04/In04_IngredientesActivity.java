@@ -309,7 +309,7 @@ public class In04_IngredientesActivity extends Activity {
         ingredientesSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProIngredientes = new Intent(In04_IngredientesActivity.this, Prt2619Activity.class);
+                Intent intentVaiProIngredientes = new Intent(In04_IngredientesActivity.this, In04Activity.class);
                 startActivity(intentVaiProIngredientes);
             }
         });

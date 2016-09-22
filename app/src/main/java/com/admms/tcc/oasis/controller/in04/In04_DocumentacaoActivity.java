@@ -471,7 +471,7 @@ public class In04_DocumentacaoActivity extends Activity {
         documentacaoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProDocumentacao = new Intent(In04_DocumentacaoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProDocumentacao = new Intent(In04_DocumentacaoActivity.this, In04Activity.class);
                 startActivity(intentVaiProDocumentacao);
             }
         });

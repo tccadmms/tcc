@@ -388,7 +388,7 @@ public class In04_ExposicaoActivity extends Activity {
         exposicaoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProExposicao = new Intent(In04_ExposicaoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProExposicao = new Intent(In04_ExposicaoActivity.this, In04Activity.class);
                 startActivity(intentVaiProExposicao);
             }
         });

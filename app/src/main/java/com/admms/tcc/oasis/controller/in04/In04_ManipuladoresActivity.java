@@ -310,7 +310,7 @@ public class In04_ManipuladoresActivity extends Activity {
         manipuladoresSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProManipuladores = new Intent(In04_ManipuladoresActivity.this, Prt2619Activity.class);
+                Intent intentVaiProManipuladores = new Intent(In04_ManipuladoresActivity.this, In04Activity.class);
                 startActivity(intentVaiProManipuladores);
             }
         });

@@ -270,7 +270,7 @@ public class In04_ArmazenamentoActivity extends Activity {
         armazenamentoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProArmazenamento = new Intent(In04_ArmazenamentoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProArmazenamento = new Intent(In04_ArmazenamentoActivity.this, In04Activity.class);
                 startActivity(intentVaiProArmazenamento);
             }
         });

@@ -190,7 +190,7 @@ public class In04_ResiduosActivity extends Activity {
         residuosSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProResiduos = new Intent(In04_ResiduosActivity.this, Prt2619Activity.class);
+                Intent intentVaiProResiduos = new Intent(In04_ResiduosActivity.this, In04Activity.class);
                 startActivity(intentVaiProResiduos);
             }
         });

@@ -1511,7 +1511,7 @@ public class In04_EdificacaoActivity extends Activity {
         edificacaoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProEdificacao = new Intent(In04_EdificacaoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProEdificacao = new Intent(In04_EdificacaoActivity.this, In04Activity.class);
                 startActivity(intentVaiProEdificacao);
             }
         });

@@ -311,7 +311,7 @@ public class In04_PreparoActivity extends Activity {
         preparoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProPreparo = new Intent(In04_PreparoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProPreparo = new Intent(In04_PreparoActivity.this, In04Activity.class);
                 startActivity(intentVaiProPreparo);
             }
         });

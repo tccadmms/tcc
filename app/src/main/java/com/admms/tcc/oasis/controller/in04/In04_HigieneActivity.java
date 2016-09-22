@@ -270,7 +270,7 @@ public class In04_HigieneActivity extends Activity {
         higieneSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProHigiene = new Intent(In04_HigieneActivity.this, Prt2619Activity.class);
+                Intent intentVaiProHigiene = new Intent(In04_HigieneActivity.this, In04Activity.class);
                 startActivity(intentVaiProHigiene);
             }
         });

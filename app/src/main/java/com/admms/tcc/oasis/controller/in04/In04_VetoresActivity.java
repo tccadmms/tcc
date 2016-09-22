@@ -232,7 +232,7 @@ public class In04_VetoresActivity extends Activity {
         vetoresSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProVetores = new Intent(In04_VetoresActivity.this, Prt2619Activity.class);
+                Intent intentVaiProVetores = new Intent(In04_VetoresActivity.this, In04Activity.class);
                 startActivity(intentVaiProVetores);
             }
         });

@@ -271,7 +271,7 @@ public class In04_SaneamentoActivity extends Activity {
         saneamentoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProSaneamento = new Intent(In04_SaneamentoActivity.this, Prt2619Activity.class);
+                Intent intentVaiProSaneamento = new Intent(In04_SaneamentoActivity.this, In04Activity.class);
                 startActivity(intentVaiProSaneamento);
             }
         });

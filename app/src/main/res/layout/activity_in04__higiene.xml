@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2. Higienização de instalações, equipamentos, móveis e utensílios"
+            android:text="2. Higienização de Instalações, Equipamentos, Móveis e Utensílios"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textColor="#000000"

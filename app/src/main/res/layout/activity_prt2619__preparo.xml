@@ -11,7 +11,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        tools:context=".controller.prt78_325.Prt78_325Activity.Prt78_325_PreparoActivity">
+        tools:context=".controller.prt2619.Prt2619Activity.Prt2619_PreparoActivity">
 
         <TextView
             android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:id="@+id/preparo_pergunta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.1 As matérias-primas, ingredientes e embalagens utilizadas para preparação do alimento estão em condições higiênico-sanitárias, adequados e em conformidade com a legislação específica (9.1)?"
+                android:text="8.1 O formato das áreas de pré-preparo, preparo, porcionamento e acondicionamento dos alimentos possuem fluxo linear, sem cruzamento de atividades entre as várias categorias e níveis de preparo dos alimentos, de forma a evitar a contaminação cruzada (7.1)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -99,7 +99,7 @@
                 android:id="@+id/preparo_pergunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.2 Há adoção de medidas a fim de minimizar o risco de contaminação cruzada (9.2)?"
+                android:text="8.2 A separação das atividades é garantida por meios físicos ou outra medidas efetivas que permitam evitar a Contaminação cruzada (7.1.1)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -165,7 +165,7 @@
                 android:id="@+id/preparo_pergunta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.3 Os produtos perecíveis expostos à temperatura ambiente permanecem pelo tempo mínimo necessário para a preparação do alimento (máximo 30 minutos) (9.3)?"
+                android:text="8.3 Ausência do pré-preparo e o preparo de alimentos nas áreas externas dos estabelecimentos (7.2)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -230,7 +230,7 @@
                 android:id="@+id/preparo_pergunta4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.4 Os alimentos não utilizados na totalidade são acondicionados e identificados de acordo com a rotulagem (9.4)?"
+                android:text="8.4 As áreas destinadas à seleção e lavagem de vegetais, manipulação de ovos, pescados, carnes e seus derivados crus são separadas das demais por meios físicos ou por outros meios eficazes de forma a evitar a contaminação cruzada (7.3)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -284,7 +284,6 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -296,7 +295,7 @@
                 android:id="@+id/preparo_pergunta5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.5 O tratamento térmico garante a temperatura de no mínimo 70° C em todas as partes do alimento (9.5)?"
+                android:text="8.5 Ausência da disposição e utilização de alimentos, matérias-primas e ingredientes, com prazos de validade vencidos ou mantidos fora das temperaturas recomendadas pelo fabricante ou por este regulamento (7.4)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -361,7 +360,7 @@
                 android:id="@+id/preparo_pergunta6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.6 Quando a utilização de temperaturas forem inferiores a 70° C, o tratamento térmico é garantido através das combinações de tempo e temperatura que asseguram a qualidade higiênico-sanitária dos alimentos (9.6)?"
+                android:text="8.6 Ausência de alimentos com embalagens não íntegras, violadas, amassadas, enferrujadas, estufadas e sem identificação de procedência (7.5)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -426,7 +425,7 @@
                 android:id="@+id/preparo_pergunta7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.7 Os óleos e gorduras utilizados são aquecidos à temperatura não superior a 180° C (9.7)?"
+                android:text="8.7 As embalagens impermeáveis dos alimentos estão limpas antes de serem abertas e para remoção de sujidades é utilizada água corrente e potável (7.6)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -491,7 +490,7 @@
                 android:id="@+id/preparo_pergunta8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.8 Os óleos e gorduras são substituídos quando há alteração evidente das características físico-químicas ou sensoriais (fumaça, espuma, aroma e sabor) (9.8)?"
+                android:text="8.8 Todos os equipamentos e utensílios que entram em contato com material potencialmente contaminado são higienizados antes do contato com as matérias-primas ou com o produto acabado (7.7)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -556,7 +555,7 @@
                 android:id="@+id/preparo_pergunta9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.9 Há monitoramento da qualidade de óleos e gorduras para frituras, e este monitoramento é registrado (9.9)?"
+                android:text="8.9 A manipulação dos alimentos prontos para o consumo, que sofreram tratamento térmico ou que não serão submetidos a tratamento térmico, e de frutas, verduras e legumes já higienizados, é realizada com o uso de utensílios previamente higienizados ou com luvas descartáveis, utilizados de forma a evitar a contaminação cruzada (7.8)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -621,7 +620,7 @@
                 android:id="@+id/preparo_pergunta10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.10 O descongelamento é conduzido sob refrigeração à temperatura inferior a 5° C (9.10)?"
+                android:text="8.10 A higienização de frutas, verduras, legumes e demais vegetais utilizados na confecção de preparações culinárias e bebidas contempla: Seleção para retirada de partes e unidades deterioradas; Seleção para retirada de unidades brotadas, de sujidades, pragas e vetores; Lavagem cuidadosa efetuada em água corrente e potável: folha por folha, legume por legume, cacho por cacho, fruta por fruta; Desinfecção realizada conforme a recomendação do fabricante do produto saneante utilizado; Enxágue efetuado de forma cuidadosa em água corrente e potável ou conforme a recomendação do fabricante (7.9)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -686,7 +685,7 @@
                 android:id="@+id/preparo_pergunta11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.11 Quando utilizado o forno de microondas para descongelamento, o alimento é submetido à cocção imediata (9.11)?"
+                android:text="8.11 Ausência do processo de desinfecção em frutas, legumes, verduras e demais vegetais que irão sofrer ação do calor; Frutas cujas cascas não serão consumidas; frutas, legumes e demais vegetais destinados ao preparo de sucos e Vitaminas cujas cascas não serão utilizadas no processo (7.9.1)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -751,7 +750,7 @@
                 android:id="@+id/preparo_pergunta12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.12 Os alimentos submetidos ao descongelamento, são mantidos sob refrigeração quando não utilizados imediatamente (9.12)?"
+                android:text="8.12 Para higienização de vegetais possui utensílios, equipamentos ou cubas de material não contaminante, próprios para este fim, resistentes à corrosão, de tamanho que permita a imersão completa dos mesmos, e em número suficiente de acordo com as quantidades de alimentos manipulados e os procedimentos utilizados (7.10)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -817,7 +816,7 @@
                 android:id="@+id/preparo_pergunta13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.13 O alimento preparado e conservado a quente encontra-se em temperatura superior a 60° C, por no máximo 6 horas (9.13)?"
+                android:text="8.13 Os produtos utilizados na higienização de vegetais apresentam na rotulagem, indicação de uso para este fim, regularizados na Agência Nacional de Vigilância Sanitária - ANVISA e utilizados até a data de validade (7.11)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -882,7 +881,7 @@
                 android:id="@+id/preparo_pergunta14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.14 Existem monitoramento, registro e ação corretiva, da temperatura de conservação a quente (9.14)?"
+                android:text="8.14 O procedimento de higienização de frutas, verduras e legumes segue a diluição dos produtos, o tempo de contato e as demais orientações do fabricante? Na utilização de outros procedimentos de higienização existe, na empresa, estudos de validação que comprovem sua eficácia, possuindo descrição da metodologia e os resultados à disposição da autoridade sanitária (7.11/ 7.12)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -948,7 +947,7 @@
                 android:id="@+id/preparo_pergunta15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.15 O registro da temperatura de conservação a quente é verificado, datado e rubricado (9.15)?"
+                android:text="8.15 Os produtos hortifrutícolas minimamente processados são manipulados e embalados segundo os parâmetros e os critérios estabelecidos por este regulamento e por outros regulamentos técnicos específicos (7.13)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1014,7 +1013,7 @@
                 android:id="@+id/preparo_pergunta16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.16 A temperatura do alimento preparado, no processo de resfriamento é reduzida de 60° C a 10° C em, no máximo, 2 horas (9.16)?"
+                android:text="8.16 A etapa de dessalgue de carnes e pescados ocorre sob condições seguras, conforme a recomendação do fabricante (7.14)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1068,6 +1067,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1079,7 +1079,7 @@
                 android:id="@+id/preparo_pergunta17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.17 Os produtos preparados são conservados em temperaturas de 4º C ou menos por 5 dias, ou em temperaturas superiores a 4º C e inferiores a 5° C, conservados por menos de cinco dias (9.17)?"
+                android:text="8.17 Na ausência de informações do fornecedor da etapa de dessalgue de carnes e pescados ocorre em água potável, sob refrigeração até 5º C, por meio de fervura (7.14)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1144,7 +1144,7 @@
                 android:id="@+id/preparo_pergunta18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.18 Os produtos preparados congelados estão em temperaturas iguais ou inferiores a -18° C (9.18)?"
+                android:text="8.18 O tempo de manipulação de produtos perecíveis em temperatura ambiente não excede há 30 minutos por lote (7.15)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1210,7 +1210,7 @@
                 android:id="@+id/preparo_pergunta19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.19 Os alimentos preparados são embalados e identificados quando armazenados sob refrigeração ou congelamento (9.19)?"
+                android:text="8.19 A temperatura das áreas climatizadas é mantida entre 12ºC e 18ºC e a manipulação nestas áreas não ultrapassa 2 horas por lote (7.16)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1275,7 +1275,7 @@
                 android:id="@+id/preparo_pergunta20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.20 Existem registros das temperaturas de refrigeração e congelamento (9.20)?"
+                android:text="8.20 O descongelamento de alimentos é efetuado segundo a recomendação do fabricante ou na ausência desta informação, o descongelamento ocorre em temperaturas inferiores a 5°C ou em forno micro-ondas ou de convecção, quando o alimento for submetido imediatamente à cocção. O procedimento realizado é de forma que garanta que todas as partes do alimento sejam completamente descongeladas (7.17)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1329,6 +1329,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1340,7 +1341,7 @@
                 android:id="@+id/preparo_pergunta21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.21 Os registros das temperaturas de refrigeração e congelamento são verificados, datados e rubricados (9.21)?"
+                android:text="8.21 Os produtos congelados são preparados segundo a recomendação do fabricante expressa na rotulagem (7.18)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1406,7 +1407,7 @@
                 android:id="@+id/preparo_pergunta22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.22 Durante a higienização, os alimentos hortifrutigranjeiros são selecionados, retirando partes ou produtos deteriorados e sem condições adequadas; são lavados criteriosamente um a um, com água potável e após imersos em solução clorada com 100 a 250ppm de cloro livre, por 15 minutos, ou demais produtos adequados, registrados no Ministério da Saúde, liberados para esse fim e de acordo com as indicações do fabricante e depois enxaguados com água potável (9.22)?"
+                android:text="8.22 Na ausência dessa informação, o descongelamento pode ser realizado diretamente sob cocção, desde que o método de cocção assegure o tratamento térmico conforme os itens 8.25 e 8.26 (7.18)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1460,6 +1461,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1471,7 +1473,7 @@
                 android:id="@+id/preparo_pergunta23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.23 Há adoção de medidas de controle para os alimentos hortifrutigranjeiros que garantam que a limpeza e, quando necessário, a desinfecção, não constituam fontes de contaminação do alimento (9.23)?"
+                android:text="8.23 . Os alimentos que tenham sido descongelados não são congelados novamente, exceto os alimentos cozidos e alimentos crus semiprontos, feitos com carnes descongeladas, desde que sejam preparados diretamente na cocção, sem descongelamento prévio. São asseguradas as condições estabelecidas nos itens 8.25 e 8.26 (7.19)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1536,7 +1538,7 @@
                 android:id="@+id/preparo_pergunta24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.24 Os vegetais folhosos crus, corretamente higienizados e não adicionados de molho, maionese, iogurte, creme de leite ou demais ligas, preparados e prontos para o consumo, são mantidos em temperatura ambiente por no máximo 1 hora ou conservados sob refrigeração por períodos maiores (9.24)?"
+                android:text="8.24 Os alimentos submetidos à cocção e destinados ao processo de congelamento, são encaminhados imediatamente para o resfriamento forçado, e a seguir para o congelamento (7.20)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1590,6 +1592,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1601,7 +1604,7 @@
                 android:id="@+id/preparo_pergunta25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.25 Os ovos utilizados estão limpos, íntegros e possuem registro no órgão competente (9.25)?"
+                android:text="8.25 O tratamento térmico garante que todas as partes dos alimentos atinjam a temperatura mínima de 74°C (7.21)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1655,6 +1658,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1666,7 +1670,7 @@
                 android:id="@+id/preparo_pergunta26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.26 Os ovos estão dentro do prazo de validade, em bom estado de conservação e armazenamento, que não propicie contaminação cruzada e seguem as indicações da rotulagem (9.25)?"
+                android:text="8.26 No tratamento térmico caso as temperaturas forem inferiores á 74ºC, ocorre o cuidado para as combinações de temperatura e tempo seja suficientes para assegurar a qualidade higiênico-sanitária dos alimentos, como 70ºC por 2 minutos ou 65ºC por 15 minutos (7.21)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1732,7 +1736,7 @@
                 android:id="@+id/preparo_pergunta27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.27 Os ovos são lavados com água potável corrente, imediatamente antes do uso, quando apresentam sujidades visíveis (9.25)?"
+                android:text="8.27 O resfriamento do alimento preparado é realizado de forma a minimizar os riscos de contaminação cruzada e de multiplicação microbiana, a temperatura do alimento preparado é reduzida de 60°C a 10ºC em até duas horas (7.22)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1797,7 +1801,7 @@
                 android:id="@+id/preparo_pergunta28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.28 Os ovos utilizados não são preparados e expostos ao consumo alimentos com ovos crus, como maionese caseira, mousse, merengue, entre outros (9.25)?"
+                android:text="8.28 O alimento preparado é mantido em equipamentos de refrigeração, resfriado ou congelado (7.22)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1851,6 +1855,7 @@
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1862,7 +1867,7 @@
                 android:id="@+id/preparo_pergunta29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.29 Os alimentos são preparados somente com ovos pasteurizados, desidratados ou tratados termicamente, assegurando sua inocuidade e quando submetidos à cocção ou fritura apresentam toda a gema dura (9.25)?"
+                android:text="8.29 Os alimentos reconstituídos recebem a adição de água potável e após a reconstituição, são consumidos imediatamente, aquecidos ou refrigerados conforme a indicação do fabricante (7.23)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1928,7 +1933,7 @@
                 android:id="@+id/preparo_pergunta30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.30 As embalagens dos ovos não são reutilizadas para outros fins (9.25)?"
+                android:text="8.30 As gorduras e os óleos utilizados em frituras não são aquecidos a temperaturas superiores a 180ºC (7.24)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -1993,7 +1998,7 @@
                 android:id="@+id/preparo_pergunta31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.31 Existem guarda de amostras (100g/100mL) de todos os alimentos preparados, incluindo bebidas (100mL), em embalagens apropriadas para alimentos, de primeiro uso (9.26)?"
+                android:text="8.31 A reutilização de óleos e gorduras só ocorre quando estes não apresentaram fumaça em temperaturas de fritura, espuma, resíduos ou alterações na cor, aroma ou sabor (7.25)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2059,7 +2064,7 @@
                 android:id="@+id/preparo_pergunta32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8.32 A embalagem da guarda de amostras são identificadas com no mínimo a denominação e data da preparação, armazenadas por 72 horas sob refrigeração, em temperatura inferior a 5º C, em cozinhas industriais, hotéis, escolas, instituições de longa permanência para idosos e estabelecimentos de educação infantil e demais estabelecimentos à critério da autoridade sanitária (9.26)?"
+                android:text="8.32 Os óleos e gorduras são filtrados em filtros próprios se utiliza fritadeira com filtro, é obedecidas às recomendações do fabricante e observadas às características físico-químicas e sensoriais dos óleos e gorduras (7.26)?"
                 android:textColor="#000000"
                 android:layout_weight="0.91"
                 android:layout_gravity="center_horizontal"/>
@@ -2110,6 +2115,334 @@
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
                 android:id="@+id/preparo_descricao_p32"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/preparo_pergunta33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.33 Ausência de ovos com as cascas rachadas ou sujas; São manipulados de maneira que o conteúdo não entre em contato com a superfície externa da casca, de forma a evitar a contaminação cruzada; Ausência de preparações em que os ovos permaneçam crus ou mal cozidos. Os ovos cozidos são fervidos por 7 minutos e os ovos fritos apresentam a gema dura, e nas preparações sem cocção são utilizados ovos pasteurizados, cozidos ou desidratados (7.27)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/preparo_p33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/preparo_p33_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p33_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p33_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preparo_foto_p33"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/preparo_descricao_p33"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/preparo_pergunta34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.34 Quando ocorre o reaquecimento dos alimentos todas as partes dos alimentos atingem , no mínimo, a temperatura de 74ºC (7.28)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/preparo_p34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/preparo_p34_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p34_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p34_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preparo_foto_p34"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/preparo_descricao_p34"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/preparo_pergunta35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.35 Ausência da utilização de restos alimentares (7.29)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/preparo_p35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/preparo_p35_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p35_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p35_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preparo_foto_p35"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/preparo_descricao_p35"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/preparo_pergunta36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.36 Ausência de pertences de uso pessoal e de outros objetos e materiais estranhos à atividade nas áreas de pré-preparo, preparo e acondicionamento dos alimentos (7.30)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/preparo_p36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/preparo_p36_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p36_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p36_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preparo_foto_p36"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/preparo_descricao_p36"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/preparo_pergunta37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.37 Ausência de caixas de madeira nas áreas destinadas ao preparo de alimentos (7.31)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/preparo_p37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/preparo_p37_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p37_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/preparo_p37_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preparo_foto_p37"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/preparo_descricao_p37"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>

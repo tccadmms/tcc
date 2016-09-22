@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".controller.cvs5.Cvs5Activity.Cvs5ExposicaoActivity">
+        android:orientation="vertical"
+        tools:context=".controller.prt2619.Prt2619Activity.Prt2619_VetoresActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10.Exposição do Alimento Preparado"
+            android:text="3. Controle de Vetores e  Pragas Urbanas"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="24dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="24dp"/>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta1"
+                android:id="@+id/vetores_pergunta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.1 As instalações internas e externas estão livres de vetores e pragas urbanas e de outros animais, assim como de indícios da presença destes (12.1)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.1 Os alimentos expostos para o consumo imediato estão protegidos contra poeiras, insetos e outras pragas urbanas, e contra contaminantes oriundos de consumidores como saliva, cabelo, entre outros (Art.46)?"
-                android:textColor="#000000"/>
-        </TableRow>
+                android:layout_gravity="center_horizontal"/>
 
+        </TableRow>
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
-
             <RadioGroup
+                android:id="@+id/vetores_p1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p1">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p1_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p1_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p1_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p1_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p1_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p1_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p1"
+                android:id="@+id/vetores_foto_p1"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -84,61 +84,61 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p1"
+                android:id="@+id/vetores_descricao_p1"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta2"
+                android:id="@+id/vetores_pergunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.2 O programa de controle de vetores e pragas urbanas é constituído de medidas preventivas e corretivas, é desenvolvido de forma contínua e contempla todas as medidas necessárias para impedir a atração, o acesso, o abrigo e a proliferação de vetores e pragas urbanas e minimizar a necessidade da aplicação de saneantes desinfestantes (12.2)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.2 Alimentos expostos para o consumo imediato estão distantes de saneantes, produtos de higiene e demais produtos tóxicos (Art.46)?"
-                android:textColor="#000000"/>
+                android:layout_gravity="center_horizontal"/>
         </TableRow>
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <RadioGroup
+                android:id="@+id/vetores_p2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p2">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p2_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p2_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p2_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p2_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p2_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p2_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p2"
+                android:id="@+id/vetores_foto_p2"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -149,61 +149,127 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p2"
+                android:id="@+id/vetores_descricao_p2"
+                android:background="@drawable/ic_descricao"
+                android:visibility="gone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/vetores_pergunta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.3 As medidas preventivas são baseadas na instalação de barreiras mecânicas e nas boas práticas de limpeza e armazenamento de alimentos e resíduos, limitando ou eliminando a oferta de alimento e de abrigo para vetores e pragas urbanas (12.3)?"
+                android:textColor="#000000"
+                android:layout_weight="0.91"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/vetores_p3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/vetores_p3_na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA - Não se aplica"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/vetores_p3_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD - Adequado"
+                    android:textColor="#000000"/>
+                <RadioButton
+                    android:id="@+id/vetores_p3_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN - Inadequado"
+                    android:textColor="#000000"/>
+            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vetores_foto_p3"
+                android:background="@drawable/ic_camera"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:onClick="tirarFotoIntent"/>
+
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:id="@+id/vetores_descricao_p3"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta3"
+                android:id="@+id/vetores_pergunta4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.4 Quando constatada a infestação, são adotadas medidas de caráter corretivo, visando diminuir ou eliminar a infestação por vetores e pragas urbanas no local, por meio de controle químico (12.4)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.3 Os alimentos expostos para o consumo imediato obedecem aos critérios de tempos X temperaturas: Alimentos quentes mínimo de 60º com tempo máximo de exposição de 6 horas, alimentos quentes abaixo de 60º tempo máximo de exposição de 1 hora; Alimentos frios até 10º tempo máximo de exposição de 4 horas e alimentos frios entre 10º e 21º tempo máximo para exposição de 2 horas (Art.47)?"
-                android:textColor="#000000"/>
+                android:layout_gravity="center_horizontal"/>
         </TableRow>
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <RadioGroup
+                android:id="@+id/vetores_p4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p3">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p4_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p3_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p4_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p3_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p4_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p3_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p3"
+                android:id="@+id/vetores_foto_p4"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -214,61 +280,61 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p3"
+                android:id="@+id/vetores_descricao_p4"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta4"
+                android:id="@+id/vetores_pergunta5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.5 A escolha das técnicas de controle de vetores e pragas urbanas de caráter corretivo, a indicação de uso de saneantes desinfetantes, bem como a disposição das armadilhas e iscas são de responsabilidade da empresa controladora de pragas urbanas (12.4.1)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.4 Os alimentos quentes e frios que não apresentam os critérios de tempo e temperatura estabelecidos são desprezados (Art.47)??"
-                android:textColor="#000000"/>
+                android:layout_gravity="center_horizontal"/>
         </TableRow>
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <RadioGroup
+                android:id="@+id/vetores_p5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p4">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p5_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p4_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p5_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p4_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p5_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p4_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p4"
+                android:id="@+id/vetores_foto_p5"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -279,61 +345,61 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p4"
+                android:id="@+id/vetores_descricao_p5"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta5"
+                android:id="@+id/vetores_pergunta6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.6 A empresa contratante cumpri as recomendações contidas no relatório técnico elaborado pela empresa contratada, bem como revisa as medidas preventivas necessárias para evitar o acesso e a proliferação e/ou infestação por vetores e pragas urbanas no local (12.4.1)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.5 A água do balcão térmico é trocada diariamente e mantida a temperatura entre oitenta e noventa graus Celsius, ocorre aferição durante o tempo de distribuição (Art.48)?"
-                android:textColor="#000000"/>
+                android:layout_gravity="center_horizontal"/>
         </TableRow>
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <RadioGroup
+                android:id="@+id/vetores_p6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p5">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p6_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p5_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p6_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p5_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p6_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p5_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p5"
+                android:id="@+id/vetores_foto_p6"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -344,61 +410,61 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p5"
+                android:id="@+id/vetores_descricao_p6"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta6"
+                android:id="@+id/vetores_pergunta7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.7 A atividade de aplicação de saneantes desinfestantes é executada por empresa controladora de pragas urbanas devidamente licenciada ou cadastrada por órgãos do Sistema de Vigilância em Saúde (12.4.2)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.6 Os ornamentos localizados na área de consumação ou refeitórios não constituem fonte de contaminação para alimentos preparados, não estão entre o fluxo de ar e os alimentos e nem sobre os balcões de distribuição (Art.49)?"
-                android:textColor="#000000"/>
+                android:layout_gravity="center_horizontal"/>
         </TableRow>
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <RadioGroup
+                android:id="@+id/vetores_p7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p6">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p7_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p6_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p7_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p6_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p7_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p6_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p6"
+                android:id="@+id/vetores_foto_p7"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -409,61 +475,61 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p6"
+                android:id="@+id/vetores_descricao_p7"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_marginTop="15dp">
+
 
             <TextView
-                android:id="@+id/exposicao_pergunta7"
+                android:id="@+id/vetores_pergunta8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:text="3.8 A escolha das técnicas de controle de vetores e pragas urbanas de caráter corretivo são efetuadas de modo a garantir a segurança dos alimentos, dos operadores, dos funcionários do estabelecimento, dos usuários do serviço e do meio ambiente (12.4.3)?"
+                android:textColor="#000000"
                 android:layout_weight="0.91"
-                android:text="10.7 Ocorre o uso de ventiladores e ar condicionado, porém, o fluxo de ar não incide diretamente sobre os ornamentos e alimentos (Art.49)?"
-                android:textColor="#000000"/>
+                android:layout_gravity="center_horizontal"/>
         </TableRow>
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <RadioGroup
+                android:id="@+id/vetores_p8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p7">
+                android:layout_gravity="center">
 
                 <RadioButton
+                    android:id="@+id/vetores_p8_na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p7_na"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p8_ad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p7_ad"/>
+                    android:textColor="#000000"/>
                 <RadioButton
+                    android:id="@+id/vetores_p8_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p7_in"/>
+                    android:textColor="#000000"/>
             </RadioGroup>
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p7"
+                android:id="@+id/vetores_foto_p8"
                 android:background="@drawable/ic_camera"
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -474,82 +540,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p7"
-                android:background="@drawable/ic_descricao"
-                android:visibility="gone"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:weightSum="1">
-
-            <TextView
-                android:id="@+id/exposicao_pergunta8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.91"
-                android:text="10.8 O recebimento de dinheiro, cartões ou outras formas de pagamento ocorrem em área específica, os funcionários responsáveis por essa atividade não manipulam alimentos (Art.50)?"
-                android:textColor="#000000"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:id="@+id/exposicao_p8">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NA - Não se aplica"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p8_na"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AD - Adequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p8_ad"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="IN - Inadequado"
-                    android:textColor="#000000"
-                    android:id="@+id/exposicao_p8_in"/>
-            </RadioGroup>
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/exposicao_foto_p8"
-                android:background="@drawable/ic_camera"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:onClick="tirarFotoIntent"/>
-
-            <ImageButton android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center"
-                android:id="@+id/exposicao_descricao_p8"
+                android:id="@+id/vetores_descricao_p8"
                 android:background="@drawable/ic_descricao"
                 android:visibility="gone"/>
         </TableRow>
 
         <ImageButton
-            android:id="@+id/exposicao_btnSalvar"
+            android:id="@+id/vetores_btnSalvar"
             android:layout_width="98dp"
             android:layout_height="31dp"
+            android:background="@drawable/botao_salvar"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/botao_salvar"/>
+            android:layout_marginTop="15dp"/>
     </LinearLayout>
 </ScrollView>

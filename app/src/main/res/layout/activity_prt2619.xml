@@ -134,15 +134,35 @@
                     android:layout_margin="15dp"/>
 
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageButton android:id="@+id/prt2619_responsavel_prt2619"
+                    android:layout_column="2"
+                    android:background="@drawable/responsavel"
+                    android:layout_width="108dp"
+                    android:layout_height="92dp"
+                    android:layout_margin="15dp"/>
+
+                <ImageButton android:id="@+id/prt2619_saneamento_prt2619"
+                    android:layout_column="4"
+                    android:background="@drawable/saneamento"
+                    android:layout_width="108dp"
+                    android:layout_height="92dp"
+                    android:layout_margin="15dp"/>
+            </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
 
-                <ImageButton android:id="@+id/prt2619_saneamento_prt2619"
+                <ImageButton android:id="@+id/prt2619_qualidade_prt2619"
                     android:layout_column="2"
-                    android:background="@drawable/saneamento"
+                    android:background="@drawable/temporario"
                     android:layout_width="108dp"
                     android:layout_height="92dp"
                     android:layout_margin="15dp"/>

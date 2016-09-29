@@ -141,22 +141,6 @@ public class CadastroActivity extends AppCompatActivity {
                         thread.start();
                     }
 
-                    if (legislacao.getSelectedItem().toString().equals("DVS nº:210/2014")) {
-                        final Intent intentVaiPraIn04 = new Intent(CadastroActivity.this, In04Activity.class);
-                        Thread thread = new Thread() {
-                            @Override
-                            public void run() {
-                                try {
-                                    Thread.sleep(1000);
-                                    startActivity(intentVaiPraIn04);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        };
-                        thread.start();
-                    }
-
                     if (legislacao.getSelectedItem().toString().equals("IN nº:04/2014")) {
                         final Intent intentVaiPraIn04 = new Intent(CadastroActivity.this, In04Activity.class);
                         Thread thread = new Thread() {

@@ -2,11 +2,15 @@ package com.admms.tcc.oasis.controller.cvs5;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216DocumentacaoActivity;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216EdificacaoActivity;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216IngredientesActivity;
@@ -18,6 +22,12 @@ import com.admms.tcc.oasis.controller.rdc216.Rdc216SaneamentoActivity;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216VetoresActivity;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216ArmazenamentoActivity;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216HigieneActivity;
+import com.admms.tcc.oasis.dao.EstabelecimentoDAO;
+import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
+import com.admms.tcc.oasis.entity.Estabelecimento;
+import com.admms.tcc.oasis.entity.PlanoAcao;
+
+import java.io.File;
 
 public class Cvs5Activity extends Activity {
 
@@ -37,12 +47,15 @@ public class Cvs5Activity extends Activity {
         ImageButton preparo = (ImageButton) findViewById(R.id.cvs5_preparo_cvs5);
         ImageButton residuos = (ImageButton) findViewById(R.id.cvs5_residuos_cvs5);
         ImageButton saneamento = (ImageButton) findViewById(R.id.cvs5_saneamento_cvs5);
+        ImageButton salvar = (ImageButton) findViewById(R.id.cvs5_gerarRelatorio_cvs5);
 
+        final Bundle bundle = getIntent().getExtras();
 
         armazenamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentVaiProArmazenamento = new Intent(Cvs5Activity.this, Cvs5ArmazenamentoActivity.class);
+                intentVaiProArmazenamento.putExtras(bundle);
                 startActivity(intentVaiProArmazenamento);
             }
         });
@@ -118,6 +131,31 @@ public class Cvs5Activity extends Activity {
             public void onClick(View view) {
                 Intent intentVaiPraSaneamento = new Intent(Cvs5Activity.this, Cvs5SaneamentoActivity.class);
                 startActivity(intentVaiPraSaneamento);
+            }
+        });
+        salvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PlanoAcaoDAO planoAcaoDAO = new PlanoAcaoDAO(Cvs5Activity.this);
+                EstabelecimentoDAO estabelecimentoDAO = new EstabelecimentoDAO(Cvs5Activity.this);
+                PlanoAcao planoAcao = new PlanoAcao();
+                Estabelecimento estabelecimento = new Estabelecimento();
+
+                Bundle bundle = getIntent().getExtras();
+                planoAcao.setCodigo(bundle.getInt("codigoPlanoAcao"));
+                planoAcao = planoAcaoDAO.buscar(planoAcao);
+                estabelecimento.setCodigo(planoAcao.getEstabelecimento().getCodigo());
+                String arquivo = ArquivoHandler.criaPlanoAcaoPDF(Cvs5Activity.this, planoAcao);
+                Toast.makeText(Cvs5Activity.this, "Documento gerado com sucesso", Toast.LENGTH_SHORT).show();
+
+                File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), arquivo);
+                Uri anexoUri = Uri.fromFile(anexo);
+                Intent mandarEmail = new Intent(Intent.ACTION_SEND);
+                mandarEmail.setType("text/plain");
+                mandarEmail.putExtra(Intent.EXTRA_EMAIL,estabelecimento.getEmail());
+                mandarEmail.putExtra(Intent.EXTRA_STREAM, anexoUri);
+                startActivity(Intent.createChooser(mandarEmail, "Mandar email..."));
+
             }
         });
     }

@@ -80,7 +80,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
         new PopulateLegislacao().populate(this,context);
 
-        QueryBuilder<Legislacao, Integer> qb = legislacaoREDao.queryBuilder();
+        /*QueryBuilder<Legislacao, Integer> qb = legislacaoREDao.queryBuilder();
 
         try {
             legislacao = qb.where().eq(Legislacao.NOME_FIELD_NAME,"PRT nº:2.619/2011").query().get(0);
@@ -95,7 +95,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     @Override

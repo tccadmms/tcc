@@ -10,6 +10,8 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName = "tb_Estabelecimento")
 public class Estabelecimento {
 
+    public static final String RAZAO_SOCIAL_FIELD_NAME = "razaoSocial";
+
     @DatabaseField(generatedId = true)
     private int codigo;
 

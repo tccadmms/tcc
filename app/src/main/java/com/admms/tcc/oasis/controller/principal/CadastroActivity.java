@@ -1,5 +1,6 @@
 package com.admms.tcc.oasis.controller.principal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,9 +20,16 @@ import com.admms.tcc.oasis.controller.prt78_325.Prt78_325Activity;
 import com.admms.tcc.oasis.controller.cvs5.Cvs5Activity;
 import com.admms.tcc.oasis.controller.rdc216.Rdc216Activity;
 import com.admms.tcc.oasis.dao.DatabaseHelper;
+import com.admms.tcc.oasis.dao.EstabelecimentoDAO;
+import com.admms.tcc.oasis.dao.LegislacaoDAO;
+import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
 import com.admms.tcc.oasis.entity.Estabelecimento;
+import com.admms.tcc.oasis.entity.Legislacao;
+import com.admms.tcc.oasis.entity.PlanoAcao;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
+
+import java.util.Date;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -34,6 +42,11 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+
+        //Preparando o db para salvar onClick
+        final Context context = this;
+        final EstabelecimentoDAO estabelecimentoDAO = new EstabelecimentoDAO(context);
+        final LegislacaoDAO legislacaoDAO = new LegislacaoDAO(context);
 
         Spinner estados = (Spinner)findViewById(R.id.cadastro_estados);
         Spinner legislacoes = (Spinner)findViewById(R.id.cadastro_legislacao);
@@ -52,10 +65,6 @@ public class CadastroActivity extends AppCompatActivity {
         estado = (Spinner) findViewById(R.id.cadastro_estados);
         legislacao = (Spinner) findViewById(R.id.cadastro_legislacao);
 
-        //Preparando o db para salvar onClick
-        databaseHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
-        final RuntimeExceptionDao<Estabelecimento, Integer> estabelecimentoDao = databaseHelper.getEstabelecimentoRuntimeExceptionDao();
-
         ImageButton botaoSalvar = (ImageButton) findViewById(R.id.cadastro_btnSalvar);
         botaoSalvar.setOnClickListener(new View.OnClickListener() {
 
@@ -65,7 +74,7 @@ public class CadastroActivity extends AppCompatActivity {
                 if (razaoSocial.getText().toString().length() == 0) {
                     razaoSocial.setError(getString(R.string.required_message));
                 } else {
-                    estabelecimentoDao.create(new Estabelecimento(String.valueOf(razaoSocial.getText()),
+                    Estabelecimento estabelecimento = new Estabelecimento(String.valueOf(razaoSocial.getText()),
                             String.valueOf(email.getText()),
                             String.valueOf(cnpj.getText()),
                             String.valueOf(cep.getText()),
@@ -74,8 +83,14 @@ public class CadastroActivity extends AppCompatActivity {
                             String.valueOf(telefone.getText()),
                             String.valueOf(ramoAtividade.getText()),
                             String.valueOf(proprietario.getText()),
-                            String.valueOf(legislacao.getSelectedItem().toString())));
+                            String.valueOf(legislacao.getSelectedItem().toString()));
+
+
+                    estabelecimento = estabelecimentoDAO.inserir(estabelecimento);
                     Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                    final Legislacao legislacaoPlanoAcao = new Legislacao();
+                    final Estabelecimento estabelecimentoPlanoAcao = estabelecimentoDAO.buscar(estabelecimento);
 
                     if (legislacao.getSelectedItem().toString().equals("RDC nº:216/2004")) {
                         final Intent intentVaiPraRdc216 = new Intent(CadastroActivity.this, Rdc216Activity.class);
@@ -84,6 +99,8 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
+                                    legislacaoPlanoAcao.setNome("RDC nº:216/2004");
+                                    intentVaiPraRdc216.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraRdc216);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -132,6 +149,8 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
+                                    legislacaoPlanoAcao.setNome("CVS nº:5/2013");
+                                    intentVaiPraCvs5.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraCvs5);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -169,6 +188,18 @@ public class CadastroActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_cadastro, menu);
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public int criarPlanoAcao(Legislacao legislacao, Estabelecimento estabelecimento, Context context) {
+        PlanoAcao planoAcao = new PlanoAcao();
+        PlanoAcaoDAO planoAcaoDAO = new PlanoAcaoDAO(context);
+
+        planoAcao.setLegislacao(legislacao);
+        planoAcao.setData(new Date());
+        planoAcao.setEstabelecimento(estabelecimento);
+        planoAcaoDAO.inserir(planoAcao);
+
+        return planoAcao.getCodigo();
     }
 
 

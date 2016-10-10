@@ -11,6 +11,8 @@ import java.util.Date;
 @DatabaseTable(tableName = "tb_Plano_Acao")
 public class PlanoAcao {
 
+    public static final String ESTABELECIMENTO_FIELD_NAME = "estabelecimento_id";
+
     @DatabaseField(generatedId = true)
     private int codigo;
 
@@ -19,6 +21,9 @@ public class PlanoAcao {
 
     @DatabaseField(foreign = true)
     private Legislacao legislacao;
+
+    @DatabaseField(foreign = true)
+    private Estabelecimento estabelecimento;
 
     public PlanoAcao() {
     }
@@ -54,5 +59,13 @@ public class PlanoAcao {
 
     public void setLegislacao(Legislacao legislacao) {
         this.legislacao = legislacao;
+    }
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
+
+    public void setEstabelecimento(Estabelecimento estabelecimento) {
+        this.estabelecimento = estabelecimento;
     }
 }

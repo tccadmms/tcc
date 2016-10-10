@@ -28,11 +28,14 @@ public class Rdc216Activity extends Activity {
         ImageButton responsavel = (ImageButton) findViewById(R.id.rdc216_responsavel_rdc216);
         ImageButton saneamento = (ImageButton) findViewById(R.id.rdc216_saneamento_rdc216);
 
+        Bundle bundle = getIntent().getExtras();
+        final String codigoPlanoAcao = bundle.getString("codigoPlanoAcao");
 
         armazenamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentVaiProArmazenamento = new Intent(Rdc216Activity.this, Rdc216ArmazenamentoActivity.class);
+                intentVaiProArmazenamento.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiProArmazenamento);
             }
         });
@@ -41,6 +44,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraDocumentacao = new Intent(Rdc216Activity.this, Rdc216DocumentacaoActivity.class);
+                intentVaiPraDocumentacao.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraDocumentacao);
             }
         });

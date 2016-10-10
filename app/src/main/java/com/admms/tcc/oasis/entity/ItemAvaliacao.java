@@ -10,11 +10,16 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName = "tb_ItemAvaliacao")
 public class ItemAvaliacao {
 
+    public static final String AREA_AVALIADA_FIELD_NAME = "areaAvaliada";
+    public static final String PERGUNTA_FIELD_NAME = "pergunta";
+    public static final String CONFORMIDADE_FIELD_NAME = "conformidade";
+    public static final String PLANO_ACAO_FIELD_NAME = "planoAcao_id";
+
     @DatabaseField(generatedId = true)
     private int codigo;
 
-    @DatabaseField(canBeNull = false)
-    private int codPlanoAcao;
+    @DatabaseField(foreign = true, canBeNull = false)
+    private PlanoAcao planoAcao;
 
     @DatabaseField
     private String areaAvaliada;
@@ -31,14 +36,10 @@ public class ItemAvaliacao {
     @DatabaseField
     private String descricao;
 
-    @DatabaseField(foreign = true)
-    private PlanoAcao planoAcao;
-
     public ItemAvaliacao() {
     }
 
     public ItemAvaliacao(int codPlanoAcao, String areaAvaliada, String pergunta, String conformidade, String foto, String descricao, PlanoAcao planoAcao) {
-        this.codPlanoAcao = codPlanoAcao;
         this.areaAvaliada = areaAvaliada;
         this.pergunta = pergunta;
         this.conformidade = conformidade;
@@ -54,14 +55,6 @@ public class ItemAvaliacao {
     public void setCodigo(int codigo) {
 
         this.codigo = codigo;
-    }
-
-    public int getCodPlanoAcao() {
-        return codPlanoAcao;
-    }
-
-    public void setCodPlanoAcao(int codPlanoAcao) {
-        this.codPlanoAcao = codPlanoAcao;
     }
 
     public String getAreaAvaliada() {
@@ -114,10 +107,12 @@ public class ItemAvaliacao {
     }
 
     public PlanoAcao getPlanoAcao() {
+
         return planoAcao;
     }
 
     public void setPlanoAcao(PlanoAcao planoAcao) {
+
         this.planoAcao = planoAcao;
     }
 }

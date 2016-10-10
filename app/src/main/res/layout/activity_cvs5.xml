@@ -148,6 +148,20 @@
                     android:layout_margin="15dp"/>
 
             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <ImageButton android:id="@+id/cvs5_gerarRelatorio_cvs5"
+                    android:layout_column="2"
+                    android:background="@drawable/botao_salvar"
+                    android:layout_width="108dp"
+                    android:layout_height="92dp"
+                    android:layout_margin="15dp"/>
+
+            </TableRow>
         </TableLayout>
     </LinearLayout>
 </ScrollView>

@@ -2,10 +2,13 @@ INSERT INTO tb_Legislacao (nome)
 VALUES ('RDC nº:216/2004');
 
 INSERT INTO tb_Legislacao (nome)
-VALUES ('PRT nº:78/2009 & PRT nº:325/2010');
+VALUES ('PRT nº:78/2009 - 325/2010');
 
 INSERT INTO tb_Legislacao (nome)
 VALUES ('PRT nº:2.619/2011');
 
 INSERT INTO tb_Legislacao (nome)
 VALUES ('CVS nº:5/2013');
+
+INSERT INTO tb_Legislacao (nome)
+VALUES ('IN nº:04/2014');

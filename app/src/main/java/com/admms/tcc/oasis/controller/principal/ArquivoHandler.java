@@ -2,6 +2,7 @@ package com.admms.tcc.oasis.controller.principal;
 
 import android.content.Context;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import com.admms.tcc.oasis.dao.DatabaseHelper;
@@ -46,14 +47,16 @@ public class ArquivoHandler {
     private static final Font FONTE_PS = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD);
 
     public static File criaPastaFotos() {
-        String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + PASTA_FOTOS_CONSTANTE;
-        File imagesFolder = new File(dir);
+        File dir = Environment.getExternalStorageDirectory();
+        File imagesFolder = new File(dir.getAbsolutePath() + PASTA_FOTOS_CONSTANTE);
 
         if(!imagesFolder.exists()) {
             imagesFolder.mkdirs();
         }
 
+        Log.i("sucess","dir variable " + imagesFolder.getAbsolutePath());
         return imagesFolder;
+
     }
 
     public static String criaPlanoAcaoPDF(Context context, PlanoAcao planoAcao) {
@@ -109,7 +112,7 @@ public class ArquivoHandler {
 
         try {
             for (ItemAvaliacao item: listaItensAvaliacao) {
-                if(item.getConformidade() == Constantes.CONFORMIDADE_INADEQUADA) {
+                if(item.getConformidade().equals(Constantes.CONFORMIDADE_INADEQUADA)) {
                     document.add(paragrafo);
                     tabela = criaItemTabela(item);
                     document.add(tabela);
@@ -126,8 +129,11 @@ public class ArquivoHandler {
 
         PdfPCell cell;
 
+        File dir = Environment.getExternalStorageDirectory();
+        File imagesFolder = new File(dir.getAbsolutePath() + PASTA_FOTOS_CONSTANTE);
+
         if(itemAvaliacao.getFoto() != null) {
-            Image imagem = Image.getInstance( Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + PASTA_FOTOS_CONSTANTE + itemAvaliacao.getFoto(),true);
+            Image imagem = Image.getInstance( imagesFolder.getAbsolutePath() + "/" + itemAvaliacao.getFoto(),true);
             cell = new PdfPCell(imagem, true);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell.setVerticalAlignment(Element.ALIGN_CENTER);

@@ -1,13 +1,17 @@
 package com.admms.tcc.oasis.controller.cvs5;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
@@ -1379,9 +1384,6 @@ public class Cvs5ArmazenamentoActivity extends Activity {
                 startActivity(intentVaiProArmazenamento);
             }
         });
-
-
-
     }
 
     private void radioButtonHandler(RadioButton naoAplica, RadioButton adequado, RadioButton inadequado, ImageButton foto, ImageButton descricao, final ItemAvaliacao itemAvaliacao) {
@@ -1398,7 +1400,7 @@ public class Cvs5ArmazenamentoActivity extends Activity {
             descricao.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mostraJanelaDescricaoComDados(itemAvaliacao);
+                    mostraJanelaDescricao(itemAvaliacao);
                 }
             });
             itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_INADEQUADA);
@@ -1457,44 +1459,11 @@ public class Cvs5ArmazenamentoActivity extends Activity {
             }
 
         } catch (Exception e) {
-            Log.i("fail","creating photofile failed for " + fileName);
+            Log.i("fail","creating photofile failed for " + fileName + "path " + image.getAbsolutePath());
         }
     }
 
-    protected void mostraJanelaDescricao() {
-
-
-        LayoutInflater layoutInflater = LayoutInflater.from(Cvs5ArmazenamentoActivity.this);
-        View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Cvs5ArmazenamentoActivity.this);
-        alertDialogBuilder.setTitle("Descrição");
-        alertDialogBuilder.setIcon(R.drawable.ic_logo);
-        alertDialogBuilder.setView(promptView);
-
-
-        final EditText descricao = (EditText) promptView.findViewById(R.id.descricao);
-
-        alertDialogBuilder.setCancelable(false)
-                .setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-
-
-                    }
-                })
-                .setNegativeButton("Cancelar",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }
-
-    protected void mostraJanelaDescricaoComDados(final ItemAvaliacao itemAvaliacao) {
-
+    protected void mostraJanelaDescricao(final ItemAvaliacao itemAvaliacao) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(Cvs5ArmazenamentoActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);

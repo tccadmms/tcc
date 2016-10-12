@@ -3,8 +3,9 @@
     package="com.admms.tcc.oasis">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -97,7 +98,10 @@
         <activity android:name=".controller.prt2619.Prt2619_ExposicaoActivity" />
         <activity android:name=".controller.prt2619.Prt2619_DocumentacaoActivity" />
         <activity android:name=".controller.prt2619.Prt2619_ResponsavelActivity" />
-        <activity android:name=".controller.prt2619.Prt2619_QualidadeActivity"></activity>
+        <activity android:name=".controller.prt2619.Prt2619_QualidadeActivity" />
+        <activity android:name=".controller.principal.ListaEmpresasActivity" />
+        <activity android:name=".controller.principal.AjudaActivity" />
+        <activity android:name=".controller.principal.SlideAjudaActivity"></activity>
     </application>
 
 </manifest>

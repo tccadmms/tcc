@@ -1332,8 +1332,8 @@
 
         <ImageButton
             android:id="@+id/qualidade_btnSalvar"
-            android:layout_width="98dp"
-            android:layout_height="31dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/botao_salvar"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"/>

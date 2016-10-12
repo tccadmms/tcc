@@ -154,6 +154,22 @@
                     android:layout_margin="15dp"/>
 
             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/rdc216_gerarRelatorio_rdc216"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_span="3"
+                    android:background="@drawable/btn_plano_de_acao"
+                    android:layout_gravity="center_horizontal"/>
+
+            </TableRow>
         </TableLayout>
     </LinearLayout>
 </ScrollView>

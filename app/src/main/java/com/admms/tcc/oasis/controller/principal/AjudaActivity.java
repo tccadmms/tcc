@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.admms.tcc.oasis.R;
 
 public class AjudaActivity extends PagerAdapter {
-    private int[] imageResources = {R.drawable.armazenamento, R.drawable.documentacao};
+    private int[] imageResources = {R.drawable.ajuda_tela_inicial, R.drawable.ajuda_tela_cadastro};
     private Context ctx;
     private LayoutInflater layoutInflater;
 

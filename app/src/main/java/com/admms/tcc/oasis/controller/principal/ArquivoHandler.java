@@ -94,15 +94,15 @@ public class ArquivoHandler {
 
 
     private static void criaHeader(Document document, String nomeEstabelecimento) throws DocumentException {
-        Paragraph header = new Paragraph();
+        PdfPTable table = new PdfPTable(3);
 
-        adicionaLinhaVazia(header, 1);
-        header.add(new Paragraph(nomeEstabelecimento,FONTE_TITULO));
-        adicionaLinhaVazia(header, 1);
-        header.add(new Paragraph("Documento gerado às " + new Date(), FONTE_PS));
-        PdfPTable table = new PdfPTable(2);
-        header.add(table);
-        document.add(header);
+        PdfPCell cell = new PdfPCell(new Phrase(nomeEstabelecimento,FONTE_TITULO));
+        cell.setColspan(2);
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase("Documento gerado às " + new SimpleDateFormat("yy/MM/dd").format(new Date()), FONTE_PS));
+        table.addCell(cell);
+
+        document.add(table);
     }
 
     private static void insereConteudo(Document document, List<ItemAvaliacao> listaItensAvaliacao) {

@@ -2,11 +2,21 @@ package com.admms.tcc.oasis.controller.rdc216;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
+import com.admms.tcc.oasis.dao.EstabelecimentoDAO;
+import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
+import com.admms.tcc.oasis.entity.Estabelecimento;
+import com.admms.tcc.oasis.entity.PlanoAcao;
+
+import java.io.File;
 
 public class Rdc216Activity extends Activity {
 
@@ -27,6 +37,7 @@ public class Rdc216Activity extends Activity {
         ImageButton residuos = (ImageButton) findViewById(R.id.rdc216_residuos_rdc216);
         ImageButton responsavel = (ImageButton) findViewById(R.id.rdc216_responsavel_rdc216);
         ImageButton saneamento = (ImageButton) findViewById(R.id.rdc216_saneamento_rdc216);
+        ImageButton salvar = (ImageButton) findViewById(R.id.rdc216_gerarRelatorio_rdc216);
 
         Bundle bundle = getIntent().getExtras();
         final String codigoPlanoAcao = bundle.getString("codigoPlanoAcao");
@@ -53,6 +64,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraEdificacao = new Intent(Rdc216Activity.this, Rdc216EdificacaoActivity.class);
+                intentVaiPraEdificacao.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraEdificacao);
             }
         });
@@ -60,6 +72,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraExposicao = new Intent(Rdc216Activity.this, Rdc216ExposicaoActivity.class);
+                intentVaiPraExposicao.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraExposicao);
             }
         });
@@ -67,6 +80,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraHigiene = new Intent(Rdc216Activity.this, Rdc216HigieneActivity.class);
+                intentVaiPraHigiene.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraHigiene);
             }
         });
@@ -74,6 +88,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraIngredientes = new Intent(Rdc216Activity.this, Rdc216IngredientesActivity.class);
+                intentVaiPraIngredientes.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraIngredientes);
             }
         });
@@ -81,6 +96,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraManipulador = new Intent(Rdc216Activity.this, Rdc216ManipuladorActivity.class);
+                intentVaiPraManipulador.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraManipulador);
             }
         });
@@ -88,6 +104,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraVetores = new Intent(Rdc216Activity.this, Rdc216VetoresActivity.class);
+                intentVaiPraVetores.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraVetores);
             }
         });
@@ -95,6 +112,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraPreparo = new Intent(Rdc216Activity.this, Rdc216PreparoActivity.class);
+                intentVaiPraPreparo.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraPreparo);
             }
         });
@@ -102,6 +120,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraResiduos = new Intent(Rdc216Activity.this, Rdc216ResiduosActivity.class);
+                intentVaiPraResiduos.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraResiduos);
             }
         });
@@ -109,6 +128,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraResponsavel = new Intent(Rdc216Activity.this, Rdc216ResponsavelActivity.class);
+                intentVaiPraResponsavel.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraResponsavel);
             }
         });
@@ -116,10 +136,35 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraSaneamento = new Intent(Rdc216Activity.this, Rdc216SaneamentoActivity.class);
+                intentVaiPraSaneamento.putExtra("codigoPlanoAcao", codigoPlanoAcao);
                 startActivity(intentVaiPraSaneamento);
             }
         });
+        salvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PlanoAcaoDAO planoAcaoDAO = new PlanoAcaoDAO(Rdc216Activity.this);
+                EstabelecimentoDAO estabelecimentoDAO = new EstabelecimentoDAO(Rdc216Activity.this);
+                PlanoAcao planoAcao = new PlanoAcao();
+                Estabelecimento estabelecimento = new Estabelecimento();
 
+                Bundle bundle = getIntent().getExtras();
+                planoAcao.setCodigo(bundle.getInt("codigoPlanoAcao"));
+                planoAcao = planoAcaoDAO.buscar(planoAcao);
+                estabelecimento.setCodigo(planoAcao.getEstabelecimento().getCodigo());
+                String arquivo = ArquivoHandler.criaPlanoAcaoPDF(Rdc216Activity.this, planoAcao);
+                Toast.makeText(Rdc216Activity.this, "Documento gerado com sucesso", Toast.LENGTH_SHORT).show();
+
+                File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), arquivo);
+                Uri anexoUri = Uri.fromFile(anexo);
+                Intent mandarEmail = new Intent(Intent.ACTION_SEND);
+                mandarEmail.setType("text/plain");
+                mandarEmail.putExtra(Intent.EXTRA_EMAIL,estabelecimento.getEmail());
+                mandarEmail.putExtra(Intent.EXTRA_STREAM, anexoUri);
+                startActivity(Intent.createChooser(mandarEmail, "Mandar email..."));
+
+            }
+        });
 
     }
 }

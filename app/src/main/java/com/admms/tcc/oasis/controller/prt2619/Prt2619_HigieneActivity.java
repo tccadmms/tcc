@@ -3,20 +3,32 @@ package com.admms.tcc.oasis.controller.prt2619;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
+import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
+import com.admms.tcc.oasis.entity.Constantes;
+import com.admms.tcc.oasis.entity.ItemAvaliacao;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Prt2619_HigieneActivity extends Activity {
 
+    private ItemAvaliacao itemAvaliacao;
     private static final int REQUEST_IMAGE_PICTURE = 1;
 
     @Override
@@ -24,43 +36,29 @@ public class Prt2619_HigieneActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prt2619__higiene);
 
+        Bundle bundle = getIntent().getExtras();
+        final int codigoPlanoAcao = bundle.getInt("codigoPlanoAcao");
+
+        itemAvaliacao = ItemAvaliacaoController.criaItemAvaliacao(codigoPlanoAcao, itemAvaliacao, Constantes.AREA_AVALIADA_HIGIENE,this);
+
         RadioGroup r_p1 = (RadioGroup) findViewById(R.id.higiene_p1);
 
 
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p1 = (RadioButton) findViewById(R.id.higiene_p1_na);
-                RadioButton ad_p1 = (RadioButton) findViewById(R.id.higiene_p1_ad);
-                RadioButton in_p1 = (RadioButton) findViewById(R.id.higiene_p1_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p1_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p1_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p1_in);
 
-                ImageButton foto_p1 = (ImageButton) findViewById(R.id.higiene_foto_p1);
-                ImageButton descricao_p1 = (ImageButton) findViewById(R.id.higiene_descricao_p1);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p1);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p1);
 
-
-                if (in_p1.isChecked()) {
-                    foto_p1.setVisibility(View.VISIBLE);
-                    descricao_p1.setVisibility(View.VISIBLE);
-                    foto_p1.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p1.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p1.isChecked()) {
-                    foto_p1.setVisibility(View.INVISIBLE);
-                    descricao_p1.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p1.setVisibility(View.INVISIBLE);
-                    descricao_p1.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta1);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -70,37 +68,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p2 = (RadioButton) findViewById(R.id.higiene_p2_na);
-                RadioButton ad_p2 = (RadioButton) findViewById(R.id.higiene_p2_ad);
-                RadioButton in_p2 = (RadioButton) findViewById(R.id.higiene_p2_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p2_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p2_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p2_in);
 
-                ImageButton foto_p2 = (ImageButton) findViewById(R.id.higiene_foto_p2);
-                ImageButton descricao_p2 = (ImageButton) findViewById(R.id.higiene_descricao_p2);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p2);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p2);
 
 
-                if (in_p2.isChecked()) {
-                    foto_p2.setVisibility(View.VISIBLE);
-                    descricao_p2.setVisibility(View.VISIBLE);
-                    foto_p2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p2.isChecked()) {
-                    foto_p2.setVisibility(View.INVISIBLE);
-                    descricao_p2.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p2.setVisibility(View.INVISIBLE);
-                    descricao_p2.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta2);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -110,37 +90,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p3 = (RadioButton) findViewById(R.id.higiene_p3_na);
-                RadioButton ad_p3 = (RadioButton) findViewById(R.id.higiene_p3_ad);
-                RadioButton in_p3 = (RadioButton) findViewById(R.id.higiene_p3_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p3_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p3_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p3_in);
 
-                ImageButton foto_p3 = (ImageButton) findViewById(R.id.higiene_foto_p3);
-                ImageButton descricao_p3 = (ImageButton) findViewById(R.id.higiene_descricao_p3);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p3);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p3);
 
 
-                if (in_p3.isChecked()) {
-                    foto_p3.setVisibility(View.VISIBLE);
-                    descricao_p3.setVisibility(View.VISIBLE);
-                    foto_p3.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p3.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p3.isChecked()) {
-                    foto_p3.setVisibility(View.INVISIBLE);
-                    descricao_p3.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p3.setVisibility(View.INVISIBLE);
-                    descricao_p3.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta3);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -150,37 +112,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p4 = (RadioButton) findViewById(R.id.higiene_p4_na);
-                RadioButton ad_p4 = (RadioButton) findViewById(R.id.higiene_p4_ad);
-                RadioButton in_p4 = (RadioButton) findViewById(R.id.higiene_p4_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p4_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p4_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p4_in);
 
-                ImageButton foto_p4 = (ImageButton) findViewById(R.id.higiene_foto_p4);
-                ImageButton descricao_p4 = (ImageButton) findViewById(R.id.higiene_descricao_p4);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p4);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p4);
 
 
-                if (in_p4.isChecked()) {
-                    foto_p4.setVisibility(View.VISIBLE);
-                    descricao_p4.setVisibility(View.VISIBLE);
-                    foto_p4.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p4.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p4.isChecked()) {
-                    foto_p4.setVisibility(View.INVISIBLE);
-                    descricao_p4.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p4.setVisibility(View.INVISIBLE);
-                    descricao_p4.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta4);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -190,37 +134,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p5 = (RadioButton) findViewById(R.id.higiene_p5_na);
-                RadioButton ad_p5 = (RadioButton) findViewById(R.id.higiene_p5_ad);
-                RadioButton in_p5 = (RadioButton) findViewById(R.id.higiene_p5_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p5_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p5_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p5_in);
 
-                ImageButton foto_p5 = (ImageButton) findViewById(R.id.higiene_foto_p5);
-                ImageButton descricao_p5 = (ImageButton) findViewById(R.id.higiene_descricao_p5);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p5);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p5);
 
 
-                if (in_p5.isChecked()) {
-                    foto_p5.setVisibility(View.VISIBLE);
-                    descricao_p5.setVisibility(View.VISIBLE);
-                    foto_p5.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p5.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p5.isChecked()) {
-                    foto_p5.setVisibility(View.INVISIBLE);
-                    descricao_p5.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p5.setVisibility(View.INVISIBLE);
-                    descricao_p5.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta5);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -230,37 +156,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p6 = (RadioButton) findViewById(R.id.higiene_p6_na);
-                RadioButton ad_p6 = (RadioButton) findViewById(R.id.higiene_p6_ad);
-                RadioButton in_p6 = (RadioButton) findViewById(R.id.higiene_p6_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p6_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p6_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p6_in);
 
-                ImageButton foto_p6 = (ImageButton) findViewById(R.id.higiene_foto_p6);
-                ImageButton descricao_p6 = (ImageButton) findViewById(R.id.higiene_descricao_p6);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p6);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p6);
 
 
-                if (in_p6.isChecked()) {
-                    foto_p6.setVisibility(View.VISIBLE);
-                    descricao_p6.setVisibility(View.VISIBLE);
-                    foto_p6.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p6.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p6.isChecked()) {
-                    foto_p6.setVisibility(View.INVISIBLE);
-                    descricao_p6.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p6.setVisibility(View.INVISIBLE);
-                    descricao_p6.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta6);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -270,37 +178,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p7 = (RadioButton) findViewById(R.id.higiene_p7_na);
-                RadioButton ad_p7 = (RadioButton) findViewById(R.id.higiene_p7_ad);
-                RadioButton in_p7 = (RadioButton) findViewById(R.id.higiene_p7_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p7_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p7_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p7_in);
 
-                ImageButton foto_p7 = (ImageButton) findViewById(R.id.higiene_foto_p7);
-                ImageButton descricao_p7 = (ImageButton) findViewById(R.id.higiene_descricao_p7);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p7);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p7);
 
 
-                if (in_p7.isChecked()) {
-                    foto_p7.setVisibility(View.VISIBLE);
-                    descricao_p7.setVisibility(View.VISIBLE);
-                    foto_p7.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p7.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p7.isChecked()) {
-                    foto_p7.setVisibility(View.INVISIBLE);
-                    descricao_p7.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p7.setVisibility(View.INVISIBLE);
-                    descricao_p7.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta7);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -310,37 +200,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p8 = (RadioButton) findViewById(R.id.higiene_p8_na);
-                RadioButton ad_p8 = (RadioButton) findViewById(R.id.higiene_p8_ad);
-                RadioButton in_p8 = (RadioButton) findViewById(R.id.higiene_p8_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p8_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p8_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p8_in);
 
-                ImageButton foto_p8 = (ImageButton) findViewById(R.id.higiene_foto_p8);
-                ImageButton descricao_p8 = (ImageButton) findViewById(R.id.higiene_descricao_p8);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p8);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p8);
 
 
-                if (in_p8.isChecked()) {
-                    foto_p8.setVisibility(View.VISIBLE);
-                    descricao_p8.setVisibility(View.VISIBLE);
-                    foto_p8.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p8.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p8.isChecked()) {
-                    foto_p8.setVisibility(View.INVISIBLE);
-                    descricao_p8.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p8.setVisibility(View.INVISIBLE);
-                    descricao_p8.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta8);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -350,37 +222,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p9 = (RadioButton) findViewById(R.id.higiene_p9_na);
-                RadioButton ad_p9 = (RadioButton) findViewById(R.id.higiene_p9_ad);
-                RadioButton in_p9 = (RadioButton) findViewById(R.id.higiene_p9_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p9_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p9_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p9_in);
 
-                ImageButton foto_p9 = (ImageButton) findViewById(R.id.higiene_foto_p9);
-                ImageButton descricao_p9 = (ImageButton) findViewById(R.id.higiene_descricao_p9);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p9);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p9);
 
 
-                if (in_p9.isChecked()) {
-                    foto_p9.setVisibility(View.VISIBLE);
-                    descricao_p9.setVisibility(View.VISIBLE);
-                    foto_p9.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p9.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p9.isChecked()) {
-                    foto_p9.setVisibility(View.INVISIBLE);
-                    descricao_p9.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p9.setVisibility(View.INVISIBLE);
-                    descricao_p9.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta9);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -390,37 +244,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p10 = (RadioButton) findViewById(R.id.higiene_p10_na);
-                RadioButton ad_p10= (RadioButton) findViewById(R.id.higiene_p10_ad);
-                RadioButton in_p10 = (RadioButton) findViewById(R.id.higiene_p10_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p10_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p10_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p10_in);
 
-                ImageButton foto_p10 = (ImageButton) findViewById(R.id.higiene_foto_p10);
-                ImageButton descricao_p10 = (ImageButton) findViewById(R.id.higiene_descricao_p10);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p10);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p10);
 
 
-                if (in_p10.isChecked()) {
-                    foto_p10.setVisibility(View.VISIBLE);
-                    descricao_p10.setVisibility(View.VISIBLE);
-                    foto_p10.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p10.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p10.isChecked()) {
-                    foto_p10.setVisibility(View.INVISIBLE);
-                    descricao_p10.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p10.setVisibility(View.INVISIBLE);
-                    descricao_p10.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta10);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -430,37 +266,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p11 = (RadioButton) findViewById(R.id.higiene_p11_na);
-                RadioButton ad_p11 = (RadioButton) findViewById(R.id.higiene_p11_ad);
-                RadioButton in_p11 = (RadioButton) findViewById(R.id.higiene_p11_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p11_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p11_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p11_in);
 
-                ImageButton foto_p11 = (ImageButton) findViewById(R.id.higiene_foto_p11);
-                ImageButton descricao_p11 = (ImageButton) findViewById(R.id.higiene_descricao_p11);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p11);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p11);
 
 
-                if (in_p11.isChecked()) {
-                    foto_p11.setVisibility(View.VISIBLE);
-                    descricao_p11.setVisibility(View.VISIBLE);
-                    foto_p11.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p11.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p11.isChecked()) {
-                    foto_p11.setVisibility(View.INVISIBLE);
-                    descricao_p11.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p11.setVisibility(View.INVISIBLE);
-                    descricao_p11.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta11);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -470,37 +288,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p12 = (RadioButton) findViewById(R.id.higiene_p12_na);
-                RadioButton ad_p12 = (RadioButton) findViewById(R.id.higiene_p12_ad);
-                RadioButton in_p12 = (RadioButton) findViewById(R.id.higiene_p12_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p12_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p12_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p12_in);
 
-                ImageButton foto_p12 = (ImageButton) findViewById(R.id.higiene_foto_p12);
-                ImageButton descricao_p12 = (ImageButton) findViewById(R.id.higiene_descricao_p12);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p12);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p12);
 
 
-                if (in_p12.isChecked()) {
-                    foto_p12.setVisibility(View.VISIBLE);
-                    descricao_p12.setVisibility(View.VISIBLE);
-                    foto_p12.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p12.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p12.isChecked()) {
-                    foto_p12.setVisibility(View.INVISIBLE);
-                    descricao_p12.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p12.setVisibility(View.INVISIBLE);
-                    descricao_p12.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta12);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -510,37 +310,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p13 = (RadioButton) findViewById(R.id.higiene_p13_na);
-                RadioButton ad_p13 = (RadioButton) findViewById(R.id.higiene_p13_ad);
-                RadioButton in_p13 = (RadioButton) findViewById(R.id.higiene_p13_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p13_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p13_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p13_in);
 
-                ImageButton foto_p13 = (ImageButton) findViewById(R.id.higiene_foto_p13);
-                ImageButton descricao_p13 = (ImageButton) findViewById(R.id.higiene_descricao_p13);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p13);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p13);
 
 
-                if (in_p13.isChecked()) {
-                    foto_p13.setVisibility(View.VISIBLE);
-                    descricao_p13.setVisibility(View.VISIBLE);
-                    foto_p13.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p13.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p13.isChecked()) {
-                    foto_p13.setVisibility(View.INVISIBLE);
-                    descricao_p13.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p13.setVisibility(View.INVISIBLE);
-                    descricao_p13.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta13);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -550,37 +332,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p14.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p14 = (RadioButton) findViewById(R.id.higiene_p14_na);
-                RadioButton ad_p14 = (RadioButton) findViewById(R.id.higiene_p14_ad);
-                RadioButton in_p14 = (RadioButton) findViewById(R.id.higiene_p14_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p14_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p14_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p14_in);
 
-                ImageButton foto_p14 = (ImageButton) findViewById(R.id.higiene_foto_p14);
-                ImageButton descricao_p14 = (ImageButton) findViewById(R.id.higiene_descricao_p14);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p14);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p14);
 
 
-                if (in_p14.isChecked()) {
-                    foto_p14.setVisibility(View.VISIBLE);
-                    descricao_p14.setVisibility(View.VISIBLE);
-                    foto_p14.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p14.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p14.isChecked()) {
-                    foto_p14.setVisibility(View.INVISIBLE);
-                    descricao_p14.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p14.setVisibility(View.INVISIBLE);
-                    descricao_p14.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta14);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -590,37 +354,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p15 = (RadioButton) findViewById(R.id.higiene_p15_na);
-                RadioButton ad_p15 = (RadioButton) findViewById(R.id.higiene_p15_ad);
-                RadioButton in_p15 = (RadioButton) findViewById(R.id.higiene_p15_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p15_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p15_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p15_in);
 
-                ImageButton foto_p15 = (ImageButton) findViewById(R.id.higiene_foto_p15);
-                ImageButton descricao_p15 = (ImageButton) findViewById(R.id.higiene_descricao_p15);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p15);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p15);
 
 
-                if (in_p15.isChecked()) {
-                    foto_p15.setVisibility(View.VISIBLE);
-                    descricao_p15.setVisibility(View.VISIBLE);
-                    foto_p15.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p15.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p15.isChecked()) {
-                    foto_p15.setVisibility(View.INVISIBLE);
-                    descricao_p15.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p15.setVisibility(View.INVISIBLE);
-                    descricao_p15.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta15);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -630,37 +376,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p16 = (RadioButton) findViewById(R.id.higiene_p16_na);
-                RadioButton ad_p16 = (RadioButton) findViewById(R.id.higiene_p16_ad);
-                RadioButton in_p16 = (RadioButton) findViewById(R.id.higiene_p16_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p16_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p16_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p16_in);
 
-                ImageButton foto_p16 = (ImageButton) findViewById(R.id.higiene_foto_p16);
-                ImageButton descricao_p16 = (ImageButton) findViewById(R.id.higiene_descricao_p16);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p16);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p16);
 
 
-                if (in_p16.isChecked()) {
-                    foto_p16.setVisibility(View.VISIBLE);
-                    descricao_p16.setVisibility(View.VISIBLE);
-                    foto_p16.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p16.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p16.isChecked()) {
-                    foto_p16.setVisibility(View.INVISIBLE);
-                    descricao_p16.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p16.setVisibility(View.INVISIBLE);
-                    descricao_p16.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta16);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -670,37 +398,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p17.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p17 = (RadioButton) findViewById(R.id.higiene_p17_na);
-                RadioButton ad_p17 = (RadioButton) findViewById(R.id.higiene_p17_ad);
-                RadioButton in_p17 = (RadioButton) findViewById(R.id.higiene_p17_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p17_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p17_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p17_in);
 
-                ImageButton foto_p17 = (ImageButton) findViewById(R.id.higiene_foto_p17);
-                ImageButton descricao_p17 = (ImageButton) findViewById(R.id.higiene_descricao_p17);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p17);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p17);
 
 
-                if (in_p17.isChecked()) {
-                    foto_p17.setVisibility(View.VISIBLE);
-                    descricao_p17.setVisibility(View.VISIBLE);
-                    foto_p17.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p17.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p17.isChecked()) {
-                    foto_p17.setVisibility(View.INVISIBLE);
-                    descricao_p17.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p17.setVisibility(View.INVISIBLE);
-                    descricao_p17.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta17);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -710,37 +420,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p18 = (RadioButton) findViewById(R.id.higiene_p18_na);
-                RadioButton ad_p18 = (RadioButton) findViewById(R.id.higiene_p18_ad);
-                RadioButton in_p18 = (RadioButton) findViewById(R.id.higiene_p18_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p18_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p18_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p18_in);
 
-                ImageButton foto_p18 = (ImageButton) findViewById(R.id.higiene_foto_p18);
-                ImageButton descricao_p18 = (ImageButton) findViewById(R.id.higiene_descricao_p18);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p18);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p18);
 
 
-                if (in_p18.isChecked()) {
-                    foto_p18.setVisibility(View.VISIBLE);
-                    descricao_p18.setVisibility(View.VISIBLE);
-                    foto_p18.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p18.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p18.isChecked()) {
-                    foto_p18.setVisibility(View.INVISIBLE);
-                    descricao_p18.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p18.setVisibility(View.INVISIBLE);
-                    descricao_p18.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -751,37 +443,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p19 = (RadioButton) findViewById(R.id.higiene_p19_na);
-                RadioButton ad_p19 = (RadioButton) findViewById(R.id.higiene_p19_ad);
-                RadioButton in_p19 = (RadioButton) findViewById(R.id.higiene_p19_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p19_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p19_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p19_in);
 
-                ImageButton foto_p19 = (ImageButton) findViewById(R.id.higiene_foto_p19);
-                ImageButton descricao_p19 = (ImageButton) findViewById(R.id.higiene_descricao_p19);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p19);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p19);
 
 
-                if (in_p19.isChecked()) {
-                    foto_p19.setVisibility(View.VISIBLE);
-                    descricao_p19.setVisibility(View.VISIBLE);
-                    foto_p19.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p19.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p19.isChecked()) {
-                    foto_p19.setVisibility(View.INVISIBLE);
-                    descricao_p19.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p19.setVisibility(View.INVISIBLE);
-                    descricao_p19.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -791,37 +465,19 @@ public class Prt2619_HigieneActivity extends Activity {
         r_p20.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton na_p20 = (RadioButton) findViewById(R.id.higiene_p20_na);
-                RadioButton ad_p20 = (RadioButton) findViewById(R.id.higiene_p20_ad);
-                RadioButton in_p20 = (RadioButton) findViewById(R.id.higiene_p20_in);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                RadioButton na = (RadioButton) findViewById(R.id.higiene_p20_na);
+                RadioButton ad = (RadioButton) findViewById(R.id.higiene_p20_ad);
+                RadioButton in = (RadioButton) findViewById(R.id.higiene_p20_in);
 
-                ImageButton foto_p20 = (ImageButton) findViewById(R.id.higiene_foto_p20);
-                ImageButton descricao_p20 = (ImageButton) findViewById(R.id.higiene_descricao_p20);
+                ImageButton foto = (ImageButton) findViewById(R.id.higiene_foto_p20);
+                ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p20);
 
 
-                if (in_p20.isChecked()) {
-                    foto_p20.setVisibility(View.VISIBLE);
-                    descricao_p20.setVisibility(View.VISIBLE);
-                    foto_p20.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            tirarFotoIntent();
-                        }
-                    });
-                    descricao_p20.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            mostraJanelaDescricao();
-                        }
-                    });
-
-                } else if (na_p20.isChecked()) {
-                    foto_p20.setVisibility(View.INVISIBLE);
-                    descricao_p20.setVisibility(View.INVISIBLE);
-                } else {
-                    foto_p20.setVisibility(View.INVISIBLE);
-                    descricao_p20.setVisibility(View.INVISIBLE);
-                }
+                TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
+                itemAvaliacao.setPergunta(pergunta.getText().toString());
+                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
             }
         });
 
@@ -830,22 +486,69 @@ public class Prt2619_HigieneActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiProHigiene = new Intent(Prt2619_HigieneActivity.this, Prt2619Activity.class);
+                intentVaiProHigiene.putExtra("codigoPlanoAcao",codigoPlanoAcao);
                 startActivity(intentVaiProHigiene);
             }
         });
     }
 
-    private void tirarFotoIntent() {
-        Intent vaiPraCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (vaiPraCamera.resolveActivity(getPackageManager())!= null) {
-            startActivityForResult(vaiPraCamera, REQUEST_IMAGE_PICTURE);
+    private void radioButtonHandler(RadioButton naoAplica, RadioButton adequado, RadioButton inadequado, ImageButton foto, ImageButton descricao, final ItemAvaliacao itemAvaliacao) {
+
+        if (inadequado.isChecked()) {
+            foto.setVisibility(View.VISIBLE);
+            descricao.setVisibility(View.VISIBLE);
+            foto.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    tirarFotoIntent(itemAvaliacao);
+                }
+            });
+            descricao.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mostraJanelaDescricao(itemAvaliacao);
+                }
+            });
+            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_INADEQUADA);
+        } else if (naoAplica.isChecked()) {
+            foto.setVisibility(View.INVISIBLE);
+            descricao.setVisibility(View.INVISIBLE);
+            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_NA);
+        } else if (adequado.isChecked()) {
+            foto.setVisibility(View.INVISIBLE);
+            descricao.setVisibility(View.INVISIBLE);
+            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_ADEQUADA);
         }
     }
 
+    private void tirarFotoIntent(ItemAvaliacao itemAvaliacao) {
+        Intent vaiPraCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String fileName = "DBP_" + timeStamp + ".png";
+        itemAvaliacao.setFoto(fileName);
 
-    protected void mostraJanelaDescricao() {
+        //Criação de Pasta
+        File imagesFolder = ArquivoHandler.criaPastaFotos();
 
+        File image = new File(imagesFolder, fileName);
+        try {
+            image.createNewFile();
+            Uri uriSavedImage = Uri.fromFile(image);
+
+            vaiPraCamera.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+
+            if (vaiPraCamera.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(vaiPraCamera, REQUEST_IMAGE_PICTURE);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
+            }
+
+        } catch (Exception e) {
+            Log.i("fail", "creating photofile failed for " + fileName + "path " + image.getAbsolutePath());
+        }
+    }
+
+    protected void mostraJanelaDescricao(final ItemAvaliacao itemAvaliacao) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_HigieneActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
@@ -860,8 +563,8 @@ public class Prt2619_HigieneActivity extends Activity {
         alertDialogBuilder.setCancelable(false)
                 .setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
-
+                        itemAvaliacao.setDescricao(descricao.getText().toString());
+                        ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
                     }
                 })
                 .setNegativeButton("Cancelar",

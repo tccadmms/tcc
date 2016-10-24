@@ -64,6 +64,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraDocumentacao = new Intent(Cvs5Activity.this, Cvs5DocumentacaoActivity.class);
+                intentVaiPraDocumentacao.putExtras(bundle);
                 startActivity(intentVaiPraDocumentacao);
             }
         });
@@ -72,6 +73,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraEdificacao = new Intent(Cvs5Activity.this, Cvs5EdificacaoActivity.class);
+                intentVaiPraEdificacao.putExtras(bundle);
                 startActivity(intentVaiPraEdificacao);
             }
         });
@@ -80,6 +82,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraExposicao = new Intent(Cvs5Activity.this, Cvs5ExposicaoActivity.class);
+                intentVaiPraExposicao.putExtras(bundle);
                 startActivity(intentVaiPraExposicao);
             }
         });
@@ -88,6 +91,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraHigiene = new Intent(Cvs5Activity.this, Cvs5HigieneActivity.class);
+                intentVaiPraHigiene.putExtras(bundle);
                 startActivity(intentVaiPraHigiene);
             }
         });
@@ -95,6 +99,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraIngredientes = new Intent(Cvs5Activity.this, Cvs5IngredientesActivity.class);
+                intentVaiPraIngredientes.putExtras(bundle);
                 startActivity(intentVaiPraIngredientes);
             }
         });
@@ -102,6 +107,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraManipulador = new Intent(Cvs5Activity.this, Cvs5ManipuladoresActivity.class);
+                intentVaiPraManipulador.putExtras(bundle);
                 startActivity(intentVaiPraManipulador);
             }
         });
@@ -109,6 +115,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraVetores = new Intent(Cvs5Activity.this, Cvs5VetoresActivity.class);
+                intentVaiPraVetores.putExtras(bundle);
                 startActivity(intentVaiPraVetores);
             }
         });
@@ -116,6 +123,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraPreparo = new Intent(Cvs5Activity.this, Cvs5PreparoActivity.class);
+                intentVaiPraPreparo.putExtras(bundle);
                 startActivity(intentVaiPraPreparo);
             }
         });
@@ -123,6 +131,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraResiduos = new Intent(Cvs5Activity.this, Cvs5ResiduosActivity.class);
+                intentVaiPraResiduos.putExtras(bundle);
                 startActivity(intentVaiPraResiduos);
             }
         });
@@ -130,6 +139,7 @@ public class Cvs5Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraSaneamento = new Intent(Cvs5Activity.this, Cvs5SaneamentoActivity.class);
+                intentVaiPraSaneamento.putExtras(bundle);
                 startActivity(intentVaiPraSaneamento);
             }
         });

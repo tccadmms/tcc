@@ -39,14 +39,13 @@ public class Rdc216Activity extends Activity {
         ImageButton saneamento = (ImageButton) findViewById(R.id.rdc216_saneamento_rdc216);
         ImageButton salvar = (ImageButton) findViewById(R.id.rdc216_gerarRelatorio_rdc216);
 
-        Bundle bundle = getIntent().getExtras();
-        final String codigoPlanoAcao = bundle.getString("codigoPlanoAcao");
+        final Bundle bundle = getIntent().getExtras();
 
         armazenamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentVaiProArmazenamento = new Intent(Rdc216Activity.this, Rdc216ArmazenamentoActivity.class);
-                intentVaiProArmazenamento.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiProArmazenamento.putExtras(bundle);
                 startActivity(intentVaiProArmazenamento);
             }
         });
@@ -55,7 +54,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraDocumentacao = new Intent(Rdc216Activity.this, Rdc216DocumentacaoActivity.class);
-                intentVaiPraDocumentacao.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraDocumentacao.putExtras(bundle);
                 startActivity(intentVaiPraDocumentacao);
             }
         });
@@ -64,7 +63,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraEdificacao = new Intent(Rdc216Activity.this, Rdc216EdificacaoActivity.class);
-                intentVaiPraEdificacao.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraEdificacao.putExtras(bundle);
                 startActivity(intentVaiPraEdificacao);
             }
         });
@@ -72,7 +71,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraExposicao = new Intent(Rdc216Activity.this, Rdc216ExposicaoActivity.class);
-                intentVaiPraExposicao.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraExposicao.putExtras(bundle);
                 startActivity(intentVaiPraExposicao);
             }
         });
@@ -80,7 +79,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraHigiene = new Intent(Rdc216Activity.this, Rdc216HigieneActivity.class);
-                intentVaiPraHigiene.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraHigiene.putExtras(bundle);
                 startActivity(intentVaiPraHigiene);
             }
         });
@@ -88,7 +87,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraIngredientes = new Intent(Rdc216Activity.this, Rdc216IngredientesActivity.class);
-                intentVaiPraIngredientes.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraIngredientes.putExtras(bundle);
                 startActivity(intentVaiPraIngredientes);
             }
         });
@@ -96,7 +95,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraManipulador = new Intent(Rdc216Activity.this, Rdc216ManipuladorActivity.class);
-                intentVaiPraManipulador.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraManipulador.putExtras(bundle);
                 startActivity(intentVaiPraManipulador);
             }
         });
@@ -104,7 +103,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraVetores = new Intent(Rdc216Activity.this, Rdc216VetoresActivity.class);
-                intentVaiPraVetores.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraVetores.putExtras(bundle);
                 startActivity(intentVaiPraVetores);
             }
         });
@@ -112,7 +111,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraPreparo = new Intent(Rdc216Activity.this, Rdc216PreparoActivity.class);
-                intentVaiPraPreparo.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraPreparo.putExtras(bundle);
                 startActivity(intentVaiPraPreparo);
             }
         });
@@ -120,7 +119,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraResiduos = new Intent(Rdc216Activity.this, Rdc216ResiduosActivity.class);
-                intentVaiPraResiduos.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraResiduos.putExtras(bundle);
                 startActivity(intentVaiPraResiduos);
             }
         });
@@ -128,7 +127,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraResponsavel = new Intent(Rdc216Activity.this, Rdc216ResponsavelActivity.class);
-                intentVaiPraResponsavel.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraResponsavel.putExtras(bundle);
                 startActivity(intentVaiPraResponsavel);
             }
         });
@@ -136,7 +135,7 @@ public class Rdc216Activity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiPraSaneamento = new Intent(Rdc216Activity.this, Rdc216SaneamentoActivity.class);
-                intentVaiPraSaneamento.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                intentVaiPraSaneamento.putExtras(bundle);
                 startActivity(intentVaiPraSaneamento);
             }
         });

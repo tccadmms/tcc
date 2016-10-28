@@ -27,14 +27,13 @@ import com.admms.tcc.oasis.controller.rdc216.Rdc216Activity;
 import com.admms.tcc.oasis.dao.DatabaseHelper;
 import com.admms.tcc.oasis.dao.EstabelecimentoDAO;
 import com.admms.tcc.oasis.dao.LegislacaoDAO;
-import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
 import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.admms.tcc.oasis.entity.Legislacao;
-import com.admms.tcc.oasis.entity.PlanoAcao;
-import com.j256.ormlite.android.apptools.OpenHelperManager;
-import com.j256.ormlite.dao.RuntimeExceptionDao;
+import com.admms.tcc.oasis.entity.Constantes;
 
 import java.util.Date;
+
+import static com.admms.tcc.oasis.controller.PlanoAcaoController.criarPlanoAcao;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -119,14 +118,14 @@ public class CadastroActivity extends AppCompatActivity {
                     final Legislacao legislacaoPlanoAcao = new Legislacao();
                     final Estabelecimento estabelecimentoPlanoAcao = estabelecimentoDAO.buscar(estabelecimento);
 
-                    if (legislacao.getSelectedItem().toString().equals("RDC nº:216/2004")) {
+                    if (legislacao.getSelectedItem().toString().equals(Constantes.LEGISLACAO_RDC216)) {
                         final Intent intentVaiPraRdc216 = new Intent(CadastroActivity.this, Rdc216Activity.class);
                         Thread thread = new Thread() {
                             @Override
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome("RDC nº:216/2004");
+                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_RDC216);
                                     intentVaiPraRdc216.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraRdc216);
                                 } catch (Exception e) {
@@ -137,14 +136,14 @@ public class CadastroActivity extends AppCompatActivity {
                         thread.start();
                     }
 
-                    if (legislacao.getSelectedItem().toString().equals("PRT nº:78/2009 - 325/2010")) {
+                    if (legislacao.getSelectedItem().toString().equals(Constantes.LEGISLACAO_PRT78)) {
                         final Intent intentVaiPraPrt78_325 = new Intent(CadastroActivity.this, Prt78_325Activity.class);
                         Thread thread = new Thread() {
                             @Override
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome("PRT nº:78/2009 - 325/2010");
+                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_PRT78);
                                     intentVaiPraPrt78_325.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraPrt78_325);
                                 } catch (Exception e) {
@@ -155,14 +154,14 @@ public class CadastroActivity extends AppCompatActivity {
                         thread.start();
                     }
 
-                    if (legislacao.getSelectedItem().toString().equals("PRT nº:2619/2011")) {
+                    if (legislacao.getSelectedItem().toString().equals(Constantes.LEGISLACAO_PRT2619)) {
                         final Intent intentVaiPraPrt2619 = new Intent(CadastroActivity.this, Prt2619Activity.class);
                         Thread thread = new Thread() {
                             @Override
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome("PRT nº:2619/2011");
+                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_PRT2619);
                                     intentVaiPraPrt2619.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraPrt2619);
                                 } catch (Exception e) {
@@ -173,14 +172,14 @@ public class CadastroActivity extends AppCompatActivity {
                         thread.start();
                     }
 
-                    if (legislacao.getSelectedItem().toString().equals("CVS nº:5/2013")) {
+                    if (legislacao.getSelectedItem().toString().equals(Constantes.LEGISLACAO_CVS5)) {
                         final Intent intentVaiPraCvs5 = new Intent(CadastroActivity.this, Cvs5Activity.class);
                         Thread thread = new Thread() {
                             @Override
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome("CVS nº:5/2013");
+                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_CVS5);
                                     intentVaiPraCvs5.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraCvs5);
                                 } catch (Exception e) {
@@ -191,14 +190,14 @@ public class CadastroActivity extends AppCompatActivity {
                         thread.start();
                     }
 
-                    if (legislacao.getSelectedItem().toString().equals("IN nº:04/2014")) {
+                    if (legislacao.getSelectedItem().toString().equals(Constantes.LEGISLACAO_IN04)) {
                         final Intent intentVaiPraIn04 = new Intent(CadastroActivity.this, In04Activity.class);
                         Thread thread = new Thread() {
                             @Override
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome("IN nº:04/2014");
+                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_IN04);
                                     intentVaiPraIn04.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraIn04);
                                 } catch (Exception e) {
@@ -229,18 +228,6 @@ public class CadastroActivity extends AppCompatActivity {
         startActivity(intentListaEmpresas);
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public int criarPlanoAcao(Legislacao legislacao, Estabelecimento estabelecimento, Context context) {
-        PlanoAcao planoAcao = new PlanoAcao();
-        PlanoAcaoDAO planoAcaoDAO = new PlanoAcaoDAO(context);
-
-        planoAcao.setLegislacao(legislacao);
-        planoAcao.setData(new Date());
-        planoAcao.setEstabelecimento(estabelecimento);
-        planoAcaoDAO.inserir(planoAcao);
-
-        return planoAcao.getCodigo();
     }
 
     @Override

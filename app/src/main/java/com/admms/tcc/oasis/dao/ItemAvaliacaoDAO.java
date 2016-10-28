@@ -79,4 +79,9 @@ public class ItemAvaliacaoDAO implements DAO<ItemAvaliacao>{
 
         return listaItensAvaliacao;
     }
+
+    @Override
+    public List<ItemAvaliacao> listar() {
+        return null;
+    }
 }

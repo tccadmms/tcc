@@ -23,6 +23,12 @@ public class Constantes {
     public static final String AREA_AVALIADA_RESPONSAVEL = "Responsável";
     public static final String AREA_AVALIADA_QUALIDADE = "Qualidade";
 
+    public static final String LEGISLACAO_CVS5 = "CVS nº:5/2013";
+    public static final String LEGISLACAO_IN04 = "IN nº:04/2014";
+    public static final String LEGISLACAO_PRT78 = "PRT nº:78/2009 - 325/2010";
+    public static final String LEGISLACAO_PRT2619 = "PRT nº:2619/2011";
+    public static final String LEGISLACAO_RDC216 = "RDC nº:216/2004";
+
     // Previne a instanciação da classe de contantes
     private Constantes() {
 

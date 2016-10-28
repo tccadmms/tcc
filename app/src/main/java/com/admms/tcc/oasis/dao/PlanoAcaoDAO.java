@@ -47,6 +47,11 @@ public class PlanoAcaoDAO implements DAO<PlanoAcao> {
         return planoAcaoReDAO.queryForId(planoAcao.getCodigo());
     }
 
+    @Override
+    public List<PlanoAcao> listar() {
+        return null;
+    }
+
     public List<PlanoAcao> buscarPlanoAcaoEstabelecimento (Estabelecimento estabelecimento) {
         QueryBuilder<PlanoAcao, Integer> qb = planoAcaoReDAO.queryBuilder();
 

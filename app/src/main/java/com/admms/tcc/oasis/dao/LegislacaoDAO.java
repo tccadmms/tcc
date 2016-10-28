@@ -9,6 +9,8 @@ import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.stmt.QueryBuilder;
 
+import java.util.List;
+
 /**
  * Created by DemonHide-RB on 10/6/2016.
  */
@@ -46,5 +48,10 @@ public class LegislacaoDAO implements DAO<Legislacao> {
         }
 
         return legislacao;
+    }
+
+    @Override
+    public List<Legislacao> listar() {
+        return null;
     }
 }

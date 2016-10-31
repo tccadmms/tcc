@@ -1,14 +1,14 @@
-INSERT INTO tb_Legislacao (nome)
-VALUES ('RDC nº:216/2004');
+INSERT INTO tb_Legislacao
+VALUES (1,'RDC nº:216/2004',6,24,55,10,17,12,13,24,0,4,3,8,6);
 
-INSERT INTO tb_Legislacao (nome)
-VALUES ('PRT nº:78/2009 - 325/2010');
+INSERT INTO tb_Legislacao
+VALUES (2,'PRT nº:78/2009 - 325/2010',7,5,36,20,18,17,16,32,0,3,7,9,7);
 
-INSERT INTO tb_Legislacao (nome)
-VALUES ('PRT nº:2.619/2011');
+INSERT INTO tb_Legislacao
+VALUES (3,'PRT nº:2.619/2011',83,48,88,39,20,18,53,37,20,18,5,17,8);
 
-INSERT INTO tb_Legislacao (nome)
-VALUES ('CVS nº:5/2013');
+INSERT INTO tb_Legislacao
+VALUES (4,'CVS nº:5/2013',55,12,48,8,22,12,33,27,0,4,0,10,3);
 
-INSERT INTO tb_Legislacao (nome)
-VALUES ('IN nº:04/2014');
+INSERT INTO tb_Legislacao
+VALUES (5,'IN nº:04/2014',6,11,37,9,6,7,7,7,0,4,0,5,5);

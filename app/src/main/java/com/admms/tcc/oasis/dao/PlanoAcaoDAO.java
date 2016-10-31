@@ -43,7 +43,7 @@ public class PlanoAcaoDAO implements DAO<PlanoAcao> {
     }
 
     @Override
-    public PlanoAcao buscar(PlanoAcao planoAcao) {
+    public PlanoAcao buscarPorID(PlanoAcao planoAcao) {
         return planoAcaoReDAO.queryForId(planoAcao.getCodigo());
     }
 

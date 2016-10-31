@@ -37,7 +37,20 @@ public class LegislacaoDAO implements DAO<Legislacao> {
         legislacaoReDAO.update(legislacao);
     }
 
-    public Legislacao buscar(Legislacao legislacao) {
+    public Legislacao buscarPorID(Legislacao legislacao) {
+        QueryBuilder<Legislacao, Integer> qb = legislacaoReDAO.queryBuilder();
+
+        try {
+            legislacao = qb.where().eq(Legislacao.ID_FIELD_NAME, legislacao.getCodigo()).query().get(0);
+        } catch (Exception e) {
+            Log.i("fail","fetching legislacao:" + legislacao.getNome() +"(" + legislacao.getCodigo() + ")");
+            return null;
+        }
+
+        return legislacao;
+    }
+
+    public Legislacao buscarPorNome(Legislacao legislacao) {
         QueryBuilder<Legislacao, Integer> qb = legislacaoReDAO.queryBuilder();
 
         try {

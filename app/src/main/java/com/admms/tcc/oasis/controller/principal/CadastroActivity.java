@@ -31,8 +31,6 @@ import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.admms.tcc.oasis.entity.Legislacao;
 import com.admms.tcc.oasis.entity.Constantes;
 
-import java.util.Date;
-
 import static com.admms.tcc.oasis.controller.PlanoAcaoController.criarPlanoAcao;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -100,6 +98,8 @@ public class CadastroActivity extends AppCompatActivity {
                 if (razaoSocial.getText().toString().length() == 0) {
                     razaoSocial.setError(getString(R.string.required_message));
                 } else {
+                    final Legislacao legislacaoPlanoAcao = new Legislacao();
+                    legislacaoPlanoAcao.setNome(legislacao.getSelectedItem().toString());
                     Estabelecimento estabelecimento = new Estabelecimento(String.valueOf(razaoSocial.getText()),
                             String.valueOf(email.getText()),
                             String.valueOf(cnpj.getText()),
@@ -109,14 +109,14 @@ public class CadastroActivity extends AppCompatActivity {
                             String.valueOf(telefone.getText()),
                             String.valueOf(ramoAtividade.getText()),
                             String.valueOf(proprietario.getText()),
-                            String.valueOf(legislacao.getSelectedItem().toString()));
+                            legislacaoDAO.buscarPorNome(legislacaoPlanoAcao));
 
 
                     estabelecimento = estabelecimentoDAO.inserir(estabelecimento);
                     Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
 
-                    final Legislacao legislacaoPlanoAcao = new Legislacao();
-                    final Estabelecimento estabelecimentoPlanoAcao = estabelecimentoDAO.buscar(estabelecimento);
+
+                    final Estabelecimento estabelecimentoPlanoAcao = estabelecimentoDAO.buscarPorID(estabelecimento);
 
                     if (legislacao.getSelectedItem().toString().equals(Constantes.LEGISLACAO_RDC216)) {
                         final Intent intentVaiPraRdc216 = new Intent(CadastroActivity.this, Rdc216Activity.class);
@@ -125,8 +125,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_RDC216);
-                                    intentVaiPraRdc216.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraRdc216.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraRdc216);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -143,8 +142,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_PRT78);
-                                    intentVaiPraPrt78_325.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraPrt78_325.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraPrt78_325);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -161,8 +159,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_PRT2619);
-                                    intentVaiPraPrt2619.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraPrt2619.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraPrt2619);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -179,8 +176,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_CVS5);
-                                    intentVaiPraCvs5.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraCvs5.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraCvs5);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -197,8 +193,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    legislacaoPlanoAcao.setNome(Constantes.LEGISLACAO_IN04);
-                                    intentVaiPraIn04.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscar(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraIn04.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraIn04);
                                 } catch (Exception e) {
                                     e.printStackTrace();

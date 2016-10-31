@@ -19,7 +19,7 @@ public class ItemAvaliacaoController {
 
         planoAcao.setCodigo(codigoPlanoAcao);
         itemAvaliacao = new ItemAvaliacao();
-        itemAvaliacao.setPlanoAcao(planoAcaoDAO.buscar(planoAcao));
+        itemAvaliacao.setPlanoAcao(planoAcaoDAO.buscarPorID(planoAcao));
         itemAvaliacao.setAreaAvaliada(areaAvaliada);
 
         return itemAvaliacao;

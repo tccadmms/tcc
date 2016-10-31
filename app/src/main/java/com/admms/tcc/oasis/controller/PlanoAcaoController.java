@@ -7,7 +7,9 @@ import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.admms.tcc.oasis.entity.Legislacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by DemonHide-RB on 10/24/2016.
@@ -17,15 +19,30 @@ public class PlanoAcaoController {
     private static PlanoAcaoDAO planoAcaoDAO;
 
     public static int criarPlanoAcao(Legislacao legislacao, Estabelecimento estabelecimento, Context context) {
-        planoAcaoDAO = new PlanoAcaoDAO(context);
-        PlanoAcao planoAcao = new PlanoAcao();
 
+        if(planoAcaoDAO == null) {
+            planoAcaoDAO = new PlanoAcaoDAO(context);
+        }
+
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String nomeArquivo = "DBP-Relatorio_" + timeStamp + ".pdf";
+
+        PlanoAcao planoAcao = new PlanoAcao();
         planoAcao.setLegislacao(legislacao);
         planoAcao.setData(new Date());
         planoAcao.setEstabelecimento(estabelecimento);
+        planoAcao.setNomeArquivo(nomeArquivo);
         planoAcaoDAO.inserir(planoAcao);
 
         return planoAcao.getCodigo();
+    }
+
+    public static List<PlanoAcao> listarPlanoAcaoEstabelecimento(Estabelecimento estabelecimento, Context context) {
+        if(planoAcaoDAO == null) {
+            planoAcaoDAO = new PlanoAcaoDAO(context);
+        }
+
+        return planoAcaoDAO.buscarPlanoAcaoEstabelecimento(estabelecimento);
     }
 
 }

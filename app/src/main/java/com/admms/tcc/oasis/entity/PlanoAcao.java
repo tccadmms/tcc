@@ -19,6 +19,9 @@ public class PlanoAcao {
     @DatabaseField(canBeNull = false)
     private Date data;
 
+    @DatabaseField
+    private String nomeArquivo;
+
     @DatabaseField(foreign = true)
     private Legislacao legislacao;
 
@@ -28,7 +31,8 @@ public class PlanoAcao {
     public PlanoAcao() {
     }
 
-    public PlanoAcao(Date data, Legislacao legislacao) {
+    public PlanoAcao(Date data, String nomeArquivo, Legislacao legislacao) {
+        this.nomeArquivo = nomeArquivo;
         this.data = new Date(System.currentTimeMillis());
         this.legislacao = legislacao;
     }
@@ -54,18 +58,30 @@ public class PlanoAcao {
     }
 
     public Legislacao getLegislacao() {
+
         return legislacao;
     }
 
     public void setLegislacao(Legislacao legislacao) {
+
         this.legislacao = legislacao;
     }
 
     public Estabelecimento getEstabelecimento() {
+
         return estabelecimento;
     }
 
     public void setEstabelecimento(Estabelecimento estabelecimento) {
         this.estabelecimento = estabelecimento;
     }
+
+    public String getNomeArquivo() {
+        return nomeArquivo;
+    }
+
+    public void setNomeArquivo(String nomeArquivo) {
+        this.nomeArquivo = nomeArquivo;
+    }
+
 }

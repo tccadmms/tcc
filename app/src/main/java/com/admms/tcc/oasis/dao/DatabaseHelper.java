@@ -30,7 +30,7 @@ import java.util.List;
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     private static final String DATABASE_NAME = "oasis.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
 
     private Dao<Avaliador, Integer> avaliadorDao = null;
     private Dao<Estabelecimento, Integer> estabelecimentoDao= null;

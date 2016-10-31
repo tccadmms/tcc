@@ -31,6 +31,9 @@ public class Estabelecimento {
     private String cidade;
 
     @DatabaseField
+    private String telefone;
+
+    @DatabaseField
     private String estado;
 
     @DatabaseField
@@ -39,19 +42,20 @@ public class Estabelecimento {
     @DatabaseField
     private String responsavelLegal;
 
-    @DatabaseField
-    private String legislacao;
+    @DatabaseField(foreign = true)
+    private Legislacao legislacao;
 
     public Estabelecimento() {
     }
 
-    public Estabelecimento(String razaoSocial, String email, String numCNPJ, String numCEP, String cidade, String estado, String s, String ramo, String responsavelLegal, String legislacao) {
+    public Estabelecimento(String razaoSocial, String email, String numCNPJ, String numCEP, String cidade, String estado, String telefone, String ramo, String responsavelLegal, Legislacao legislacao) {
         this.razaoSocial = razaoSocial;
         this.email = email;
         this.numCNPJ = numCNPJ;
         this.numCEP = numCEP;
         this.cidade = cidade;
         this.estado = estado;
+        this.telefone = telefone;
         this.ramo = ramo;
         this.responsavelLegal = responsavelLegal;
         this.legislacao = legislacao;
@@ -113,6 +117,14 @@ public class Estabelecimento {
         this.estado = estado;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public String getRamo() {
         return ramo;
     }
@@ -129,11 +141,11 @@ public class Estabelecimento {
         this.responsavelLegal = responsavelLegal;
     }
 
-    public String getLegislacao() {
+    public Legislacao getLegislacao() {
         return legislacao;
     }
 
-    public void setLegislacao(String legislacao) {
+    public void setLegislacao(Legislacao legislacao) {
         this.legislacao = legislacao;
     }
 }

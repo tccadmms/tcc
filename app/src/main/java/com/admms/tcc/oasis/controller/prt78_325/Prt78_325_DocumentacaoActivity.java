@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
-import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
+import com.admms.tcc.oasis.controller.principal.ArquivoController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
 
@@ -210,7 +210,7 @@ public class Prt78_325_DocumentacaoActivity extends Activity {
         itemAvaliacao.setFoto(fileName);
 
         //Criação de Pasta
-        File imagesFolder = ArquivoHandler.criaPastaFotos();
+        File imagesFolder = ArquivoController.criaPastaFotos();
 
         File image = new File(imagesFolder, fileName);
         try {

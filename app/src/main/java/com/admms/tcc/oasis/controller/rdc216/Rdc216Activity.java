@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
-import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
+import com.admms.tcc.oasis.controller.principal.ArquivoController;
 import com.admms.tcc.oasis.dao.EstabelecimentoDAO;
 import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
 import com.admms.tcc.oasis.entity.Estabelecimento;
@@ -149,12 +149,12 @@ public class Rdc216Activity extends Activity {
 
                 Bundle bundle = getIntent().getExtras();
                 planoAcao.setCodigo(bundle.getInt("codigoPlanoAcao"));
-                planoAcao = planoAcaoDAO.buscar(planoAcao);
+                planoAcao = planoAcaoDAO.buscarPorID(planoAcao);
                 estabelecimento.setCodigo(planoAcao.getEstabelecimento().getCodigo());
-                String arquivo = ArquivoHandler.criaPlanoAcaoPDF(Rdc216Activity.this, planoAcao);
+                ArquivoController.criaPlanoAcaoPDF(Rdc216Activity.this, planoAcao);
                 Toast.makeText(Rdc216Activity.this, "Documento gerado com sucesso", Toast.LENGTH_SHORT).show();
 
-                File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), arquivo);
+                File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), planoAcao.getNomeArquivo());
                 Uri anexoUri = Uri.fromFile(anexo);
                 Intent mandarEmail = new Intent(Intent.ACTION_SEND);
                 mandarEmail.setType("text/plain");

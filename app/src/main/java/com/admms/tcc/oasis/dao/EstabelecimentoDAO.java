@@ -41,7 +41,7 @@ public class EstabelecimentoDAO implements DAO<Estabelecimento> {
     }
 
     @Override
-    public Estabelecimento buscar(Estabelecimento estabelecimento) {
+    public Estabelecimento buscarPorID(Estabelecimento estabelecimento) {
         return estabelecimentoReDAO.queryForId(estabelecimento.getCodigo());
     }
 

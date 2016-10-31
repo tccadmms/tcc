@@ -1,5 +1,5 @@
 #
-# generated on 2016/10/07 01:26:09
+# generated on 2016/10/31 03:18:42
 #
 # --table-start--
 dataClass=com.admms.tcc.oasis.entity.Avaliador
@@ -41,6 +41,9 @@ fieldName=numCEP
 fieldName=cidade
 # --field-end--
 # --field-start--
+fieldName=telefone
+# --field-end--
+# --field-start--
 fieldName=estado
 # --field-end--
 # --field-start--
@@ -51,6 +54,7 @@ fieldName=responsavelLegal
 # --field-end--
 # --field-start--
 fieldName=legislacao
+foreign=true
 # --field-end--
 # --table-fields-end--
 # --table-end--
@@ -66,6 +70,45 @@ generatedId=true
 # --field-start--
 fieldName=nome
 canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasArmazenamento
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasDocumentacao
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasEdificacao
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasExposicao
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasHigiene
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasIngredientes
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasManipuladores
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasPreparo
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasQualidade
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasResiduos
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasResponsavel
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasSaneamento
+# --field-end--
+# --field-start--
+fieldName=numeroPerguntasVetores
 # --field-end--
 # --table-fields-end--
 # --table-end--
@@ -99,6 +142,9 @@ generatedId=true
 # --field-start--
 fieldName=data
 canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=nomeArquivo
 # --field-end--
 # --field-start--
 fieldName=legislacao

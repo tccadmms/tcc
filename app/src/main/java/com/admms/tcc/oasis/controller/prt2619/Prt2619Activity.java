@@ -10,18 +10,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
-import com.admms.tcc.oasis.controller.in04.In04_ArmazenamentoActivity;
-import com.admms.tcc.oasis.controller.in04.In04_DocumentacaoActivity;
-import com.admms.tcc.oasis.controller.in04.In04_EdificacaoActivity;
-import com.admms.tcc.oasis.controller.in04.In04_ExposicaoActivity;
-import com.admms.tcc.oasis.controller.in04.In04_HigieneActivity;
-import com.admms.tcc.oasis.controller.in04.In04_IngredientesActivity;
-import com.admms.tcc.oasis.controller.in04.In04_ManipuladoresActivity;
-import com.admms.tcc.oasis.controller.in04.In04_PreparoActivity;
-import com.admms.tcc.oasis.controller.in04.In04_ResiduosActivity;
-import com.admms.tcc.oasis.controller.in04.In04_SaneamentoActivity;
-import com.admms.tcc.oasis.controller.in04.In04_VetoresActivity;
-import com.admms.tcc.oasis.controller.principal.ArquivoHandler;
+import com.admms.tcc.oasis.controller.principal.ArquivoController;
 import com.admms.tcc.oasis.controller.prt78_325.Prt78_325_ExposicaoActivity;
 import com.admms.tcc.oasis.dao.EstabelecimentoDAO;
 import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
@@ -175,12 +164,12 @@ public class Prt2619Activity extends Activity {
 
                 Bundle bundle = getIntent().getExtras();
                 planoAcao.setCodigo(bundle.getInt("codigoPlanoAcao"));
-                planoAcao = planoAcaoDAO.buscar(planoAcao);
+                planoAcao = planoAcaoDAO.buscarPorID(planoAcao);
                 estabelecimento.setCodigo(planoAcao.getEstabelecimento().getCodigo());
-                String arquivo = ArquivoHandler.criaPlanoAcaoPDF(Prt2619Activity.this, planoAcao);
+                ArquivoController.criaPlanoAcaoPDF(Prt2619Activity.this, planoAcao);
                 Toast.makeText(Prt2619Activity.this, "Documento gerado com sucesso", Toast.LENGTH_SHORT).show();
 
-                File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), arquivo);
+                File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), planoAcao.getNomeArquivo());
                 Uri anexoUri = Uri.fromFile(anexo);
                 Intent mandarEmail = new Intent(Intent.ACTION_SEND);
                 mandarEmail.setType("text/plain");

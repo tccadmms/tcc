@@ -9,7 +9,7 @@ public interface DAO<T> {
 
     public T inserir(T t);
     public void alterar(T t);
-    public T buscar(T t);
+    public T buscarPorID(T t);
     public List<T> listar();
 
 }

@@ -1,11 +1,9 @@
 package com.admms.tcc.oasis.dao;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.util.Log;
 
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
-import com.admms.tcc.oasis.entity.Legislacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
@@ -31,8 +29,8 @@ public class ItemAvaliacaoDAO implements DAO<ItemAvaliacao>{
     }
 
     public ItemAvaliacao inserir(ItemAvaliacao itemAvaliacao) {
-        if(buscar(itemAvaliacao) != null) {
-            ItemAvaliacao antigoItemAvaliacao = buscar(itemAvaliacao);
+        if(buscarPorID(itemAvaliacao) != null) {
+            ItemAvaliacao antigoItemAvaliacao = buscarPorID(itemAvaliacao);
 
             antigoItemAvaliacao.setConformidade(itemAvaliacao.getConformidade());
             antigoItemAvaliacao.setDescricao(itemAvaliacao.getDescricao());
@@ -52,7 +50,7 @@ public class ItemAvaliacaoDAO implements DAO<ItemAvaliacao>{
         itemAvaliacaoReDAO.update(itemAvaliacao);
     }
 
-    public ItemAvaliacao buscar(ItemAvaliacao itemAvaliacao) {
+    public ItemAvaliacao buscarPorID(ItemAvaliacao itemAvaliacao) {
         QueryBuilder<ItemAvaliacao, Integer> qb = itemAvaliacaoReDAO.queryBuilder();
 
         try {

@@ -25,7 +25,8 @@
         <activity android:name=".controller.rdc216.Rdc216ArmazenamentoActivity" />
         <activity android:name=".controller.rdc216.Rdc216DocumentacaoActivity" />
         <activity android:name=".controller.rdc216.Rdc216EdificacaoActivity" />
-        <activity android:name=".controller.principal.DBPActivity">
+        <activity android:name=".controller.principal.DBPActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -101,7 +102,6 @@
         <activity android:name=".controller.prt2619.Prt2619_QualidadeActivity" />
         <activity android:name=".controller.principal.ListaDiagnosticosActivity"/>
         <activity android:name=".controller.principal.ListaEmpresasActivity" />
-        <activity android:name=".controller.principal.AjudaActivity" />
         <activity android:name=".controller.principal.SlideAjudaActivity"/>
     </application>
 

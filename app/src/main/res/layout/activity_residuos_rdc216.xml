@@ -30,6 +30,7 @@
             android:weightSum="1">
 
             <TextView
+                android:id="@+id/residuos_pergunta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -94,6 +95,7 @@
             android:weightSum="1">
 
             <TextView
+                android:id="@+id/residuos_pergunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.91"
@@ -155,6 +157,7 @@
             android:weightSum="1">
 
             <TextView
+                android:id="@+id/residuos_pergunta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.91"
@@ -214,6 +217,7 @@
             android:weightSum="1">
 
             <TextView
+                android:id="@+id/residuos_pergunta4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.91"

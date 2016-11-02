@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24dp"
-                    android:text="PT nº: 2619/2011"
+                    android:text="PRT nº: 2619/2011"
                     android:id="@+id/textView"
                     android:layout_column="2"
                     android:layout_span="3"

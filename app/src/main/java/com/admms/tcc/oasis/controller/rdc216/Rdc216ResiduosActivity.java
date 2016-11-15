@@ -21,15 +21,18 @@ import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
 import com.admms.tcc.oasis.controller.principal.ArquivoController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
+import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Rdc216ResiduosActivity extends Activity {
 
     private ItemAvaliacao itemAvaliacao;
     private static final int REQUEST_IMAGE_PICTURE = 1;
+    private static final int NUMERO_PERGUNTAS = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,9 +135,37 @@ public class Rdc216ResiduosActivity extends Activity {
         residuosSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProresiduos = new Intent(Rdc216ResiduosActivity.this, Rdc216Activity.class);
-                intentVaiProresiduos.putExtra("codigoPlanoAcao",codigoPlanoAcao);
-                startActivity(intentVaiProresiduos);
+                PlanoAcao planoAcao = new PlanoAcao();
+                planoAcao.setCodigo(codigoPlanoAcao);
+
+                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_RESIDUOS, Rdc216ResiduosActivity.this);
+
+                if (NUMERO_PERGUNTAS != listaItens.size()) {
+                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which){
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    Intent intentVaiProresiduos = new Intent(Rdc216ResiduosActivity.this, Rdc216Activity.class);
+                                    intentVaiProresiduos.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                                    startActivity(intentVaiProresiduos);
+                                    break;
+
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    //Nao faz nada
+                                    break;
+                            }
+                        }
+                    };
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Rdc216ResiduosActivity.this);
+                    builder.setMessage("Você ainda não respondeu todas as perguntas. Deseja prosseguir?").setPositiveButton("Sim", dialogClickListener)
+                            .setNegativeButton("Voltar", dialogClickListener).show();
+                } else {
+                    Intent intentVaiProresiduos = new Intent(Rdc216ResiduosActivity.this, Rdc216Activity.class);
+                    intentVaiProresiduos.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                    startActivity(intentVaiProresiduos);
+                }
             }
         });
 

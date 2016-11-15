@@ -63,7 +63,7 @@ public class ArquivoController {
 
         String caminho = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + planoAcao.getNomeArquivo();
 
-        listaItensAvaliacao = itemAvaliacaoDao.buscarPlanoAcao(planoAcao);
+        listaItensAvaliacao = itemAvaliacaoDao.buscarPorPlanoAcao(planoAcao);
         Estabelecimento estabelecimento = new Estabelecimento();
         estabelecimento.setCodigo(planoAcao.getEstabelecimento().getCodigo());
         estabelecimento = estabelecimentoDao.buscarPorID(estabelecimento);

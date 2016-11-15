@@ -18,18 +18,22 @@ import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
+import com.admms.tcc.oasis.controller.cvs5.Cvs5Activity;
 import com.admms.tcc.oasis.controller.principal.ArquivoController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
+import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Prt78_325_ResponsavelActivity extends Activity {
 
     private ItemAvaliacao itemAvaliacao;
     private static final int REQUEST_IMAGE_PICTURE = 1;
+    private static final int NUMERO_PERGUNTAS = 7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,9 +218,37 @@ public class Prt78_325_ResponsavelActivity extends Activity {
         responsavelSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProResponsavel = new Intent(Prt78_325_ResponsavelActivity.this, Prt78_325Activity.class);
-                intentVaiProResponsavel.putExtra("codigoPlanoAcao",codigoPlanoAcao);
-                startActivity(intentVaiProResponsavel);
+                PlanoAcao planoAcao = new PlanoAcao();
+                planoAcao.setCodigo(codigoPlanoAcao);
+
+                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_RESPONSAVEL, Prt78_325_ResponsavelActivity.this);
+
+                if (NUMERO_PERGUNTAS != listaItens.size()) {
+                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which){
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    Intent intentVaiProResponsavel = new Intent(Prt78_325_ResponsavelActivity.this, Prt78_325Activity.class);
+                                    intentVaiProResponsavel.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                                    startActivity(intentVaiProResponsavel);
+                                    break;
+
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    //Nao faz nada
+                                    break;
+                            }
+                        }
+                    };
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Prt78_325_ResponsavelActivity.this);
+                    builder.setMessage("Você ainda não respondeu todas as perguntas. Deseja prosseguir?").setPositiveButton("Sim", dialogClickListener)
+                            .setNegativeButton("Voltar", dialogClickListener).show();
+                } else {
+                    Intent intentVaiProResponsavel = new Intent(Prt78_325_ResponsavelActivity.this, Prt78_325Activity.class);
+                    intentVaiProResponsavel.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                    startActivity(intentVaiProResponsavel);
+                }
             }
         });
 

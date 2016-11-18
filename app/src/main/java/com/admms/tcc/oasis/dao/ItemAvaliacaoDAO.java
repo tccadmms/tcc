@@ -47,6 +47,7 @@ public class ItemAvaliacaoDAO implements DAO<ItemAvaliacao>{
     }
 
     public void alterar(ItemAvaliacao itemAvaliacao) {
+
         itemAvaliacaoReDAO.update(itemAvaliacao);
     }
 
@@ -64,12 +65,27 @@ public class ItemAvaliacaoDAO implements DAO<ItemAvaliacao>{
         return itemAvaliacao;
     }
 
-    public List<ItemAvaliacao> buscarPlanoAcao(PlanoAcao planoAcao) {
+    public List<ItemAvaliacao> buscarPorPlanoAcao(PlanoAcao planoAcao) {
         QueryBuilder<ItemAvaliacao, Integer> qb = itemAvaliacaoReDAO.queryBuilder();
         List<ItemAvaliacao> listaItensAvaliacao = new ArrayList<ItemAvaliacao>();
 
         try {
             listaItensAvaliacao = qb.where().eq(ItemAvaliacao.PLANO_ACAO_FIELD_NAME, planoAcao.getCodigo()).query();
+        } catch (Exception e) {
+            Log.i("fail","fetching plano de acao (" + planoAcao.getCodigo() + ") não existe");
+            return null;
+        }
+
+        return listaItensAvaliacao;
+    }
+
+    public List<ItemAvaliacao> buscarPorAreaAvaliada(PlanoAcao planoAcao, String areaAvaliada) {
+        QueryBuilder<ItemAvaliacao, Integer> qb = itemAvaliacaoReDAO.queryBuilder();
+        List<ItemAvaliacao> listaItensAvaliacao = new ArrayList<ItemAvaliacao>();
+
+        try {
+            listaItensAvaliacao = qb.where().eq(ItemAvaliacao.PLANO_ACAO_FIELD_NAME, planoAcao.getCodigo())
+                                            .and().eq(ItemAvaliacao.AREA_AVALIADA_FIELD_NAME, areaAvaliada).query();
         } catch (Exception e) {
             Log.i("fail","fetching plano de acao (" + planoAcao.getCodigo() + ") não existe");
             return null;

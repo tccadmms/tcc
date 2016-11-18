@@ -21,15 +21,18 @@ import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
 import com.admms.tcc.oasis.controller.principal.ArquivoController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
+import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Prt2619_HigieneActivity extends Activity {
 
     private ItemAvaliacao itemAvaliacao;
     private static final int REQUEST_IMAGE_PICTURE = 1;
+    private static final int NUMERO_PERGUNTAS = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -429,7 +432,7 @@ public class Prt2619_HigieneActivity extends Activity {
                 ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p18);
 
 
-                TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta18);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
                 radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
                 ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
@@ -452,7 +455,7 @@ public class Prt2619_HigieneActivity extends Activity {
                 ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p19);
 
 
-                TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta19);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
                 radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
                 ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
@@ -474,7 +477,7 @@ public class Prt2619_HigieneActivity extends Activity {
                 ImageButton descricao = (ImageButton) findViewById(R.id.higiene_descricao_p20);
 
 
-                TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
+                TextView pergunta = (TextView) findViewById(R.id.higiene_pergunta20);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
                 radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
                 ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_HigieneActivity.this);
@@ -485,9 +488,37 @@ public class Prt2619_HigieneActivity extends Activity {
         higieneSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProHigiene = new Intent(Prt2619_HigieneActivity.this, Prt2619Activity.class);
-                intentVaiProHigiene.putExtra("codigoPlanoAcao",codigoPlanoAcao);
-                startActivity(intentVaiProHigiene);
+                PlanoAcao planoAcao = new PlanoAcao();
+                planoAcao.setCodigo(codigoPlanoAcao);
+
+                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_HIGIENE, Prt2619_HigieneActivity.this);
+
+                if (NUMERO_PERGUNTAS != listaItens.size()) {
+                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which){
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    Intent intentVaiProHigiene = new Intent(Prt2619_HigieneActivity.this, Prt2619Activity.class);
+                                    intentVaiProHigiene.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                                    startActivity(intentVaiProHigiene);
+                                    break;
+
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    //Nao faz nada
+                                    break;
+                            }
+                        }
+                    };
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Prt2619_HigieneActivity.this);
+                    builder.setMessage("Você ainda não respondeu todas as perguntas. Deseja prosseguir?").setPositiveButton("Sim", dialogClickListener)
+                            .setNegativeButton("Voltar", dialogClickListener).show();
+                } else {
+                    Intent intentVaiProHigiene = new Intent(Prt2619_HigieneActivity.this, Prt2619Activity.class);
+                    intentVaiProHigiene.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                    startActivity(intentVaiProHigiene);
+                }
             }
         });
     }

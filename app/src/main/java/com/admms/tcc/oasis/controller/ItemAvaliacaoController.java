@@ -7,15 +7,23 @@ import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 
+import java.util.List;
+
 /**
  * Created by DemonHide-RB on 10/21/2016.
  */
 public class ItemAvaliacaoController {
 
+    private static PlanoAcaoDAO planoAcaoDAO;
+    private static ItemAvaliacaoDAO itemAvaliacaoDAO;
+
     public static ItemAvaliacao criaItemAvaliacao(int codigoPlanoAcao, ItemAvaliacao itemAvaliacao, String areaAvaliada, Context context) {
         //Cria plano de Acao para busca
         PlanoAcao planoAcao = new PlanoAcao();
-        PlanoAcaoDAO planoAcaoDAO = new PlanoAcaoDAO(context);
+
+        if (planoAcaoDAO == null) {
+            planoAcaoDAO = new PlanoAcaoDAO(context);
+        }
 
         planoAcao.setCodigo(codigoPlanoAcao);
         itemAvaliacao = new ItemAvaliacao();
@@ -34,7 +42,18 @@ public class ItemAvaliacaoController {
     }
 
     public static void salvarItemAvaliacao(ItemAvaliacao itemAvaliacao, Context context) {
-        ItemAvaliacaoDAO itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+        if (itemAvaliacaoDAO == null) {
+            itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+        }
+
         itemAvaliacaoDAO.inserir(itemAvaliacao);
+    }
+
+    public static List<ItemAvaliacao> buscaItemAvaliacaoPorAreaAvaliada(PlanoAcao planoAcao, String areaAvaliada, Context context) {
+        if (itemAvaliacaoDAO == null) {
+            itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+        }
+
+        return itemAvaliacaoDAO.buscarPorAreaAvaliada(planoAcao, areaAvaliada);
     }
 }

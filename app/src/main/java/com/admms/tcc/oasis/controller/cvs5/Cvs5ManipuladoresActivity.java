@@ -1,6 +1,7 @@
 package com.admms.tcc.oasis.controller.cvs5;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -18,20 +19,21 @@ import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
-import com.admms.tcc.oasis.controller.principal.ArquivoController;
+import com.admms.tcc.oasis.controller.ArquivoController;
+import com.admms.tcc.oasis.controller.UserInterfaceController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Cvs5ManipuladoresActivity extends Activity {
 
     private ItemAvaliacao itemAvaliacao;
-    private static final int REQUEST_IMAGE_PICTURE = 1;
     private static final int NUMERO_PERGUNTAS = 33;
 
     @Override
@@ -39,7 +41,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cvs5_manipuladores);
 
-        Bundle bundle = getIntent().getExtras();
+        final Context context = Cvs5ManipuladoresActivity.this;
+
+        final Bundle bundle = getIntent().getExtras();
         final int codigoPlanoAcao = bundle.getInt("codigoPlanoAcao");
 
         itemAvaliacao = ItemAvaliacaoController.criaItemAvaliacao(codigoPlanoAcao, itemAvaliacao, Constantes.AREA_AVALIADA_MANIPULADORES,this);
@@ -61,9 +65,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta1);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -85,9 +89,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta2);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -109,9 +113,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta3);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -133,9 +137,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta4);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -157,9 +161,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta5);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -181,9 +185,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta6);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -205,9 +209,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta7);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -229,9 +233,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta8);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -253,9 +257,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta9);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -277,9 +281,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta10);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -301,9 +305,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta11);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -325,9 +329,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta12);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -349,9 +353,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta13);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -373,9 +377,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta14);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -397,9 +401,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta15);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -421,9 +425,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta16);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -445,9 +449,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta17);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -469,9 +473,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta18);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -494,9 +498,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta19);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -518,9 +522,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta20);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -542,9 +546,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta21);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -566,9 +570,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta22);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -590,9 +594,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta23);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -614,9 +618,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta24);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -638,9 +642,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta25);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -662,9 +666,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta26);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -686,9 +690,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta27);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -710,9 +714,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta28);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -734,9 +738,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta29);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -758,9 +762,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta30);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -782,9 +786,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta31);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -806,9 +810,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta32);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -830,9 +834,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 TextView pergunta = (TextView) findViewById(R.id.manipuladores_pergunta33);
 
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
 
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -843,7 +847,7 @@ public class Cvs5ManipuladoresActivity extends Activity {
                 PlanoAcao planoAcao = new PlanoAcao();
                 planoAcao.setCodigo(codigoPlanoAcao);
 
-                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_MANIPULADORES, Cvs5ManipuladoresActivity.this);
+                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_MANIPULADORES, context);
 
                 if (NUMERO_PERGUNTAS != listaItens.size()) {
                     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
@@ -851,8 +855,9 @@ public class Cvs5ManipuladoresActivity extends Activity {
                         public void onClick(DialogInterface dialog, int which) {
                             switch (which){
                                 case DialogInterface.BUTTON_POSITIVE:
-                                    Intent intentVaiProManipuladores = new Intent(Cvs5ManipuladoresActivity.this, Cvs5Activity.class);
+                                    Intent intentVaiProManipuladores = new Intent(context, Cvs5Activity.class);
                                     intentVaiProManipuladores.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                                    intentVaiProManipuladores.putExtras(bundle);
                                     startActivity(intentVaiProManipuladores);
                                     break;
 
@@ -863,12 +868,13 @@ public class Cvs5ManipuladoresActivity extends Activity {
                         }
                     };
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Cvs5ManipuladoresActivity.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setMessage("Você ainda não respondeu todas as perguntas. Deseja prosseguir?").setPositiveButton("Sim", dialogClickListener)
                             .setNegativeButton("Voltar", dialogClickListener).show();
                 } else {
-                    Intent intentVaiProManipuladores = new Intent(Cvs5ManipuladoresActivity.this, Cvs5Activity.class);
+                    Intent intentVaiProManipuladores = new Intent(context, Cvs5Activity.class);
                     intentVaiProManipuladores.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                    intentVaiProManipuladores.putExtras(bundle);
                     startActivity(intentVaiProManipuladores);
                 }
             }
@@ -877,93 +883,227 @@ public class Cvs5ManipuladoresActivity extends Activity {
 
     }
 
-    private void radioButtonHandler(RadioButton naoAplica, RadioButton adequado, RadioButton inadequado, ImageButton foto, ImageButton descricao, final ItemAvaliacao itemAvaliacao) {
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        if (inadequado.isChecked()) {
-            foto.setVisibility(View.VISIBLE);
-            descricao.setVisibility(View.VISIBLE);
-            foto.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    tirarFotoIntent(itemAvaliacao);
-                }
-            });
-            descricao.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mostraJanelaDescricao(itemAvaliacao);
-                }
-            });
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_INADEQUADA);
-        } else if (naoAplica.isChecked()) {
-            foto.setVisibility(View.INVISIBLE);
-            descricao.setVisibility(View.INVISIBLE);
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_NA);
-        } else if (adequado.isChecked()){
-            foto.setVisibility(View.INVISIBLE);
-            descricao.setVisibility(View.INVISIBLE);
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_ADEQUADA);
+        final Context context = Cvs5ManipuladoresActivity.this;
+
+        int contRadioButton = 0, contImageButton = 0, contTextView = 0;
+
+        List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();
+        List<ImageButton> listaImageButtons = new ArrayList<ImageButton>();
+        List<TextView> listaTextViews = new ArrayList<TextView>();
+
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p1_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p1_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p1_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p2_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p2_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p2_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p3_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p3_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p3_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p4_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p4_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p4_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p5_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p5_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p5_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p6_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p6_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p6_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p7_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p7_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p7_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p8_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p8_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p8_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p9_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p9_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p9_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p10_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p10_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p10_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p11_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p11_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p11_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p12_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p12_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p12_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p13_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p13_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p13_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p14_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p14_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p14_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p15_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p15_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p15_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p16_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p16_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p16_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p17_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p17_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p17_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p18_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p18_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p18_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p19_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p19_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p19_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p20_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p20_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p20_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p21_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p21_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p21_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p22_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p22_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p22_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p23_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p23_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p23_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p24_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p24_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p24_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p25_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p25_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p25_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p26_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p26_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p26_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p27_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p27_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p27_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p28_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p28_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p28_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p29_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p29_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p29_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p30_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p30_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p30_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p31_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p31_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p31_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p32_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p32_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p32_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p33_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p33_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p33_in));
+
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p1));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p1));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p2));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p2));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p3));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p3));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p4));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p4));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p5));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p5));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p6));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p6));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p7));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p7));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p8));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p8));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p9));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p9));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p10));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p10));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p11));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p11));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p12));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p12));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p13));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p13));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p14));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p14));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p15));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p15));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p16));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p16));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p17));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p17));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p18));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p18));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p19));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p19));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p20));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p20));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p21));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p21));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p22));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p22));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p23));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p23));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p24));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p24));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p25));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p25));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p26));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p26));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p27));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p27));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p28));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p28));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p29));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p29));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p30));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p30));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p31));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p31));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p32));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p32));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p33));
+        listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p33));
+
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta1));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta2));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta3));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta4));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta5));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta6));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta7));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta8));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta9));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta10));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta11));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta12));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta13));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta14));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta15));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta16));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta17));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta18));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta19));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta20));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta21));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta22));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta23));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta24));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta25));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta26));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta27));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta28));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta29));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta30));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta31));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta32));
+        listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta33));
+
+        for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
+            UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
+                    listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);
+            contRadioButton = contRadioButton + 3;
+            contImageButton = contImageButton + 2;
         }
     }
-
-    private void tirarFotoIntent(ItemAvaliacao itemAvaliacao) {
-        Intent vaiPraCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String fileName = "DBP_" + timeStamp + ".png";
-        itemAvaliacao.setFoto(fileName);
-
-        //Criação de Pasta
-        File imagesFolder = ArquivoController.criaPastaFotos();
-
-        File image = new File(imagesFolder, fileName);
-        try {
-            image.createNewFile();
-            Uri uriSavedImage = Uri.fromFile(image);
-
-            vaiPraCamera.putExtra(MediaStore.EXTRA_OUTPUT,uriSavedImage);
-
-            if (vaiPraCamera.resolveActivity(getPackageManager())!= null) {
-                startActivityForResult(vaiPraCamera, REQUEST_IMAGE_PICTURE);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
-            }
-
-        } catch (Exception e) {
-            Log.i("fail","creating photofile failed for " + fileName + "path " + image.getAbsolutePath());
-        }
-    }
-
-    protected void mostraJanelaDescricao(final ItemAvaliacao itemAvaliacao) {
-
-        LayoutInflater layoutInflater = LayoutInflater.from(Cvs5ManipuladoresActivity.this);
-        View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Cvs5ManipuladoresActivity.this);
-        alertDialogBuilder.setTitle("Descrição");
-        alertDialogBuilder.setIcon(R.drawable.ic_logo);
-        alertDialogBuilder.setView(promptView);
-
-
-        final EditText descricao = (EditText) promptView.findViewById(R.id.descricao);
-
-        alertDialogBuilder.setCancelable(false)
-                .setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        itemAvaliacao.setDescricao(descricao.getText().toString());
-                        ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Cvs5ManipuladoresActivity.this);
-                    }
-                })
-                .setNegativeButton("Cancelar",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-
-    }
-
 }
 

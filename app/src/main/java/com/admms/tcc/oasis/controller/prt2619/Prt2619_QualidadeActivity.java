@@ -1,6 +1,7 @@
 package com.admms.tcc.oasis.controller.prt2619;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -18,20 +19,21 @@ import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
-import com.admms.tcc.oasis.controller.principal.ArquivoController;
+import com.admms.tcc.oasis.controller.ArquivoController;
+import com.admms.tcc.oasis.controller.UserInterfaceController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Prt2619_QualidadeActivity extends Activity {
 
     private ItemAvaliacao itemAvaliacao;
-    private static final int REQUEST_IMAGE_PICTURE = 1;
     private static final int NUMERO_PERGUNTAS = 20;
 
     @Override
@@ -39,7 +41,9 @@ public class Prt2619_QualidadeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prt2619__qualidade);
 
-        Bundle bundle = getIntent().getExtras();
+        final Context context = Prt2619_QualidadeActivity.this;
+
+        final Bundle bundle = getIntent().getExtras();
         final int codigoPlanoAcao = bundle.getInt("codigoPlanoAcao");
 
         itemAvaliacao = ItemAvaliacaoController.criaItemAvaliacao(codigoPlanoAcao, itemAvaliacao, Constantes.AREA_AVALIADA_QUALIDADE,this);
@@ -60,8 +64,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta1);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -82,8 +86,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta2);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -104,8 +108,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta3);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -126,8 +130,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta4);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -148,8 +152,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta5);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -170,8 +174,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta6);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -192,8 +196,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta7);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -214,8 +218,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta8);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -236,8 +240,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta9);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -258,8 +262,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta10);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -280,8 +284,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta11);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -302,8 +306,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta12);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -324,8 +328,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta13);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -346,8 +350,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta14);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -368,8 +372,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta15);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -390,8 +394,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta16);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -412,8 +416,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta17);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -434,8 +438,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta18);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -457,8 +461,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta19);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -479,8 +483,8 @@ public class Prt2619_QualidadeActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.qualidade_pergunta20);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -491,7 +495,7 @@ public class Prt2619_QualidadeActivity extends Activity {
                 PlanoAcao planoAcao = new PlanoAcao();
                 planoAcao.setCodigo(codigoPlanoAcao);
 
-                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_QUALIDADE, Prt2619_QualidadeActivity.this);
+                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_QUALIDADE, context);
 
                 if (NUMERO_PERGUNTAS != listaItens.size()) {
                     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
@@ -499,8 +503,9 @@ public class Prt2619_QualidadeActivity extends Activity {
                         public void onClick(DialogInterface dialog, int which) {
                             switch (which){
                                 case DialogInterface.BUTTON_POSITIVE:
-                                    Intent intentVaiProQualidade = new Intent(Prt2619_QualidadeActivity.this, Prt2619Activity.class);
+                                    Intent intentVaiProQualidade = new Intent(context, Prt2619Activity.class);
                                     intentVaiProQualidade.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                                    intentVaiProQualidade.putExtras(bundle);
                                     startActivity(intentVaiProQualidade);
                                     break;
 
@@ -511,104 +516,162 @@ public class Prt2619_QualidadeActivity extends Activity {
                         }
                     };
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Prt2619_QualidadeActivity.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setMessage("Você ainda não respondeu todas as perguntas. Deseja prosseguir?").setPositiveButton("Sim", dialogClickListener)
                             .setNegativeButton("Voltar", dialogClickListener).show();
                 } else {
-                    Intent intentVaiProQualidade = new Intent(Prt2619_QualidadeActivity.this, Prt2619Activity.class);
+                    Intent intentVaiProQualidade = new Intent(context, Prt2619Activity.class);
                     intentVaiProQualidade.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                    intentVaiProQualidade.putExtras(bundle);
                     startActivity(intentVaiProQualidade);
                 }
             }
         });
     }
 
-    private void radioButtonHandler(RadioButton naoAplica, RadioButton adequado, RadioButton inadequado, ImageButton foto, ImageButton descricao, final ItemAvaliacao itemAvaliacao) {
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        if (inadequado.isChecked()) {
-            foto.setVisibility(View.VISIBLE);
-            descricao.setVisibility(View.VISIBLE);
-            foto.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    tirarFotoIntent(itemAvaliacao);
-                }
-            });
-            descricao.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mostraJanelaDescricao(itemAvaliacao);
-                }
-            });
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_INADEQUADA);
-        } else if (naoAplica.isChecked()) {
-            foto.setVisibility(View.INVISIBLE);
-            descricao.setVisibility(View.INVISIBLE);
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_NA);
-        } else if (adequado.isChecked()) {
-            foto.setVisibility(View.INVISIBLE);
-            descricao.setVisibility(View.INVISIBLE);
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_ADEQUADA);
+        final Context context = Prt2619_QualidadeActivity.this;
+
+        int contRadioButton = 0, contImageButton = 0, contTextView = 0;
+
+        List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();
+        List<ImageButton> listaImageButtons = new ArrayList<ImageButton>();
+        List<TextView> listaTextViews = new ArrayList<TextView>();
+
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p1_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p1_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p1_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p2_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p2_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p2_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p3_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p3_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p3_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p4_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p4_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p4_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p5_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p5_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p5_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p6_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p6_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p6_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p7_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p7_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p7_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p8_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p8_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p8_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p9_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p9_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p9_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p10_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p10_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p10_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p11_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p11_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p11_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p12_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p12_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p12_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p13_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p13_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p13_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p14_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p14_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p14_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p15_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p15_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p15_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p16_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p16_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p16_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p17_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p17_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p17_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p18_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p18_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p18_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p19_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p19_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p19_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p20_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p20_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.qualidade_p20_in));
+
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p1));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p1));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p2));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p2));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p3));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p3));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p4));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p4));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p5));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p5));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p6));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p6));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p7));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p7));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p8));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p8));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p9));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p9));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p10));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p10));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p11));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p11));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p12));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p12));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p13));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p13));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p14));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p14));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p15));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p15));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p16));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p16));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p17));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p17));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p18));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p18));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p19));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p19));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_foto_p20));
+        listaImageButtons.add((ImageButton) findViewById(R.id.qualidade_descricao_p20));
+
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta1));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta2));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta3));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta4));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta5));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta6));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta7));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta8));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta9));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta10));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta11));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta12));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta13));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta14));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta15));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta16));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta17));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta18));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta19));
+        listaTextViews.add((TextView) findViewById(R.id.qualidade_pergunta20));
+
+        for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
+            UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
+                    listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);
+            contRadioButton = contRadioButton + 3;
+            contImageButton = contImageButton + 2;
         }
-    }
-
-    private void tirarFotoIntent(ItemAvaliacao itemAvaliacao) {
-        Intent vaiPraCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String fileName = "DBP_" + timeStamp + ".png";
-        itemAvaliacao.setFoto(fileName);
-
-        //Criação de Pasta
-        File imagesFolder = ArquivoController.criaPastaFotos();
-
-        File image = new File(imagesFolder, fileName);
-        try {
-            image.createNewFile();
-            Uri uriSavedImage = Uri.fromFile(image);
-
-            vaiPraCamera.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
-
-            if (vaiPraCamera.resolveActivity(getPackageManager()) != null) {
-                startActivityForResult(vaiPraCamera, REQUEST_IMAGE_PICTURE);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
-            }
-
-        } catch (Exception e) {
-            Log.i("fail", "creating photofile failed for " + fileName + "path " + image.getAbsolutePath());
-        }
-    }
-
-    protected void mostraJanelaDescricao(final ItemAvaliacao itemAvaliacao) {
-
-        LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_QualidadeActivity.this);
-        View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Prt2619_QualidadeActivity.this);
-        alertDialogBuilder.setTitle("Descrição");
-        alertDialogBuilder.setIcon(R.drawable.ic_logo);
-        alertDialogBuilder.setView(promptView);
-
-
-        final EditText descricao = (EditText) promptView.findViewById(R.id.descricao);
-
-        alertDialogBuilder.setCancelable(false)
-                .setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        itemAvaliacao.setDescricao(descricao.getText().toString());
-                        ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_QualidadeActivity.this);
-                    }
-                })
-                .setNegativeButton("Cancelar",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-
     }
 }
 

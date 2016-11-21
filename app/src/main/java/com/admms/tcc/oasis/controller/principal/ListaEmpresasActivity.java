@@ -57,11 +57,11 @@ public class ListaEmpresasActivity extends Activity {
     private AdapterView.OnItemClickListener onClickListener = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
             Estabelecimento estabelecimento = (Estabelecimento) parent.getItemAtPosition(position);
-            mostraJanelaDescricao(estabelecimento);
+            mostraOpcaoEstabelecimento(estabelecimento);
         }
     };
 
-    protected void mostraJanelaDescricao(final Estabelecimento estabelecimento) {
+    protected void mostraOpcaoEstabelecimento(final Estabelecimento estabelecimento) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(ListaEmpresasActivity.this);
         View promptView = layoutInflater.inflate(R.layout.activity_criar_visualizar_diag, null);

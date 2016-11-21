@@ -125,7 +125,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    intentVaiPraRdc216.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraRdc216.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorNome(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraRdc216);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -142,7 +142,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    intentVaiPraPrt78_325.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraPrt78_325.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorNome(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraPrt78_325);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -159,7 +159,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    intentVaiPraPrt2619.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraPrt2619.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorNome(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraPrt2619);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -176,7 +176,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    intentVaiPraCvs5.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraCvs5.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorNome(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraCvs5);
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -193,7 +193,7 @@ public class CadastroActivity extends AppCompatActivity {
                             public void run() {
                                 try {
                                     Thread.sleep(1000);
-                                    intentVaiPraIn04.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorID(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
+                                    intentVaiPraIn04.putExtra("codigoPlanoAcao",criarPlanoAcao(legislacaoDAO.buscarPorNome(legislacaoPlanoAcao), estabelecimentoPlanoAcao,context));
                                     startActivity(intentVaiPraIn04);
                                 } catch (Exception e) {
                                     e.printStackTrace();

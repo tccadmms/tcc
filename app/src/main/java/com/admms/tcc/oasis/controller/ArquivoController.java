@@ -1,4 +1,4 @@
-package com.admms.tcc.oasis.controller.principal;
+package com.admms.tcc.oasis.controller;
 
 import android.content.Context;
 import android.os.Environment;
@@ -161,130 +161,102 @@ public class ArquivoController {
             }
         }
 
-        PdfPTable tabela = new PdfPTable(3);
+        PdfPTable tabela = new PdfPTable(2);
         PdfPCell cell = new PdfPCell(new Phrase("Legislação: " + legislacao.getNome()));
         tabela.addCell(cell);
         cell = new PdfPCell(new Phrase("% Itens Atendidos"));
         tabela.addCell(cell);
-        cell = new PdfPCell(new Phrase("Parecer Técnico"));
-        tabela.addCell(cell);
 
-        float porcentagem;
+        double porcentagem;
         if (legislacao.getNumeroPerguntasArmazenamento() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_ARMAZENAMENTO));
             tabela.addCell(cell);
-            porcentagem = contArmazenamento/legislacao.getNumeroPerguntasArmazenamento() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contArmazenamento)/legislacao.getNumeroPerguntasArmazenamento() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasDocumentacao() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_DOCUMENTACAO));
             tabela.addCell(cell);
-            porcentagem = contDocumentacao/legislacao.getNumeroPerguntasDocumentacao() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contDocumentacao)/legislacao.getNumeroPerguntasDocumentacao() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasEdificacao() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_EDIFICACAO));
             tabela.addCell(cell);
-            porcentagem = contEdificacao/legislacao.getNumeroPerguntasEdificacao() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double)contEdificacao)/legislacao.getNumeroPerguntasEdificacao() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasExposicao() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_EXPOSICAO));
             tabela.addCell(cell);
-            porcentagem = contExposicao/legislacao.getNumeroPerguntasExposicao() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contExposicao)/legislacao.getNumeroPerguntasExposicao() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasHigiene() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_HIGIENE));
             tabela.addCell(cell);
-            porcentagem = contHigiene/legislacao.getNumeroPerguntasHigiene() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contHigiene)/legislacao.getNumeroPerguntasHigiene() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasIngredientes() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_INGREDIENTES));
             tabela.addCell(cell);
-            porcentagem = contIngredientes/legislacao.getNumeroPerguntasIngredientes() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contIngredientes)/legislacao.getNumeroPerguntasIngredientes() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasManipuladores() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_MANIPULADORES));
             tabela.addCell(cell);
-            porcentagem = contManipuladores/legislacao.getNumeroPerguntasManipuladores() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contManipuladores)/legislacao.getNumeroPerguntasManipuladores() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasPreparo() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_PREPARO));
             tabela.addCell(cell);
-            porcentagem = contPreparo/legislacao.getNumeroPerguntasPreparo() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contPreparo)/legislacao.getNumeroPerguntasPreparo() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasQualidade() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_QUALIDADE));
             tabela.addCell(cell);
-            porcentagem = contQualidade/legislacao.getNumeroPerguntasQualidade() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contQualidade)/legislacao.getNumeroPerguntasQualidade() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasResiduos() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_RESIDUOS));
             tabela.addCell(cell);
-            porcentagem = contResiduos/legislacao.getNumeroPerguntasResiduos() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contResiduos)/legislacao.getNumeroPerguntasResiduos() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasResponsavel() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_RESPONSAVEL));
             tabela.addCell(cell);
-            porcentagem = contResponsavel/legislacao.getNumeroPerguntasResponsavel() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contResponsavel)/legislacao.getNumeroPerguntasResponsavel() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasSaneamento() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_SANEAMENTO));
             tabela.addCell(cell);
-            porcentagem = contSaneamento/legislacao.getNumeroPerguntasSaneamento() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contSaneamento)/legislacao.getNumeroPerguntasSaneamento() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
         if (legislacao.getNumeroPerguntasVetores() != 0) {
             cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_VETORES));
             tabela.addCell(cell);
-            porcentagem = contVetores/legislacao.getNumeroPerguntasVetores() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem)));
-            tabela.addCell(cell);
-            cell = new PdfPCell(new Phrase(parecerTecnico(porcentagem)));
+            porcentagem = 100.0 - ((double) contVetores)/legislacao.getNumeroPerguntasVetores() * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
             tabela.addCell(cell);
         }
 
@@ -318,26 +290,26 @@ public class ArquivoController {
         cell.setRowspan(1);
         tabela.addCell(cell);
         if(itemAvaliacao.getDescricao() == null) {
-            cell = new PdfPCell(new Phrase("O que está inadequado: " + "N/A"));
+            cell = new PdfPCell(new Phrase("O que: " + "N/A"));
             tabela.addCell(cell);
         } else {
-            cell = new PdfPCell(new Phrase("O que está inadequado: " + itemAvaliacao.getDescricao() + "\n"));
+            cell = new PdfPCell(new Phrase("O que: " + itemAvaliacao.getDescricao() + "\n"));
             tabela.addCell(cell);
         }
 
-        cell = new PdfPCell(new Phrase("Quem vai resolver: " + "\n"));
+        cell = new PdfPCell(new Phrase("Quem: " + "\n "));
         cell.setRowspan(1);
         tabela.addCell(cell);
 
-        cell = new PdfPCell(new Phrase("Como vai ser resolvido: " + "\n"));
+        cell = new PdfPCell(new Phrase("Como: " + "\n "));
         cell.setRowspan(1);
         tabela.addCell(cell);
 
-        cell = new PdfPCell(new Phrase("Quanto vai custar: " + "\r\n"));
+        cell = new PdfPCell(new Phrase("Quanto: " + "\r\n "));
         cell.setRowspan(1);
         tabela.addCell(cell);
 
-        cell = new PdfPCell(new Phrase("Quando vai ser adequado: " + "\n"));
+        cell = new PdfPCell(new Phrase("Quando: " + "\n "));
         cell.setRowspan(1);
         tabela.addCell(cell);
 
@@ -347,16 +319,6 @@ public class ArquivoController {
     private static void adicionaLinhaVazia(Paragraph paragrafo, int numeroLinhas) {
         for (int i = 0; i < numeroLinhas; i++) {
             paragrafo.add(new Paragraph(" "));
-        }
-    }
-
-    private static String parecerTecnico(float numero) {
-        if (numero < 60) {
-            return "Não qualificado ou Item Crítico";
-        } else if ((numero >= 60) && (numero < 90)) {
-            return "Qualificado com providências";
-        } else {
-            return "Qualificado";
         }
     }
 }

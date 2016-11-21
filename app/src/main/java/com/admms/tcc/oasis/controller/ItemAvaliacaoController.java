@@ -49,6 +49,14 @@ public class ItemAvaliacaoController {
         itemAvaliacaoDAO.inserir(itemAvaliacao);
     }
 
+    public static ItemAvaliacao buscarItemAvaliacao(ItemAvaliacao itemAvaliacao, Context context) {
+        if (itemAvaliacaoDAO == null) {
+            itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+        }
+
+        return itemAvaliacaoDAO.buscarPorID(itemAvaliacao);
+    }
+
     public static List<ItemAvaliacao> buscaItemAvaliacaoPorAreaAvaliada(PlanoAcao planoAcao, String areaAvaliada, Context context) {
         if (itemAvaliacaoDAO == null) {
             itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);

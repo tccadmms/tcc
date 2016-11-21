@@ -1,6 +1,7 @@
 package com.admms.tcc.oasis.controller.prt2619;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -18,21 +19,21 @@ import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.ItemAvaliacaoController;
-import com.admms.tcc.oasis.controller.principal.ArquivoController;
-import com.admms.tcc.oasis.controller.prt78_325.Prt78_325Activity;
+import com.admms.tcc.oasis.controller.ArquivoController;
+import com.admms.tcc.oasis.controller.UserInterfaceController;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
 import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Prt2619_ArmazenamentoActivity extends Activity {
 
     private ItemAvaliacao itemAvaliacao;
-    private static final int REQUEST_IMAGE_PICTURE = 1;
     private static final int NUMERO_PERGUNTAS = 83;
 
     @Override
@@ -40,7 +41,9 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prt2619__armazenamento);
 
-        Bundle bundle = getIntent().getExtras();
+        final Context context = Prt2619_ArmazenamentoActivity.this;
+
+        final Bundle bundle = getIntent().getExtras();
         final int codigoPlanoAcao = bundle.getInt("codigoPlanoAcao");
 
         itemAvaliacao = ItemAvaliacaoController.criaItemAvaliacao(codigoPlanoAcao, itemAvaliacao, Constantes.AREA_AVALIADA_ARMAZENAMENTO,this);
@@ -61,8 +64,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta1);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -83,8 +86,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta2);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -105,8 +108,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta3);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -127,8 +130,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta4);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -149,8 +152,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta5);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -171,8 +174,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta6);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -193,8 +196,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta7);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -215,8 +218,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta8);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -237,8 +240,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta9);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -259,8 +262,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta10);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -281,8 +284,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta11);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -303,8 +306,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta12);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -325,8 +328,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta13);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -347,8 +350,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta14);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -369,8 +372,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta15);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -391,8 +394,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta16);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -413,8 +416,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta17);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -435,8 +438,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta18);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -458,8 +461,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta19);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -480,8 +483,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta20);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -502,8 +505,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta21);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -524,8 +527,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta22);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -546,8 +549,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta23);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -568,8 +571,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta24);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -590,8 +593,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta25);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -612,8 +615,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta26);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -634,8 +637,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta27);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -656,8 +659,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta28);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -678,8 +681,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta29);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -700,8 +703,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta30);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -722,8 +725,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta31);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -744,8 +747,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta32);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -766,8 +769,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta33);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -788,8 +791,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta34);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -810,8 +813,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta35);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -832,8 +835,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta36);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -854,8 +857,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta37);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -876,8 +879,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta38);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -898,8 +901,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta39);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -920,8 +923,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta40);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -942,8 +945,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta41);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -964,8 +967,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta42);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -986,8 +989,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta43);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1008,8 +1011,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta44);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1030,8 +1033,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta45);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1052,8 +1055,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta46);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1074,8 +1077,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta47);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1096,8 +1099,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta48);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1118,8 +1121,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta49);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1140,8 +1143,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta50);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1162,8 +1165,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta51);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1184,8 +1187,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta52);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1206,8 +1209,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta53);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1228,8 +1231,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta54);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1250,8 +1253,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta55);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1272,8 +1275,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta56);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1294,8 +1297,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta57);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1316,8 +1319,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta58);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1338,8 +1341,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta59);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1360,8 +1363,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta60);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1383,8 +1386,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta61);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1405,8 +1408,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta62);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1427,8 +1430,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta63);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1449,8 +1452,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta64);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1471,8 +1474,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta65);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1493,8 +1496,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta66);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1515,8 +1518,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta67);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1537,8 +1540,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta68);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1559,8 +1562,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta69);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1581,8 +1584,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta70);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1603,8 +1606,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta71);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1625,8 +1628,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta72);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1647,8 +1650,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta73);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1669,8 +1672,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta74);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1691,8 +1694,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta75);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1713,8 +1716,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta76);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1735,8 +1738,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta77);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1757,8 +1760,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta78);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1779,8 +1782,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta79);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1801,8 +1804,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta80);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1823,8 +1826,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta81);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1845,8 +1848,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta82);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1867,8 +1870,8 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
 
                 TextView pergunta = (TextView) findViewById(R.id.armazenamento_pergunta83);
                 itemAvaliacao.setPergunta(pergunta.getText().toString());
-                radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
+                UserInterfaceController.radioButtonHandler(na, ad, in, foto, descricao, itemAvaliacao, context);
+                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, context);
             }
         });
 
@@ -1880,7 +1883,7 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
                 PlanoAcao planoAcao = new PlanoAcao();
                 planoAcao.setCodigo(codigoPlanoAcao);
 
-                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_ARMAZENAMENTO, Prt2619_ArmazenamentoActivity.this);
+                List<ItemAvaliacao> listaItens = ItemAvaliacaoController.buscaItemAvaliacaoPorAreaAvaliada(planoAcao,Constantes.AREA_AVALIADA_ARMAZENAMENTO, context);
 
                 if (NUMERO_PERGUNTAS != listaItens.size()) {
                     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
@@ -1888,8 +1891,9 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
                         public void onClick(DialogInterface dialog, int which) {
                             switch (which){
                                 case DialogInterface.BUTTON_POSITIVE:
-                                    Intent intentVaiProArmazenamento = new Intent(Prt2619_ArmazenamentoActivity.this, Prt2619Activity.class);
+                                    Intent intentVaiProArmazenamento = new Intent(context, Prt2619Activity.class);
                                     intentVaiProArmazenamento.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                                    intentVaiProArmazenamento.putExtras(bundle);
                                     startActivity(intentVaiProArmazenamento);
                                     break;
 
@@ -1900,106 +1904,541 @@ public class Prt2619_ArmazenamentoActivity extends Activity {
                         }
                     };
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Prt2619_ArmazenamentoActivity.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setMessage("Você ainda não respondeu todas as perguntas. Deseja prosseguir?").setPositiveButton("Sim", dialogClickListener)
                             .setNegativeButton("Voltar", dialogClickListener).show();
                 } else {
-                    Intent intentVaiProArmazenamento = new Intent(Prt2619_ArmazenamentoActivity.this, Prt2619Activity.class);
+                    Intent intentVaiProArmazenamento = new Intent(context, Prt2619Activity.class);
                     intentVaiProArmazenamento.putExtra("codigoPlanoAcao", codigoPlanoAcao);
+                    intentVaiProArmazenamento.putExtras(bundle);
                     startActivity(intentVaiProArmazenamento);
                 }
             }
         });
     }
 
-    private void radioButtonHandler(RadioButton naoAplica, RadioButton adequado, RadioButton inadequado, ImageButton foto, ImageButton descricao, final ItemAvaliacao itemAvaliacao) {
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        if (inadequado.isChecked()) {
-            foto.setVisibility(View.VISIBLE);
-            descricao.setVisibility(View.VISIBLE);
-            foto.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    tirarFotoIntent(itemAvaliacao);
-                }
-            });
-            descricao.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mostraJanelaDescricao(itemAvaliacao);
-                }
-            });
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_INADEQUADA);
-        } else if (naoAplica.isChecked()) {
-            foto.setVisibility(View.INVISIBLE);
-            descricao.setVisibility(View.INVISIBLE);
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_NA);
-        } else if (adequado.isChecked()) {
-            foto.setVisibility(View.INVISIBLE);
-            descricao.setVisibility(View.INVISIBLE);
-            itemAvaliacao.setConformidade(Constantes.CONFORMIDADE_ADEQUADA);
+        final Context context = Prt2619_ArmazenamentoActivity.this;
+
+        int contRadioButton = 0, contImageButton = 0, contTextView = 0;
+
+        List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();
+        List<ImageButton> listaImageButtons = new ArrayList<ImageButton>();
+        List<TextView> listaTextViews = new ArrayList<TextView>();
+
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p1_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p1_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p1_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p2_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p2_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p2_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p3_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p3_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p3_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p4_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p4_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p4_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p5_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p5_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p5_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p6_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p6_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p6_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p7_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p7_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p7_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p8_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p8_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p8_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p9_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p9_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p9_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p10_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p10_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p10_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p11_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p11_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p11_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p12_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p12_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p12_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p13_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p13_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p13_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p14_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p14_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p14_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p15_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p15_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p15_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p16_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p16_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p16_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p17_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p17_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p17_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p18_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p18_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p18_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p19_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p19_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p19_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p20_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p20_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p20_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p21_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p21_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p21_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p22_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p22_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p22_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p23_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p23_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p23_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p24_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p24_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p24_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p25_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p25_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p25_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p26_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p26_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p26_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p27_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p27_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p27_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p28_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p28_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p28_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p29_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p29_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p29_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p30_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p30_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p30_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p31_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p31_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p31_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p32_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p32_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p32_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p33_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p33_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p33_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p34_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p34_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p34_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p35_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p35_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p35_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p36_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p36_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p36_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p37_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p37_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p37_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p38_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p38_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p38_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p39_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p39_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p39_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p40_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p40_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p40_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p41_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p41_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p41_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p42_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p42_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p42_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p43_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p43_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p43_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p44_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p44_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p44_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p45_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p45_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p45_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p46_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p46_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p46_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p47_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p47_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p47_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p48_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p48_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p48_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p49_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p49_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p49_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p50_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p50_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p50_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p51_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p51_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p51_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p52_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p52_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p52_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p53_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p53_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p53_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p54_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p54_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p54_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p55_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p55_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p55_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p56_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p56_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p56_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p57_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p57_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p57_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p58_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p58_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p58_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p59_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p59_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p59_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p60_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p60_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p60_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p61_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p61_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p61_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p62_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p62_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p62_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p63_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p63_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p63_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p64_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p64_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p64_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p65_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p65_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p65_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p66_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p66_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p66_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p67_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p67_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p67_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p68_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p68_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p68_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p69_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p69_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p69_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p70_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p70_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p70_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p71_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p71_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p71_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p72_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p72_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p72_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p73_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p73_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p73_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p74_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p74_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p74_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p75_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p75_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p75_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p76_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p76_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p76_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p77_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p77_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p77_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p78_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p78_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p78_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p79_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p79_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p79_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p80_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p80_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p80_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p81_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p81_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p81_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p82_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p82_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p82_in));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p83_na));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p83_ad));
+        listaRadioButtons.add((RadioButton) findViewById(R.id.armazenamento_p83_in));
+
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p1));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p1));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p2));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p2));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p3));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p3));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p4));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p4));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p5));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p5));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p6));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p6));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p7));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p7));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p8));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p8));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p9));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p9));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p10));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p10));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p11));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p11));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p12));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p12));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p13));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p13));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p14));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p14));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p15));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p15));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p16));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p16));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p17));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p17));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p18));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p18));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p19));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p19));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p20));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p20));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p21));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p21));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p22));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p22));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p23));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p23));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p24));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p24));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p25));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p25));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p26));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p26));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p27));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p27));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p28));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p28));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p29));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p29));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p30));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p30));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p31));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p31));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p32));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p32));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p33));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p33));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p34));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p34));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p35));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p35));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p36));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p36));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p37));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p37));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p38));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p38));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p39));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p39));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p40));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p40));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p41));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p41));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p42));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p42));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p43));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p43));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p44));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p44));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p45));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p45));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p46));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p46));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p47));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p47));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p48));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p48));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p49));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p49));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p50));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p50));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p51));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p51));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p52));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p52));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p53));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p53));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p54));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p54));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p55));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p55));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p56));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p56));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p57));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p57));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p58));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p58));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p59));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p59));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p60));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p60));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p61));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p61));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p62));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p62));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p63));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p63));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p64));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p64));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p65));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p65));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p66));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p66));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p67));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p67));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p68));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p68));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p69));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p69));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p70));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p70));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p71));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p71));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p72));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p72));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p73));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p73));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p74));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p74));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p75));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p75));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p76));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p76));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p77));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p77));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p78));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p78));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p79));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p79));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p80));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p80));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p81));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p81));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p82));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p82));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_foto_p83));
+        listaImageButtons.add((ImageButton) findViewById(R.id.armazenamento_descricao_p83));
+
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta1));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta2));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta3));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta4));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta5));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta6));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta7));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta8));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta9));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta10));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta11));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta12));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta13));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta14));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta15));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta16));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta17));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta18));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta19));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta20));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta21));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta22));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta23));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta24));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta25));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta26));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta27));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta28));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta29));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta30));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta31));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta32));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta33));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta34));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta35));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta36));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta37));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta38));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta39));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta40));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta41));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta42));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta43));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta44));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta45));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta46));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta47));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta48));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta49));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta50));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta51));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta52));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta53));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta54));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta55));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta56));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta57));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta58));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta59));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta60));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta61));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta62));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta63));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta64));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta65));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta66));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta67));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta68));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta69));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta70));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta71));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta72));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta73));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta74));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta75));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta76));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta77));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta78));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta79));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta80));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta81));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta82));
+        listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta83));
+
+        for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
+            UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
+                    listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);
+            contRadioButton = contRadioButton + 3;
+            contImageButton = contImageButton + 2;
         }
     }
-
-    private void tirarFotoIntent(ItemAvaliacao itemAvaliacao) {
-        Intent vaiPraCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String fileName = "DBP_" + timeStamp + ".png";
-        itemAvaliacao.setFoto(fileName);
-
-        //Criação de Pasta
-        File imagesFolder = ArquivoController.criaPastaFotos();
-
-        File image = new File(imagesFolder, fileName);
-        try {
-            image.createNewFile();
-            Uri uriSavedImage = Uri.fromFile(image);
-
-            vaiPraCamera.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
-
-            if (vaiPraCamera.resolveActivity(getPackageManager()) != null) {
-                startActivityForResult(vaiPraCamera, REQUEST_IMAGE_PICTURE);
-                ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
-            }
-
-        } catch (Exception e) {
-            Log.i("fail", "creating photofile failed for " + fileName + "path " + image.getAbsolutePath());
-        }
-    }
-
-    protected void mostraJanelaDescricao(final ItemAvaliacao itemAvaliacao) {
-
-        LayoutInflater layoutInflater = LayoutInflater.from(Prt2619_ArmazenamentoActivity.this);
-        View promptView = layoutInflater.inflate(R.layout.activity_pop_up, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Prt2619_ArmazenamentoActivity.this);
-        alertDialogBuilder.setTitle("Descrição");
-        alertDialogBuilder.setIcon(R.drawable.ic_logo);
-        alertDialogBuilder.setView(promptView);
-
-
-        final EditText descricao = (EditText) promptView.findViewById(R.id.descricao);
-
-        alertDialogBuilder.setCancelable(false)
-                .setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        itemAvaliacao.setDescricao(descricao.getText().toString());
-                        ItemAvaliacaoController.salvarItemAvaliacao(itemAvaliacao, Prt2619_ArmazenamentoActivity.this);
-                    }
-                })
-                .setNegativeButton("Cancelar",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-
-    }
-
 }
 
 

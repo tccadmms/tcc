@@ -45,4 +45,12 @@ public class PlanoAcaoController {
         return planoAcaoDAO.buscarPlanoAcaoEstabelecimento(estabelecimento);
     }
 
+    public static PlanoAcao buscarPlanoAcaoPorID(PlanoAcao planoAcao, Context context) {
+        if(planoAcaoDAO == null) {
+            planoAcaoDAO = new PlanoAcaoDAO(context);
+        }
+
+        return planoAcaoDAO.buscarPorID(planoAcao);
+    }
+
 }

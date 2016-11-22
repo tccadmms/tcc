@@ -122,12 +122,19 @@ public class ArquivoController {
     }
 
     private static void insereResumo(Document document, List<ItemAvaliacao> listaItensAvaliacao, Estabelecimento estabelecimento, Context context) throws DocumentException {
-        LegislacaoDAO legislacaoDAO = new LegislacaoDAO(context);
-        Legislacao legislacao = legislacaoDAO.buscarPorID(estabelecimento.getLegislacao());
-        
+        Legislacao legislacao = LegislacaoController.buscarLegislacaoPorID(estabelecimento.getLegislacao(),context);
+
         int contArmazenamento = 0, contDocumentacao = 0, contEdificacao = 0, contExposicao = 0;
         int contHigiene = 0, contIngredientes = 0, contManipuladores = 0, contPreparo = 0, contQualidade = 0;
         int contResiduos = 0, contResponsavel = 0, contSaneamento = 0, contVetores = 0;
+
+        int contArmazenamentoNA = 0, contDocumentacaoNA = 0, contEdificacaoNA = 0, contExposicaoNA = 0;
+        int contHigieneNA = 0, contIngredientesNA = 0, contManipuladoresNA = 0, contPreparoNA = 0, contQualidadeNA = 0;
+        int contResiduosNA = 0, contResponsavelNA = 0, contSaneamentoNA = 0, contVetoresNA = 0;
+
+        int contArmazenamentoAD = 0, contDocumentacaoAD = 0, contEdificacaoAD = 0, contExposicaoAD = 0;
+        int contHigieneAD = 0, contIngredientesAD = 0, contManipuladoresAD = 0, contPreparoAD = 0, contQualidadeAD = 0;
+        int contResiduosAD = 0, contResponsavelAD = 0, contSaneamentoAD = 0, contVetoresAD = 0;
 
         for (ItemAvaliacao item: listaItensAvaliacao) {
             if (item.getConformidade().equals(Constantes.CONFORMIDADE_INADEQUADA)) {
@@ -158,6 +165,62 @@ public class ArquivoController {
                 } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_VETORES)) {
                     contVetores++;
                 }
+            } else if (item.getConformidade().equals(Constantes.CONFORMIDADE_NA)) {
+                if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_ARMAZENAMENTO)) {
+                    contArmazenamentoNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_DOCUMENTACAO)) {
+                    contDocumentacaoNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_EDIFICACAO)) {
+                    contEdificacaoNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_EXPOSICAO)) {
+                    contExposicaoNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_HIGIENE)) {
+                    contHigieneNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_INGREDIENTES)) {
+                    contIngredientesNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_MANIPULADORES)) {
+                    contManipuladoresNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_PREPARO)) {
+                    contPreparoNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_QUALIDADE)) {
+                    contQualidadeNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_RESIDUOS)) {
+                    contResiduosNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_RESPONSAVEL)) {
+                    contResponsavelNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_SANEAMENTO)) {
+                    contSaneamentoNA++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_VETORES)) {
+                    contVetoresNA++;
+                }
+            } else if (item.getConformidade().equals(Constantes.CONFORMIDADE_ADEQUADA)) {
+                if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_ARMAZENAMENTO)) {
+                    contArmazenamentoAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_DOCUMENTACAO)) {
+                    contDocumentacaoAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_EDIFICACAO)) {
+                    contEdificacaoAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_EXPOSICAO)) {
+                    contExposicaoAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_HIGIENE)) {
+                    contHigieneAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_INGREDIENTES)) {
+                    contIngredientesAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_MANIPULADORES)) {
+                    contManipuladoresAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_PREPARO)) {
+                    contPreparoAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_QUALIDADE)) {
+                    contQualidadeAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_RESIDUOS)) {
+                    contResiduosAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_RESPONSAVEL)) {
+                    contResponsavelAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_SANEAMENTO)) {
+                    contSaneamentoAD++;
+                } else if (item.getAreaAvaliada().equals(Constantes.AREA_AVALIADA_VETORES)) {
+                    contVetoresAD++;
+                }
             }
         }
 
@@ -167,99 +230,64 @@ public class ArquivoController {
         cell = new PdfPCell(new Phrase("% Itens Atendidos"));
         tabela.addCell(cell);
 
-        double porcentagem;
+        List<Double> porcentagemQuesitosAvaliados = new ArrayList<Double>();
+        double porcentagemTotal= 0.0;
+        int areasAvaliadas=0;
+
+        // Adiciona as avaliações na lista. Se uma area não foi avaliada, o método devolve um resultado negativo.
         if (legislacao.getNumeroPerguntasArmazenamento() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_ARMAZENAMENTO));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contArmazenamento)/legislacao.getNumeroPerguntasArmazenamento() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_ARMAZENAMENTO, contArmazenamentoNA,contArmazenamentoAD,contArmazenamento,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasDocumentacao() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_DOCUMENTACAO));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contDocumentacao)/legislacao.getNumeroPerguntasDocumentacao() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_DOCUMENTACAO, contDocumentacaoNA,contDocumentacaoAD,contDocumentacao,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasEdificacao() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_EDIFICACAO));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double)contEdificacao)/legislacao.getNumeroPerguntasEdificacao() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_EDIFICACAO, contEdificacaoNA,contEdificacaoAD,contEdificacao,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasExposicao() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_EXPOSICAO));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contExposicao)/legislacao.getNumeroPerguntasExposicao() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_EXPOSICAO, contExposicaoNA,contExposicaoAD,contExposicao,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasHigiene() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_HIGIENE));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contHigiene)/legislacao.getNumeroPerguntasHigiene() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_HIGIENE, contHigieneNA,contHigieneAD,contHigiene,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasIngredientes() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_INGREDIENTES));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contIngredientes)/legislacao.getNumeroPerguntasIngredientes() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_INGREDIENTES, contIngredientesNA,contIngredientesAD,contIngredientes,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasManipuladores() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_MANIPULADORES));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contManipuladores)/legislacao.getNumeroPerguntasManipuladores() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_MANIPULADORES, contManipuladoresNA,contManipuladoresAD,contManipuladores,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasPreparo() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_PREPARO));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contPreparo)/legislacao.getNumeroPerguntasPreparo() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_PREPARO, contPreparoNA,contPreparoAD,contPreparo,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasQualidade() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_QUALIDADE));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contQualidade)/legislacao.getNumeroPerguntasQualidade() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_QUALIDADE, contQualidadeNA,contQualidadeAD,contQualidade,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasResiduos() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_RESIDUOS));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contResiduos)/legislacao.getNumeroPerguntasResiduos() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_RESIDUOS, contResiduosNA,contResiduosAD,contResiduos,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasResponsavel() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_RESPONSAVEL));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contResponsavel)/legislacao.getNumeroPerguntasResponsavel() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_RESPONSAVEL, contResponsavelNA,contResponsavelAD,contResponsavel,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasSaneamento() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_SANEAMENTO));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contSaneamento)/legislacao.getNumeroPerguntasSaneamento() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_SANEAMENTO, contSaneamentoNA,contSaneamentoAD,contSaneamento,tabela,legislacao));
         }
         if (legislacao.getNumeroPerguntasVetores() != 0) {
-            cell = new PdfPCell(new Phrase(Constantes.AREA_AVALIADA_VETORES));
-            tabela.addCell(cell);
-            porcentagem = 100.0 - ((double) contVetores)/legislacao.getNumeroPerguntasVetores() * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            porcentagemQuesitosAvaliados.add(avaliaArea(Constantes.AREA_AVALIADA_VETORES, contVetoresNA,contVetoresAD,contVetores,tabela,legislacao));
         }
 
+        // Remove todos os resultados que não foram avaliados
+        for (Double e : porcentagemQuesitosAvaliados) {
+            if (e >= 0.0) {
+                porcentagemTotal += e;
+                areasAvaliadas++;
+            }
+        }
+
+        porcentagemTotal = porcentagemTotal/areasAvaliadas;
+        cell = new PdfPCell(new Phrase("Porcentagem de Adequação TOTAL"));
+        tabela.addCell(cell);
+        cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagemTotal) + "%"));
+        tabela.addCell(cell);
         document.add(tabela);
     }
 
@@ -320,5 +348,25 @@ public class ArquivoController {
         for (int i = 0; i < numeroLinhas; i++) {
             paragrafo.add(new Paragraph(" "));
         }
+    }
+
+    private static double avaliaArea(String areaAvaliada, int itensNA, int itensAD, int itensIN, PdfPTable tabela, Legislacao legislacao) {
+        double porcentagem;
+        PdfPCell cell;
+
+        cell = new PdfPCell(new Phrase(areaAvaliada));
+        tabela.addCell(cell);
+
+        if ((itensIN == 0) && (itensAD == 0) && (itensNA == 0)) {
+            cell = new PdfPCell(new Phrase("Area não Avaliada"));
+            tabela.addCell(cell);
+            return -1;
+        } else {
+            porcentagem = 100.0 - ((double) itensIN)/(legislacao.getNumeroPerguntasArmazenamento() - itensNA) * 100;
+            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
+            tabela.addCell(cell);
+        }
+
+        return porcentagem;
     }
 }

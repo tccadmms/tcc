@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
@@ -13,10 +15,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
 import com.admms.tcc.oasis.entity.Constantes;
+import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.admms.tcc.oasis.entity.ItemAvaliacao;
+import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -146,4 +152,48 @@ public class UserInterfaceController {
         }
     }
 
+    public static void gerarRelatorio(Bundle bundle, final Context context) {
+        PlanoAcao planoAcao = new PlanoAcao();
+
+        planoAcao.setCodigo(bundle.getInt("codigoPlanoAcao"));
+        planoAcao = PlanoAcaoController.buscarPlanoAcaoPorID(planoAcao, context);
+        final String nomeArquivo = planoAcao.getNomeArquivo();
+        final Estabelecimento estabelecimento = EstabelecimentoController.buscarPorID(planoAcao.getEstabelecimento(), context);
+        ArquivoController.criaPlanoAcaoPDF(context, planoAcao);
+        Toast.makeText(context, "Documento gerado com sucesso", Toast.LENGTH_SHORT).show();
+
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        File arquivo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), nomeArquivo);
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setDataAndType(Uri.fromFile(arquivo),"application/pdf");
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        context.startActivity(intent);
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), nomeArquivo);
+                        Uri anexoUri = Uri.fromFile(anexo);
+                        Intent mandarEmail = new Intent(Intent.ACTION_SENDTO);
+                        mandarEmail.setType("text/plain");
+                        if (estabelecimento.getEmail() != null) {
+                            mandarEmail.setData(Uri.parse("mailto:" + estabelecimento.getEmail()));
+                        } else {
+                            mandarEmail.setData(Uri.parse("mailto:"));
+                        }
+                        mandarEmail.putExtra(Intent.EXTRA_STREAM, anexoUri);
+                        context.startActivity(Intent.createChooser(mandarEmail, "Mandar email..."));
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage("Você deseja visualizar o relatório em PDF ou enviá-lo por email?").setPositiveButton("PDF", dialogClickListener)
+                .setNegativeButton("E-mail", dialogClickListener).show();
+
+    }
 }

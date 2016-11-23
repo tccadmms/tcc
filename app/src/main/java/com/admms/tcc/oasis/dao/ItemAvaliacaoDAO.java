@@ -94,8 +94,25 @@ public class ItemAvaliacaoDAO implements DAO<ItemAvaliacao>{
         return listaItensAvaliacao;
     }
 
+    public List<ItemAvaliacao> buscarPorAreaAvaliadaConformidade(PlanoAcao planoAcao, String areaAvaliada, String conformidade) {
+        QueryBuilder<ItemAvaliacao, Integer> qb = itemAvaliacaoReDAO.queryBuilder();
+        List<ItemAvaliacao> listaItensAvaliacao = new ArrayList<ItemAvaliacao>();
+
+        try {
+            listaItensAvaliacao = qb.where().eq(ItemAvaliacao.PLANO_ACAO_FIELD_NAME, planoAcao.getCodigo())
+                    .and().eq(ItemAvaliacao.AREA_AVALIADA_FIELD_NAME, areaAvaliada)
+                    .and().eq(ItemAvaliacao.CONFORMIDADE_FIELD_NAME, conformidade).query();
+        } catch (Exception e) {
+            Log.i("fail","fetching plano de acao (" + planoAcao.getCodigo() + ") não existe");
+            return null;
+        }
+
+        return listaItensAvaliacao;
+    }
+
     @Override
     public List<ItemAvaliacao> listar() {
-        return null;
+
+        return itemAvaliacaoReDAO.queryForAll();
     }
 }

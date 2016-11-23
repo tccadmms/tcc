@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.admms.tcc.oasis.R;
@@ -49,24 +51,32 @@ public class AdapterEstabelecimento extends ArrayAdapter<Estabelecimento> {
 
     public static class ViewHolder {
         public TextView display_name;
+        public ImageView editar_estabelecimento;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         View vi = convertView;
         final ViewHolder holder;
 
         try {
             if (convertView == null) {
-                vi = inflater.inflate(R.layout.simple_row, null);
+                vi = inflater.inflate(R.layout.edit_row, null);
                 holder = new ViewHolder();
 
-                holder.display_name = (TextView) vi.findViewById(R.id.rowTextView);
+                holder.display_name = (TextView) vi.findViewById(R.id.editRowTextView);
+                holder.editar_estabelecimento = (ImageView) vi.findViewById(R.id.ivImage);
 
                 vi.setTag(holder);
             } else {
                 holder = (ViewHolder) vi.getTag();
             }
 
+            holder.editar_estabelecimento.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((ListView) parent).performItemClick(v, position, 0);
+                }
+            });
             holder.display_name.setText(listaEstabelecimentos.get(position).getRazaoSocial());
         } catch (Exception e) {
         }

@@ -25,8 +25,18 @@ public class LegislacaoController {
     }
 
     public static Legislacao buscarLegislacaoPorID(Legislacao legislacao, Context context) {
-        inicializarDB(context);
+        if (legislacaoDAO == null) {
+            inicializarDB(context);
+        }
 
         return legislacaoDAO.buscarPorID(legislacao);
+    }
+
+    public static Legislacao buscarLegislacaoPorNome(Legislacao legislacao, Context context) {
+        if (legislacaoDAO == null) {
+            inicializarDB(context);
+        }
+
+        return legislacaoDAO.buscarPorNome(legislacao);
     }
 }

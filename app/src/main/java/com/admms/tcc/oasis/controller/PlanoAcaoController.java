@@ -18,7 +18,7 @@ public class PlanoAcaoController {
 
     private static PlanoAcaoDAO planoAcaoDAO;
 
-    public static int criarPlanoAcao(Legislacao legislacao, Estabelecimento estabelecimento, Context context) {
+    public static PlanoAcao criarPlanoAcao(Legislacao legislacao, Estabelecimento estabelecimento, Context context) {
 
         if(planoAcaoDAO == null) {
             planoAcaoDAO = new PlanoAcaoDAO(context);
@@ -34,7 +34,7 @@ public class PlanoAcaoController {
         planoAcao.setNomeArquivo(nomeArquivo);
         planoAcaoDAO.inserir(planoAcao);
 
-        return planoAcao.getCodigo();
+        return planoAcao;
     }
 
     public static List<PlanoAcao> listarPlanoAcaoEstabelecimento(Estabelecimento estabelecimento, Context context) {

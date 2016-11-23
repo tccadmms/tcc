@@ -46,6 +46,7 @@ public class EstabelecimentoDAO implements DAO<Estabelecimento> {
     }
 
     public List<Estabelecimento> listar() {
+
         return estabelecimentoReDAO.queryForAll();
     }
 }

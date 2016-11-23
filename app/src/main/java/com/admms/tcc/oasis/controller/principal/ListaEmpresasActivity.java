@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.EstabelecimentoController;
+import com.admms.tcc.oasis.controller.LegislacaoController;
 import com.admms.tcc.oasis.controller.PlanoAcaoController;
 import com.admms.tcc.oasis.controller.adapter.AdapterEstabelecimento;
 import com.admms.tcc.oasis.controller.cvs5.Cvs5Activity;
@@ -25,6 +26,7 @@ import com.admms.tcc.oasis.dao.LegislacaoDAO;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.Estabelecimento;
 import com.admms.tcc.oasis.entity.Legislacao;
+import com.admms.tcc.oasis.entity.PlanoAcao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,13 +44,12 @@ public class ListaEmpresasActivity extends Activity {
         setContentView(R.layout.activity_lista_empresas);
 
         final Context context = this;
-        EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
 
         ListView ListaEmpresa = (ListView) findViewById(R.id.ListaEmpresas);
 
-        List<Estabelecimento> listaEstabelecimentos = estabelecimentoController.lista(context);
+        List<Estabelecimento> listaEstabelecimentos = EstabelecimentoController.lista(context);
 
-        adapter = new AdapterEstabelecimento(ListaEmpresasActivity.this, R.layout.simple_row, R.id.rowTextView, listaEstabelecimentos);
+        adapter = new AdapterEstabelecimento(ListaEmpresasActivity.this, R.layout.edit_row, R.id.rowTextView, listaEstabelecimentos);
         ListaEmpresa.setAdapter(adapter);
 
         ListaEmpresa.setOnItemClickListener(onClickListener);
@@ -56,8 +57,31 @@ public class ListaEmpresasActivity extends Activity {
 
     private AdapterView.OnItemClickListener onClickListener = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
-            Estabelecimento estabelecimento = (Estabelecimento) parent.getItemAtPosition(position);
-            mostraOpcaoEstabelecimento(estabelecimento);
+
+            long viewId = v.getId();
+            final Estabelecimento estabelecimento = (Estabelecimento) parent.getItemAtPosition(position);
+
+            if (viewId == R.id.ivImage) {
+                final Intent intentVaiPraCadastro = new Intent(ListaEmpresasActivity.this, CadastroActivity.class);
+                Thread thread = new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(1000);
+                            intentVaiPraCadastro.putExtra("editarEstabelecimento",true);
+                            intentVaiPraCadastro.putExtra("codigoEstabelecimento",estabelecimento.getCodigo());
+                            startActivity(intentVaiPraCadastro);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                thread.start();
+            }
+            else {
+                mostraOpcaoEstabelecimento(estabelecimento);
+
+            }
         }
     };
 
@@ -72,12 +96,13 @@ public class ListaEmpresasActivity extends Activity {
         ImageButton CriarNovoDiagnostico = (ImageButton) promptView.findViewById(R.id.btn_cria_diagnostico);
         ImageButton VisualizarDiagnostico = (ImageButton) promptView.findViewById(R.id.btn_visualiza_diagnostico);
 
-        final LegislacaoDAO legislacaoDAO = new LegislacaoDAO(ListaEmpresasActivity.this);
-        final Legislacao legislacao = legislacaoDAO.buscarPorID(estabelecimento.getLegislacao());
+        final Legislacao legislacao = LegislacaoController.buscarLegislacaoPorID(estabelecimento.getLegislacao(), ListaEmpresasActivity.this);
 
         CriarNovoDiagnostico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final PlanoAcao planoAcao = criarPlanoAcao(legislacao, estabelecimento,ListaEmpresasActivity.this);
+
                 if (legislacao.getNome().equals(Constantes.LEGISLACAO_RDC216)) {
                     final Intent intentVaiPraRdc216 = new Intent(ListaEmpresasActivity.this, Rdc216Activity.class);
                     Thread thread = new Thread() {
@@ -85,7 +110,7 @@ public class ListaEmpresasActivity extends Activity {
                         public void run() {
                             try {
                                 Thread.sleep(1000);
-                                intentVaiPraRdc216.putExtra("codigoPlanoAcao", criarPlanoAcao(estabelecimento.getLegislacao(), estabelecimento, ListaEmpresasActivity.this));
+                                intentVaiPraRdc216.putExtra("codigoPlanoAcao", planoAcao.getCodigo());
                                 startActivity(intentVaiPraRdc216);
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -102,7 +127,7 @@ public class ListaEmpresasActivity extends Activity {
                         public void run() {
                             try {
                                 Thread.sleep(1000);
-                                intentVaiPraPrt78_325.putExtra("codigoPlanoAcao", criarPlanoAcao(estabelecimento.getLegislacao(), estabelecimento, ListaEmpresasActivity.this));
+                                intentVaiPraPrt78_325.putExtra("codigoPlanoAcao", planoAcao.getCodigo());
                                 startActivity(intentVaiPraPrt78_325);
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -119,7 +144,7 @@ public class ListaEmpresasActivity extends Activity {
                         public void run() {
                             try {
                                 Thread.sleep(1000);
-                                intentVaiPraPrt2619.putExtra("codigoPlanoAcao", criarPlanoAcao(estabelecimento.getLegislacao(), estabelecimento, ListaEmpresasActivity.this));
+                                intentVaiPraPrt2619.putExtra("codigoPlanoAcao", planoAcao.getCodigo());
                                 startActivity(intentVaiPraPrt2619);
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -136,7 +161,7 @@ public class ListaEmpresasActivity extends Activity {
                         public void run() {
                             try {
                                 Thread.sleep(1000);
-                                intentVaiPraCvs5.putExtra("codigoPlanoAcao", criarPlanoAcao(estabelecimento.getLegislacao(), estabelecimento, ListaEmpresasActivity.this));
+                                intentVaiPraCvs5.putExtra("codigoPlanoAcao", planoAcao.getCodigo());
                                 startActivity(intentVaiPraCvs5);
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -153,7 +178,7 @@ public class ListaEmpresasActivity extends Activity {
                         public void run() {
                             try {
                                 Thread.sleep(1000);
-                                intentVaiPraIn04.putExtra("codigoPlanoAcao", criarPlanoAcao(estabelecimento.getLegislacao(), estabelecimento, ListaEmpresasActivity.this));
+                                intentVaiPraIn04.putExtra("codigoPlanoAcao", planoAcao.getCodigo());
                                 startActivity(intentVaiPraIn04);
                             } catch (Exception e) {
                                 e.printStackTrace();

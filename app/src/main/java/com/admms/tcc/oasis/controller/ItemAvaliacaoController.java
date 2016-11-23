@@ -17,6 +17,10 @@ public class ItemAvaliacaoController {
     private static PlanoAcaoDAO planoAcaoDAO;
     private static ItemAvaliacaoDAO itemAvaliacaoDAO;
 
+    private static void inicializaDB(Context context) {
+        itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+    }
+
     public static ItemAvaliacao criaItemAvaliacao(int codigoPlanoAcao, ItemAvaliacao itemAvaliacao, String areaAvaliada, Context context) {
         //Cria plano de Acao para busca
         PlanoAcao planoAcao = new PlanoAcao();
@@ -37,13 +41,14 @@ public class ItemAvaliacaoController {
 
         itemAvaliacao.setFoto(null);
         itemAvaliacao.setDescricao(null);
+        itemAvaliacao.setPergunta(null);
 
         return itemAvaliacao;
     }
 
     public static void salvarItemAvaliacao(ItemAvaliacao itemAvaliacao, Context context) {
         if (itemAvaliacaoDAO == null) {
-            itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+            inicializaDB(context);
         }
 
         itemAvaliacaoDAO.inserir(itemAvaliacao);
@@ -51,7 +56,7 @@ public class ItemAvaliacaoController {
 
     public static ItemAvaliacao buscarItemAvaliacao(ItemAvaliacao itemAvaliacao, Context context) {
         if (itemAvaliacaoDAO == null) {
-            itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+            inicializaDB(context);
         }
 
         return itemAvaliacaoDAO.buscarPorID(itemAvaliacao);
@@ -59,9 +64,17 @@ public class ItemAvaliacaoController {
 
     public static List<ItemAvaliacao> buscaItemAvaliacaoPorAreaAvaliada(PlanoAcao planoAcao, String areaAvaliada, Context context) {
         if (itemAvaliacaoDAO == null) {
-            itemAvaliacaoDAO = new ItemAvaliacaoDAO(context);
+            inicializaDB(context);
         }
 
         return itemAvaliacaoDAO.buscarPorAreaAvaliada(planoAcao, areaAvaliada);
+    }
+
+    public static List<ItemAvaliacao> buscaItemAvaliacaoPorAreaAvaliadaConformidade(PlanoAcao planoAcao, String areaAvaliada, String conformidade , Context context) {
+        if (itemAvaliacaoDAO == null) {
+            inicializaDB(context);
+        }
+
+        return itemAvaliacaoDAO.buscarPorAreaAvaliadaConformidade(planoAcao, areaAvaliada, conformidade);
     }
 }

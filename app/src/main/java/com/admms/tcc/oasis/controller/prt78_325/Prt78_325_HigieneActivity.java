@@ -47,7 +47,7 @@ public class Prt78_325_HigieneActivity extends Activity {
         final Bundle bundle = getIntent().getExtras();
         final int codigoPlanoAcao = bundle.getInt("codigoPlanoAcao");
 
-        itemAvaliacao = ItemAvaliacaoController.criaItemAvaliacao(codigoPlanoAcao, itemAvaliacao, Constantes.AREA_AVALIADA_INGREDIENTES,this);
+        itemAvaliacao = ItemAvaliacaoController.criaItemAvaliacao(codigoPlanoAcao, itemAvaliacao, Constantes.AREA_AVALIADA_HIGIENE,this);
 
         RadioGroup r_p1 = (RadioGroup) findViewById(R.id.higiene_p1);
 

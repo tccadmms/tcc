@@ -14,7 +14,9 @@
         android:icon="@drawable/ic_logo"
         android:label="DBP - Boas Práticas"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true" >
         <activity
             android:name=".controller.principal.MainActivity"
             android:screenOrientation="portrait"

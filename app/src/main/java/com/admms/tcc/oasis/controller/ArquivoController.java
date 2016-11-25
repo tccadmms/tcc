@@ -96,7 +96,7 @@ public class ArquivoController {
         PdfPCell cell = new PdfPCell(new Phrase(nomeEstabelecimento,FONTE_TITULO));
         cell.setColspan(2);
         table.addCell(cell);
-        cell = new PdfPCell(new Phrase("Documento gerado às " + new SimpleDateFormat("yy/MM/dd").format(new Date()), FONTE_PS));
+        cell = new PdfPCell(new Phrase("Documento gerado em " + new SimpleDateFormat("dd/MM/yyyy").format(new Date()), FONTE_PS));
         table.addCell(cell);
 
         document.add(table);

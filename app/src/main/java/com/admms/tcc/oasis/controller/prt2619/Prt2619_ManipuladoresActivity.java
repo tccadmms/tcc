@@ -1254,14 +1254,11 @@ public class Prt2619_ManipuladoresActivity extends Activity {
                 }
             }
         });
+
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = Prt2619_ManipuladoresActivity.this;
-
+    private void populateActivity(Context context) {
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
         List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();
@@ -1427,7 +1424,7 @@ public class Prt2619_ManipuladoresActivity extends Activity {
         listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p53_na));
         listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p53_ad));
         listaRadioButtons.add((RadioButton) findViewById(R.id.manipuladores_p53_in));
-        
+
         listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p1));
         listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_descricao_p1));
         listaImageButtons.add((ImageButton) findViewById(R.id.manipuladores_foto_p2));

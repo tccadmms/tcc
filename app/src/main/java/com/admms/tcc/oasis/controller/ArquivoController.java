@@ -362,9 +362,15 @@ public class ArquivoController {
             tabela.addCell(cell);
             return -1;
         } else {
-            porcentagem = 100.0 - ((double) itensIN)/(NumTotalPerguntas - itensNA) * 100;
-            cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
-            tabela.addCell(cell);
+            if ((itensAD + itensIN) != 0) {
+                porcentagem = 100.0 - ((double) itensIN) / (itensAD + itensIN) * 100;
+                cell = new PdfPCell(new Phrase(String.format("%.2f",porcentagem) + "%"));
+                tabela.addCell(cell);
+            } else {
+                porcentagem = -1;
+                cell = new PdfPCell(new Phrase("Não se Aplica"));
+                tabela.addCell(cell);
+            }
         }
 
         return porcentagem;

@@ -354,15 +354,10 @@ public class In04_DocumentacaoActivity extends Activity {
             }
         });
 
-
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = In04_DocumentacaoActivity.this;
-
+    private void populateActivity(Context context) {
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
         List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();
@@ -443,7 +438,7 @@ public class In04_DocumentacaoActivity extends Activity {
         listaTextViews.add((TextView) findViewById(R.id.documentacao_pergunta10));
         listaTextViews.add((TextView) findViewById(R.id.documentacao_pergunta11));
         listaTextViews.add((TextView) findViewById(R.id.documentacao_pergunta12));
-        
+
         for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
             itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
             itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());

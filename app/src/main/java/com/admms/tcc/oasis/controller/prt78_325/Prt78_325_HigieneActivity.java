@@ -522,14 +522,11 @@ public class Prt78_325_HigieneActivity extends Activity {
                 }
             }
         });
+
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = Prt78_325_HigieneActivity.this;
-
+    private void populateActivity(Context context) {
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
         List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();

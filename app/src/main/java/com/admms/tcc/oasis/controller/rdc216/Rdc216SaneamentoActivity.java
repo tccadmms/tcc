@@ -264,14 +264,10 @@ public class Rdc216SaneamentoActivity extends Activity {
             }
         });
 
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = Rdc216SaneamentoActivity.this;
-
+    private void populateActivity(Context context) {
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
         List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();

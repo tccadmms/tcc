@@ -367,17 +367,10 @@ public class Cvs5DocumentacaoActivity extends Activity {
             }
         });
 
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Bundle bundle = getIntent().getExtras();
-        final int codigoPlanoAcao = bundle.getInt("codigoPlanoAcao");
-
-
-        final Context context = Cvs5DocumentacaoActivity.this;
+    private void populateActivity(Context context) {
 
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
@@ -468,5 +461,6 @@ public class Cvs5DocumentacaoActivity extends Activity {
             contRadioButton = contRadioButton + 3;
             contImageButton = contImageButton + 2;
         }
+
     }
 }

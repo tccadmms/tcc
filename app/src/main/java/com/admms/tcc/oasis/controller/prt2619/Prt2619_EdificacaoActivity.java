@@ -2024,14 +2024,11 @@ public class Prt2619_EdificacaoActivity extends Activity {
                 }
             }
         });
+
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = Prt2619_EdificacaoActivity.this;
-
+    private void populateActivity(Context context) {
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
         List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();
@@ -2568,7 +2565,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         listaTextViews.add((TextView) findViewById(R.id.edificacao_pergunta86));
         listaTextViews.add((TextView) findViewById(R.id.edificacao_pergunta87));
         listaTextViews.add((TextView) findViewById(R.id.edificacao_pergunta88));
-        
+
         for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
             itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
             itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());

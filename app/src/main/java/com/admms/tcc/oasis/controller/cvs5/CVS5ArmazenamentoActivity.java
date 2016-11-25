@@ -1409,13 +1409,11 @@ public class Cvs5ArmazenamentoActivity extends Activity {
                 }
             }
         });
+
+        populateActivity(context);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = Cvs5ArmazenamentoActivity.this;
+    private void populateActivity(Context context) {
 
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 

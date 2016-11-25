@@ -256,15 +256,10 @@ public class In04_IngredientesActivity extends Activity {
             }
         });
 
+        populateActivity(context);
     }
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        final Context context = In04_IngredientesActivity.this;
-
+    private void populateActivity(Context context) {
         int contRadioButton = 0, contImageButton = 0, contTextView = 0;
 
         List<RadioButton> listaRadioButtons = new ArrayList<RadioButton>();

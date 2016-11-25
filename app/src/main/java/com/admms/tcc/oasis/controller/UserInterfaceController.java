@@ -18,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.admms.tcc.oasis.R;
+import com.admms.tcc.oasis.controller.principal.MainActivity;
 import com.admms.tcc.oasis.dao.PlanoAcaoDAO;
 import com.admms.tcc.oasis.entity.Constantes;
 import com.admms.tcc.oasis.entity.Estabelecimento;
@@ -168,7 +169,13 @@ public class UserInterfaceController {
                 switch (which){
                     case DialogInterface.BUTTON_POSITIVE:
                         File arquivo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), nomeArquivo);
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+                        //Retorna o aplicativo para a classe Main
+                        Intent intent = new Intent (context, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        context.startActivity(intent);
+
+                        intent = new Intent(Intent.ACTION_VIEW);
                         intent.setDataAndType(Uri.fromFile(arquivo),"application/pdf");
                         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                         context.startActivity(intent);
@@ -177,6 +184,12 @@ public class UserInterfaceController {
                     case DialogInterface.BUTTON_NEGATIVE:
                         File anexo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), nomeArquivo);
                         Uri anexoUri = Uri.fromFile(anexo);
+
+                        //Retorna o aplicativo para a classe Main
+                        intent = new Intent (context, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        context.startActivity(intent);
+
                         Intent mandarEmail = new Intent(Intent.ACTION_SENDTO);
                         mandarEmail.setType("text/plain");
                         if (estabelecimento.getEmail() != null) {

@@ -99,7 +99,7 @@ public class ListaDiagnosticosActivity extends Activity {
             };
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ListaDiagnosticosActivity.this);
-            builder.setMessage("Você deseja visualizar o PDF ou carregar os dados no APP?").setPositiveButton("APP", dialogClickListener)
+            builder.setMessage("Você deseja visualizar o PDF ou continuar o diagnóstico no aplicativo?").setPositiveButton("Continuar", dialogClickListener)
                     .setNegativeButton("PDF", dialogClickListener).show();
         }
     };

@@ -1,13 +1,17 @@
 package com.admms.tcc.oasis.controller;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -208,5 +212,29 @@ public class UserInterfaceController {
         builder.setMessage("Você deseja visualizar o relatório em PDF ou enviá-lo por email?").setPositiveButton("PDF", dialogClickListener)
                 .setNegativeButton("E-mail", dialogClickListener).show();
 
+    }
+
+    public static void pedirPermissoes(Activity activity) {
+        boolean hasPermissionWriteStorage = (ContextCompat.checkSelfPermission(activity,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+        boolean hasPermissionCamera = (ContextCompat.checkSelfPermission(activity,
+                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED);
+        boolean hasPermissionReadStorage = (ContextCompat.checkSelfPermission(activity,
+                Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+        if (!hasPermissionCamera) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.CAMERA},
+                    Constantes.REQUEST_CAMERA_ACCESS);
+        }
+        if (!hasPermissionWriteStorage) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    Constantes.REQUEST_WRITE_STORAGE);
+        }
+        if (!hasPermissionReadStorage) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    Constantes.REQUEST_READ_STORAGE);
+        }
     }
 }

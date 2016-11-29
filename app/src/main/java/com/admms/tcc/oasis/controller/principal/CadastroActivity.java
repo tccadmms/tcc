@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.admms.tcc.oasis.R;
 import com.admms.tcc.oasis.controller.EstabelecimentoController;
 import com.admms.tcc.oasis.controller.LegislacaoController;
+import com.admms.tcc.oasis.controller.UserInterfaceController;
 import com.admms.tcc.oasis.controller.in04.In04Activity;
 import com.admms.tcc.oasis.controller.prt2619.Prt2619Activity;
 import com.admms.tcc.oasis.controller.prt78_325.Prt78_325Activity;
@@ -39,9 +40,6 @@ import static com.admms.tcc.oasis.controller.PlanoAcaoController.criarPlanoAcao;
 public class CadastroActivity extends AppCompatActivity {
 
     DatabaseHelper databaseHelper;
-    private static final int REQUEST_WRITE_STORAGE = 112;
-    private static final int REQUEST_CAMERA_ACCESS = 1888;
-    private static final int REQUEST_READ_STORAGE= 87;
     private EditText cnpj, razaoSocial, email, telefone, cidade, cep, ramoAtividade, proprietario;
     private Spinner estado, legislacao;
 
@@ -50,7 +48,7 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        pedirPermissoes();
+        UserInterfaceController.pedirPermissoes(this);
 
         final Bundle bundle = getIntent().getExtras();
         final Context context = this;
@@ -138,27 +136,7 @@ public class CadastroActivity extends AppCompatActivity {
         }
     }
 
-    private void pedirPermissoes() {
-        boolean hasPermissionWriteStorage = (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
-        boolean hasPermissionCamera = (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED);
-        boolean hasPermissionReadStorage = (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED);
-        if (!hasPermissionCamera) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA},
-                    REQUEST_CAMERA_ACCESS);
-        } else if (!hasPermissionWriteStorage) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    REQUEST_WRITE_STORAGE);
-        } else if (!hasPermissionReadStorage) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                    REQUEST_WRITE_STORAGE);
-        }
-    }
+
 
 
     private void alterarEstabelecimento(LegislacaoDAO legislacaoDAO, int codigoEstabelecimento, Context context) {
@@ -317,7 +295,7 @@ public class CadastroActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode)
         {
-            case REQUEST_WRITE_STORAGE: {
+            case Constantes.REQUEST_WRITE_STORAGE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 {
                     //reload my activity with permission granted or use the features what required the permission
@@ -325,7 +303,29 @@ public class CadastroActivity extends AppCompatActivity {
                     startActivity(getIntent());
                 } else
                 {
-                    Toast.makeText(this, "The app was not allowed to write to your storage. Hence, it cannot function properly. Please consider granting it this permission", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Aplicativo não têm permissão para gravar na memória, de modo que não pode funcionar corretamente.", Toast.LENGTH_LONG).show();
+                }
+            }
+            case Constantes.REQUEST_CAMERA_ACCESS: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                {
+                    //reload my activity with permission granted or use the features what required the permission
+                    finish();
+                    startActivity(getIntent());
+                } else
+                {
+                    Toast.makeText(this, "Aplicativo não têm permissão para usar a câmera, de modo que não pode funcionar corretamente.", Toast.LENGTH_LONG).show();
+                }
+            }
+            case Constantes.REQUEST_READ_STORAGE: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                {
+                    //reload my activity with permission granted or use the features what required the permission
+                    finish();
+                    startActivity(getIntent());
+                } else
+                {
+                    Toast.makeText(this, "Aplicativo não têm permissão para acessar a memória, de modo que não pode funcionar corretamente.", Toast.LENGTH_LONG).show();
                 }
             }
         }

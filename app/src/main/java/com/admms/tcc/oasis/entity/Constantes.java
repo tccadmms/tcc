@@ -29,6 +29,9 @@ public class Constantes {
     public static final String LEGISLACAO_PRT2619 = "PRT nº:2619/2011";
     public static final String LEGISLACAO_RDC216 = "RDC nº:216/2004";
 
+    public static final int REQUEST_WRITE_STORAGE = 112;
+    public static final int REQUEST_CAMERA_ACCESS = 1888;
+    public static final int REQUEST_READ_STORAGE = 87;
     // Previne a instanciação da classe de contantes
     private Constantes() {
 

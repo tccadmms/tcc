@@ -101,7 +101,7 @@ public class Cvs5Activity extends Activity {
         armazenamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVaiProArmazenamento = new Intent(context, Cvs5ArmazenamentoActivity.class);
+                Intent intentVaiProArmazenamento = new Intent(context, CVS5ArmazenamentoActivity.class);
                 intentVaiProArmazenamento.putExtras(bundle);
                 startActivity(intentVaiProArmazenamento);
             }

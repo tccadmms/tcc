@@ -54,7 +54,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p1_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p1_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p1_in);
@@ -75,7 +75,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p2_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p2_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p2_in);
@@ -97,7 +97,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p3_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p3_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p3_in);
@@ -119,7 +119,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p4_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p4_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p4_in);
@@ -141,7 +141,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p5_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p5_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p5_in);
@@ -163,7 +163,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p6_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p6_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p6_in);
@@ -185,7 +185,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p7_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p7_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p7_in);
@@ -207,7 +207,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p8_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p8_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p8_in);
@@ -229,7 +229,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p9_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p9_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p9_in);
@@ -251,7 +251,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p10_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p10_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p10_in);
@@ -273,7 +273,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p11_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p11_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p11_in);
@@ -295,7 +295,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p12_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p12_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p12_in);
@@ -317,7 +317,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p13_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p13_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p13_in);
@@ -339,7 +339,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p14.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p14_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p14_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p14_in);
@@ -361,7 +361,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p15_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p15_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p15_in);
@@ -383,7 +383,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p16_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p16_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p16_in);
@@ -405,7 +405,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p17.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p17_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p17_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p17_in);
@@ -427,7 +427,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p18_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p18_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p18_in);
@@ -450,7 +450,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p19_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p19_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p19_in);
@@ -472,7 +472,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p20.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p20_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p20_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p20_in);
@@ -494,7 +494,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p21.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p21_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p21_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p21_in);
@@ -516,7 +516,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p22.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p22_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p22_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p22_in);
@@ -538,7 +538,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p23.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p23_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p23_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p23_in);
@@ -560,7 +560,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p24.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p24_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p24_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p24_in);
@@ -582,7 +582,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p25.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p25_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p25_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p25_in);
@@ -604,7 +604,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p26.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p26_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p26_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p26_in);
@@ -626,7 +626,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p27.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p27_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p27_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p27_in);
@@ -648,7 +648,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p28.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p28_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p28_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p28_in);
@@ -670,7 +670,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p29.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p29_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p29_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p29_in);
@@ -692,7 +692,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p30.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p30_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p30_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p30_in);
@@ -714,7 +714,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p31.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p31_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p31_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p31_in);
@@ -736,7 +736,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p32.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p32_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p32_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p32_in);
@@ -758,7 +758,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p33.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p33_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p33_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p33_in);
@@ -780,7 +780,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p34.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p34_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p34_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p34_in);
@@ -802,7 +802,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p35.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p35_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p35_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p35_in);
@@ -824,7 +824,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p36.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p36_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p36_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p36_in);
@@ -846,7 +846,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p37.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p37_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p37_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p37_in);
@@ -868,7 +868,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p38.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p38_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p38_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p38_in);
@@ -890,7 +890,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p39.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p39_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p39_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p39_in);
@@ -912,7 +912,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p40.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p40_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p40_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p40_in);
@@ -934,7 +934,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p41.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p41_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p41_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p41_in);
@@ -956,7 +956,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p42.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p42_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p42_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p42_in);
@@ -978,7 +978,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p43.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p43_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p43_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p43_in);
@@ -1000,7 +1000,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p44.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p44_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p44_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p44_in);
@@ -1022,7 +1022,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p45.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p45_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p45_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p45_in);
@@ -1044,7 +1044,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p46.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p46_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p46_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p46_in);
@@ -1066,7 +1066,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p47.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p47_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p47_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p47_in);
@@ -1088,7 +1088,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p48.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p48_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p48_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p48_in);
@@ -1110,7 +1110,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p49.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p49_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p49_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p49_in);
@@ -1132,7 +1132,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p50.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p50_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p50_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p50_in);
@@ -1154,7 +1154,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p51.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p51_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p51_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p51_in);
@@ -1176,7 +1176,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p52.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p52_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p52_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p52_in);
@@ -1198,7 +1198,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p53.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p53_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p53_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p53_in);
@@ -1220,7 +1220,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p54.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p54_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p54_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p54_in);
@@ -1242,7 +1242,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p55.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p55_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p55_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p55_in);
@@ -1264,7 +1264,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p56.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p56_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p56_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p56_in);
@@ -1286,7 +1286,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p57.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p57_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p57_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p57_in);
@@ -1308,7 +1308,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p58.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p58_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p58_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p58_in);
@@ -1330,7 +1330,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p59.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p59_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p59_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p59_in);
@@ -1352,7 +1352,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p60.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p60_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p60_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p60_in);
@@ -1375,7 +1375,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p61.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p61_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p61_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p61_in);
@@ -1397,7 +1397,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p62.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p62_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p62_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p62_in);
@@ -1419,7 +1419,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p63.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p63_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p63_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p63_in);
@@ -1441,7 +1441,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p64.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p64_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p64_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p64_in);
@@ -1463,7 +1463,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p65.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p65_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p65_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p65_in);
@@ -1485,7 +1485,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p66.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p66_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p66_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p66_in);
@@ -1507,7 +1507,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p67.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p67_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p67_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p67_in);
@@ -1529,7 +1529,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p68.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p68_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p68_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p68_in);
@@ -1551,7 +1551,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p69.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p69_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p69_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p69_in);
@@ -1573,7 +1573,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p70.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p70_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p70_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p70_in);
@@ -1595,7 +1595,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p71.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p71_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p71_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p71_in);
@@ -1617,7 +1617,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p72.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p72_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p72_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p72_in);
@@ -1639,7 +1639,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p73.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p73_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p73_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p73_in);
@@ -1661,7 +1661,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p74.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p74_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p74_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p74_in);
@@ -1683,7 +1683,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p75.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p75_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p75_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p75_in);
@@ -1705,7 +1705,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p76.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p76_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p76_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p76_in);
@@ -1727,7 +1727,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p77.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p77_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p77_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p77_in);
@@ -1749,7 +1749,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p78.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p78_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p78_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p78_in);
@@ -1771,7 +1771,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p79.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p79_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p79_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p79_in);
@@ -1793,7 +1793,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p80.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p80_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p80_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p80_in);
@@ -1815,7 +1815,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p81.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p81_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p81_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p81_in);
@@ -1837,7 +1837,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p82.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p82_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p82_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p82_in);
@@ -1859,7 +1859,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p83.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p83_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p83_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p83_in);
@@ -1881,7 +1881,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p84.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p84_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p84_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p84_in);
@@ -1903,7 +1903,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p85.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p85_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p85_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p85_in);
@@ -1925,7 +1925,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p86.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p86_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p86_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p86_in);
@@ -1947,7 +1947,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p87.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p87_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p87_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p87_in);
@@ -1969,7 +1969,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         r_p88.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.edificacao_p88_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.edificacao_p88_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.edificacao_p88_in);
@@ -2567,7 +2567,7 @@ public class Prt2619_EdificacaoActivity extends Activity {
         listaTextViews.add((TextView) findViewById(R.id.edificacao_pergunta88));
 
         for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
-            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
             itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
             UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
                     listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);

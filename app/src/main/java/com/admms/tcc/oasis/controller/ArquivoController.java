@@ -96,7 +96,7 @@ public class ArquivoController {
         PdfPCell cell = new PdfPCell(new Phrase(nomeEstabelecimento,FONTE_TITULO));
         cell.setColspan(2);
         table.addCell(cell);
-        cell = new PdfPCell(new Phrase("Documento gerado em " + new SimpleDateFormat("dd/MM/yyyy").format(new Date()), FONTE_PS));
+        cell = new PdfPCell(new Phrase("" + new SimpleDateFormat("dd/MM/yyyy").format(new Date()) + "", FONTE_PS));
         table.addCell(cell);
 
         document.add(table);
@@ -292,14 +292,15 @@ public class ArquivoController {
     }
 
     private static PdfPTable criaItemTabela(ItemAvaliacao itemAvaliacao) throws BadElementException, IOException {
-        PdfPTable tabela = new PdfPTable(2);
 
         PdfPCell cell;
+        PdfPTable tabela;
 
         File dir = Environment.getExternalStorageDirectory();
         File imagesFolder = new File(dir.getAbsolutePath() + PASTA_FOTOS_CONSTANTE);
 
         if(itemAvaliacao.getFoto() != null) {
+            tabela = new PdfPTable(2);
             Image imagem = Image.getInstance( imagesFolder.getAbsolutePath() + "/" + itemAvaliacao.getFoto(),true);
             cell = new PdfPCell(imagem, true);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -307,14 +308,10 @@ public class ArquivoController {
             cell.setRowspan(6);
             tabela.addCell(cell);
         } else {
-            cell = new PdfPCell(new Phrase("\nN/A\n"));
-            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-            cell.setVerticalAlignment(Element.ALIGN_CENTER);
-            cell.setRowspan(6);
-            tabela.addCell(cell);
+            tabela = new PdfPTable(1);
         }
 
-        cell = new PdfPCell(new Phrase("Item Inadequado: " + itemAvaliacao.getPergunta().substring(0, itemAvaliacao.getPergunta().indexOf(" ")) + "\n"));
+        cell = new PdfPCell(new Phrase("Item Inadequado: " + itemAvaliacao.getPergunta() + "\n"));
         cell.setRowspan(1);
         tabela.addCell(cell);
         if(itemAvaliacao.getDescricao() == null) {

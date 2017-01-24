@@ -54,7 +54,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.armazenamento_p1_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.armazenamento_p1_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.armazenamento_p1_in);
@@ -76,7 +76,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.armazenamento_p2_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.armazenamento_p2_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.armazenamento_p2_in);
@@ -98,7 +98,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.armazenamento_p3_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.armazenamento_p3_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.armazenamento_p3_in);
@@ -120,7 +120,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.armazenamento_p4_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.armazenamento_p4_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.armazenamento_p4_in);
@@ -142,7 +142,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.armazenamento_p5_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.armazenamento_p5_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.armazenamento_p5_in);
@@ -164,7 +164,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
                 RadioButton na = (RadioButton) findViewById(R.id.armazenamento_p6_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.armazenamento_p6_ad);
                 RadioButton in = (RadioButton) findViewById(R.id.armazenamento_p6_in);
@@ -271,7 +271,7 @@ public class Rdc216ArmazenamentoActivity extends AppCompatActivity {
         listaTextViews.add((TextView) findViewById(R.id.armazenamento_pergunta6));
 
         for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
-            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
             itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
             UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
                     listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);

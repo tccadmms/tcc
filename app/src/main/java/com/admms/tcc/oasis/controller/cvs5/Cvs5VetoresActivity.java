@@ -47,7 +47,7 @@ public class Cvs5VetoresActivity extends Activity {
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p1_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p1_ad);
@@ -71,7 +71,7 @@ public class Cvs5VetoresActivity extends Activity {
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p2_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p2_ad);
@@ -95,7 +95,7 @@ public class Cvs5VetoresActivity extends Activity {
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p3_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p3_ad);

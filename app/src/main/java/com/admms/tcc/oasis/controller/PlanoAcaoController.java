@@ -25,7 +25,7 @@ public class PlanoAcaoController {
         }
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String nomeArquivo = "DBP-Relatorio_" + timeStamp + ".pdf";
+        String nomeArquivo = estabelecimento.getRazaoSocial().replaceAll("\\s+","") + "_" + timeStamp + ".pdf";
 
         PlanoAcao planoAcao = new PlanoAcao();
         planoAcao.setLegislacao(legislacao);

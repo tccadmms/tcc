@@ -54,7 +54,7 @@ public class In04_VetoresActivity extends Activity {
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p1_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p1_ad);
@@ -78,7 +78,7 @@ public class In04_VetoresActivity extends Activity {
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p2_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p2_ad);
@@ -102,7 +102,7 @@ public class In04_VetoresActivity extends Activity {
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p3_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p3_ad);
@@ -126,7 +126,7 @@ public class In04_VetoresActivity extends Activity {
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p4_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p4_ad);
@@ -150,7 +150,7 @@ public class In04_VetoresActivity extends Activity {
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.vetores_p5_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.vetores_p5_ad);
@@ -253,7 +253,7 @@ public class In04_VetoresActivity extends Activity {
         listaTextViews.add((TextView) findViewById(R.id.vetores_pergunta5));
 
         for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
-            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
             itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
             UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
                     listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);

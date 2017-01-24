@@ -46,6 +46,11 @@ public class ItemAvaliacaoController {
         return itemAvaliacao;
     }
 
+    public static ItemAvaliacao limpaItemAvaliacao(ItemAvaliacao itemAvaliacao, Context context) {
+
+        return criaItemAvaliacao(itemAvaliacao.getPlanoAcao().getCodigo(), itemAvaliacao, itemAvaliacao.getAreaAvaliada(), context);
+    }
+
     public static void salvarItemAvaliacao(ItemAvaliacao itemAvaliacao, Context context) {
         if (itemAvaliacaoDAO == null) {
             inicializaDB(context);

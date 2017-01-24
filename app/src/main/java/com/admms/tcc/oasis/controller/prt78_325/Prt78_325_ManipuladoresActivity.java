@@ -54,7 +54,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p1_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p1_ad);
@@ -78,7 +78,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p2_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p2_ad);
@@ -102,7 +102,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p3_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p3_ad);
@@ -126,7 +126,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p4_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p4_ad);
@@ -150,7 +150,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p5_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p5_ad);
@@ -174,7 +174,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p6_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p6_ad);
@@ -198,7 +198,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p7_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p7_ad);
@@ -222,7 +222,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p8_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p8_ad);
@@ -246,7 +246,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p9_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p9_ad);
@@ -270,7 +270,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p10_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p10_ad);
@@ -294,7 +294,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p11_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p11_ad);
@@ -318,7 +318,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p12_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p12_ad);
@@ -342,7 +342,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p13_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p13_ad);
@@ -366,7 +366,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p14.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p14_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p14_ad);
@@ -390,7 +390,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p15_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p15_ad);
@@ -414,7 +414,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         r_p16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+                itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
 
                 RadioButton na = (RadioButton) findViewById(R.id.manipuladores_p16_na);
                 RadioButton ad = (RadioButton) findViewById(R.id.manipuladores_p16_ad);
@@ -582,7 +582,7 @@ public class Prt78_325_ManipuladoresActivity extends Activity {
         listaTextViews.add((TextView) findViewById(R.id.manipuladores_pergunta16));
 
         for (int i = 0; i < NUMERO_PERGUNTAS; i++) {
-            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao);
+            itemAvaliacao = ItemAvaliacaoController.limpaItemAvaliacao(itemAvaliacao, context);
             itemAvaliacao.setPergunta(listaTextViews.get(contTextView++).getText().toString());
             UserInterfaceController.radioButtonPopulate(listaRadioButtons.get(contRadioButton), listaRadioButtons.get(contRadioButton + 1),listaRadioButtons.get(contRadioButton + 2),
                     listaImageButtons.get(contImageButton),listaImageButtons.get(contImageButton + 1),itemAvaliacao, context);
